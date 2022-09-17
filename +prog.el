@@ -34,7 +34,8 @@
   (setq nxml-auto-insert-xml-declaration-flag nil
         nxml-slash-auto-complete-flag nil)
 
-  (add-hook! 'nxml-mode-local-vars-hook :append #'lsp!)
+  (unless (modulep! :lang web +lsp)
+    (add-hook! 'nxml-mode-local-vars-hook :append #'lsp!))
 
   (if (modulep! :checkers spell)
       (add-hook! 'nxml-mode-hook
