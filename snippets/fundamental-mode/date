@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: (current date)
+# uuid: date
+# key: date
+# --
+`(format-time-string "%Y-%m-%d")`

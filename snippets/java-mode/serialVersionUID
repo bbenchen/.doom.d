@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: serialVersionUID
+# key: ser
+# uuid: serialVersionUID
+# --
+private static final long serialVersionUID = 1L;

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec "${HOME}/.jenv/versions/11/bin/java" -jar "`dirname $0`/../google-java-format.jar" "$@"
