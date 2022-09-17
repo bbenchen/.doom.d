@@ -115,11 +115,18 @@
 
   (setq mu4e-alert-interesting-mail-query "flag:unread AND maildir:/INBOX/ AND NOT flag:trash"))
 
-(if (modulep! :email mu4e +org)
-    (after! org-msg
-      (setq org-msg-convert-citation t
-            org-msg-signature "
+(when (modulep! :email mu4e +org)
+  (after! org-msg
+    (setq org-msg-convert-citation t
+          org-msg-signature "
  Best Regards,
  #+begin_signature
  *陈显彬（Mike Chen）*
- #+end_signature")))
+ #+end_signature"))
+
+  (when (modulep! :lang web +lsp)
+    (remove-hook! 'web-mode-local-vars-hook #'lsp!)
+
+    (add-hook! 'web-mode-local-vars-hook (when (and (string-match-p "^org-msg" (buffer-name))
+                                                    (not (bound-and-true-p org-msg-mode)))
+                                           (lsp!)))))
