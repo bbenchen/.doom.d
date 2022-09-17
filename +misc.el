@@ -121,7 +121,8 @@
     (blamer-idle-time 0.5)
     (blamer-min-offset 70)
     :init
-    (map! (:prefix-map ("v" . "versioning")
+    (map! :leader
+          (:prefix-map ("v" . "versioning")
            :desc "Blamer show commit" "b" #'blamer-show-posframe-commit-info
            :desc "Blamer" "B" #'blamer-mode))
     :config
