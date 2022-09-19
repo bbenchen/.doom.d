@@ -10,6 +10,9 @@
 (if (boundp 'pixel-scroll-precision-mode)
     (pixel-scroll-precision-mode t))
 
+(setq initial-major-mode 'fundamental-mode
+      initial-scratch-message nil)
+
 ;; recentf
 (after! recentf
   (add-to-list 'recentf-exclude "\\.mail")
