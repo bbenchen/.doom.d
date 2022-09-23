@@ -57,7 +57,7 @@
 
 (package! rime :pin "3eeef9c445fa056a4b32137f9ef72c27ced2d4ab")
 
-(package! google-translate :pin "f2b4534d4554c2103ed8084353c94c9cdc5cb24c")
+(package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
 
 (when (modulep! :completion company)
   (package! company-english-helper
@@ -72,7 +72,7 @@
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 
 (if IS-MAC
-    (package! exec-path-from-shell :pin "dff9ce3577bf3f2938d9bde8ec8aa4fef3b061f3"))
+    (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
