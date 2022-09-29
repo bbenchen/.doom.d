@@ -49,6 +49,10 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+(package! doom-themes
+  :recipe (:host github :repo "cxb811201/doom-themes")
+  :pin "b694c0a08a6439342ab8fe8782217eb35d1c8568")
+
 (package! posframe :pin "0d23bc5f7cfac00277d83ae7ba52c48685bcbc68")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
