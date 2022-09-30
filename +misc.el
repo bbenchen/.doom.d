@@ -38,19 +38,8 @@
 
 ;; modeline
 (setq +modeline-height 24)
-(after! doom-modeline
-  (setq doom-modeline-major-mode-icon t
-        doom-modeline-persp-name t
-        doom-modeline-enable-word-count t
-        doom-modeline-indent-info t
-        doom-modeline-buffer-file-name-style 'auto
-        doom-modeline-gnus-idle 5
-        doom-modeline-support-imenu t)
-
-  (setq all-the-icons-scale-factor 1.1)
-
-  ;；set modeline time format
-  (setq display-time-format "%D %R"))
+;；set modeline time format
+(setq display-time-format "%D %R")
 
 ;; which-key-posframe
 (use-package! which-key-posframe
