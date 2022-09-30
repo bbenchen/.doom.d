@@ -49,13 +49,8 @@
 
   (setq all-the-icons-scale-factor 1.1)
 
-  (setq display-time-format "%D %R") ;；set modeline time format
-
-  (doom-modeline-def-modeline 'my-default-modeline
-    '(bar workspace-name window-number modals matches follow buffer-info remote-host buffer-position word-count parrot selection-info)
-    '(objed-state misc-info persp-name battery grip mu4e gnus debug repl lsp minor-modes input-method indent-info buffer-encoding major-mode process vcs checker time "    "))
-
-  (add-hook! 'doom-modeline-mode-hook (doom-modeline-set-modeline 'my-default-modeline 'default)))
+  ;；set modeline time format
+  (setq display-time-format "%D %R"))
 
 ;; which-key-posframe
 (use-package! which-key-posframe
