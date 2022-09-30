@@ -37,6 +37,7 @@
         `(vertico-posframe-border :background ,(doom-color 'modeline-bg)))))
 
 ;; modeline
+(setq +modeline-height 24)
 (after! doom-modeline
   (setq doom-modeline-major-mode-icon t
         doom-modeline-persp-name t
