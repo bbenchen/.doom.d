@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "0d23bc5f7cfac00277d83ae7ba52c48685bcbc68")
+(package! posframe :pin "0c5e57ac870735cb780936b1efc4bdd17fe87112")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
@@ -77,7 +77,7 @@
 (package! which-key-posframe :pin "90e85d74899fc23d95798048cc0bbdb4bab9c1b7")
 
 (if (modulep! :tools magit)
-    (package! blamer :pin "99b43779341af0d924bfe2a9103993a6b9e3d3b2"))
+    (package! blamer :pin "c4d5e3ad78f834bf04453756838028be9a932fc8"))
 
 (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
