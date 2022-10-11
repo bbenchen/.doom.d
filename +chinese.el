@@ -284,7 +284,7 @@ unwanted space when exporting org-mode to hugo markdown."
 
 ;; insert-translated-name
 (use-package! insert-translated-name
-  :defer t
+  :defer 2
   :init
   (map! :leader
         (:prefix-map ("y" . "translate")
