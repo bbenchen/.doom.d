@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "0c5e57ac870735cb780936b1efc4bdd17fe87112")
+(package! posframe :pin "3084cb6eb366d26b0f5a4aa9baffb297178be3b8")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
@@ -62,9 +62,13 @@
     :recipe (:host github :repo "cxb811201/company-english-helper")
     :pin "5c8ead05988ab6e6351825af83a93dbf1cff0392"))
 
+(package! websocket :pin "82b370602fa0158670b1c6c769f223159affce9b")
+(package! deno-bridge
+  :recipe (:host github :repo "manateelazycat/deno-bridge")
+  :pin "df28dddcf5fa0ce87e5c83b3aa685f6d1558a008")
 (package! insert-translated-name
-  :recipe (:host github :repo "manateelazycat/insert-translated-name")
-  :pin "ff2c2cfac801c155b72fafdb39414b9de30d1d41")
+  :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
+  :pin "8e176727d33a50aa81c28b9301176de0a4fce76c")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")

@@ -134,8 +134,8 @@ unwanted space when exporting org-mode to hugo markdown."
   :commands (google-translate-chinese-at-point++
              google-translate-chinese-at-point)
   :init
-  (setq google-translate-base-url "https://translate.google.cn/translate_a/single"
-        google-translate-listen-url "https://translate.google.cn/translate_tts"
+  (setq google-translate-base-url "https://translate.google.com/translate_a/single"
+        google-translate-listen-url "https://translate.google.com/translate_tts"
         ;; google-translate-backend-method 'curl
         google-translate-default-source-language "en"
         google-translate-default-target-language "zh-CN")
@@ -290,5 +290,4 @@ unwanted space when exporting org-mode to hugo markdown."
         (:prefix-map ("y" . "translate")
          :desc "Insert translated name" "i" #'insert-translated-name-insert))
   :config
-  (setq insert-translated-name-default-style 'origin
-        insert-translated-name-translate-engine "google"))
+  (setq insert-translated-name-default-style 'origin))
