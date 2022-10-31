@@ -65,7 +65,7 @@
 (package! websocket :pin "82b370602fa0158670b1c6c769f223159affce9b")
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
-  :pin "df28dddcf5fa0ce87e5c83b3aa685f6d1558a008")
+  :pin "14706162db9c5b772a56fd66cadce615f325fee6")
 (package! insert-translated-name
   :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
   :pin "8e176727d33a50aa81c28b9301176de0a4fce76c")
@@ -78,7 +78,7 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
-(package! which-key-posframe :pin "90e85d74899fc23d95798048cc0bbdb4bab9c1b7")
+(package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
     (package! blamer :pin "c4d5e3ad78f834bf04453756838028be9a932fc8"))
