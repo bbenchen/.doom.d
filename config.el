@@ -47,8 +47,12 @@
 
 ;; no broder
 (when (> emacs-major-version 28)
-  (set-frame-parameter nil 'undecorated t)
-  (add-to-list 'default-frame-alist '(undecorated . t)))
+  (cond (IS-MAC
+         (set-frame-parameter nil 'undecorated-round t)
+         (add-to-list 'default-frame-alist '(undecorated-round . t)))
+        (t
+         (set-frame-parameter nil 'undecorated t)
+         (add-to-list 'default-frame-alist '(undecorated . t)))))
 
 ;; transparency
 (set-frame-parameter nil 'alpha 85)
