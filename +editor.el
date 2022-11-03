@@ -27,7 +27,7 @@
   :commands (centered-cursor-mode
              global-centered-cursor-mode)
   :init
-  (add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook) #'centered-cursor-mode)
+  (add-hook! (prog-mode text-mode conf-mode) #'centered-cursor-mode)
   (map! :leader
         :desc "Centered point" "C--" #'centered-cursor-mode)
   :config
