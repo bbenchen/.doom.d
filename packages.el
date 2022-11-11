@@ -66,9 +66,13 @@
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
   :pin "14706162db9c5b772a56fd66cadce615f325fee6")
-(package! insert-translated-name
-  :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
-  :pin "8e176727d33a50aa81c28b9301176de0a4fce76c")
+(if IS-MAC
+    (package! insert-translated-name
+      :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
+      :pin "8e176727d33a50aa81c28b9301176de0a4fce76c")
+  (package! insert-translated-name
+    :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
+    :pin "73b8a08e54a44eda61d5974f96dd1e6a39a84f07"))
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
