@@ -84,6 +84,7 @@
   ;; xml
   (setq lsp-xml-jar-file (expand-file-name "org.eclipse.lemminx-0.22.0-uber.jar" lsp-server-install-dir))
 
+  ;; Disable `lsp-mode' in `git-timemachine-mode'
   (defadvice! lsp--init-if-visible-a (fn &rest args)
     :around #'lsp--init-if-visible
     (unless (bound-and-true-p git-timemachine-mode)
