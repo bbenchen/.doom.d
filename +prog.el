@@ -82,7 +82,7 @@
         lsp-kotlin-debug-adapter-path (concat lsp-server-install-dir "kotlin/adapter/bin/kotlin-debug-adapter"))
 
   ;; xml
-  (setq lsp-xml-jar-file (expand-file-name "org.eclipse.lemminx-0.20.0-uber.jar" lsp-server-install-dir))
+  (setq lsp-xml-jar-file (expand-file-name "org.eclipse.lemminx-0.22.0-uber.jar" lsp-server-install-dir))
 
   (defadvice! lsp--init-if-visible-a (fn &rest args)
     :around #'lsp--init-if-visible
