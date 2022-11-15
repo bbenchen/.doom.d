@@ -53,7 +53,7 @@
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
-(package! rime :pin "3eeef9c445fa056a4b32137f9ef72c27ced2d4ab")
+(package! rime :pin "74f3dff40e66c65388a9471eecbc1d9aca5612f7")
 
 (package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
 
@@ -65,14 +65,14 @@
 (package! websocket :pin "82b370602fa0158670b1c6c769f223159affce9b")
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
-  :pin "14706162db9c5b772a56fd66cadce615f325fee6")
+  :pin "5fd90536a22f5f251844146fab1a1ab466c856ea")
 (if IS-MAC
     (package! insert-translated-name
       :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
       :pin "8e176727d33a50aa81c28b9301176de0a4fce76c")
   (package! insert-translated-name
     :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
-    :pin "73b8a08e54a44eda61d5974f96dd1e6a39a84f07"))
+    :pin "79975d06a2fc620372706ab5aac711219b163f4c"))
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
