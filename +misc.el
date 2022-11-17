@@ -48,7 +48,8 @@
     `(which-key-posframe :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg))
     `(which-key-posframe-border :background ,(doom-color 'modeline-bg)))
 
-  (setq which-key-posframe-border-width 1
+  (setq which-key-frame-max-height 24
+        which-key-posframe-border-width 1
         which-key-posframe-poshandler 'posframe-poshandler-frame-center)
 
   (which-key-posframe-mode))
