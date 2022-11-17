@@ -117,12 +117,8 @@
 
 (when (modulep! :email mu4e +org)
   (after! org-msg
-    (setq org-msg-convert-citation t
-          org-msg-signature "
- Best Regards,
- #+begin_signature
- *陈显彬（Mike Chen）*
- #+end_signature"))
+    (setq org-msg-convert-citation nil
+          org-msg-greeting-fmt "\n\n#+begin_signature\n--\n*陈显彬（Mike Chen）*\n#+end_signature\n\n"))
 
   (when (modulep! :lang web +lsp)
     (remove-hook! 'web-mode-local-vars-hook #'lsp!)
