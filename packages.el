@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "3084cb6eb366d26b0f5a4aa9baffb297178be3b8")
+(package! posframe :pin "48b7130ca3b5c98bdb21bf99b64a3536acf2b0eb")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
