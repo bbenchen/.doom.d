@@ -33,6 +33,15 @@
   :config
   (setq ccm-recenter-at-end-of-file t))
 
+;; super-save
+(use-package! super-save
+  :config
+  (setq super-save-auto-save-when-idle t)
+  (add-to-list 'super-save-hook-triggers 'find-file-hook)
+  (setq super-save-remote-files nil)
+  (setq super-save-exclude '(".gpg"))
+  (super-save-mode +1))
+
 (map! "C-s" #'phi-search
       "s-F" #'phi-search
       "C-r" #'phi-search-backward
