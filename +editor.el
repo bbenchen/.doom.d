@@ -33,14 +33,20 @@
   :config
   (setq ccm-recenter-at-end-of-file t))
 
-;; super-save
-(use-package! super-save
+;; auto-save
+(use-package! auto-save
   :config
-  (setq super-save-auto-save-when-idle t)
-  (add-to-list 'super-save-hook-triggers 'find-file-hook)
-  (setq super-save-remote-files nil)
-  (setq super-save-exclude '(".gpg"))
-  (super-save-mode +1))
+  (setq auto-save-silent t)   ; quietly save
+
+  ;; custom predicates if you don't want auto save.
+  ;; disable auto save mode when current filetype is an gpg file.
+  (setq auto-save-disable-predicates
+        '((lambda ()
+            (or (string-suffix-p
+                 "gpg"
+                 (file-name-extension (buffer-name)) t)
+                (bound-and-true-p org-msg-mode)))))
+  (auto-save-enable))
 
 (map! "C-s" #'phi-search
       "s-F" #'phi-search
