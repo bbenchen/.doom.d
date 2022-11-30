@@ -187,72 +187,42 @@
 
   (defadvice! +lookup/definition-a (fn &rest args)
     :around #'+lookup/definition
-    (if-let ((langserver-info (cl-find-if
-                               (lambda (pair)
-                                 (let ((mode (car pair)))
-                                   (if (symbolp mode)
-                                       (eq major-mode mode)
-                                     (member major-mode mode))))
-                               lsp-bridge-single-lang-server-mode-list)))
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-find-def)
       (apply fn args)))
 
   (defadvice! +lookup/references-a (fn &rest args)
     :around #'+lookup/references
-    (if-let ((langserver-info (cl-find-if
-                               (lambda (pair)
-                                 (let ((mode (car pair)))
-                                   (if (symbolp mode)
-                                       (eq major-mode mode)
-                                     (member major-mode mode))))
-                               lsp-bridge-single-lang-server-mode-list)))
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-find-references)
       (apply fn args)))
 
   (defadvice! +lookup/implementations-a (fn &rest args)
     :around #'+lookup/implementations
-    (if-let ((langserver-info (cl-find-if
-                               (lambda (pair)
-                                 (let ((mode (car pair)))
-                                   (if (symbolp mode)
-                                       (eq major-mode mode)
-                                     (member major-mode mode))))
-                               lsp-bridge-single-lang-server-mode-list)))
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-find-impl)
       (apply fn args)))
 
   (defadvice! +lookup/documentation-a (fn &rest args)
     :around #'+lookup/documentation
-    (if-let ((langserver-info (cl-find-if
-                               (lambda (pair)
-                                 (let ((mode (car pair)))
-                                   (if (symbolp mode)
-                                       (eq major-mode mode)
-                                     (member major-mode mode))))
-                               lsp-bridge-single-lang-server-mode-list)))
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-popup-documentation)
       (apply fn args)))
 
   (defadvice! better-jumper-jump-backward-a (fn &rest args)
     :around #'better-jumper-jump-backward
-    (if-let ((langserver-info (cl-find-if
-                               (lambda (pair)
-                                 (let ((mode (car pair)))
-                                   (if (symbolp mode)
-                                       (eq major-mode mode)
-                                     (member major-mode mode))))
-                               lsp-bridge-single-lang-server-mode-list)))
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-find-def-return)
       (apply fn args)))
 
   (defadvice! +default/diagnostics-a (fn &rest args)
     :around #'+default/diagnostics
-    (if-let ((langserver-info (cl-find-if
-                               (lambda (pair)
-                                 (let ((mode (car pair)))
-                                   (if (symbolp mode)
-                                       (eq major-mode mode)
-                                     (member major-mode mode))))
-                               lsp-bridge-single-lang-server-mode-list)))
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-diagnostic-list)
-      (funcall fn args))))
+      (apply fn args))))
