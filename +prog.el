@@ -3,6 +3,10 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
+;; flycheck
+(after! flycheck
+  (setq flycheck-checker-error-threshold 2000))
+
 ;; xml
 (after! nxml-mode
   (setq nxml-auto-insert-xml-declaration-flag nil
