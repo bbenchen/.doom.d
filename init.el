@@ -21,14 +21,14 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       (company
-        +childframe)       ; the ultimate code completion backend
+       ;;(company
+       ;; +childframe)     ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ;;ivy               ; a search engine for love and life
        (vertico
         +icons
-        +childframe)       ; the search engine of the future
+        +childframe)     ; the search engine of the future
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -47,7 +47,7 @@
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        ;;tabs              ; a tab bar for Emacs
-       (treemacs +lsp)   ; a project drawer, like neotree but cooler
+       treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
        (vc-gutter
         +pretty
@@ -95,7 +95,7 @@
        :tools
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
-       (debugger +lsp)   ; FIXME stepping through code, to help you add bugs
+       debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
@@ -104,7 +104,7 @@
        ;;gist              ; interacting with github gists
        (lookup
         +dictionary)     ; navigate your code and its documentation
-       lsp               ; M-x vscode
+       ;; lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -145,7 +145,6 @@
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
        (go
-        +lsp
         +tree-sitter)    ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
        ;;(haskell +lsp)    ; a language that's lazier than I am
@@ -154,17 +153,16 @@
        (json
         +tree-sitter)    ; At least it ain't XML
        (java
-        +lsp
+        ;; +lsp
         +tree-sitter)    ; the poster child for carpal tunnel syndrome
        (javascript
-        +lsp
         +tree-sitter)    ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
        ;;latex             ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
-       lua               ; one-based indices? one-based indices
+       ;;lua               ; one-based indices? one-based indices
        (markdown +grip)  ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
@@ -186,7 +184,6 @@
        ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        (scala
-        +lsp
         +tree-sitter)    ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
        (sh

@@ -272,16 +272,6 @@ unwanted space when exporting org-mode to hugo markdown."
         (%google-translate-at-point override-p t)
       (%google-translate-at-point override-p nil))))
 
-;; company-english-helper
-(use-package! company-english-helper
-  :when (modulep! :completion company)
-  :defer t
-  :commands toggle-company-english-helper
-  :init
-  (map! :leader
-        (:prefix-map ("y" . "translate")
-         :desc "Toggle company english" "t" #'toggle-company-english-helper)))
-
 ;; insert-translated-name
 (use-package! insert-translated-name
   :defer 2

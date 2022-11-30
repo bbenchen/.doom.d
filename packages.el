@@ -57,11 +57,6 @@
 
 (package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
 
-(when (modulep! :completion company)
-  (package! company-english-helper
-    :recipe (:host github :repo "cxb811201/company-english-helper")
-    :pin "5c8ead05988ab6e6351825af83a93dbf1cff0392"))
-
 (package! websocket :pin "82b370602fa0158670b1c6c769f223159affce9b")
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
@@ -88,9 +83,16 @@
 (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
-    (package! blamer :pin "c4d5e3ad78f834bf04453756838028be9a932fc8"))
+    (package! blamer :pin "4e0eb1a835c92ee40edac0fdd4c39a53729004d9"))
 
-(package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
+(package! lsp-bridge
+  :recipe (:host github
+           :repo "manateelazycat/lsp-bridge"
+           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
+  :pin "43803fbb1e0d4757164ce39b70d162a896c59bf0")
+
+(when (modulep! :lang go)
+  (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321"))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
 (package! protobuf-mode
   :recipe (:host github :repo "emacsmirror/protobuf-mode" :files ("*.el"))
