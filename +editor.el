@@ -49,6 +49,9 @@
                 (bound-and-true-p org-msg-mode)))))
   (auto-save-enable))
 
+;; duplicate-line
+(use-package! duplicate-line)
+
 (map! "C-s" #'phi-search
       "s-F" #'phi-search
       "C-r" #'phi-search-backward
