@@ -89,7 +89,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "43803fbb1e0d4757164ce39b70d162a896c59bf0")
+  :pin "8c1fdca4396dd53eee6a2ced3149409a6e84d00b")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321"))
@@ -101,4 +101,4 @@
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "d6f451dc09fb1a6f38a8327cf46ef246431afbd9")
-(package! ob-sql-mode :pin "b31a016585324ad91f1742ff6205bcb76f3ece6e")
+(package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
