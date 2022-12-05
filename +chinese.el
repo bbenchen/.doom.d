@@ -281,3 +281,12 @@ unwanted space when exporting org-mode to hugo markdown."
          :desc "Insert translated name" "i" #'insert-translated-name-insert))
   :config
   (setq insert-translated-name-default-style 'origin))
+
+;; dictionary-overlay
+(use-package! dictionary-overlay
+  :defer 2
+  :init
+  (setq dictionary-overlay-translators '("local" "darwin" "sdcv" "web")
+        dictionary-overlay-user-data-directory (expand-file-name "dictionary-overlay-data" doom-cache-dir))
+  :config
+  (dictionary-overlay-start))

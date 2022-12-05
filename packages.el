@@ -68,6 +68,12 @@
   (package! insert-translated-name
     :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
     :pin "79975d06a2fc620372706ab5aac711219b163f4c"))
+(package! websocket-bridge
+  :recipe (:host github :repo "ginqi7/websocket-bridge")
+  :pin "1029d91b8096739557133690b92c05d4838aac07")
+(package! dictionary-overlay
+  :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
+  :pin "cd4fdf9727f18aee3e9152ec26c4b5908fe944b9")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
