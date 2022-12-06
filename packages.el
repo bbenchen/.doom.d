@@ -55,6 +55,8 @@
 
 (package! rime :pin "74f3dff40e66c65388a9471eecbc1d9aca5612f7")
 
+(package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
+
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
   :pin "a738c8d2d3130a66f158af02fc23c9ea6358e47d")
