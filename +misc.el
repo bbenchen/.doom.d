@@ -149,8 +149,10 @@
   (setq popweb-proxy-type "http"
         popweb-proxy-host "127.0.0.1"
         popweb-proxy-port "7890")
-  (add-to-list 'load-path (expand-file-name "extension/dict" (file-name-directory (locate-library "popweb"))) t)
-  (add-to-list 'load-path (expand-file-name "extension/url-preview" (file-name-directory (locate-library "popweb"))) t)
+
+  (let ((dir (file-name-directory (locate-library "popweb"))))
+    (dolist (sub-dir '("extension/dict" "extension/url-preview"))
+      (add-to-list 'load-path (expand-file-name sub-dir dir) t)))
 
   (require 'popweb-url)
 
