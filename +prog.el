@@ -151,8 +151,7 @@
 
   (setq lsp-bridge-lookup-doc-tooltip-border-width 2
         lsp-bridge-lookup-doc-tooltip-max-height 30
-        lsp-bridge-diagnostic-tooltip-border-width 2
-        acm-markdown-render-doc t)
+        lsp-bridge-diagnostic-tooltip-border-width 2)
 
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
