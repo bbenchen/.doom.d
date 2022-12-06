@@ -292,17 +292,10 @@ unwanted space when exporting org-mode to hugo markdown."
       (defalias 'string-split #'split-string))
   (dictionary-overlay-start))
 
-;; popweb
-(use-package! popweb
-  :defer 1
+;; popweb-dict
+(use-package! popweb-dict
+  :after popweb
   :config
-  (setq popweb-proxy-type "http"
-        popweb-proxy-host "127.0.0.1"
-        popweb-proxy-port "7890")
-
-  (add-to-list 'load-path (expand-file-name "extension/dict" (file-name-directory (locate-library "popweb"))) t)
-  (require 'popweb-dict)
-
   (map! :leader
         (:prefix-map ("y" . "translate")
          :desc "Bing translate"         "b" #'popweb-dict-bing-pointer

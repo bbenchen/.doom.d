@@ -142,6 +142,22 @@
   ;; (setq exec-path-from-shell-debug t)
   (exec-path-from-shell-initialize))
 
+;; popweb
+(use-package! popweb
+  :defer 1
+  :config
+  (setq popweb-proxy-type "http"
+        popweb-proxy-host "127.0.0.1"
+        popweb-proxy-port "7890")
+  (add-to-list 'load-path (expand-file-name "extension/dict" (file-name-directory (locate-library "popweb"))) t)
+  (add-to-list 'load-path (expand-file-name "extension/url-preview" (file-name-directory (locate-library "popweb"))) t)
+
+  (require 'popweb-url)
+
+  (setq popweb-url-web-window-size-use-absolute t
+        popweb-url-web-window-width-absolute 600
+        popweb-url-web-window-height-absolute 480))
+
 ;; command-log
 (use-package! command-log-mode
   :commands global-command-log-mode
