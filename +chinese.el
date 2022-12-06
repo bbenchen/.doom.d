@@ -142,8 +142,7 @@ unwanted space when exporting org-mode to hugo markdown."
 
   (map! :leader
         (:prefix-map ("y" . "translate")
-         "g" #'google-translate-chinese-at-point++
-         "G" #'google-translate-chinese-at-point))
+         :desc "Google translate" "g" #'google-translate-chinese-at-point++))
   :config
   (setq url-automatic-caching t
         google-translate-listen-program (executable-find "mpv"))
