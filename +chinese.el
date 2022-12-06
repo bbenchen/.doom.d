@@ -288,8 +288,6 @@ unwanted space when exporting org-mode to hugo markdown."
   (setq dictionary-overlay-translators '("local" "darwin" "sdcv" "web")
         dictionary-overlay-user-data-directory (expand-file-name "dictionary-overlay-data" doom-data-dir))
   :config
-  (if (<= emacs-major-version 28)
-      (defalias 'string-split #'split-string))
   (dictionary-overlay-start))
 
 ;; popweb-dict

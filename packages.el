@@ -77,7 +77,7 @@
   :pin "1029d91b8096739557133690b92c05d4838aac07")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "cd4fdf9727f18aee3e9152ec26c4b5908fe944b9")
+  :pin "6d089fee93c24f90278cbc80749ae9bc4399d685")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
