@@ -24,7 +24,9 @@
 
   (setq mu4e-headers-time-format "%T"
         mu4e-headers-date-format "%D"
-        mu4e-headers-long-date-format "%D %T")
+        mu4e-headers-long-date-format "%D %T"
+        ;; mu4e-search-full t
+        mu4e-search-results-limit 1000)
 
   (map! :map mu4e-headers-mode-map
         "l" #'+mu4e/capture-msg-to-agenda)
