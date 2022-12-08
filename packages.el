@@ -59,7 +59,7 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "8524a1f7ec6e28f951beefc99728ffae141e42aa")
+  :pin "659004ac937cd21343bc124b1b68f3947450e7c0")
 
 (package! websocket :pin "82b370602fa0158670b1c6c769f223159affce9b")
 (package! deno-bridge
@@ -77,7 +77,7 @@
   :pin "1029d91b8096739557133690b92c05d4838aac07")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "6d089fee93c24f90278cbc80749ae9bc4399d685")
+  :pin "9935fb9891d759a6af59c118c108b952807595be")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
@@ -103,7 +103,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "063abe56383c0e58c6ecf3ef660e55ccd69d3f44")
+  :pin "5ff4f33a6145a9c38fecd1269c7850e249931d99")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321"))
