@@ -50,7 +50,8 @@
   (auto-save-enable))
 
 ;; duplicate-line
-(use-package! duplicate-line)
+(use-package! duplicate-line
+  :when (<= emacs-major-version 28))
 
 (map! "C-s" #'phi-search
       "s-F" #'phi-search
