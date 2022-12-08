@@ -299,4 +299,5 @@ unwanted space when exporting org-mode to hugo markdown."
          :desc "Bing translate"         "b" #'popweb-dict-bing-pointer
          :desc "Bing translate input"   "B" #'popweb-dict-bing-input
          :desc "Youdao translate"       "y" #'popweb-dict-youdao-pointer
-         :desc "Youdao translate input" "Y" #'popweb-dict-youdao-input)))
+         :desc "Youdao translate input" "Y" #'popweb-dict-youdao-input
+         :desc "Play voice"             "p" #'popweb-dict-say-word)))
