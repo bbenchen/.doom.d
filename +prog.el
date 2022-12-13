@@ -60,12 +60,11 @@
                  "s" #'go-fill-struct)))
 
 ;; java
-(after! java-mode
-  (if (modulep! :editor format)
-      (progn
-        (set-formatter! 'google-java-format
-          '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
-          :modes 'java-mode)))
+(when (and (modulep! :lang java)
+           (modulep! :editor format))
+  (set-formatter! 'google-java-format
+    '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
+    :modes 'java-mode)
 
   (setq-hook! 'java-mode-hook
     tab-width 4
