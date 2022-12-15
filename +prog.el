@@ -181,6 +181,10 @@
                     (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
                       (cl-return "deno")))))))))
 
+  (map! :leader
+        (:prefix-map ("c" . "code")
+         :desc "LSP Code actions" "a" #'lsp-bridge-code-action))
+
   (defadvice! lsp-bridge-frame-background-color-a ()
     :override #'lsp-bridge-frame-background-color
     (doom-color 'modeline-bg))
