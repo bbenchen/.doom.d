@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "48b7130ca3b5c98bdb21bf99b64a3536acf2b0eb")
+(package! posframe :pin "0567d06aae1d8d324a679455edbe06afcc7e1088")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
@@ -74,10 +74,10 @@
     :pin "79975d06a2fc620372706ab5aac711219b163f4c"))
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
-  :pin "1029d91b8096739557133690b92c05d4838aac07")
+  :pin "beeb13581fcd9a132633d9b021b47409632ad003")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "b05ce3ea2a83870b4f69436f9e03225dfd38de1f")
+  :pin "09cd87d4ec57dabd60c58dc51adc16943cf68d7b")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
@@ -103,7 +103,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "22264d63cdedf53ae337ad2777f4f192d0fcf9e5")
+  :pin "3889c294a66d50904b3139a98c962675af287c98")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321"))
