@@ -183,7 +183,9 @@
 
   (map! :leader
         (:prefix-map ("c" . "code")
-         :desc "LSP Code actions" "a" #'lsp-bridge-code-action))
+         :desc "LSP Code actions"            "a"  #'lsp-bridge-code-action
+         :desc "Jump to symbol in workspace" "j"  #'lsp-bridge-workspace-list-symbols
+         :desc "LSP Rename"                  "r"  #'lsp-bridge-rename))
 
   (defadvice! lsp-bridge-frame-background-color-a ()
     :override #'lsp-bridge-frame-background-color
