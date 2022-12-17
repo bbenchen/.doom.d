@@ -77,7 +77,7 @@
   :pin "beeb13581fcd9a132633d9b021b47409632ad003")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "09cd87d4ec57dabd60c58dc51adc16943cf68d7b")
+  :pin "1aa5a5d4d2bf2ca6525b13fda708bfa6d027412b")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
@@ -104,7 +104,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "cac985d0b32f851ce281e47610f61b22facc3e28")
+  :pin "c3834f4fa0aa0bd15ecb14b19d7f4830914bd01c")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321"))
