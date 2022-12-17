@@ -39,6 +39,8 @@
 
   ;; (add-hook 'before-save-hook #'gofmt-before-save)
 
+  (remove-hook! 'go-mode-hook #'go-eldoc-setup)
+
   (if (modulep! :checkers syntax)
       (add-hook! 'go-mode-hook
         (setq-local flycheck-disabled-checkers '(go-gofmt

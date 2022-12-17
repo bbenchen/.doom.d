@@ -107,7 +107,8 @@
   :pin "c3834f4fa0aa0bd15ecb14b19d7f4830914bd01c")
 
 (when (modulep! :lang go)
-  (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321"))
+  (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
+  (disable-packages! go-eldoc))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
 (package! protobuf-mode
   :recipe (:host github :repo "emacsmirror/protobuf-mode" :files ("*.el"))
