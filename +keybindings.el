@@ -5,6 +5,8 @@
       "C-x C-z" nil
 
       (:when IS-MAC
+        (:when (modulep! :completion vertico)
+          "s-F" #'consult-line-multi)
         "s-x" #'kill-region
         "s-+" #'text-scale-increase
         "s-=" #'text-scale-increase
