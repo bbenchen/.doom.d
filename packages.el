@@ -104,7 +104,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "7dfeeb640d14697755e2ac7997af0ec6c413197f")
+  :pin "81cc2fcce76c6bec705281d476bc19a186efbe31")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
