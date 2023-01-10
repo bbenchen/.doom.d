@@ -77,7 +77,7 @@
   :pin "beeb13581fcd9a132633d9b021b47409632ad003")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "93a998097b2b5e6c6a30f0d17e1e8183deb26240")
+  :pin "5a1181e4ae87dabb09e6b611196b3ded2ef37ad5")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
@@ -95,7 +95,7 @@
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 
-(package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
+;; (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
     (package! blamer :pin "4e0eb1a835c92ee40edac0fdd4c39a53729004d9"))
