@@ -95,7 +95,7 @@
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 
-;; (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
+(package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
     (package! blamer :pin "4e0eb1a835c92ee40edac0fdd4c39a53729004d9"))
