@@ -89,7 +89,7 @@
     (package! duplicate-line
       :recipe (:host github :repo "manateelazycat/duplicate-line")
       :pin "03b8aa8c4ab094b59881421d34a2028c6b5ce2b1"))
-(package! goto-line-preview :pin "9091885111e96590e9c9f4d311706497da6b8f84")
+(package! goto-line-preview :pin "c6db484cf401351f7f2f57496b0466b774435947")
 
 (if IS-MAC
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
