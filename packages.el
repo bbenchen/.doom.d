@@ -53,13 +53,13 @@
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
-(package! rime :pin "74f3dff40e66c65388a9471eecbc1d9aca5612f7")
+(package! rime :pin "0a50c918d2de56aa401a68ba37394446c6fc9ed6")
 
 (package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "bd7818e7dbe42dbe185cd55633a840ce446ad277")
+  :pin "bd968b1c39627c951f68530013e09f37974546b6")
 
 (package! websocket :pin "8604982b1207fafdef7ecdc4ba54541c1ea87212")
 (package! deno-bridge
@@ -74,17 +74,17 @@
     :pin "79975d06a2fc620372706ab5aac711219b163f4c"))
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
-  :pin "beeb13581fcd9a132633d9b021b47409632ad003")
+  :pin "063eb742d931a32c719a3032402e02efa23ce126")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "5a1181e4ae87dabb09e6b611196b3ded2ef37ad5")
+  :pin "49246ff8ac4b452abc3e2fda147ca37cc72d2c0b")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
-  :pin "5cd9455fd838ec6f4c483d31cb42d84f30266663")
+  :pin "512fd791902a96aa60bc432c347f850cde2fc1ac")
 (if (<= emacs-major-version 28)
     (package! duplicate-line
       :recipe (:host github :repo "manateelazycat/duplicate-line")
@@ -98,13 +98,13 @@
 (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
-    (package! blamer :pin "4e0eb1a835c92ee40edac0fdd4c39a53729004d9"))
+    (package! blamer :pin "d1d5f2dc4d9cd5a47c47b55abb1f3b38911cc2d0"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "ee33fc9c75c0595b9082ae0f16869aa9d8cb22a3")
+  :pin "8b2bc85e93421e5ef0ace7a07944866b64ad64dc")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
