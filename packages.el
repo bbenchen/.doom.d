@@ -59,7 +59,7 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "bd968b1c39627c951f68530013e09f37974546b6")
+  :pin "f023f4550f0d199959544e6074331a1ef57a9656")
 
 (package! websocket :pin "2c576b6cb8e7b868e09e09c8e9cb6cf66f427bad")
 (package! deno-bridge
@@ -104,7 +104,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "f0e9965fa0f7d91d130d49714b987e2001d260fa")
+  :pin "b74620039d5d5c3731196254ce909fc8b1672b04")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
