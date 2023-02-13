@@ -49,17 +49,17 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "aa88860a16e28a311f81e18f1d9ed2e7d9e33991")
+(package! posframe :pin "06b939cfb06168782fc378043ff35bd7fec203b8")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
-(package! rime :pin "0a50c918d2de56aa401a68ba37394446c6fc9ed6")
+(package! rime :pin "6438abacace7d94f05fabc45b82d619677fc5fca")
 
 (package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "cf83f90ee44b95b29aff8a84a3d7a2009d7336d0")
+  :pin "e830b3c5f54227ae57117c7262b5d0c9fcc73334")
 
 (package! websocket :pin "2c576b6cb8e7b868e09e09c8e9cb6cf66f427bad")
 (package! deno-bridge
@@ -104,7 +104,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "2259ba55a2c1fca63a62e24c8fd0aa23c1cdb73e")
+  :pin "c3894431d8c878ef90f4e98537d9ffebac274a1f")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
