@@ -62,19 +62,20 @@
   :pin "e830b3c5f54227ae57117c7262b5d0c9fcc73334")
 
 (package! websocket :pin "2c923eba75f77af5a20154776053beaf4b8ad56c")
-(package! deno-bridge
-  :recipe (:host github :repo "manateelazycat/deno-bridge")
-  :pin "5fd90536a22f5f251844146fab1a1ab466c856ea")
-(if IS-MAC
-    (package! insert-translated-name
-      :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
-      :pin "8e176727d33a50aa81c28b9301176de0a4fce76c")
-  (package! insert-translated-name
-    :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
-    :pin "79975d06a2fc620372706ab5aac711219b163f4c"))
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
   :pin "99c1dab933d8394ecbab1a0e07a1b940b8441ecc")
+(if IS-MAC
+    (package! insert-translated-name
+      :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
+      :pin "c478cf264a363aa8ed9d40b755ec9f25577abaff")
+  (progn
+    (package! deno-bridge
+      :recipe (:host github :repo "manateelazycat/deno-bridge")
+      :pin "5fd90536a22f5f251844146fab1a1ab466c856ea")
+    (package! insert-translated-name
+      :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
+      :pin "79975d06a2fc620372706ab5aac711219b163f4c")))
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
   :pin "c171d3f4624486981df17dd7abe5e5d1cf19be42")
