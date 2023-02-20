@@ -120,7 +120,9 @@
 (when (modulep! :email mu4e +org)
   (after! org-msg
     (setq org-msg-convert-citation nil
-          org-msg-greeting-fmt "\n\n#+begin_signature\n--\n陈显彬（Mike Chen）\n#+end_signature\n"))
+          org-msg-greeting-fmt "\n\n#+begin_signature\n--\n陈显彬（Mike Chen）\n#+end_signature\n")
+    (add-hook! 'org-msg-edit-mode-local-vars-hook (when (bound-and-true-p lsp-bridge-mode)
+                                                    (lsp-bridge-mode -1))))
 
   (when (modulep! :lang web +lsp)
     (remove-hook! 'web-mode-local-vars-hook #'lsp!)
