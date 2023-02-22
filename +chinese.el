@@ -271,9 +271,12 @@ unwanted space when exporting org-mode to hugo markdown."
         (%google-translate-at-point override-p t)
       (%google-translate-at-point override-p nil))))
 
+(use-package! websocket-bridge)
+
 ;; insert-translated-name
 (use-package! insert-translated-name
   :defer 2
+  :after websocket-bridge
   :init
   (map! :leader
         (:prefix-map ("y" . "translate")
@@ -284,6 +287,7 @@ unwanted space when exporting org-mode to hugo markdown."
 ;; dictionary-overlay
 (use-package! dictionary-overlay
   :defer 2
+  :after websocket-bridge
   :init
   (setq dictionary-overlay-translators '("local" "darwin" "sdcv" "web")
         dictionary-overlay-user-data-directory (expand-file-name "dictionary-overlay-data" doom-data-dir))
