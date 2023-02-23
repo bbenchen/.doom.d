@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "06b939cfb06168782fc378043ff35bd7fec203b8")
+(package! posframe :pin "dace2dcf105e9685b4085836645b3392dc7e2211")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
@@ -68,7 +68,7 @@
 (if IS-MAC
     (package! insert-translated-name
       :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
-      :pin "c478cf264a363aa8ed9d40b755ec9f25577abaff")
+      :pin "f067c888e6280a96e435c840ebe4d0760b8d9df9")
   (progn
     (package! deno-bridge
       :recipe (:host github :repo "manateelazycat/deno-bridge")
@@ -105,7 +105,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "56710901aae91d4ec357ef9b21e9fb516f64bdb5")
+  :pin "439fd7cc7b2a77bf7e8abe5056188ccb42c4f48d")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
