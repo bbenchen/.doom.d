@@ -72,7 +72,7 @@
   (progn
     (package! deno-bridge
       :recipe (:host github :repo "manateelazycat/deno-bridge")
-      :pin "5fd90536a22f5f251844146fab1a1ab466c856ea")
+      :pin "facbe2b7e517d32a6df0645e6da14f23a51636e8")
     (package! insert-translated-name
       :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
       :pin "79975d06a2fc620372706ab5aac711219b163f4c")))
@@ -105,7 +105,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "57e7eca2bf64fa022b5f138a9d339da931df7eb7")
+  :pin "e2d9ffe50e30f588f2b2519e012f03c86000e67e")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
