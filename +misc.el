@@ -78,10 +78,9 @@
       (setq dired-kill-when-opening-new-dired-buffer t)))
 
 ;; spell
+(setq ispell-dictionary "en_US"
+      ispell-alternate-dictionary (expand-file-name "english-words" doom-user-dir))
 (after! ispell
-  (setq ispell-dictionary "en_US")
-  (setq ispell-alternate-dictionary (expand-file-name "english-words" doom-user-dir))
-
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
 
 ;; magit
