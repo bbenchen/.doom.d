@@ -137,7 +137,8 @@
                                          "GOBIN"
                                          "GO111MODULE"
                                          "GOPROXY"
-                                         "LSP_USE_PLISTS"))
+                                         "LSP_USE_PLISTS"
+                                         "OPENAI_API_KEY"))
   ;; (setq exec-path-from-shell-debug t)
   (exec-path-from-shell-initialize))
 
