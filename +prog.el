@@ -170,6 +170,7 @@
                                           "-XX:AdaptiveSizePolicyWeight=90"
                                           "-Dsun.zip.disableMemoryMapping=true"
                                           (concat "-javaagent:" lombok-jar-path))))
+  (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge-config/jdtls.json" doom-user-dir))
 
   (setq lsp-bridge-get-single-lang-server-by-project
         (lambda (_project-path filepath)
