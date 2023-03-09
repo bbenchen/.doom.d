@@ -59,9 +59,9 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "e830b3c5f54227ae57117c7262b5d0c9fcc73334")
+  :pin "751e66eed0b863f86b9f9641ffd7d354aef6590a")
 
-(package! websocket :pin "2c923eba75f77af5a20154776053beaf4b8ad56c")
+(package! websocket :pin "1a08093b122d8cf20366a1cba5faddf7a53d08ed")
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
   :pin "99c1dab933d8394ecbab1a0e07a1b940b8441ecc")
@@ -72,13 +72,13 @@
   (progn
     (package! deno-bridge
       :recipe (:host github :repo "manateelazycat/deno-bridge")
-      :pin "facbe2b7e517d32a6df0645e6da14f23a51636e8")
+      :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
     (package! insert-translated-name
       :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
       :pin "79975d06a2fc620372706ab5aac711219b163f4c")))
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "faba18b289b10a26190379085ea09b6d2ae28559")
+  :pin "a4290811b2b89203760cb1943a470d877f946263")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
@@ -99,16 +99,16 @@
 (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
-    (package! blamer :pin "d1d5f2dc4d9cd5a47c47b55abb1f3b38911cc2d0"))
+    (package! blamer :pin "50cd50d4541be22091b11d3f6dcf4e9f1b9521af"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "699ebc9567eb63b22cac4b5049000fa6289cc31d")
+  :pin "59fe5cf379fe278c3470530edb1ffce547332935")
 
 (when (modulep! :lang go)
-  (package! go-fill-struct :pin "a613d0b378473eef39e8fd5724abe790aea84321")
+  (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
 (package! protobuf-mode
