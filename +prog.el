@@ -146,7 +146,8 @@
 (use-package! lsp-bridge
   :init
   (setq lsp-bridge-enable-mode-line nil
-        lsp-bridge-enable-log nil)
+        lsp-bridge-enable-log nil
+        lsp-bridge-enable-org-babe t)
   :config
   (global-lsp-bridge-mode)
 
