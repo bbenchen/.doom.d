@@ -12,8 +12,8 @@
  * `(format-time-string "%Y-%m-%d")`       ********            `(user-full-name)`          create file
  * </pre>
  *
- * @author: `(user-full-name)`
- * @date: `(format-time-string "%Y-%m-%d %H:%M:%S")`
+ * @author `(user-full-name)`
+ * @date `(format-time-string "%Y-%m-%d %H:%M:%S")`
  * @since ${0:1.0.0}
- * @copyright: 2018, FA Software (Shanghai) Co., Ltd. All Rights Reserved.
+ * @copyright 2018, FA Software (Shanghai) Co., Ltd. All Rights Reserved.
  */
