@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "dace2dcf105e9685b4085836645b3392dc7e2211")
+(package! posframe :pin "b00f1386ca4e251a5c3d8985d313217e56e42a7e")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
@@ -105,7 +105,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "59fe5cf379fe278c3470530edb1ffce547332935")
+  :pin "067345011b83ccff12a449d382e7d114bdfbe34f")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
