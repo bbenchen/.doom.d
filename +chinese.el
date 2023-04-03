@@ -69,6 +69,9 @@
                                   rime-predicate-prog-in-code-p
                                   rime-predicate-ace-window-p
                                   rime-predicate-hydra-p))
+  (if (and IS-MAC
+           (string-prefix-p "aarch64" system-configuration))
+      (setq rime-emacs-module-header-root (concat "/opt/homebrew/opt/emacs-plus@" (number-to-string emacs-major-version) "/include")))
   :config
   (custom-set-faces!
     `(rime-default-face :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg)))
