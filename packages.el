@@ -78,14 +78,14 @@
       :pin "79975d06a2fc620372706ab5aac711219b163f4c")))
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "a4290811b2b89203760cb1943a470d877f946263")
+  :pin "a1146e47da22ed43d439bb820527ebf59c1bee4c")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
-  :pin "512fd791902a96aa60bc432c347f850cde2fc1ac")
+  :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
 (if (<= emacs-major-version 28)
     (package! duplicate-line
       :recipe (:host github :repo "manateelazycat/duplicate-line")
@@ -105,7 +105,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "a615666044428cf33aa4bde0b3c213b0ce21c8bd")
+  :pin "074602c7e26731aead18704ec704c849871fc575")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
