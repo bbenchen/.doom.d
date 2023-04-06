@@ -147,7 +147,7 @@
   :init
   (setq lsp-bridge-enable-mode-line nil
         lsp-bridge-enable-log nil
-        lsp-bridge-enable-org-babe t)
+        lsp-bridge-enable-org-babel t)
   :config
   (global-lsp-bridge-mode)
 
@@ -200,6 +200,13 @@
     (if (and lsp-bridge-mode
              (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-find-def)
+      (apply fn args)))
+
+  (defadvice! +lookup/type-definition-a (fn &rest args)
+    :around #'+lookup/type-definition
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
+        (lsp-bridge-find-type-def)
       (apply fn args)))
 
   (defadvice! +lookup/references-a (fn &rest args)
