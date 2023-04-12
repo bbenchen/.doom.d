@@ -63,7 +63,7 @@
           "launchMode": "Hybrid"
         },
         "format": {
-          "enabled": false
+          "enabled": true
         },
         "contentProvider": {
           "preferred": "fernflower"
