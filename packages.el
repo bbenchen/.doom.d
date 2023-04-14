@@ -64,7 +64,7 @@
 (package! websocket :pin "1a08093b122d8cf20366a1cba5faddf7a53d08ed")
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
-  :pin "99c1dab933d8394ecbab1a0e07a1b940b8441ecc")
+  :pin "40676478e3b2dd5af068b1f7f7024776e7557446")
 (if IS-MAC
     (package! insert-translated-name
       :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
