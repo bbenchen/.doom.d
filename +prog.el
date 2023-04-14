@@ -195,6 +195,13 @@
     :override #'lsp-bridge-frame-background-color
     (doom-color 'modeline-bg))
 
+  (defadvice! +format/region-or-buffer-a (fn &rest args)
+    :around #'+format/region-or-buffer
+    (if (and lsp-bridge-mode
+             (lsp-bridge-has-lsp-server-p))
+        (lsp-bridge-code-format)
+      (apply fn args)))
+
   (defadvice! +lookup/definition-a (fn &rest args)
     :around #'+lookup/definition
     (if (and lsp-bridge-mode
