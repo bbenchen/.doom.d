@@ -284,6 +284,7 @@ unwanted space when exporting org-mode to hugo markdown."
   (map! :leader
         (:prefix-map ("y" . "translate")
          :desc "Insert translated name" "i" #'insert-translated-name-insert))
+  (setq insert-translated-name-puppeteer-proxy-server "http://127.0.0.1:7890")
   :config
   (setq insert-translated-name-default-style 'origin))
 
