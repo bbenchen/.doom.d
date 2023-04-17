@@ -68,7 +68,7 @@
 (if IS-MAC
     (package! insert-translated-name
       :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
-      :pin "f067c888e6280a96e435c840ebe4d0760b8d9df9")
+      :pin "a736ca1ac391f43f65d14f64c2f4388da013858a")
   (progn
     (package! deno-bridge
       :recipe (:host github :repo "manateelazycat/deno-bridge")
@@ -105,7 +105,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "03fa63d614e4355461fd24b34fa8c24080f57c9f")
+  :pin "d986c013c8a32b9e218887c88fa57c5b374f0c51")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
