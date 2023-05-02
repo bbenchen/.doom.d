@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "b00f1386ca4e251a5c3d8985d313217e56e42a7e")
+(package! posframe :pin "3b97dc180b03498103cfcc7f44e64150df440bf0")
 
 (package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
 
@@ -99,13 +99,13 @@
 (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
-    (package! blamer :pin "50cd50d4541be22091b11d3f6dcf4e9f1b9521af"))
+    (package! blamer :pin "3d9d12f5a7f31018efdb17a77da8277a3f5da0a6"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "6282b88ab9720e89225278a147e47b1a31d6aa6d")
+  :pin "cd90441f1ab8fa6e9c124ee9b20ba5cbed407b0b")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
