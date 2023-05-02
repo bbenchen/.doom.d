@@ -72,6 +72,9 @@
           "guessMethodArguments": true,
           "overwrite": true,
           "enabled": true,
+          "lazyResolveTextEdit": {
+            "enabled": true
+          },
           "favoriteStaticMembers": [
             "org.junit.Assert.*",
             "org.junit.Assume.*",
