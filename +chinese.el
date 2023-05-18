@@ -9,7 +9,7 @@
   (setq calendar-latitude 30.67)
   (setq calendar-longitude 104.06)
   ;; Holidays
-  (setq calendar-mark-holidays-flag nil)
+  (setq calendar-mark-holidays-flag t)
   (setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
   (setq cal-china-x-general-holidays
         '((holiday-lunar 1 15 "元宵节")

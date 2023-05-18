@@ -51,7 +51,9 @@
 
 (package! posframe :pin "3b97dc180b03498103cfcc7f44e64150df440bf0")
 
-(package! cal-china-x :pin "94005e678a1d2522b7a00299779f40c5c77286b8")
+(package! cal-china-x
+  :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
+  :pin "fa50ae0c5cf992e95288a3da9c02948a9b42c009")
 
 (package! rime :pin "6438abacace7d94f05fabc45b82d619677fc5fca")
 
