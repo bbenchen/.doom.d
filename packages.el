@@ -101,13 +101,13 @@
 (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
-    (package! blamer :pin "24e03cb34c6f335c57c1e37c075335e86388576b"))
+    (package! blamer :pin "ab00e6a3ea482c342d918add9c20bfd3fa740aaa"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "d82f78c60ea7b0c7b03d57e15c1905b8d651783e")
+  :pin "ce463c9fc4137364ff85f89ae44d6762c425f69d")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
