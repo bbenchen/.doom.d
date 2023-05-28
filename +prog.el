@@ -147,7 +147,9 @@
   :init
   (setq lsp-bridge-enable-mode-line nil
         lsp-bridge-enable-log nil
-        lsp-bridge-enable-org-babel t)
+        lsp-bridge-enable-org-babel t
+        acm-enable-tabnine nil
+        acm-enable-preview t)
   :config
   (global-lsp-bridge-mode)
 
@@ -173,7 +175,7 @@
                                           (concat "-javaagent:" lombok-jar-path))))
   (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge-config/jdtls.json" doom-user-dir))
 
-  (setq lsp-bridge-get-single-lang-server-by-project
+  (setq lsp-bridge-get-multi-lang-server-by-project
         (lambda (_project-path filepath)
           ;; If typescript file include deno.land url, then use Deno LSP server.
           (save-excursion
