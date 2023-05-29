@@ -145,7 +145,9 @@
 ;; lsp-bridge
 (use-package! lsp-bridge
   :init
-  (setq lsp-bridge-enable-mode-line nil
+  (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
+        lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
+        lsp-bridge-enable-mode-line nil
         lsp-bridge-enable-log nil
         lsp-bridge-enable-org-babel t
         acm-enable-tabnine nil
@@ -173,7 +175,7 @@
                                           "-XX:AdaptiveSizePolicyWeight=90"
                                           "-Dsun.zip.disableMemoryMapping=true"
                                           (concat "-javaagent:" lombok-jar-path))))
-  (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge-config/jdtls.json" doom-user-dir))
+  (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
   (setq lsp-bridge-get-multi-lang-server-by-project
         (lambda (_project-path filepath)
