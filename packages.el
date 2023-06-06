@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! posframe :pin "3b97dc180b03498103cfcc7f44e64150df440bf0")
+(package! posframe :pin "59911917d57f77577e1aa6df7584fa00636de84a")
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
@@ -98,7 +98,7 @@
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 
-(package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
+;; (package! which-key-posframe :pin "421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6")
 
 (if (modulep! :tools magit)
     (package! blamer :pin "ab00e6a3ea482c342d918add9c20bfd3fa740aaa"))
@@ -107,7 +107,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "a1ad7768e2cdd0c78cb377adbd8096b7f4d2e00d")
+  :pin "4c77bfa7a4573db8eb677528979dfb8d6717bc75")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
