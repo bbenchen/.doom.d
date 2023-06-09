@@ -85,6 +85,7 @@
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
+(package! goto-line-preview :pin "2b93fa4a75e3d696b308309ab4e898dc5bb92865")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
@@ -92,7 +93,6 @@
     (package! duplicate-line
       :recipe (:host github :repo "manateelazycat/duplicate-line")
       :pin "03b8aa8c4ab094b59881421d34a2028c6b5ce2b1"))
-(package! goto-line-preview :pin "c6db484cf401351f7f2f57496b0466b774435947")
 
 (if IS-MAC
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
@@ -107,7 +107,7 @@
   :recipe (:host github
            :repo "manateelazycat/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "6f93deb32ebb3799dfedd896a17a0428a9b461bb")
+  :pin "36cb36e03ec725d3c15c44637e6707b9e79b728d")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
