@@ -192,6 +192,10 @@
       (lambda (parent)
         (member (treesit-node-type parent) '("method_declaration")))))))
 
+;; dockerfile
+(after! dockerfile-ts-mode
+  (set-docsets! 'dockerfile-ts-mode "Docker"))
+
 ;; pkgbuild-mode
 (use-package! pkgbuild-mode
   :defer t

@@ -97,8 +97,10 @@
           (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))
           (toml . ("https://github.com/tree-sitter/tree-sitter-toml"))))
 
-  ;; (setq major-mode-remap-alist
-  ;;       '((java-mode . java-ts-mode)))
+  (setq major-mode-remap-alist
+        '((dockerfile-mode . dockerfile-ts-mode)
+          (json-mode . json-ts-mode)
+          (yaml-mode . yaml-ts-mode)))
 
   (add-hook! (emacs-lisp-mode ielm-mode)
     (treesit-parser-create 'elisp))
