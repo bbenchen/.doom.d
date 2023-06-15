@@ -91,7 +91,7 @@
                      (format " -m '%s.%s#%s'" pkg class method)
                    (format " -c '%s.%s'" pkg class)))
          t)
-      (message "Can not found package/class/classpath"))))
+      (user-error "Can not found package/class/classpath"))))
 
 (defun +java/maven-get-project-classpath ()
   (when-let* ((project-dir (doom-project-root))
