@@ -24,8 +24,8 @@
   (when (executable-find "gopkgs")
     (defun go-packages-gopkgs ()
       "Return a list of all Go packages, using `gopkgs'."
-      (if-let (project-root (doom-project-root))
-          (sort (process-lines "gopkgs" "-workDir" project-root) #'string<)
+      (if-let (project-dir (doom-project-root))
+          (sort (process-lines "gopkgs" "-workDir" project-dir) #'string<)
         (sort (process-lines "gopkgs") #'string<)))
     (setq go-packages-function 'go-packages-gopkgs))
 
@@ -62,15 +62,135 @@
                  "s" #'go-fill-struct)))
 
 ;; java
-(when (and (modulep! :lang java)
-           (modulep! :editor format))
-  (set-formatter! 'google-java-format
-    '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
-    :modes 'java-mode)
+;; (when (and (modulep! :lang java)
+;;            (modulep! :editor format))
+;;   (set-formatter! 'google-java-format
+;;     '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
+;;     :modes 'java-mode))
 
-  (setq-hook! 'java-mode-hook
-    tab-width 4
-    fill-column 120))
+(add-hook! '(java-mode-hook java-ts-mode-hook)
+  (setq tab-width 4
+        fill-column 120))
+
+(defvar +java/junit-platform-console-standalone-jar
+  (expand-file-name "~/.local/jdtls/test-runner/junit-platform-console-standalone.jar"))
+
+;; check junit console launcher options for details
+(defun +java/run-junit-test ()
+  "Java run main/test at point."
+  (interactive)
+  (let* ((pkg (+java/current-package))
+         (class (+java/current-class))
+         (method (+java/current-method))
+         (classpath (+java/maven-get-project-classpath)))
+    (if (and pkg class classpath)
+        (compile
+         (concat "java -jar " +java/junit-platform-console-standalone-jar
+                 " -cp " classpath
+                 (if method
+                     (format " -m '%s.%s#%s'" pkg class method)
+                   (format " -c '%s.%s'" pkg class)))
+         t)
+      (message "Can not found package/class/classpath"))))
+
+(defun +java/maven-get-project-classpath ()
+  (when-let* ((project-dir (doom-project-root))
+              (target-path (expand-file-name "target" project-dir))
+              (deps-cp (+java/maven-get-deps-classpath target-path)))
+    (format "%s/classes:%s/test-classes:%s" target-path target-path deps-cp)))
+
+(defun +java/maven-get-deps-classpath (target-location)
+  "Get dependencies classpath."
+  (let ((deps-cp-file (format "%s/deps-cp" target-location)))
+    (unless (file-exists-p deps-cp-file)
+      ;; NOTE: Cache deps classpath to speed up shell command, regenerate it once you modify project dependencies.
+      (let* ((project-dir (doom-project-root))
+             (mvnw-file (expand-file-name "mvnw" project-dir))
+             (maven (if (and (file-exists-p! mvnw-file)
+                             (file-executable-p mvnw-file))
+                        "./mvnw"
+                      "mvn"))
+             (command (concat "cd " project-dir " && "
+                              maven " dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=" deps-cp-file)))
+        (call-process-shell-command command)))
+    (with-temp-buffer
+      (insert-file-contents deps-cp-file)
+      (buffer-string))))
+
+(defun +java/current-package ()
+  (if (eq major-mode 'java-mode)
+      (+java-current-package)
+    (+java/treesit-get-package)))
+
+(defun +java/current-class ()
+  (if (eq major-mode 'java-mode)
+      (+java-current-class)
+    (+java/treesit-get-class)))
+
+(defun +java/current-method ()
+  (if (eq major-mode 'java-mode)
+      (if (and (modulep! :tools tree-sitter)
+               (modulep! :lang java +tree-sitter))
+          (+java/tree-sitter-get-method))
+    (+java/treesit-get-method)))
+
+(when (and (modulep! :tools tree-sitter)
+           (modulep! :lang java +tree-sitter))
+  (defun +java/tree-sitter-get-method ()
+    (let* ((query (tsc-make-query (tree-sitter-require 'java) [(method_declaration name: (identifier) @function.method)]))
+           (root-node (tsc-root-node tree-sitter-tree))
+           (captures (tsc--without-restriction
+                       (tsc-query-captures query root-node #'tsc--buffer-substring-no-properties)))
+           (nodes (mapcar (lambda (capture)
+                            (pcase-let ((`(_ . ,node) capture))
+                              node))
+                          captures)))
+
+      (when (length> nodes 0)
+        (let* ((cur-node (tree-sitter-node-at-pos :named))
+               (found-node (cl-find-if (lambda (node) (tsc-node-eq node cur-node)) nodes)))
+          (unless found-node
+            (let ((parent (tsc-get-parent cur-node))
+                  (break))
+              (while (and parent (not break))
+                (setq break (string= (tsc-node-type parent) "method_declaration"))
+                (unless break
+                  (setq parent (tsc-get-parent parent))))
+              (if parent
+                  (setq found-node (tsc-get-child-by-field parent :name)))
+              ))
+          (if found-node
+              (tsc-node-text found-node))
+          )))))
+
+(after! java-ts-mode
+  (defun +java/treesit-get-package-node ()
+    (treesit-node-text
+     (car (treesit-filter-child
+           (treesit-buffer-root-node)
+           (lambda (child)
+             (member (treesit-node-type child) '("package_declaration")))))
+     t))
+
+  (defun +java/treesit-get-package ()
+    (let ((p (+java/treesit-get-package-node)))
+      (when (string-match "package \\(.+\\);" p)
+        (match-string 1 p))))
+
+  (defun +java/treesit-get-class ()
+    (treesit-defun-name
+     (car
+      (treesit-filter-child
+       (treesit-buffer-root-node)
+       (lambda (child)
+         (member (treesit-node-type child) '("class_declaration")))))))
+
+  (defun +java/treesit-get-method ()
+    (treesit-defun-name
+     (treesit-parent-until
+      (treesit-node-at (point))
+      (lambda (parent)
+        (member (treesit-node-type parent) '("method_declaration")))))))
 
 ;; pkgbuild-mode
 (use-package! pkgbuild-mode

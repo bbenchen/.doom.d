@@ -64,3 +64,56 @@
       "C-r" #'phi-search-backward
       "s-d" #'phi-search-backward
       "M-%" #'phi-replace)
+
+;; treesit
+(use-package! treesit
+  :when (treesit-available-p)
+  :config
+  (setq treesit-extra-load-path (list (expand-file-name "tree-sitter" doom-cache-dir)))
+
+  (setq treesit-language-source-alist
+        '((bash . ("https://github.com/tree-sitter/tree-sitter-bash"))
+          (css . ("https://github.com/tree-sitter/tree-sitter-css"))
+          (cmake . ("https://github.com/uyha/tree-sitter-cmake"))
+          (dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile"))
+          (elisp . ("https://github.com/Wilfred/tree-sitter-elisp"))
+          (go . ("https://github.com/tree-sitter/tree-sitter-go"))
+          (gomod . ("https://github.com/camdencheek/tree-sitter-go-mod"))
+          (html . ("https://github.com/tree-sitter/tree-sitter-html"))
+          (java . ("https://github.com/tree-sitter/tree-sitter-java"))
+          (javascript . ("https://github.com/tree-sitter/tree-sitter-javascript"))
+          (json . ("https://github.com/tree-sitter/tree-sitter-json"))
+          (lua . ("https://github.com/Azganoth/tree-sitter-lua"))
+          (make . ("https://github.com/alemuller/tree-sitter-make"))
+          (markdown . ("https://github.com/MDeiml/tree-sitter-markdown" nil "tree-sitter-markdown/src"))
+          (org . ("https://github.com/milisims/tree-sitter-org"))
+          (proto . ("https://github.com/mitchellh/tree-sitter-proto"))
+          (python . ("https://github.com/tree-sitter/tree-sitter-python"))
+          (typescript . ("https://github.com/tree-sitter/tree-sitter-typescript" nil "typescript/src"))
+          (tsx . ("https://github.com/tree-sitter/tree-sitter-typescript" nil "tsx/src"))
+          (scala . ("https://github.com/tree-sitter/tree-sitter-scala"))
+          (sql . ("https://github.com/m-novikov/tree-sitter-sql"))
+          (vue . ("https://github.com/merico-dev/tree-sitter-vue"))
+          (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))
+          (toml . ("https://github.com/tree-sitter/tree-sitter-toml"))))
+
+  ;; (setq major-mode-remap-alist
+  ;;       '((java-mode . java-ts-mode)))
+
+  (add-hook! (emacs-lisp-mode ielm-mode)
+    (treesit-parser-create 'elisp))
+
+  (add-hook! markdown-mode
+    (treesit-parser-create 'markdown))
+
+  (add-hook! org-mode
+    (treesit-parser-create 'org))
+
+  (add-hook! protobuf-mode
+    (treesit-parser-create 'proto))
+
+  ;; (add-hook! scala-mode
+  ;;   (treesit-parser-create 'scala))
+
+  (add-hook! sql-mode
+    (treesit-parser-create 'sql)))
