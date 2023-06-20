@@ -22,11 +22,14 @@
   ;; load mu4e-contrib
   (require 'mu4e-contrib)
 
-  (setq mu4e-headers-time-format "%T"
+  (setq mu4e-compose-dont-reply-to-self t
+        mu4e-headers-time-format "%T"
         mu4e-headers-date-format "%D"
         mu4e-headers-long-date-format "%D %T"
         ;; mu4e-search-full t
-        mu4e-search-results-limit 1000)
+        mu4e-search-results-limit 1000
+        mu4e-attachment-dir "~/Downloads"
+        mm-text-html-renderer 'gnus-w3m)
 
   (map! :map mu4e-headers-mode-map
         "l" #'+mu4e/capture-msg-to-agenda)
@@ -106,7 +109,14 @@
            :key ?l)
           (:name "With attachments"
            :query "flag:attach AND maildir:/INBOX/ AND NOT flag:trash"
-           :key ?p))))
+           :key ?p)))
+
+  (defun +mu4e-open-mail-as-html ()
+    "Open the HTML mail in Browser."
+    (interactive)
+    (if-let ((msg (mu4e-message-at-point t)))
+        (mu4e-action-view-in-browser msg)
+      (user-error "No message at point."))))
 
 (after! mu4e-alert
   (if IS-MAC
