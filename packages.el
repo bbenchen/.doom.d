@@ -49,6 +49,9 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+(package! tide :disable t)
+(package! tree-sitter-indent :disable t)
+
 (package! posframe :pin "59911917d57f77577e1aa6df7584fa00636de84a")
 
 (package! cal-china-x
