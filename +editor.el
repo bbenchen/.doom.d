@@ -100,6 +100,7 @@
   (setq major-mode-remap-alist
         '((dockerfile-mode . dockerfile-ts-mode)
           (json-mode . json-ts-mode)
+          (js-json-mode . json-ts-mode)
           (yaml-mode . yaml-ts-mode)))
 
   (add-hook! (emacs-lisp-mode ielm-mode)
