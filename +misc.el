@@ -34,12 +34,22 @@
     (after! vertico-posframe
       (custom-set-faces!
         `(vertico-posframe :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg))
-        `(vertico-posframe-border :background ,(doom-color 'modeline-bg)))))
+        `(vertico-posframe-border :background ,(doom-color 'modeline-bg)))
+
+      (add-hook! 'doom-load-theme-hook :append
+        (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
+        (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
+        (set-face-background 'vertico-posframe-border (doom-color 'modeline-bg)))))
 
 ;; modeline
 (setq +modeline-height 24)
 ;；set modeline time format
 (setq display-time-format "%D %R")
+
+;; rainbow
+(after! rainbow-mode
+  (add-hook! 'rainbow-mode-hook
+    (hl-line-mode (if rainbow-mode -1 +1))))
 
 ;; lookup
 (when (and IS-MAC
@@ -104,7 +114,12 @@
            :desc "Blamer" "B" #'blamer-mode))
     :config
     (custom-set-faces!
-      `(blamer-face :foreground "#7a88cf" :background nil :italic t))))
+      `(blamer-face :foreground "#7a88cf" :background nil :italic t))
+
+    (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
+
+    (add-hook! 'doom-load-theme-hook :append
+      (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg)))))
 
 ;; exec-path-from-shell
 (use-package! exec-path-from-shell
@@ -189,3 +204,86 @@
         (if (bound-and-true-p global-command-log-mode)
             (global-command-log-mode -1)
           (global-command-log-mode 1))))))
+
+;; emacs-application-framework
+(use-package! eaf
+  :load-path (lambda () (list (expand-file-name "site-lisp/eaf" doom-user-dir)))
+  :defer 2
+  :init
+  (setq +lookup-open-url-fn #'eaf-open-browser
+        browse-url-browser-function #'eaf-open-browser
+        eaf-start-python-process-when-require nil
+        eaf-config-location (expand-file-name "eaf/" doom-cache-dir)
+        eaf-proxy-type "http"
+        eaf-proxy-host "127.0.0.1"
+        eaf-proxy-port "7890"
+        eaf-webengine-pc-user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+        eaf-webengine-font-family "Times New Roman"
+        eaf-webengine-serif-font-family "Times New Roman"
+        eaf-webengine-fixed-font-family "Courier New"
+        eaf-browser-dark-mode nil
+        eaf-browser-enable-adblocker t
+        eaf-browser-enable-autofill t
+        eaf-browser-aria2-proxy-host "127.0.0.1"
+        eaf-browser-aria2-proxy-port "7890")
+
+  (if-let ((bookmarks (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
+                            (IS-LINUX (file-exists-p! (and (or "chromium/Default/Bookmarks"
+                                                               "google-chrome/Default/Bookmarks"))
+                                                      "~/.config"))
+                            (t nil))))
+      (setq eaf-chrome-bookmark-file bookmarks))
+
+  (if-let ((history (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/History")
+                          (IS-LINUX (file-exists-p! (and (or "chromium/Default/History"
+                                                             "google-chrome/Default/History"))
+                                                    "~/.config"))
+                          (t nil))))
+      (setq eaf-browser-chrome-history-file history))
+  :config
+  (require 'eaf-image-viewer)
+  (require 'eaf-pdf-viewer)
+  (require 'eaf-browser)
+  (require 'eaf-markdown-previewer)
+  (require 'eaf-org-previewer)
+  (require 'eaf-markmap)
+
+  (advice-remove #'dired-find-file #'eaf--dired-find-file-advisor)
+  (advice-remove #'dired-find-alternate-file #'eaf--dired-find-file-advisor)
+
+  ;; ensure focus change function has been add
+  (defadvice! eaf-restart-process-a ()
+    :after #'eaf-restart-process
+    (remove-function after-focus-change-function #'eaf--topmost-focus-change)
+    (add-function :after after-focus-change-function #'eaf--topmost-focus-change))
+
+  (when (modulep! :completion vertico +childframe)
+    (after! vertico-posframe
+      (defun eaf-in-eaf-buffer (&rest _args)
+        (let ((has-eaf-buffer nil))
+          (dolist (window (window-list))
+            (if (eq (with-current-buffer (window-buffer window)
+                      major-mode)  'eaf-mode)
+                (setq has-eaf-buffer t)))
+          has-eaf-buffer))
+      (advice-add #'vertico-posframe--show :before-until #'eaf-in-eaf-buffer)
+      (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer)))
+
+  (after! org
+    (require 'eaf-org)
+
+    (defun eaf-org-open-file (file &optional _link)
+      "An wrapper function on `eaf-open'."
+      (eaf-open file))
+
+    ;; use `emacs-application-framework' to open PDF file: link
+    (add-to-list 'org-file-apps '("\\.pdf\\'" . eaf-org-open-file)))
+
+  (setq +latex-viewers nil)
+  (after! tex
+    (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex --synctex=1%(mode)%' %t" TeX-run-TeX nil t))
+    (add-to-list 'TeX-view-program-list '("eaf" eaf-pdf-synctex-forward-view))
+    (add-to-list 'TeX-view-program-selection '(output-pdf "eaf"))))
+
+(use-package! chatgpt
+  :load-path (lambda () (list (expand-file-name "site-lisp/chatgpt" doom-user-dir))))
