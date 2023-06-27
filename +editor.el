@@ -101,7 +101,8 @@
         '((dockerfile-mode . dockerfile-ts-mode)
           (json-mode . json-ts-mode)
           (js-json-mode . json-ts-mode)
-          (yaml-mode . yaml-ts-mode)))
+          (yaml-mode . yaml-ts-mode)
+          (conf-toml-mode . toml-ts-mode)))
 
   (add-hook! (emacs-lisp-mode ielm-mode)
     (treesit-parser-create 'elisp))

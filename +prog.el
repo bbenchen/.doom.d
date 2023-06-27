@@ -196,6 +196,10 @@
 (after! dockerfile-ts-mode
   (set-docsets! 'dockerfile-ts-mode "Docker"))
 
+;; yaml
+(when (treesit-available-p)
+  (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
+
 ;; pkgbuild-mode
 (use-package! pkgbuild-mode
   :defer t
