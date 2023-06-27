@@ -82,9 +82,7 @@
 
 ;; magit
 (after! magit
-  (setq magit-revision-show-gravatars nil)
-
-  (remove-hook! 'server-switch-hook #'magit-commit-diff))
+  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     ")))
 
 (after! magit-todos
   (setq magit-todos-submodule-list t
