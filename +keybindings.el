@@ -28,7 +28,8 @@
        :desc "Command window" "C" #'toggle-command-window
        :desc "Frame transparency" "T" #'toggle-frame-transparency
        :desc "Window maximize" "m" #'doom/window-maximize-buffer
-       :desc "Proxy" "p" #'toggle-proxy-http)
+       :desc "Proxy" "p" #'toggle-proxy-http
+       :desc "Rainbow mode" "R" #'rainbow-mode)
 
       (:prefix-map ("w" . "workspaces/windows")
                    "<up>" #'shrink-window
