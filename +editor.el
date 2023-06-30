@@ -2,6 +2,9 @@
 
 (setq-default fill-column 120)
 
+;; narrow
+(put 'narrow-to-region 'disabled nil)
+
 ;; iedit
 (setq iedit-toggle-key-default nil)
 
