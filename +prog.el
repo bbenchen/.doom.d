@@ -68,10 +68,6 @@
 ;;     '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
 ;;     :modes 'java-mode))
 
-(add-hook! '(java-mode-hook java-ts-mode-hook)
-  (setq tab-width 4
-        fill-column 120))
-
 (defvar +java/junit-platform-console-standalone-jar
   (expand-file-name "~/.local/jdtls/test-runner/junit-platform-console-standalone.jar"))
 
