@@ -101,8 +101,9 @@
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 
-(if (modulep! :tools magit)
-    (package! blamer :pin "ab00e6a3ea482c342d918add9c20bfd3fa740aaa"))
+(when (modulep! :tools magit)
+  (package! magit-gerrit :pin "a97521574c5b7d4b7ab89e25c358c87fd5b1887f")
+  (package! blamer :pin "ab00e6a3ea482c342d918add9c20bfd3fa740aaa"))
 
 (package! lsp-bridge
   :recipe (:host github

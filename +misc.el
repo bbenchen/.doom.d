@@ -117,7 +117,10 @@
     (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
 
     (add-hook! 'doom-load-theme-hook :append
-      (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg)))))
+      (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))))
+
+  ;; magit-gerrit
+  (use-package! magit-gerrit))
 
 ;; exec-path-from-shell
 (use-package! exec-path-from-shell
