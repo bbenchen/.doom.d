@@ -24,7 +24,12 @@
 
 ;; projectile
 (after! projectile
-  (setq projectile-project-search-path '("~/"))
+  (setq projectile-project-search-path
+        '(("~/Projects/emacs" . 1)
+          ("~/Projects/fa/sources" . 1)
+          ("~/Projects/golang" . 1)
+          ("~/Projects/java" . 1)
+          ("~/Projects/scala" . 1)))
 
   (dolist (suffix '(".bak" ".exe"))
     (add-to-list 'projectile-globally-ignored-file-suffixes suffix)))
