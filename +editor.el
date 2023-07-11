@@ -101,11 +101,12 @@
           (toml . ("https://github.com/tree-sitter/tree-sitter-toml"))))
 
   (setq major-mode-remap-alist
-        '((dockerfile-mode . dockerfile-ts-mode)
+        '((conf-toml-mode . toml-ts-mode)
+          (dockerfile-mode . dockerfile-ts-mode)
           (json-mode . json-ts-mode)
           (js-json-mode . json-ts-mode)
-          (yaml-mode . yaml-ts-mode)
-          (conf-toml-mode . toml-ts-mode)))
+          (python-mode . python-ts-mode)
+          (yaml-mode . yaml-ts-mode)))
 
   (add-hook! (emacs-lisp-mode ielm-mode)
     (treesit-parser-create 'elisp))
