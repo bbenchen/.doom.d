@@ -268,19 +268,21 @@
 
 ;; lsp-bridge
 (use-package! lsp-bridge
-  :init
+  :config
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
         lsp-bridge-enable-mode-line nil
         lsp-bridge-enable-log nil
         lsp-bridge-enable-org-babel t
+        lsp-bridge-diagnostic-tooltip-border-width 2
+        lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
+        lsp-bridge-signature-show-with-frame-position "point"
+        lsp-bridge-python-lsp-server "ruff"
+        acm-backend-yas-match-by-trigger-keyword t
         acm-enable-tabnine nil
         acm-enable-preview t)
-  :config
-  (global-lsp-bridge-mode)
 
-  (setq lsp-bridge-diagnostic-tooltip-border-width 2
-        lsp-bridge-signature-show-function 'lsp-bridge-signature-frame)
+  (global-lsp-bridge-mode)
 
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
