@@ -77,41 +77,25 @@
   (interactive)
   (let* ((pkg (+java/current-package))
          (class (+java/current-class))
-         (method (+java/current-method))
-         (classpath (+java/maven-get-project-classpath)))
-    (if (and pkg class classpath)
-        (compile
-         (concat "java -jar " +java/junit-platform-console-standalone-jar
-                 " -cp " classpath
-                 (if method
-                     (format " -m '%s.%s#%s'" pkg class method)
-                   (format " -c '%s.%s'" pkg class)))
-         t)
-      (user-error "Can not found package/class/classpath"))))
-
-(defun +java/maven-get-project-classpath ()
-  (when-let* ((project-dir (doom-project-root))
-              (target-path (expand-file-name "target" project-dir))
-              (deps-cp (+java/maven-get-deps-classpath target-path)))
-    (format "%s/classes:%s/test-classes:%s" target-path target-path deps-cp)))
-
-(defun +java/maven-get-deps-classpath (target-location)
-  "Get dependencies classpath."
-  (let ((deps-cp-file (format "%s/deps-cp" target-location)))
-    (unless (file-exists-p deps-cp-file)
-      ;; NOTE: Cache deps classpath to speed up shell command, regenerate it once you modify project dependencies.
-      (let* ((project-dir (doom-project-root))
-             (mvnw-file (expand-file-name "mvnw" project-dir))
-             (maven (if (and (file-exists-p! mvnw-file)
-                             (file-executable-p mvnw-file))
-                        "./mvnw"
-                      "mvn"))
-             (command (concat "cd " project-dir " && "
-                              maven " dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=" deps-cp-file)))
-        (call-process-shell-command command)))
-    (with-temp-buffer
-      (insert-file-contents deps-cp-file)
-      (buffer-string))))
+         (method (+java/current-method)))
+    (if (and pkg class)
+        (lsp-bridge-jdtls-project-is-test-file
+         #'(lambda (is-test-file)
+             (if is-test-file
+                 (lsp-bridge-jdtls-project-get-classpaths
+                  #'(lambda (classpaths)
+                      (setq-local old-default-directory default-directory
+                                  default-directory (doom-project-root))
+                      (compile (concat "java -jar " +java/junit-platform-console-standalone-jar
+                                       " -cp " classpaths
+                                       (if method
+                                           (format " -m '%s.%s#%s'" pkg class method)
+                                         (format " -c '%s.%s'" pkg class)))
+                               t)
+                      (setq-local default-directory old-default-directory))
+                  "test")
+               (message "%s is not a test file" class))))
+      (user-error "Can not found package/class"))))
 
 (defun +java/current-package ()
   (if (eq major-mode 'java-mode)
@@ -253,18 +237,6 @@
   (add-hook! 'sql-mode-hook :append #'sqlind-minor-mode))
 
 (use-package! ob-sql-mode)
-
-;; dap-mode
-(after! dap-mode
-  (add-hook! '(dap-session-created-hook dap-stopped-hook)
-    (defun show-dap-hydra (&rest _)
-      "Show dap hydra"
-      (dap-hydra)))
-
-  (add-hook! 'dap-terminated-hook
-    (defun hide-dap-hydra (&rest _)
-      "Hide dap hydra"
-      (dap-hydra/nil))))
 
 ;; lsp-bridge
 (use-package! lsp-bridge
