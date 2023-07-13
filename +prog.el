@@ -282,18 +282,21 @@
         acm-enable-tabnine nil
         acm-enable-preview t)
 
+  (if (featurep 'orderless)
+      (setq acm-candidate-match-function 'orderless-regexp))
+
   (global-lsp-bridge-mode)
 
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
                                           "-server"
-                                          "-Xmx6G"
-                                          "-Xmn2G"
+                                          "-Xmx2G"
+                                          "-Xmn1G"
                                           "-Xss512K"
                                           "-XX:MetaspaceSize=1536M"
                                           "-XX:MaxMetaspaceSize=1536M"
                                           "-XX:InitialCodeCacheSize=128M"
-                                          "-XX:ReservedCodeCacheSize=512M"
+                                          "-XX:ReservedCodeCacheSize=256M"
                                           "-XX:+UseG1GC"
                                           "-XX:+UseStringDeduplication"
                                           "-XX:GCTimeRatio=19"
