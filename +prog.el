@@ -90,12 +90,11 @@
                   #'(lambda (classpaths)
                       (setq-local old-default-directory default-directory
                                   default-directory (doom-project-root))
-                      (compile (concat "java -jar " +java/junit-platform-console-standalone-jar
-                                       " -cp " classpaths
-                                       (if method
-                                           (format " -m '%s.%s#%s'" pkg class method)
-                                         (format " -c '%s.%s'" pkg class)))
-                               t)
+                      (compilation-start (concat "java -jar " +java/junit-platform-console-standalone-jar
+                                                 " -cp " classpaths
+                                                 (if method
+                                                     (format " -m '%s.%s#%s'" pkg class method)
+                                                   (format " -c '%s.%s'" pkg class))))
                       (setq-local default-directory old-default-directory))
                   "test")
                (message "%s is not a test file" class))))
