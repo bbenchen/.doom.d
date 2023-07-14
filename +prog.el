@@ -144,8 +144,7 @@
                   (setq found-node (tsc-get-child-by-field parent :name)))
               ))
           (if found-node
-              (tsc-node-text found-node))
-          )))))
+              (tsc-node-text found-node)))))))
 
 (after! java-ts-mode
   (defun +java/treesit-get-package-node ()
