@@ -68,6 +68,10 @@
 ;;     '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
 ;;     :modes 'java-mode))
 
+(map! :map (java-mode-map java-ts-mode-map)
+      :localleader
+      :desc "Run junit test" "t" #'+java/run-junit-test)
+
 (defvar +java/junit-platform-console-standalone-jar
   (expand-file-name "~/.local/jdtls/test-runner/junit-platform-console-standalone.jar"))
 
