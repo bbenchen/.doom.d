@@ -244,7 +244,7 @@
 (use-package! lsp-bridge
   :config
   (after! winner
-    (add-to-list 'winner-boring-buffers "*lsp-bridge-code-action-menu*"))
+    (appendq! winner-boring-buffers '("*lsp-bridge-code-action-menu*" "*lsp-bridge-call-hierarchy*")))
 
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
