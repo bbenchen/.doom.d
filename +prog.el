@@ -276,11 +276,9 @@
                                           "-XX:MaxMetaspaceSize=256M"
                                           "-XX:InitialCodeCacheSize=128M"
                                           "-XX:ReservedCodeCacheSize=256M"
-                                          "-XX:+UseG1GC"
-                                          "-XX:+UseStringDeduplication"
-                                          "-XX:GCTimeRatio=19"
-                                          "-XX:AdaptiveSizePolicyWeight=90"
-                                          "-Dsun.zip.disableMemoryMapping=true"
+                                          "-XX:MaxDirectMemorySize=512M"
+                                          "-XX:+UseNUMA"
+                                          "-XX:+UseZGC"
                                           (concat "-javaagent:" lombok-jar-path))))
   (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
