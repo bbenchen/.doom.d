@@ -268,10 +268,11 @@
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
                                           "-server"
+                                          "-Xms2G"
                                           "-Xmx2G"
-                                          "-Xmn1G"
+                                          "-Xmn768M"
                                           "-Xss512K"
-                                          "-XX:MetaspaceSize=128M"
+                                          "-XX:MetaspaceSize=256M"
                                           "-XX:MaxMetaspaceSize=256M"
                                           "-XX:InitialCodeCacheSize=128M"
                                           "-XX:ReservedCodeCacheSize=256M"
