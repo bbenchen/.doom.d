@@ -278,21 +278,25 @@ unwanted space when exporting org-mode to hugo markdown."
         (%google-translate-at-point override-p t)
       (%google-translate-at-point override-p nil))))
 
-(use-package! websocket-bridge)
-
 ;; insert-translated-name
 (use-package! insert-translated-name
-  :defer 2
-  :after websocket-bridge
-  :init
+  :config
+  (setq insert-translated-name-default-style 'origin)
+
+  (defadvice! insert-translated-name-retrieve-translation-a (&rest _)
+    :before #'insert-translated-name-retrieve-translation
+    (doom-disable-delete-trailing-whitespace-h))
+
+  (defadvice! insert-translated-name-update-translation-in-buffer-a (&rest _)
+    :after #'insert-translated-name-update-translation-in-buffer
+    (doom-enable-delete-trailing-whitespace-h))
+
   (map! :leader
         (:prefix-map ("y" . "translate")
-         :desc "Insert translated name" "i" #'insert-translated-name-insert))
-  (setq insert-translated-name-puppeteer-proxy-server "http://127.0.0.1:7890")
-  :config
-  (setq insert-translated-name-default-style 'origin))
+         :desc "Insert translated name" "i" #'insert-translated-name-insert)))
 
 ;; dictionary-overlay
+(use-package! websocket-bridge)
 (use-package! dictionary-overlay
   :defer 2
   :after websocket-bridge

@@ -61,6 +61,9 @@
 (package! rime :pin "6438abacace7d94f05fabc45b82d619677fc5fca")
 
 (package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
+(package! insert-translated-name
+  :recipe (:host github :repo "cxb811201/insert-translated-name" :branch "google")
+  :pin "4263968c2bcaf6ecc6c66c9ca43770f39aa09b8b")
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
@@ -70,17 +73,6 @@
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
   :pin "40676478e3b2dd5af068b1f7f7024776e7557446")
-(if IS-MAC
-    (package! insert-translated-name
-      :recipe (:host github :repo "cxb811201/insert-translated-name" :files ("*.el" "*ts"))
-      :pin "a736ca1ac391f43f65d14f64c2f4388da013858a")
-  (progn
-    (package! deno-bridge
-      :recipe (:host github :repo "manateelazycat/deno-bridge")
-      :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
-    (package! insert-translated-name
-      :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*ts"))
-      :pin "e92d6deeb581ff1d66eec0e4247029e111d347e6")))
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
   :pin "a1146e47da22ed43d439bb820527ebf59c1bee4c")
