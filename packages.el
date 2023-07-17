@@ -52,7 +52,7 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
-(package! posframe :pin "59911917d57f77577e1aa6df7584fa00636de84a")
+(package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
@@ -109,7 +109,7 @@
   :recipe (:host github
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "bbe56b5d2e2cbe57ea8b8404b0668445c7d4f23d")
+  :pin "b8e211652a734fe704df4bdc426dfed6fdb289bc")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
