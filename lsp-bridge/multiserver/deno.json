@@ -8,6 +8,8 @@
   "find_type_define": "deno",
   "find_implementation": "deno",
   "find_references": "deno",
+  "peek_find_definition": "deno",
+  "peek_find_references": "deno",
   "formatting": "deno",
   "hover": "deno",
   "signature_help": "deno",
