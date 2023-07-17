@@ -301,10 +301,6 @@
          :desc "LSP Rename"                  "r"  #'lsp-bridge-rename
          :desc "LSP Peek"                    "p"  #'lsp-bridge-peek))
 
-  (defadvice! lsp-bridge-frame-background-color-a ()
-    :override #'lsp-bridge-frame-background-color
-    (doom-color 'modeline-bg))
-
   (defadvice! +format/region-or-buffer-a (fn &rest args)
     :around #'+format/region-or-buffer
     (if (and lsp-bridge-mode
