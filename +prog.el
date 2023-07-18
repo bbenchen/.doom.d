@@ -275,7 +275,7 @@
                                           "-XX:MetaspaceSize=256M"
                                           "-XX:MaxMetaspaceSize=256M"
                                           "-XX:InitialCodeCacheSize=128M"
-                                          "-XX:ReservedCodeCacheSize=256M"
+                                          "-XX:ReservedCodeCacheSize=128M"
                                           "-XX:MaxDirectMemorySize=512M"
                                           "-XX:+UseNUMA"
                                           "-XX:+UseZGC"
