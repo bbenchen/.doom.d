@@ -290,3 +290,15 @@
     (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex --synctex=1%(mode)%' %t" TeX-run-TeX nil t))
     (add-to-list 'TeX-view-program-list '("eaf" eaf-pdf-synctex-forward-view))
     (add-to-list 'TeX-view-program-selection '(output-pdf "eaf"))))
+
+;; mind-wave
+(use-package! mind-wave
+  :config
+  (setq mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
+        mind-wave-api-base "https://openkey.cloud/v1"
+        mind-wave-chat-model "gpt-3.5-turbo-0613"
+        mind-wave-async-text-model "gpt-3.5-turbo-0613"
+        mind-wave-action-code-model "gpt-3.5-turbo-0613"
+        mind-wave-explain-word-model "gpt-3.5-turbo-0613"
+        mind-wave-parse-title-model "gpt-3.5-turbo-0613"
+        mind-wave-git-commit-model "gpt-3.5-turbo-0613"))

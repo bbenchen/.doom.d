@@ -92,6 +92,9 @@
 (if IS-MAC
     (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
+(package! mind-wave
+  :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
+  :pin "1ae7b7be74fa1f37b18f9031d127a563e2434617")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit :pin "a97521574c5b7d4b7ab89e25c358c87fd5b1887f")
