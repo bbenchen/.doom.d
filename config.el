@@ -35,7 +35,7 @@
         (IS-MAC (setq doom-font (font-spec :family font :size 12 :weight 'Regular))))
   (setq doom-variable-pitch-font doom-font
         doom-serif-font doom-font
-        doom-unicode-font doom-font
+        ;; doom-unicode-font doom-font
         doom-big-font doom-font)
   (add-hook! 'after-setting-font-hook :append
     (set-fontset-font t 'cjk-misc font nil 'prepend)
