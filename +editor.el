@@ -62,10 +62,17 @@
 (use-package! duplicate-line
   :when (<= emacs-major-version 28))
 
+;; deno-bridge-jieba
+(use-package! deno-bridge-jieba
+  :config
+  (map! "M-f"           #'deno-bridge-jieba-forward-word
+        "M-b"           #'deno-bridge-jieba-backward-word
+        "M-d"           #'deno-bridge-jieba-kill-word
+        "M-<backspace>" #'deno-bridge-jieba-backward-kill-word
+        "M-@"           #'deno-bridge-jieba-mark-word))
+
 (map! "C-s" #'phi-search
-      "s-F" #'phi-search
       "C-r" #'phi-search-backward
-      "s-d" #'phi-search-backward
       "M-%" #'phi-replace)
 
 ;; treesit

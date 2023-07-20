@@ -76,6 +76,12 @@
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
   :pin "a1146e47da22ed43d439bb820527ebf59c1bee4c")
+(package! deno-bridge
+  :recipe (:host github :repo "manateelazycat/deno-bridge")
+  :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
+(package! deno-bridge-jieba
+  :recipe (:host github :repo "ginqi7/deno-bridge-jieba" :files ("*.el" "*.ts"))
+  :pin "9f03c09db96064964905991a51ce4c664c44dcc5")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
