@@ -40,7 +40,7 @@
 (use-package! goto-line-preview
   :defer t
   :init
-  (global-set-key [remap goto-line] #'goto-line-preview))
+  (define-key! [remap goto-line] #'goto-line-preview))
 
 ;; auto-save
 (use-package! auto-save
@@ -65,15 +65,17 @@
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
   :config
-  (map! "M-f"           #'deno-bridge-jieba-forward-word
-        "M-b"           #'deno-bridge-jieba-backward-word
-        "M-d"           #'deno-bridge-jieba-kill-word
-        "M-<backspace>" #'deno-bridge-jieba-backward-kill-word
-        "M-@"           #'deno-bridge-jieba-mark-word))
+  (define-key!
+    [remap forward-word]       #'deno-bridge-jieba-forward-word
+    [remap backward-word]      #'deno-bridge-jieba-backward-word
+    [remap kill-word]          #'deno-bridge-jieba-kill-word
+    [remap backward-kill-word] #'deno-bridge-jieba-backward-kill-word
+    [remap mark-word]          #'deno-bridge-jieba-mark-word))
 
-(map! "C-s" #'phi-search
-      "C-r" #'phi-search-backward
-      "M-%" #'phi-replace)
+(define-key!
+ [remap isearch-forward]  #'phi-search
+ [remap isearch-backward] #'phi-search-backward
+ [remap query-replace]    #'phi-replace-query)
 
 ;; treesit
 (use-package! treesit
