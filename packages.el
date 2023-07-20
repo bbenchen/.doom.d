@@ -124,3 +124,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "d6f451dc09fb1a6f38a8327cf46ef246431afbd9")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
+(package! auto-rename-tag :pin "0793cba1c7e78a8de5da85696cccefb4a7ad71e2")

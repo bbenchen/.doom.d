@@ -19,6 +19,10 @@
               (flyspell-mode -1)
             (spell-fu-mode -1))))))
 
+(use-package! auto-rename-tag
+  :config
+  (add-hook! (nxml-mode xml-mode sgml-mode) #'auto-rename-tag-mode))
+
 ;; go
 (after! go-mode
   (when (executable-find "gopkgs")
