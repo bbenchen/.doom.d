@@ -195,7 +195,8 @@
               (setq command-window-frame
                     (posframe-show
                      clm/command-log-buffer
-                     :position `(,(- (x-display-pixel-width) 420) . 0)
+                     :position (point)
+                     :poshandler #'posframe-poshandler-frame-top-left-or-right-other-corner
                      :width 55
                      :height 5
                      :min-width 55
