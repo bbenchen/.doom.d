@@ -8,8 +8,7 @@
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Mike Chen"
       user-mail-address "517926804@qq.com"
-      epa-file-encrypt-to user-mail-address
-      auth-sources '("~/.authinfo.gpg"))
+      epa-file-encrypt-to user-mail-address)
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
