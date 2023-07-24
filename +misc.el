@@ -22,6 +22,10 @@
 ;; workspaces
 (setq +workspaces-on-switch-project-behavior t)
 
+;; lookup
+(appendq! +lookup-provider-url-alist
+          '(("Maven Repository" "http://mvnrepository.com/search?q=%s&ref=opensearch")))
+
 ;; projectile
 (after! projectile
   (setq projectile-project-search-path
