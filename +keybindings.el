@@ -41,3 +41,7 @@
         (:map makefile-mode-map
          :localleader
          :desc "Run task" "r" #'+make/run)))
+
+(map! (:when (featurep 'with-editor)
+        [remap async-shell-command] #'with-editor-async-shell-command
+        [remap shell-command] #'with-editor-shell-command))
