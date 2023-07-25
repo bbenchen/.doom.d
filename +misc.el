@@ -4,8 +4,10 @@
 (setq system-time-locale "zh_CN")
 
 (setq confirm-kill-processes nil
-      confirm-kill-emacs nil
-      x-select-enable-clipboard-manager nil)
+      confirm-kill-emacs nil)
+
+(if IS-LINUX
+    (setq x-select-enable-clipboard-manager nil))
 
 (if (boundp 'pixel-scroll-precision-mode)
     (pixel-scroll-precision-mode t))
