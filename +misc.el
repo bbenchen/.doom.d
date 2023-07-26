@@ -63,10 +63,9 @@
     (hl-line-mode (if rainbow-mode -1 +1))))
 
 ;; lookup
-(when (and IS-MAC
-           (featurep 'xwidget-internal))
+(when (and IS-MAC (featurep 'xwidget-internal))
   (setq +lookup-open-url-fn #'+lookup-xwidget-webkit-open-url-fn
-        browse-url-browser-function #'xwidget-webkit-browse-url)
+        browse-url-browser-function #'+lookup-xwidget-webkit-open-url-fn)
   (if (boundp 'xwidget-webkit-enable-plugins)
       (setq xwidget-webkit-enable-plugins t)))
 
