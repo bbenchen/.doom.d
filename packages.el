@@ -100,7 +100,7 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
-  :pin "1ae7b7be74fa1f37b18f9031d127a563e2434617")
+  :pin "994618abcd2c6a09af49b486d270ad4fd2d5b4a4")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit :pin "a97521574c5b7d4b7ab89e25c358c87fd5b1887f")
@@ -110,7 +110,7 @@
   :recipe (:host github
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "45820c0d073edeba78dbc06e15807a22abc2f735")
+  :pin "81fe270f94422af431e5b6fd9df840241bfa3ef7")
 
 (when (modulep! :lang go)
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
