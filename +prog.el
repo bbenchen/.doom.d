@@ -3,10 +3,6 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
-;; flycheck
-(after! flycheck
-  (setq flycheck-checker-error-threshold 2000))
-
 ;; xml
 (after! nxml-mode
   (setq nxml-auto-insert-xml-declaration-flag nil
@@ -43,18 +39,7 @@
 
   ;; (add-hook 'before-save-hook #'gofmt-before-save)
 
-  (remove-hook! 'go-mode-hook #'go-eldoc-setup)
-
-  (if (modulep! :checkers syntax)
-      (add-hook! 'go-mode-hook
-        (setq-local flycheck-disabled-checkers '(go-gofmt
-                                                 go-golint
-                                                 go-vet
-                                                 go-build
-                                                 go-test
-                                                 go-errcheck
-                                                 go-unconvert
-                                                 go-staticcheck)))))
+  (remove-hook! 'go-mode-hook #'go-eldoc-setup))
 
 (use-package! go-fill-struct
   :when (modulep! :lang go)
@@ -268,6 +253,21 @@
       (setq acm-candidate-match-function 'orderless-regexp))
 
   (global-lsp-bridge-mode)
+
+  (when (modulep! :checkers syntax)
+    (defun lsp-bridge-lsp-server-disable-flymake-or-flycheck()
+      (cond ((and (modulep! :checkers syntax +flymake)
+                  (lsp-bridge-has-lsp-server-p))
+             (if (bound-and-true-p flymake-mode)
+                 (flymake-mode -1))
+             (if (featurep 'flymake-popon)
+                 (flymake-popon-mode -1)))
+            (t
+             (if (bound-and-true-p flycheck-mode)
+                 (flycheck-mode -1)))))
+
+    (dolist (hook lsp-bridge-default-mode-hooks)
+      (add-hook hook #'lsp-bridge-lsp-server-disable-flymake-or-flycheck t)))
 
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
