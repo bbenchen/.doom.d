@@ -122,7 +122,6 @@
 (load! "+chinese")
 (load! "+editor")
 (load! "+org")
-(load! "+markdown")
 (load! "+mail")
 (load! "+prog")
 (load! "+keybindings")
