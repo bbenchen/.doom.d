@@ -17,10 +17,8 @@
 
 ;;;###autoload
 (defun +lookup/password (&rest keys)
-  (let ((result (apply #'auth-source-search keys)))
-    (if result
-        (funcall (plist-get (car result) :secret))
-      nil)))
+  (if-let ((result (apply #'auth-source-search keys)))
+    (auth-info-password (car result))))
 
 ;;;###autoload
 (defun pinentry-emacs (desc prompt _ok _error)
