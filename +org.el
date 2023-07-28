@@ -2,9 +2,6 @@
 
 ;; org-mode
 (after! org
-  (if (modulep! :lang org +crypt)
-      (setq epa-file-encrypt-to user-mail-address))
-
   (setq org-image-actual-width 600)
 
   (add-to-list 'org-modules 'org-tempo t)
