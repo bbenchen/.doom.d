@@ -116,9 +116,7 @@
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
-(package! protobuf-mode
-  :recipe (:host github :repo "emacsmirror/protobuf-mode" :files ("*.el"))
-  :pin "745044422c9062e5cffbfbba33c030c30f9c0694")
+(package! protobuf-ts-mode :pin "cde61510b711d90bf2978ca4cbd3f36fce8b4c3e")
 (package! sqlup-mode :pin "3f9df9c88d6a7f9b1ae907e401cad8d3d7d63bbf")
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")

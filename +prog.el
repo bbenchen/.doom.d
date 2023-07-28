@@ -188,11 +188,9 @@
       org-plantuml-jar-path plantuml-jar-path)
 
 ;; protobuf
-(use-package! protobuf-mode
-  :defer t
-  :init
-  (add-hook! 'protobuf-mode-hook
-    (display-line-numbers-mode t)))
+(use-package! protobuf-ts-mode
+  :mode "\\.proto\\'"
+  :defer t)
 
 ;; projectile
 (after! projectile

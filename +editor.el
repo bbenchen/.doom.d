@@ -126,9 +126,6 @@
   (add-hook! org-mode
     (treesit-parser-create 'org))
 
-  (add-hook! protobuf-mode
-    (treesit-parser-create 'proto))
-
   ;; (add-hook! scala-mode
   ;;   (treesit-parser-create 'scala))
 
