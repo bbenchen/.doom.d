@@ -154,6 +154,22 @@
   ;; (setq exec-path-from-shell-debug t)
   (exec-path-from-shell-initialize))
 
+;; pass
+(after! pass
+  (defadvice! pass-view-a()
+    :override #'pass-view
+    (pass--with-closest-entry entry
+      (find-file-other-window (concat (f-join (password-store-dir) entry) ".gpg"))))
+
+  (defun pass-view-quit()
+    (interactive)
+    (kill-current-buffer)
+    (if (modulep! :ui workspaces)
+        (+workspace/close-window-or-workspace)
+      (quit-window t)))
+  (map! :map pass-view-mode-map
+        "C-c C-q" #'pass-view-quit))
+
 ;; popweb
 (use-package! popweb
   :defer 1
