@@ -156,12 +156,12 @@
 
 ;; pass
 (after! pass
-  (defadvice! pass-view-a()
+  (defadvice! pass-view-a ()
     :override #'pass-view
     (pass--with-closest-entry entry
       (find-file-other-window (concat (f-join (password-store-dir) entry) ".gpg"))))
 
-  (defun pass-view-quit()
+  (defun pass-view-quit ()
     (interactive)
     (kill-current-buffer)
     (if (modulep! :ui workspaces)
