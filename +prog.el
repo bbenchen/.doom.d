@@ -32,14 +32,21 @@
   (if (executable-find "gogetdoc")
       (setq godoc-at-point-function 'godoc-gogetdoc))
 
+  ;; (add-hook 'before-save-hook #'gofmt-before-save)
   (let ((command (or (executable-find "gofumpt")
                      (executable-find "goimports"))))
     (if command
         (setq gofmt-command command)))
 
-  ;; (add-hook 'before-save-hook #'gofmt-before-save)
+  (remove-hook! go-mode #'go-eldoc-setup)
 
-  (remove-hook! 'go-mode-hook #'go-eldoc-setup))
+  (defadvice! godef-jump-a (&rest _args)
+    :override #'godef-jump
+    (+lookup/definition))
+
+  (defadvice! godef-describe-a (&rest _args)
+    :override #'godef-describe
+    (+lookup/documentation)))
 
 (use-package! go-fill-struct
   :when (modulep! :lang go)
@@ -49,6 +56,15 @@
         :localleader
         (:prefix ("r" . "reflect")
                  "s" #'go-fill-struct)))
+
+(use-package! go-impl
+  :when (modulep! :lang go)
+  :defer t
+  :init
+  (map! :map go-mode-map
+        :localleader
+        (:prefix ("r" . "reflect")
+                 "I" #'go-impl)))
 
 ;; java
 ;; (when (and (modulep! :lang java)

@@ -113,6 +113,7 @@
   :pin "7e556ce85b024f994436eac1a8ab6d6d97898b1e")
 
 (when (modulep! :lang go)
+  (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
