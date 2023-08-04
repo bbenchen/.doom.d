@@ -50,7 +50,7 @@
 
 (use-package! go-fill-struct
   :when (modulep! :lang go)
-  :defer t
+  :after go-mode
   :init
   (map! :map go-mode-map
         :localleader
@@ -59,7 +59,7 @@
 
 (use-package! go-impl
   :when (modulep! :lang go)
-  :defer t
+  :after go-mode
   :init
   (map! :map go-mode-map
         :localleader
