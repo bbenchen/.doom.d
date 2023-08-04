@@ -54,8 +54,7 @@
   :init
   (map! :map go-mode-map
         :localleader
-        (:prefix ("r" . "reflect")
-                 "s" #'go-fill-struct)))
+        "f" #'go-fill-struct))
 
 (use-package! go-impl
   :when (modulep! :lang go)
@@ -63,8 +62,7 @@
   :init
   (map! :map go-mode-map
         :localleader
-        (:prefix ("r" . "reflect")
-                 "I" #'go-impl)))
+        "I" #'go-impl))
 
 ;; java
 ;; (when (and (modulep! :lang java)
