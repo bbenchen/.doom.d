@@ -110,7 +110,7 @@
   :recipe (:host github
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "c75c1b2ebc78b3af8c506309ed270b086bcff570")
+  :pin "8115c8a7e8cb84b637890159828dc8c4c571b695")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
