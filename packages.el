@@ -69,7 +69,7 @@
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
   :pin "b374b4a5da44dde82c06b59dfd99caedc6291824")
 
-(package! websocket :pin "1a08093b122d8cf20366a1cba5faddf7a53d08ed")
+(package! websocket :pin "a39ea953f27f6ae105ac5b1343852ddf13438048")
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
   :pin "40676478e3b2dd5af068b1f7f7024776e7557446")
@@ -86,7 +86,7 @@
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
-(package! goto-line-preview :pin "2b93fa4a75e3d696b308309ab4e898dc5bb92865")
+(package! goto-line-preview :pin "ac672c7d556e70b05eef499fb62c3f5093e4819e")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
@@ -96,7 +96,7 @@
       :pin "03b8aa8c4ab094b59881421d34a2028c6b5ce2b1"))
 
 (if IS-MAC
-    (package! exec-path-from-shell :pin "ddd24dc823de9a94435b4d8ea7569161657f31e2"))
+    (package! exec-path-from-shell :pin "03fc0a38af9e396c98f5a30c392cf757b3a34feb"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
@@ -117,10 +117,10 @@
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
-(package! protobuf-ts-mode :pin "cde61510b711d90bf2978ca4cbd3f36fce8b4c3e")
+(package! protobuf-ts-mode :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
 (package! sqlup-mode :pin "3f9df9c88d6a7f9b1ae907e401cad8d3d7d63bbf")
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "d6f451dc09fb1a6f38a8327cf46ef246431afbd9")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "0793cba1c7e78a8de5da85696cccefb4a7ad71e2")
+(package! auto-rename-tag :pin "74dc96fafe63ff81a44e67ceceb6e0a23b6277b2")
