@@ -315,14 +315,7 @@
 ;; mind-wave
 (use-package! mind-wave
   :config
-  (setq mind-wave-python-command (cond (IS-WINDOWS
-                                        (if (executable-find "pypy3.exe")
-                                            "pypy3.exe"
-                                          "python3.exe"))
-                                       (t (if (executable-find "pypy3")
-                                              "pypy3"
-                                            "python3")))
-        mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
+  (setq mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
         mind-wave-api-base "https://openkey.cloud/v1"
         mind-wave-chat-model "gpt-3.5-turbo-0613"
         mind-wave-async-text-model "gpt-3.5-turbo-0613"
