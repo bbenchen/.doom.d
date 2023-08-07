@@ -252,7 +252,8 @@
         eaf-browser-enable-adblocker t
         eaf-browser-enable-autofill t
         eaf-browser-aria2-proxy-host "127.0.0.1"
-        eaf-browser-aria2-proxy-port "7890")
+        eaf-browser-aria2-proxy-port "7890"
+        eaf-browser-auto-import-chrome-cookies t)
 
   (if-let ((bookmarks (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
                             (IS-LINUX (file-exists-p! (and (or "chromium/Default/Bookmarks"
@@ -277,6 +278,11 @@
 
   (advice-remove #'dired-find-file #'eaf--dired-find-file-advisor)
   (advice-remove #'dired-find-alternate-file #'eaf--dired-find-file-advisor)
+
+  (defun eaf-translate-text (text)
+    (cond ((featurep 'popweb-dict) (popweb-dict-bing-input text))
+          ((modulep! :tools lookup +dictionary) (+lookup/dictionary-definition text))
+          (t (message "Can't translate text"))))
 
   ;; ensure focus change function has been add
   (defadvice! eaf-restart-process-a ()
