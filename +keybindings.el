@@ -4,6 +4,11 @@
       "M-z" nil
       "C-x C-z" nil
 
+      "<M-up>"    #'drag-stuff-up
+      "<M-down>"  #'drag-stuff-down
+      "<M-left>"  #'drag-stuff-left
+      "<M-right>" #'drag-stuff-right
+
       (:when IS-MAC
         (:when (modulep! :completion vertico)
           "s-F" #'consult-line-multi)
