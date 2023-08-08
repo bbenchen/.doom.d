@@ -259,6 +259,7 @@
         lsp-bridge-python-lsp-server "ruff"
         acm-backend-yas-match-by-trigger-keyword t
         acm-enable-tabnine nil
+        acm-enable-copilot nil
         acm-enable-preview t)
 
   (if (featurep 'orderless)
