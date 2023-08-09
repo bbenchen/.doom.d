@@ -1,5 +1,7 @@
 ;;; +keybindings.el -*- lexical-binding: t; -*-
 
+(global-set-key [escape] #'doom/escape)
+
 (map! "C-z" nil
       "M-z" nil
       "C-x C-z" nil
