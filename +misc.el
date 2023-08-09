@@ -98,9 +98,9 @@
   (setq magit-todos-submodule-list t
         magit-todos-exclude-globs (append magit-todos-exclude-globs '(".svn/" "node_modules/*"))))
 
-(after! git-commit
-  (if (modulep! :checkers spell +flyspell)
-      (remove-hook! 'git-commit-mode-hook #'flyspell-mode)))
+;; (after! git-commit
+;;   (if (modulep! :checkers spell +flyspell)
+;;       (remove-hook! 'git-commit-mode-hook #'flyspell-mode)))
 
 (when (modulep! :tools magit)
   ;; magit-todos
