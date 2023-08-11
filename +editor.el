@@ -72,6 +72,12 @@
     [remap backward-kill-word] #'deno-bridge-jieba-backward-kill-word
     [remap mark-word]          #'deno-bridge-jieba-mark-word))
 
+;; wraplish
+(use-package! wraplish
+  :defer t
+  :config
+  (add-hook! (prog-mode text-mode conf-mode) #'wraplish-mode))
+
 (define-key!
  [remap isearch-forward]  #'phi-search
  [remap isearch-backward] #'phi-search-backward

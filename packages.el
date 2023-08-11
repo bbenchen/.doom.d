@@ -82,6 +82,9 @@
 (package! deno-bridge-jieba
   :recipe (:host github :repo "ginqi7/deno-bridge-jieba" :files ("*.el" "*.ts"))
   :pin "9f03c09db96064964905991a51ce4c664c44dcc5")
+(package! wraplish
+  :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
+  :pin "b00bb447532cf86a4444317b1dabfcdd8e806762")
 
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
