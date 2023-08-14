@@ -69,7 +69,7 @@
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
   :pin "b374b4a5da44dde82c06b59dfd99caedc6291824")
 
-(package! websocket :pin "a39ea953f27f6ae105ac5b1343852ddf13438048")
+(package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
   :pin "40676478e3b2dd5af068b1f7f7024776e7557446")
@@ -89,7 +89,7 @@
 (package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
-(package! goto-line-preview :pin "ac672c7d556e70b05eef499fb62c3f5093e4819e")
+(package! goto-line-preview :pin "3d5b0411751a8c4f1e7bd8d1b57b90ccfa1f3e7f")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
@@ -126,4 +126,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "d6f451dc09fb1a6f38a8327cf46ef246431afbd9")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "74dc96fafe63ff81a44e67ceceb6e0a23b6277b2")
+(package! auto-rename-tag :pin "5df9ea4cbbf8231def4f1a11df92fbcb2d10fb1e")
