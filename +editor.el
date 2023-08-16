@@ -58,10 +58,6 @@
                 (bound-and-true-p org-msg-mode)))))
   (auto-save-enable))
 
-;; duplicate-line
-(use-package! duplicate-line
-  :when (<= emacs-major-version 28))
-
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
   :config

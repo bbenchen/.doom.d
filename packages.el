@@ -93,10 +93,6 @@
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
-(if (<= emacs-major-version 28)
-    (package! duplicate-line
-      :recipe (:host github :repo "manateelazycat/duplicate-line")
-      :pin "03b8aa8c4ab094b59881421d34a2028c6b5ce2b1"))
 
 (if IS-MAC
     (package! exec-path-from-shell :pin "03fc0a38af9e396c98f5a30c392cf757b3a34feb"))
