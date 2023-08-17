@@ -140,7 +140,8 @@
               "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n#+end_signature\n")))
 
     (advice-add #'mu4e-compose-new :before #'mu4e-set-signature-for-org-msg)
-    (advice-add #'mu4e-compose-reply :before #'mu4e-set-signature-for-org-msg)))
+    (advice-add #'mu4e-compose-reply :before #'mu4e-set-signature-for-org-msg)
+    (advice-add #'mu4e-compose-forward :before #'mu4e-set-signature-for-org-msg)))
 
 (after! mu4e-alert
   (if IS-MAC
