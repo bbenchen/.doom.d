@@ -129,7 +129,18 @@
     (interactive)
     (if-let ((msg (mu4e-message-at-point t)))
         (mu4e-action-view-in-browser msg)
-      (user-error "No message at point."))))
+      (user-error "No message at point")))
+
+  (when (modulep! :email mu4e +org)
+    (defun mu4e-set-signature-for-org-msg (&rest _)
+      (if (string= (mu4e-context-name (mu4e-context-current)) "fa-software.com")
+          (setq org-msg-greeting-fmt
+                "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n\nFA Software (Chengdu) Co., Ltd\n#+end_signature\n")
+        (setq org-msg-greeting-fmt
+              "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n#+end_signature\n")))
+
+    (advice-add #'mu4e-compose-new :before #'mu4e-set-signature-for-org-msg)
+    (advice-add #'mu4e-compose-reply :before #'mu4e-set-signature-for-org-msg)))
 
 (after! mu4e-alert
   (if IS-MAC
@@ -142,13 +153,5 @@
 
 (when (modulep! :email mu4e +org)
   (after! org-msg
-    (setq org-msg-greeting-fmt "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n\nFA Software (Chengdu) Co., Ltd\n#+end_signature\n")
     (add-hook! 'org-msg-edit-mode-local-vars-hook (when (bound-and-true-p lsp-bridge-mode)
-                                                    (lsp-bridge-mode -1))))
-
-  (when (modulep! :lang web +lsp)
-    (remove-hook! 'web-mode-local-vars-hook #'lsp!)
-
-    (add-hook! 'web-mode-local-vars-hook (when (and (string-match-p "^org-msg" (buffer-name))
-                                                    (not (bound-and-true-p org-msg-mode)))
-                                           (lsp!)))))
+                                                    (lsp-bridge-mode -1)))))
