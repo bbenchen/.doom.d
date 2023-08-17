@@ -5,10 +5,10 @@
 (setq +mu4e-backend 'mbsync)
 
 (set-email-account! "fa-software.com"
-                    '((mu4e-sent-folder       . "/fa-software.com/已发送")
-                      (mu4e-drafts-folder     . "/fa-software.com/草稿")
-                      (mu4e-trash-folder      . "/fa-software.com/已删除")
-                      (mu4e-refile-folder     . "/fa-software.com/INBOX")
+                    '((mu4e-sent-folder       . "/fa-software.com/Sent")
+                      (mu4e-drafts-folder     . "/fa-software.com/Drafts")
+                      (mu4e-trash-folder      . "/fa-software.com/Trash")
+                      (mu4e-refile-folder     . "/fa-software.com/Inbox")
                       (mu4e-update-interval   . 600)
                       (smtpmail-smtp-user     . "xianbin.chen@fa-software.com")
                       (smtpmail-smtp-server   . "smtp.qiye.aliyun.com")
@@ -17,6 +17,19 @@
                       (user-full-name         . "Mike Chen")
                       (user-mail-address      . "xianbin.chen@fa-software.com"))
                     t)
+
+(set-email-account! "qq.com"
+                    '((mu4e-sent-folder       . "/fa-software.com/Sent")
+                      (mu4e-drafts-folder     . "/fa-software.com/Drafts")
+                      (mu4e-trash-folder      . "/fa-software.com/Trash")
+                      (mu4e-refile-folder     . "/fa-software.com/Inbox")
+                      (mu4e-update-interval   . 600)
+                      (smtpmail-smtp-user     . "517926804@qq.com")
+                      (smtpmail-smtp-server   . "smtp.qq.com")
+                      (smtpmail-smtp-service  . 465)
+                      (smtpmail-stream-type   . ssl)
+                      (user-full-name         . "Mike Chen")
+                      (user-mail-address      . "517926804@qq.com")))
 
 (after! mu4e
   ;; load mu4e-contrib
@@ -78,37 +91,37 @@
 
   (setq mu4e-bookmarks
         `((:name  "Unread messages"
-           :query "flag:unread AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "flag:unread AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?u)
           (:name "Today's messages"
-           :query "date:today..now AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "date:today..now AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?t)
           (:name "Last week"
-           :query "date:1w..now AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "date:1w..now AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?w)
           (:name "Last month"
-           :query "date:1m..now AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "date:1m..now AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?m)
           (:name "Last season"
-           :query "date:3m..now AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "date:3m..now AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?s)
           (:name "Last half year"
-           :query "date:6m..now AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "date:6m..now AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?h)
           (:name "Last year"
-           :query "date:1y..now AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "date:1y..now AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?y)
           (:name "All in inbox"
-           :query "maildir:/INBOX/ AND NOT flag:trash"
+           :query "maildir:/Inbox/ AND NOT flag:trash"
            :key ?a)
           (:name "Important"
-           :query "prio:high AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "prio:high AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?i)
           (:name "Mailing lists"
-           :query "flag:list AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "flag:list AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?l)
           (:name "With attachments"
-           :query "flag:attach AND maildir:/INBOX/ AND NOT flag:trash"
+           :query "flag:attach AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?p)))
 
   (defun +mu4e-open-mail-as-html ()
