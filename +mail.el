@@ -8,7 +8,7 @@
                     '((mu4e-sent-folder       . "/fa-software.com/Sent")
                       (mu4e-drafts-folder     . "/fa-software.com/Drafts")
                       (mu4e-trash-folder      . "/fa-software.com/Trash")
-                      (mu4e-refile-folder     . "/fa-software.com/Inbox")
+                      (mu4e-refile-folder     . "/fa-software.com/Archive")
                       (mu4e-update-interval   . 600)
                       (smtpmail-smtp-user     . "xianbin.chen@fa-software.com")
                       (smtpmail-smtp-server   . "smtp.qiye.aliyun.com")
@@ -19,10 +19,10 @@
                     t)
 
 (set-email-account! "qq.com"
-                    '((mu4e-sent-folder       . "/fa-software.com/Sent")
-                      (mu4e-drafts-folder     . "/fa-software.com/Drafts")
-                      (mu4e-trash-folder      . "/fa-software.com/Trash")
-                      (mu4e-refile-folder     . "/fa-software.com/Inbox")
+                    '((mu4e-sent-folder       . "/qq.com/Sent")
+                      (mu4e-drafts-folder     . "/qq.com/Drafts")
+                      (mu4e-trash-folder      . "/qq.com/Trash")
+                      (mu4e-refile-folder     . "/qq.com/Archive")
                       (mu4e-update-interval   . 600)
                       (smtpmail-smtp-user     . "517926804@qq.com")
                       (smtpmail-smtp-server   . "smtp.qq.com")
