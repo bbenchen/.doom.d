@@ -10,10 +10,6 @@
                       (mu4e-trash-folder      . "/fa-software.com/Trash")
                       (mu4e-refile-folder     . "/fa-software.com/Archive")
                       (mu4e-update-interval   . 600)
-                      (smtpmail-smtp-user     . "xianbin.chen@fa-software.com")
-                      (smtpmail-smtp-server   . "smtp.qiye.aliyun.com")
-                      (smtpmail-smtp-service  . 465)
-                      (smtpmail-stream-type   . ssl)
                       (user-full-name         . "Mike Chen")
                       (user-mail-address      . "xianbin.chen@fa-software.com"))
                     t)
@@ -24,16 +20,19 @@
                       (mu4e-trash-folder      . "/qq.com/Trash")
                       (mu4e-refile-folder     . "/qq.com/Archive")
                       (mu4e-update-interval   . 600)
-                      (smtpmail-smtp-user     . "517926804@qq.com")
-                      (smtpmail-smtp-server   . "smtp.qq.com")
-                      (smtpmail-smtp-service  . 465)
-                      (smtpmail-stream-type   . ssl)
                       (user-full-name         . "Mike Chen")
                       (user-mail-address      . "517926804@qq.com")))
 
 (after! mu4e
-  ;; load mu4e-contrib
-  (require 'mu4e-contrib)
+  (define-key! [remap compose-mail] #'+mu4e/compose)
+
+  (map! :map mu4e-headers-mode-map
+        "l" #'+mu4e/capture-msg-to-agenda)
+
+  (when (version<= "1.6" mu4e-mu-version)
+    (map! :map mu4e-view-mode-map
+          "A" #'+mu4e-view-select-mime-part-action
+          "o" #'+mu4e-view-open-attachment))
 
   (setq mu4e-compose-dont-reply-to-self t
         mu4e-headers-time-format "%T"
@@ -44,15 +43,25 @@
         mu4e-attachment-dir "~/Downloads"
         mm-text-html-renderer 'gnus-w3m)
 
-  (define-key! [remap compose-mail] #'+mu4e/compose)
+  (setq sendmail-program (executable-find "msmtp")
+        send-mail-function #'smtpmail-send-it
+        message-sendmail-f-is-evil t
+        message-send-mail-function #'message-send-mail-with-sendmail)
 
-  (map! :map mu4e-headers-mode-map
-        "l" #'+mu4e/capture-msg-to-agenda)
+  (add-hook! 'message-send-mail-hook
+    (defun +mu4e-set-msmtp-account ()
+      (if (message-mail-p)
+          (save-excursion
+            (let*
+                ((from (save-restriction
+                         (message-narrow-to-headers)
+                         (message-fetch-field "from")))
+                 (account
+                  (cond
+                   ((string-match "xianbin.chen@fa-software.com" from) "fa")
+                   ((string-match "517926804@qq.com" from) "qq"))))
+              (setq message-sendmail-extra-arguments (list '"-a" account '"--read-envelope-from")))))))
 
-  (when (version<= "1.6" mu4e-mu-version)
-    (map! :map mu4e-view-mode-map
-          "A" #'+mu4e-view-select-mime-part-action
-          "o" #'+mu4e-view-open-attachment))
   ;;
   ;; Xapian, the search engine of mu has a poor support of CJK characters,
   ;; which causes only query contains no more than 2 CJK characters works.
@@ -126,7 +135,7 @@
            :query "flag:attach AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?p)))
 
-  (defun +mu4e-open-mail-as-html ()
+  (defun +mu4e/open-mail-as-html ()
     "Open the HTML mail in Browser."
     (interactive)
     (if-let ((msg (mu4e-message-at-point t)))
@@ -134,16 +143,41 @@
       (user-error "No message at point")))
 
   (when (modulep! :email mu4e +org)
-    (defun mu4e-set-signature-for-org-msg (&rest _)
+    (defun +mu4e-set-signature-for-org-msg ()
       (if (string= (mu4e-context-name (mu4e-context-current)) "fa-software.com")
           (setq org-msg-greeting-fmt
                 "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n\nFA Software (Chengdu) Co., Ltd\n#+end_signature\n")
         (setq org-msg-greeting-fmt
               "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n#+end_signature\n")))
 
-    (advice-add #'mu4e-compose-new :before #'mu4e-set-signature-for-org-msg)
-    (advice-add #'mu4e-compose-reply :before #'mu4e-set-signature-for-org-msg)
-    (advice-add #'mu4e-compose-forward :before #'mu4e-set-signature-for-org-msg)))
+    (add-hook! 'mu4e-compose-pre-hook #'+mu4e-set-signature-for-org-msg))
+
+  (add-hook! 'mu4e-compose-mode-hook
+    (defun +mu4e-add-cc-and-bcc-header ()
+      (save-excursion (message-add-header "Cc: \n"))))
+
+  (defun mu4e-headers-mark-all-unread-read ()
+    "Put a ! \(read) mark on all visible unread messages."
+    (interactive)
+    (mu4e-headers-mark-for-each-if
+     (cons 'read nil)
+     (lambda (msg _param)
+       (memq 'unread (mu4e-msg-field msg :flags)))))
+
+  (defun mu4e-headers-flag-all-read ()
+    "Flag all visible messages as \"read\"."
+    (interactive)
+    (mu4e-headers-mark-all-unread-read)
+    (mu4e-mark-execute-all t))
+
+  (defun mu4e-headers-mark-all ()
+    "Mark all headers for some action.
+Ask user what action to execute."
+    (interactive)
+    (mu4e-headers-mark-for-each-if
+     (cons 'something nil)
+     (lambda (_msg _param) t))
+    (mu4e-mark-execute-all)))
 
 (after! mu4e-alert
   (if IS-MAC
@@ -152,7 +186,7 @@
   ;; Show notifications for mails already notified
   (setq mu4e-alert-notify-repeated-mails nil)
 
-  (setq mu4e-alert-interesting-mail-query "flag:unread AND maildir:/INBOX/ AND NOT flag:trash"))
+  (setq mu4e-alert-interesting-mail-query "flag:unread AND maildir:/Inbox/ AND NOT flag:trash"))
 
 (when (modulep! :email mu4e +org)
   (after! org-msg
