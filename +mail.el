@@ -44,6 +44,8 @@
         mu4e-attachment-dir "~/Downloads"
         mm-text-html-renderer 'gnus-w3m)
 
+  (define-key! [remap compose-mail] #'+mu4e/compose)
+
   (map! :map mu4e-headers-mode-map
         "l" #'+mu4e/capture-msg-to-agenda)
 
