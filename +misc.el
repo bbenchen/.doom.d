@@ -253,7 +253,7 @@
         eaf-browser-enable-autofill t
         eaf-browser-aria2-proxy-host "127.0.0.1"
         eaf-browser-aria2-proxy-port "7890"
-        eaf-browser-auto-import-chrome-cookies t)
+        eaf-browser-auto-import-chrome-cookies nil)
 
   (if-let ((bookmarks (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
                             (IS-LINUX (file-exists-p! (and (or "chromium/Default/Bookmarks"
@@ -276,8 +276,55 @@
   (require 'eaf-org-previewer)
   (require 'eaf-markmap)
 
-  (advice-remove #'dired-find-file #'eaf--dired-find-file-advisor)
-  (advice-remove #'dired-find-alternate-file #'eaf--dired-find-file-advisor)
+  (when (modulep! :emacs dired)
+    (advice-remove #'dired-find-file #'eaf--dired-find-file-advisor)
+    (advice-remove #'dired-find-alternate-file #'eaf--dired-find-file-advisor))
+
+  (defvar eaf-office-preview-list nil)
+
+  (defadvice! eaf-open-office-a (file)
+    :override #'eaf-open-office
+    (if-let* ((command (or (executable-find "libreoffice")
+                           (executable-find "soffice")))
+              (file-md5 (eaf-get-file-md5 file))
+              (basename (file-name-base file))
+              (pdf-file (format "%s/%s.pdf" temporary-file-directory file-md5))
+              (pdf-argument (format "%s.%s_office_pdf" basename (file-name-extension file))))
+        (if (file-exists-p pdf-file)
+            (progn
+              (pushnew! eaf-office-preview-list (cons pdf-file file))
+              (eaf-open pdf-file "pdf-viewer" pdf-argument))
+          (message "Converting %s to PDF, EAF will start shortly..." file)
+          (make-process
+           :name ""
+           :buffer " *eaf-open-office*"
+           :command (list command "--headless" "--convert-to" "pdf" (file-truename file) "--outdir" temporary-file-directory)
+           :sentinel (lambda (_ event)
+                       (when (string= (substring event 0 -1) "finished")
+                         (rename-file (format "%s/%s.pdf" temporary-file-directory basename) pdf-file)
+                         (pushnew! eaf-office-preview-list (cons pdf-file file))
+                         (eaf-open pdf-file "pdf-viewer" pdf-argument)))))
+      (error "[EAF/office] libreoffice is required convert Office file to PDF!")))
+
+  (defadvice! eaf-open-external-a ()
+    :override #'eaf-open-external
+    (let* ((path-or-url (eaf-get-path-or-url))
+           (office-path-or-url (cdr (assoc path-or-url eaf-office-preview-list)))
+           (final-path-or-url (if office-path-or-url
+                                  office-path-or-url
+                                path-or-url)))
+      (cond ((memq system-type '(cygwin windows-nt ms-dos))
+             (w32-shell-execute "open" final-path-or-url))
+            ((eq system-type 'darwin)
+             (shell-command (concat "open " (shell-quote-argument final-path-or-url))))
+            ((eq system-type 'gnu/linux)
+             (let ((process-connection-type nil))
+               (start-process "" nil "xdg-open" final-path-or-url))))))
+
+  (defadvice! eaf-py-proxy-close_buffer-a ()
+    :override #'eaf-py-proxy-close_buffer
+    (if-let* ((file (eaf-get-path-or-url)))
+        (delq! file eaf-office-preview-list 'assoc)))
 
   (defun eaf-translate-text (text)
     (cond ((featurep 'popweb-dict) (popweb-dict-bing-input text))

@@ -41,7 +41,8 @@
         ;; mu4e-search-full t
         mu4e-search-results-limit 1000
         mu4e-attachment-dir "~/Downloads"
-        mm-text-html-renderer 'gnus-w3m)
+        mm-text-html-renderer 'gnus-w3m
+        mu4e-view-open-program 'find-file)
 
   (setq sendmail-program (executable-find "msmtp")
         send-mail-function #'smtpmail-send-it
@@ -177,7 +178,28 @@ Ask user what action to execute."
     (mu4e-headers-mark-for-each-if
      (cons 'something nil)
      (lambda (_msg _param) t))
-    (mu4e-mark-execute-all)))
+    (mu4e-mark-execute-all))
+
+  (defun mu4e--view-mime-part-to-temp-file (handle)
+    "Write MIME-part HANDLE to a temporary file and return the file name.
+The filename is deduced from the MIME-part's filename, or
+otherwise random; the result is placed in a temporary directory
+with a unique name. Returns the full path for the file created.
+The directory and file are self-destructed."
+    (let* ((tmpdir (make-temp-file "mu4e-temp-" t))
+           (fname (mm-handle-filename handle))
+           (fname (and fname
+                       (gnus-map-function mm-file-name-rewrite-functions
+                                          (file-name-nondirectory fname))))
+           (fname (if fname
+                      (concat tmpdir "/" (replace-regexp-in-string "/" "-" fname))
+                    (let ((temporary-file-directory tmpdir))
+                      (make-temp-file "mimepart")))))
+      (unless (file-exists-p fname)
+        (mm-save-part-to-file handle fname))
+      ;; (run-at-time "30 sec" nil
+      ;;              (lambda () (ignore-errors (delete-directory tmpdir t))))
+      fname)))
 
 (after! mu4e-alert
   (if IS-MAC
