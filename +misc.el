@@ -322,7 +322,7 @@
                (start-process "" nil "xdg-open" final-path-or-url))))))
 
   (defadvice! eaf-py-proxy-close_buffer-a ()
-    :override #'eaf-py-proxy-close_buffer
+    :before #'eaf-py-proxy-close_buffer
     (if-let* ((file (eaf-get-path-or-url)))
         (delq! file eaf-office-preview-list 'assoc)))
 
