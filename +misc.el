@@ -309,9 +309,9 @@
   (defadvice! eaf-open-external-a ()
     :override #'eaf-open-external
     (let* ((path-or-url (eaf-get-path-or-url))
-           (office-path-or-url (expand-file-name (cdr (assoc path-or-url eaf-office-preview-list))))
+           (office-path-or-url (cdr (assoc path-or-url eaf-office-preview-list)))
            (final-path-or-url (if office-path-or-url
-                                  office-path-or-url
+                                  (expand-file-name office-path-or-url)
                                 path-or-url)))
       (cond ((memq system-type '(cygwin windows-nt ms-dos))
              (w32-shell-execute "open" final-path-or-url))
