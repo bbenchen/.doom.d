@@ -357,6 +357,7 @@
       (eaf-open file))
 
     ;; use `emacs-application-framework' to open PDF file: link
+    (setq org-file-apps (assoc-delete-all "\\.pdf\\'" org-file-apps))
     (add-to-list 'org-file-apps '("\\.pdf\\'" . eaf-org-open-file)))
 
   (setq +latex-viewers nil)
