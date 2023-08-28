@@ -154,7 +154,7 @@
     (add-hook! 'mu4e-compose-pre-hook #'+mu4e-set-signature-for-org-msg))
 
   (add-hook! 'mu4e-compose-mode-hook
-    (defun +mu4e-add-cc-and-bcc-header ()
+    (defun +mu4e-add-cc--header ()
       (save-excursion (message-add-header "Cc: \n"))))
 
   (defun mu4e-headers-mark-all-unread-read ()
