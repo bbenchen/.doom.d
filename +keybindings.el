@@ -29,7 +29,6 @@
             "C-\\" #'toggle-input-method))
 
 (map! :leader
-      "e" nil
       (:prefix-map ("f" . "file")
        :desc "Find file in dotfiles" "t" #'find-in-dotfiles
        :desc "Browse dotfiles" "T" #'browse-dotfiles)
