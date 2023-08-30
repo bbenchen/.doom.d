@@ -74,11 +74,6 @@
   :config
   (add-hook! (prog-mode text-mode conf-mode) #'wraplish-mode))
 
-(define-key!
- [remap isearch-forward]  #'phi-search
- [remap isearch-backward] #'phi-search-backward
- [remap query-replace]    #'phi-replace-query)
-
 ;; treesit
 (use-package! treesit
   :when (treesit-available-p)

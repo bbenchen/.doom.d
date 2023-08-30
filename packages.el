@@ -86,7 +86,6 @@
   :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
   :pin "b00bb447532cf86a4444317b1dabfcdd8e806762")
 
-(package! phi-search :pin "c34f5800968922d1f9e7b10092b8705d6640ad18")
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
 (package! goto-line-preview :pin "3d5b0411751a8c4f1e7bd8d1b57b90ccfa1f3e7f")
