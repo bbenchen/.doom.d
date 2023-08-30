@@ -197,12 +197,12 @@ unwanted space when exporting org-mode to hugo markdown."
     (setq google-translate-tooltip-last-scroll-offset (window-start)))
 
   (defun -region-or-word ()
-    (if (use-region-p)
-        (buffer-substring-no-properties (region-beginning) (region-end))
-      (thing-at-point 'word t)))
+    (cond ((derived-mode-p 'pdf-view-mode) (car (pdf-view-active-region-text)))
+          ((use-region-p) (buffer-substring-no-properties (region-beginning) (region-end)))
+          (t (thing-at-point 'word t))))
 
   (defun -chinese-word-p (word)
-    (if (and word (string-match "\\cc" word)) t nil))
+    (if (and word (string-match "[\u4e00-\u9fa5]" word)) t nil))
 
   (defun -translate-request (source-language target-language text)
     (let* ((json (google-translate-request source-language
@@ -244,11 +244,11 @@ unwanted space when exporting org-mode to hugo markdown."
            (bounds nil))
       (-translate-request
        source-language target-language
-       (if (use-region-p)
-           (buffer-substring-no-properties (region-beginning) (region-end))
-         (or (and (setq bounds (bounds-of-thing-at-point 'word))
-                  (buffer-substring-no-properties (car bounds) (cdr bounds)))
-             (error "No word at point."))))))
+       (cond ((derived-mode-p 'pdf-view-mode) (car (pdf-view-active-region-text)))
+             ((use-region-p) (buffer-substring-no-properties (region-beginning) (region-end)))
+             (t (or (and (setq bounds (bounds-of-thing-at-point 'word))
+                         (buffer-substring-no-properties (car bounds) (cdr bounds)))
+                    (error "No word at point")))))))
 
   (defun google-translate-at-point++ (&optional override-p)
     "Translate at point and show result with posframe."
@@ -265,7 +265,7 @@ unwanted space when exporting org-mode to hugo markdown."
 英转中翻译。并在posframe提示框里显示结果。此方法只能用于点词翻译，
 不能用于划词翻译，至于原因，我还没弄明白。"
     (interactive "P")
-    (if (-chinese-word-p(-region-or-word))
+    (if (-chinese-word-p (-region-or-word))
         (%google-translate-at-point++ override-p t)
       (%google-translate-at-point++ override-p nil)))
 
@@ -274,7 +274,7 @@ unwanted space when exporting org-mode to hugo markdown."
 英转中翻译。并在另一个buffer里显示结果。此方法既可用于点词翻译，
 也可用于划词翻译。"
     (interactive "P")
-    (if (-chinese-word-p(-region-or-word))
+    (if (-chinese-word-p (-region-or-word))
         (%google-translate-at-point override-p t)
       (%google-translate-at-point override-p nil))))
 
