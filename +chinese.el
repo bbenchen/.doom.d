@@ -326,4 +326,6 @@ unwanted space when exporting org-mode to hugo markdown."
 
   (defadvice! popweb-dict-region-or-word-a ()
     :override #'popweb-dict-region-or-word
-    (-region-or-word)))
+    (cond ((derived-mode-p 'pdf-view-mode) (car (pdf-view-active-region-text)))
+          ((use-region-p) (buffer-substring-no-properties (region-beginning) (region-end)))
+          (t (thing-at-point 'word t)))))
