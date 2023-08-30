@@ -270,7 +270,6 @@
       (setq eaf-browser-chrome-history-file history))
   :config
   (require 'eaf-image-viewer)
-  (require 'eaf-pdf-viewer)
   (require 'eaf-browser)
   (require 'eaf-markdown-previewer)
   (require 'eaf-org-previewer)
@@ -350,21 +349,7 @@
       (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer)))
 
   (after! org
-    (require 'eaf-org)
-
-    (defun eaf-org-open-file (file &optional _link)
-      "An wrapper function on `eaf-open'."
-      (eaf-open file))
-
-    ;; use `emacs-application-framework' to open PDF file: link
-    (setq org-file-apps (assoc-delete-all "\\.pdf\\'" org-file-apps))
-    (add-to-list 'org-file-apps '("\\.pdf\\'" . eaf-org-open-file)))
-
-  (setq +latex-viewers nil)
-  (after! tex
-    (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex --synctex=1%(mode)%' %t" TeX-run-TeX nil t))
-    (add-to-list 'TeX-view-program-list '("eaf" eaf-pdf-synctex-forward-view))
-    (add-to-list 'TeX-view-program-selection '(output-pdf "eaf"))))
+    (require 'eaf-org)))
 
 ;; mind-wave
 (use-package! mind-wave
