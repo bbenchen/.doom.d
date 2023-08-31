@@ -101,7 +101,9 @@
   :pin "994618abcd2c6a09af49b486d270ad4fd2d5b4a4")
 
 (when (modulep! :tools magit)
-  (package! magit-gerrit :pin "a97521574c5b7d4b7ab89e25c358c87fd5b1887f")
+  (package! magit-gerrit
+    :recipe (:host github :repo "darcylee/magit-gerrit")
+    :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
   (package! blamer :pin "ab00e6a3ea482c342d918add9c20bfd3fa740aaa"))
 
 (package! lsp-bridge
