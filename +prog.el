@@ -250,6 +250,7 @@
 
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
+        lsp-bridge-enable-completion-in-string t
         lsp-bridge-enable-mode-line nil
         lsp-bridge-enable-log nil
         lsp-bridge-enable-org-babel t
@@ -258,6 +259,7 @@
         lsp-bridge-signature-show-with-frame-position "point"
         lsp-bridge-python-lsp-server "ruff"
         acm-backend-yas-match-by-trigger-keyword t
+        acm-backend-search-file-words-enable-fuzzy-match t
         acm-enable-tabnine nil
         acm-enable-copilot nil
         acm-enable-preview t)
