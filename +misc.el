@@ -21,6 +21,16 @@
   (add-to-list 'recentf-exclude "/var")
   (add-to-list 'recentf-exclude "/autosave"))
 
+;; winner
+(after! winner
+  ;; fix: wrong type argument: frame-live-p, #<dead frame
+  (defadvice! winner-save-old-configurations-a ()
+    "Remove dead frames from `winner-modified-list`"
+    :before #'winner-save-old-configurations
+    (cl-dolist (frame winner-modified-list)
+      (unless (frame-live-p frame)
+        (delq! frame winner-modified-list)))))
+
 ;; workspaces
 (setq +workspaces-on-switch-project-behavior t)
 
