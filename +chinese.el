@@ -138,10 +138,12 @@ unwanted space when exporting org-mode to hugo markdown."
 ;; google-translate
 (use-package! go-translate
   :defer t
+  :commands gts-do-translate-prompt
   :init
   (map! :leader
         (:prefix-map ("y" . "translate")
-         :desc "Google translate" "g" #'gts-do-translate))
+         :desc "Google translate" "g" #'gts-do-translate
+         :desc "Google translate prompt" "G" #'gts-do-translate-prompt))
   (add-hook! 'doom-load-theme-hook :append
     (setq gts-pop-posframe-backcolor (face-background 'mode-line)
           gts-pop-posframe-forecolor (face-foreground 'mode-line)))
@@ -152,12 +154,22 @@ unwanted space when exporting org-mode to hugo markdown."
         gts-posframe-pop-render-timeout nil
         gts-pop-posframe-backcolor (face-background 'mode-line)
         gts-pop-posframe-forecolor (face-foreground 'mode-line))
+
   (setq gts-default-translator
         (gts-translator
          :picker (gts-noprompt-picker :texter (gts-current-or-selection-texter))
          :engines (list (gts-google-rpc-engine :parser (gts-google-rpc-parser)))
          :render (gts-posframe-pop-render)
-         :splitter (gts-paragraph-splitter))))
+         :splitter (gts-paragraph-splitter)))
+
+  (defun gts-do-translate-prompt ()
+    "Do the translation of this prompt"
+    (interactive)
+    (gts-translate (gts-translator
+                    :picker (gts-prompt-picker)
+                    :engines (list (gts-google-rpc-engine :parser (gts-google-rpc-parser)))
+                    :render (gts-posframe-pop-render)
+                    :splitter (gts-paragraph-splitter)))))
 
 ;; insert-translated-name
 (use-package! insert-translated-name
