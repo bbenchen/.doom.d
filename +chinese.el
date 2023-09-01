@@ -136,38 +136,27 @@ unwanted space when exporting org-mode to hugo markdown."
       (list paragraph fixed-contents info))))
 
 ;; google-translate
-(use-package! google-translate
+(use-package! go-translate
   :defer t
-  :commands (google-translate-chinese-at-point)
   :init
-  (setq google-translate-base-url "https://translate.google.com/translate_a/single"
-        google-translate-listen-url "https://translate.google.com/translate_tts"
-        ;; google-translate-backend-method 'curl
-        google-translate-default-source-language "en"
-        google-translate-default-target-language "zh-CN"
-        google-translate-listen-program (executable-find "mpv"))
-
   (map! :leader
         (:prefix-map ("y" . "translate")
-         :desc "Google translate" "g" #'google-translate-chinese-at-point))
+         :desc "Google translate" "g" #'gts-do-translate))
+  (add-hook! 'doom-load-theme-hook :append
+    (setq gts-pop-posframe-backcolor (face-background 'mode-line)
+          gts-pop-posframe-forecolor (face-foreground 'mode-line)))
   :config
-  (setq url-automatic-caching t)
-
-  (set-popup-rule! "^\\*Google Translate\\*" :side 'right :size 0.4 :select t)
-
-  (defun google-translate-chinese-at-point (&optional override-p)
-    "如果当前位置是中文，则自动调用反向进行中转英翻译，否则进行正向
-英转中翻译。并在另一个buffer里显示结果。此方法既可用于点词翻译，
-也可用于划词翻译。"
-    (interactive "P")
-    (if-let ((word (cond ((derived-mode-p 'pdf-view-mode) (car (pdf-view-active-region-text)))
-                         ((use-region-p) (buffer-substring-no-properties (region-beginning) (region-end)))
-                         (t (if-let* ((bounds (bounds-of-thing-at-point 'word)))
-                                (buffer-substring-no-properties (car bounds) (cdr bounds))
-                              (error "No word at point"))))))
-        (if (string-match "[\u4e00-\u9fa5]" word)
-            (%google-translate-at-point override-p t)
-          (%google-translate-at-point override-p nil)))))
+  (set-popup-rule! "^\\*Go-Translate\\*" :side 'right :size 0.4 :select t)
+  (setq gts-translate-list '(("en" "zh"))
+        gts-buffer-follow-p t
+        gts-pop-posframe-backcolor (face-background 'mode-line)
+        gts-pop-posframe-forecolor (face-foreground 'mode-line))
+  (setq gts-default-translator
+        (gts-translator
+         :picker (gts-noprompt-picker :texter (gts-current-or-selection-texter))
+         :engines (list (gts-google-rpc-engine))
+         :render (gts-posframe-pop-render)
+         :splitter (gts-paragraph-splitter))))
 
 ;; insert-translated-name
 (use-package! insert-translated-name

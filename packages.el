@@ -60,7 +60,7 @@
 
 (package! rime :pin "6438abacace7d94f05fabc45b82d619677fc5fca")
 
-(package! google-translate :pin "e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9")
+(package! go-translate :pin "e5680e294f0e18d945c9f18ff7f4e6610c1ed50b")
 (package! insert-translated-name
   :recipe (:host github :repo "cxb811201/insert-translated-name" :branch "google")
   :pin "4263968c2bcaf6ecc6c66c9ca43770f39aa09b8b")
