@@ -69,9 +69,13 @@
                                   rime-predicate-prog-in-code-p
                                   rime-predicate-ace-window-p
                                   rime-predicate-hydra-p))
+
   (if (and IS-MAC
            (string-prefix-p "aarch64" system-configuration))
-      (setq rime-emacs-module-header-root (concat "/opt/homebrew/opt/emacs-plus@" (number-to-string emacs-major-version) "/include")))
+      (if-let* ((emacs-install-dir (file-exists-p! (or (concat "/opt/homebrew/opt/emacs-plus@" (number-to-string emacs-major-version))
+                                                       (concat "/opt/homebrew/opt/emacs-head@" (number-to-string emacs-major-version)))))
+                (emacs-module-header-dir (expand-file-name "include" emacs-install-dir)))
+          (setq rime-emacs-module-header-root emacs-module-header-dir)))
   :config
   (custom-set-faces!
     `(rime-default-face :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg)))
