@@ -100,25 +100,27 @@
 (after! ispell
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
 
+;; with-editor
+(setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
+
 ;; magit
 (after! magit
   (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     ")))
 
+;; magit-todos
 (after! magit-todos
   (setq magit-todos-submodule-list t
-        magit-todos-exclude-globs (append magit-todos-exclude-globs '(".svn/" "node_modules/*"))))
+        magit-todos-exclude-globs (append magit-todos-exclude-globs '(".svn/" "node_modules/*")))
+  (if (executable-find "nice")
+      (setq magit-todos-nice t))
+  (if (executable-find "rg")
+      (setq magit-todos-scanner 'magit-todos--scan-with-rg)))
 
 ;; (after! git-commit
 ;;   (if (modulep! :checkers spell +flyspell)
 ;;       (remove-hook! 'git-commit-mode-hook #'flyspell-mode)))
 
 (when (modulep! :tools magit)
-  ;; magit-todos
-  (if (executable-find "nice")
-      (setq magit-todos-nice t))
-  (if (executable-find "rg")
-      (setq magit-todos-scanner 'magit-todos--scan-with-rg))
-
   ;; blamer
   (use-package! blamer
     :defer 5
