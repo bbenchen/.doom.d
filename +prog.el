@@ -5,6 +5,9 @@
 
 ;; xml
 (after! nxml-mode
+  (when (modulep! :tools tree-sitter)
+    (add-hook! 'nxml-mode-local-vars-hook :append #'tree-sitter!))
+
   (setq nxml-auto-insert-xml-declaration-flag nil
         nxml-slash-auto-complete-flag nil)
 
