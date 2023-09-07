@@ -109,7 +109,8 @@
 (package! lsp-bridge
   :recipe (:host github
            :repo "cxb811201/lsp-bridge"
-           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
+           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
+           :build (:not compile))
   :pin "a864917e092e2ac97cad9d9fc8a13f73dea42674")
 
 (when (modulep! :lang go)
