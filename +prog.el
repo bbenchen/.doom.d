@@ -98,7 +98,7 @@
                       (setq-local old-default-directory default-directory
                                   default-directory (doom-project-root))
                       (compilation-start (concat "java -jar " +java/junit-platform-console-standalone-jar
-                                                 " -cp " classpaths
+                                                 " execute --disable-banner  -cp " classpaths
                                                  (if method
                                                      (format " -m '%s.%s#%s'" pkg class method)
                                                    (format " -c '%s.%s'" pkg class))))
@@ -290,7 +290,6 @@
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
                                           "-server"
-                                          "-Xms2G"
                                           "-Xmx2G"
                                           "-Xmn768M"
                                           "-Xss512K"
