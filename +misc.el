@@ -359,10 +359,7 @@
                 (setq has-eaf-buffer t)))
           has-eaf-buffer))
       (advice-add #'vertico-posframe--show :before-until #'eaf-in-eaf-buffer)
-      (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer)))
-
-  (after! org
-    (require 'eaf-org)))
+      (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer))))
 
 ;; mind-wave
 (use-package! mind-wave
