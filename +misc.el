@@ -101,7 +101,7 @@
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
 
 ;; with-editor
-(setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
+;; (setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
 
 ;; magit
 (after! magit
