@@ -81,14 +81,14 @@
   :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
 (package! deno-bridge-jieba
   :recipe (:host github :repo "ginqi7/deno-bridge-jieba" :files ("*.el" "*.ts"))
-  :pin "9f03c09db96064964905991a51ce4c664c44dcc5")
+  :pin "065dc1933ae0195321bdcdee46e6775dbd77f0e4")
 (package! wraplish
   :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
   :pin "b00bb447532cf86a4444317b1dabfcdd8e806762")
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
-(package! centered-cursor-mode :pin "ebaeb80fba0bafdf6f95706308123dec2cf4b99f")
-(package! goto-line-preview :pin "3d5b0411751a8c4f1e7bd8d1b57b90ccfa1f3e7f")
+(package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
+(package! goto-line-preview :pin "877d65a60cfa1abab55c95574212bdc9fcd6bebe")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
@@ -98,7 +98,7 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
-  :pin "994618abcd2c6a09af49b486d270ad4fd2d5b4a4")
+  :pin "b787803ff745dde28727c10833b397d846fc1f7f")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
@@ -111,7 +111,7 @@
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "a864917e092e2ac97cad9d9fc8a13f73dea42674")
+  :pin "7730d0d004ba8923282b71cee1ca7595a8395bf2")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -124,4 +124,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "d6f451dc09fb1a6f38a8327cf46ef246431afbd9")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "5df9ea4cbbf8231def4f1a11df92fbcb2d10fb1e")
+(package! auto-rename-tag :pin "d31dc3882d0bc2cfc3856fcec1e1e61a5f60659b")
