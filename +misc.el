@@ -134,12 +134,13 @@
            :desc "Blamer" "B" #'blamer-mode))
     :config
     (custom-set-faces!
-      `(blamer-face :foreground "#7a88cf" :background nil :italic t))
+      `(blamer-face :foreground ,(doom-color 'blue) :background unspecified :italic t))
 
     (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
 
     (add-hook! 'doom-load-theme-hook :append
-      (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))))
+      (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
+      (set-face-foreground 'blamer-face (doom-color 'blue))))
 
   ;; magit-gerrit
   (use-package! magit-gerrit))
