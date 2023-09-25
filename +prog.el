@@ -267,7 +267,7 @@
         acm-enable-copilot nil
         acm-enable-preview t)
 
-  (if (featurep 'orderless)
+  (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-regexp))
 
   (global-lsp-bridge-mode)
