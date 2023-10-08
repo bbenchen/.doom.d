@@ -114,17 +114,18 @@
           (python-mode . python-ts-mode)
           (yaml-mode . yaml-ts-mode)))
 
-  (add-hook! (emacs-lisp-mode ielm-mode)
-    (treesit-parser-create 'elisp))
+  ;; (add-hook! (emacs-lisp-mode ielm-mode)
+  ;;   (treesit-parser-create 'elisp))
 
-  (add-hook! markdown-mode
-    (treesit-parser-create 'markdown))
+  ;; (add-hook! markdown-mode
+  ;;   (treesit-parser-create 'markdown))
 
-  (add-hook! org-mode
-    (treesit-parser-create 'org))
+  ;; (add-hook! org-mode
+  ;;   (treesit-parser-create 'org))
 
   ;; (add-hook! scala-mode
   ;;   (treesit-parser-create 'scala))
 
-  (add-hook! sql-mode
-    (treesit-parser-create 'sql)))
+  ;; (add-hook! sql-mode
+  ;;   (treesit-parser-create 'sql))
+  )
