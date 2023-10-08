@@ -369,13 +369,6 @@
     (if (and lsp-bridge-mode
              (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-find-def-return)
-      (apply fn args)))
-
-  (defadvice! +default/diagnostics-a (fn &rest args)
-    :around #'+default/diagnostics
-    (if (and lsp-bridge-mode
-             (lsp-bridge-has-lsp-server-p))
-        (lsp-bridge-diagnostic-list)
       (apply fn args))))
 
 (use-package! flymake-bridge
