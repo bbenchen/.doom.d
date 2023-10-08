@@ -113,6 +113,11 @@
            :build (:not compile))
   :pin "69d34a5a70cd624bea41e9ba3ceb8b56dc13bea5")
 
+(when (modulep! :checkers syntax +flymake)
+  (package! flymake-bridge
+    :recipe (:host github :repo "liuyinz/flymake-bridge")
+    :pin "c0b727d3c600b32e663dfd2dbd51223f0af88af7"))
+
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")

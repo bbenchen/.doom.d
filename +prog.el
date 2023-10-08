@@ -377,3 +377,9 @@
              (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-diagnostic-list)
       (apply fn args))))
+
+(use-package! flymake-bridge
+  :when (modulep! :checkers syntax +flymake)
+  :after lsp-bridge
+  :config
+  (add-hook! lsp-bridge-mode #'flymake-bridge-setup))
