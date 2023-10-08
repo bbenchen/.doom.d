@@ -104,7 +104,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "ab00e6a3ea482c342d918add9c20bfd3fa740aaa"))
+  (package! blamer :pin "4b70b657f83542491b77a4dc512674f3fa5ce01c"))
 
 (package! lsp-bridge
   :recipe (:host github
@@ -127,6 +127,6 @@
 (package! sqlup-mode :pin "3f9df9c88d6a7f9b1ae907e401cad8d3d7d63bbf")
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
-  :pin "d6f451dc09fb1a6f38a8327cf46ef246431afbd9")
+  :pin "323ece64acaac7f27b7806db9dba0757d6e57885")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
 (package! auto-rename-tag :pin "d31dc3882d0bc2cfc3856fcec1e1e61a5f60659b")
