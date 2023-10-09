@@ -229,7 +229,10 @@
 
 ;; sql
 (after! sql
-  (setq sql-product 'oracle))
+  (setq sql-product 'oracle)
+
+  (if (modulep! :tools tree-sitter)
+      (add-hook! 'sql-mode-local-vars-hook #'tree-sitter! 'append)))
 
 (use-package! sqlup-mode
   :defer t
