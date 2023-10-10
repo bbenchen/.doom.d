@@ -273,6 +273,9 @@
   (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-regexp))
 
+  (appendq! lsp-bridge-single-lang-server-mode-list
+            '(((json-mode json-ts-mode) . "vscode-json-language-server")))
+
   (global-lsp-bridge-mode)
 
   (when (modulep! :checkers syntax)
