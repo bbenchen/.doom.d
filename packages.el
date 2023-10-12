@@ -94,7 +94,7 @@
   :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
 
 (if IS-MAC
-    (package! exec-path-from-shell :pin "03fc0a38af9e396c98f5a30c392cf757b3a34feb"))
+    (package! exec-path-from-shell :pin "4e1a938157515734019ad5b4e3cc09d849013da8"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
@@ -111,12 +111,12 @@
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "69d34a5a70cd624bea41e9ba3ceb8b56dc13bea5")
+  :pin "4f742ae1cac073da1f07d9988c75d33fb54b0a45")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
-    :pin "c0b727d3c600b32e663dfd2dbd51223f0af88af7"))
+    :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
