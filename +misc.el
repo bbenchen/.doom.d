@@ -92,7 +92,14 @@
   (setq dired-recursive-copies 'always
         dired-recursive-deletes 'always)
   (if (boundp 'dired-kill-when-opening-new-dired-buffer)
-      (setq dired-kill-when-opening-new-dired-buffer t)))
+      (setq dired-kill-when-opening-new-dired-buffer t))
+
+  (map! :map dired-mode-map
+        "h" #'dired-up-directory
+        "l" #'dired-find-alternate-file)
+
+  ;; Don't complain about this command being disabled when we use it
+  (put 'dired-find-alternate-file 'disabled nil))
 
 ;; spell
 (setq ispell-dictionary "en_US"
