@@ -278,20 +278,14 @@
 
   (global-lsp-bridge-mode)
 
-  (when (modulep! :checkers syntax)
-    (defun lsp-bridge-lsp-server-disable-flymake-or-flycheck()
-      (cond ((and (modulep! :checkers syntax +flymake)
-                  (lsp-bridge-has-lsp-server-p))
-             (if (bound-and-true-p flymake-mode)
-                 (flymake-mode -1))
-             (if (featurep 'flymake-popon)
-                 (flymake-popon-mode -1)))
-            (t
-             (if (bound-and-true-p flycheck-mode)
-                 (flycheck-mode -1)))))
+  (when (and (modulep! :checkers syntax)
+             (not (modulep! :checkers syntax +flymake)))
+    (defun lsp-bridge-lsp-server-disable-flycheck()
+      (if (bound-and-true-p flycheck-mode)
+          (flycheck-mode -1)))
 
     (dolist (hook lsp-bridge-default-mode-hooks)
-      (add-hook hook #'lsp-bridge-lsp-server-disable-flymake-or-flycheck t)))
+      (add-hook hook #'lsp-bridge-lsp-server-disable-flycheck t)))
 
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
