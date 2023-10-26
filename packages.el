@@ -58,7 +58,7 @@
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
   :pin "fa50ae0c5cf992e95288a3da9c02948a9b42c009")
 
-(package! rime :pin "6438abacace7d94f05fabc45b82d619677fc5fca")
+(package! rime :pin "0de3250fd1005878dd7a06a8fef7324a878f17b3")
 
 (package! go-translate :pin "e5680e294f0e18d945c9f18ff7f4e6610c1ed50b")
 (package! insert-translated-name
@@ -91,7 +91,7 @@
 (package! goto-line-preview :pin "877d65a60cfa1abab55c95574212bdc9fcd6bebe")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
-  :pin "e0a6f2e85e2aae115321e2cdfee892d48f0d9597")
+  :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
 
 (if IS-MAC
     (package! exec-path-from-shell :pin "4e1a938157515734019ad5b4e3cc09d849013da8"))
@@ -111,7 +111,7 @@
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "7f1c9805a7e1999b9cb9c318c2809e3e1ac6eb7c")
+  :pin "0c16503d825e4e3add733157d53414c7a6ace99d")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
