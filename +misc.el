@@ -371,9 +371,10 @@
 ;; mind-wave
 (use-package! mind-wave
   :config
-  (setq mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
+  (setq mind-wave-lang "zh_CN"
+        mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
         mind-wave-api-base "https://openkey.cloud/v1"
-        mind-wave-chat-model "gpt-3.5-turbo-0613"
+        mind-wave-chat-model "gpt-3.5-turbo-16k-0613"
         mind-wave-async-text-model "gpt-3.5-turbo-0613"
         mind-wave-action-code-model "gpt-3.5-turbo-0613"
         mind-wave-explain-word-model "gpt-3.5-turbo-0613"
