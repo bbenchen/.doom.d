@@ -108,7 +108,10 @@
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
 
 ;; with-editor
-;; (setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
+(if IS-MAC
+    (if (string-prefix-p "aarch64" system-configuration)
+        (setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
+      (setq with-editor-emacsclient-executable "/usr/local/bin/emacsclient")))
 
 ;; magit
 (after! magit
