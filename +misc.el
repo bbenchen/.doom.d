@@ -101,6 +101,15 @@
   ;; Don't complain about this command being disabled when we use it
   (put 'dired-find-alternate-file 'disabled nil))
 
+;; flymake
+(after! flymake-popon
+  (setq flymake-popon-posframe-border-width 0)
+  (custom-set-faces!
+    `(flymake-popon :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg)))
+  (add-hook! 'doom-load-theme-hook :append
+    (set-face-foreground 'flymake-popon (doom-color 'modeline-fg))
+    (set-face-background 'flymake-popon (doom-color 'modeline-bg))))
+
 ;; spell
 (setq ispell-dictionary "en_US"
       ispell-alternate-dictionary (expand-file-name "english-words" doom-user-dir))
