@@ -79,9 +79,6 @@
       :desc "Run junit test" "t" #'+java/run-junit-test
       :desc "Update project config" "u" #'lsp-bridge-jdtls-update-project-configuration)
 
-(defvar +java/junit-platform-console-standalone-jar
-  (expand-file-name "~/.local/jdtls/test-runner/junit-platform-console-standalone.jar"))
-
 ;; check junit console launcher options for details
 (defun +java/run-junit-test ()
   "Java run main/test at point."
@@ -95,14 +92,18 @@
              (if is-test-file
                  (lsp-bridge-jdtls-project-get-classpaths
                   #'(lambda (classpaths)
-                      (setq-local old-default-directory default-directory
-                                  default-directory (doom-project-root))
-                      (compilation-start (concat "java -jar " +java/junit-platform-console-standalone-jar
-                                                 " execute --disable-banner  -cp " classpaths
-                                                 (if method
-                                                     (format " -m '%s.%s#%s'" pkg class method)
-                                                   (format " -c '%s.%s'" pkg class))))
-                      (setq-local default-directory old-default-directory))
+                      (let ((junit-wrapper "junit-wrapper.py")
+                            (classpath-file (expand-file-name "junit-classpaths" temporary-file-directory)))
+                        (with-temp-file classpath-file
+                          (insert classpaths))
+
+                        (setq-local old-default-directory default-directory
+                                    default-directory (doom-project-root))
+                        (compilation-start (concat junit-wrapper (format " '%s'" classpath-file)
+                                                   (if method
+                                                       (format " '%s.%s#%s'" pkg class method)
+                                                     (format " '%s.%s'" pkg class))))
+                        (setq-local default-directory old-default-directory)))
                   "test")
                (message "%s is not a test file" class))))
       (user-error "Can not found package/class"))))
