@@ -111,7 +111,7 @@
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "13e5479d011c6a94a103078d5917a30df829e93b")
+  :pin "c454f5c59ebafd532fafe9b4814e2f36d32403b2")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
