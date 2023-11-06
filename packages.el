@@ -84,7 +84,7 @@
   :pin "065dc1933ae0195321bdcdee46e6775dbd77f0e4")
 (package! wraplish
   :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
-  :pin "b00bb447532cf86a4444317b1dabfcdd8e806762")
+  :pin "4f62da9631b825ea948406063df4f4407e82c142")
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
@@ -111,7 +111,7 @@
            :repo "cxb811201/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "c454f5c59ebafd532fafe9b4814e2f36d32403b2")
+  :pin "62da9f8b4f9debfe29e87bf683f7e72c71eca57d")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
