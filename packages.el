@@ -58,7 +58,7 @@
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
   :pin "fa50ae0c5cf992e95288a3da9c02948a9b42c009")
 
-(package! rime :pin "ca02a6b8035aa4dec186a2e9d818e28bc8c55a79")
+(package! rime :pin "fd434071ce95c41e5d580e303ccf2a65f189e7ec")
 
 (package! go-translate :pin "e5680e294f0e18d945c9f18ff7f4e6610c1ed50b")
 (package! insert-translated-name
@@ -94,7 +94,7 @@
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
 
 (if IS-MAC
-    (package! exec-path-from-shell :pin "1d110cb57ee2dedf1cf58f762c8dd39488534ad7"))
+    (package! exec-path-from-shell :pin "99b1b731d55614dceb72b6f16602df2b8d030dc9"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
