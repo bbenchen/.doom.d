@@ -99,16 +99,18 @@
         },
         "compile": {
           "nullAnalysis": {
-            "mode": "interactive",
+            "mode": "automatic",
             "nonnull": [
               "javax.annotation.Nonnull",
               "org.eclipse.jdt.annotation.NonNull",
-              "org.springframework.lang.NonNull"
+              "org.springframework.lang.NonNull",
+              "org.jetbrains.annotations.NotNull"
             ],
             "nullable": [
               "javax.annotation.Nullable",
               "org.eclipse.jdt.annotation.Nullable",
-              "org.springframework.lang.Nullable"
+              "org.springframework.lang.Nullable",
+              "org.jetbrains.annotations.Nullable"
             ]
           }
         }
