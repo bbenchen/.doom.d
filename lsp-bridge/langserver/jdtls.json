@@ -96,6 +96,21 @@
           "description": {
             "enabled": true
           }
+        },
+        "compile": {
+          "nullAnalysis": {
+            "mode": "interactive",
+            "nonnull": [
+              "javax.annotation.Nonnull",
+              "org.eclipse.jdt.annotation.NonNull",
+              "org.springframework.lang.NonNull"
+            ],
+            "nullable": [
+              "javax.annotation.Nullable",
+              "org.eclipse.jdt.annotation.Nullable",
+              "org.springframework.lang.Nullable"
+            ]
+          }
         }
       }
     },
