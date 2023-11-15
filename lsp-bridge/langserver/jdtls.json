@@ -12,8 +12,7 @@
         },
         "import": {
           "maven": {
-            "enabled": true,
-            "downloadSources": true
+            "enabled": true
           },
           "gradle": {
             "enabled": true,
@@ -27,6 +26,9 @@
             "**/archetype-resources/**",
             "**/META-INF/maven/**"
           ]
+        },
+        "maven": {
+          "downloadSources": true
         },
         "configuration": {
           "updateBuildConfiguration": "automatic",
@@ -88,6 +90,12 @@
             "org.hamcrest.MatcherAssert.*",
             "org.hamcrest.Matchers.*"
           ]
+        },
+        "signatureHelp": {
+          "enabled": true,
+          "description": {
+            "enabled": true
+          }
         }
       }
     },
