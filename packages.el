@@ -109,8 +109,7 @@
 (package! lsp-bridge
   :recipe (:host github
            :repo "cxb811201/lsp-bridge"
-           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
-           :build (:not compile))
+           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
   :pin "d43a1fb06abd8cc2048ed6c649d6fadae6f2e28c")
 
 (when (modulep! :checkers syntax +flymake)
