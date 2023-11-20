@@ -62,7 +62,7 @@
 
 (package! go-translate :pin "e5680e294f0e18d945c9f18ff7f4e6610c1ed50b")
 (package! insert-translated-name
-  :recipe (:host github :repo "cxb811201/insert-translated-name" :branch "google")
+  :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
   :pin "4263968c2bcaf6ecc6c66c9ca43770f39aa09b8b")
 
 (package! popweb
@@ -108,9 +108,9 @@
 
 (package! lsp-bridge
   :recipe (:host github
-           :repo "cxb811201/lsp-bridge"
+           :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "d43a1fb06abd8cc2048ed6c649d6fadae6f2e28c")
+  :pin "d99005135d956df435e9ad2624bf20da649417ae")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
