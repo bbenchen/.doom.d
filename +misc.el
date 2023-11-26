@@ -1,7 +1,7 @@
 ;;; +misc.el -*- lexical-binding: t; -*-
 
 (use-cjk-char-width-table 'zh_CN)
-(setq system-time-locale "zh_CN")
+(setq system-time-locale "C")
 
 (setq confirm-kill-processes nil
       confirm-kill-emacs nil)
