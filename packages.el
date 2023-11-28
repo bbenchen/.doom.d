@@ -49,6 +49,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+(unpin! (:editor snippets))
+
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
