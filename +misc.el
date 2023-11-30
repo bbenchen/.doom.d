@@ -51,16 +51,25 @@
     (add-to-list 'projectile-globally-ignored-file-suffixes suffix)))
 
 ;; vertico
-(if (modulep! :completion vertico +childframe)
-    (after! vertico-posframe
-      (custom-set-faces!
-        `(vertico-posframe :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg))
-        `(vertico-posframe-border :background ,(doom-color 'modeline-bg)))
+(when (modulep! :completion vertico)
+  (if (modulep! :completion vertico +childframe)
+      (after! vertico-posframe
+        (custom-set-faces!
+          `(vertico-posframe :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg))
+          `(vertico-posframe-border :background ,(doom-color 'modeline-bg)))
 
-      (add-hook! 'doom-load-theme-hook :append
-        (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
-        (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
-        (set-face-background 'vertico-posframe-border (doom-color 'modeline-bg)))))
+        (add-hook! 'doom-load-theme-hook :append
+          (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
+          (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
+          (set-face-background 'vertico-posframe-border (doom-color 'modeline-bg)))))
+
+  ;; Support Pinyin
+  (use-package! pinyinlib
+    :after orderless
+    :init
+    (defun completion--regex-pinyin (str)
+      (orderless-regexp (pinyinlib-build-regexp-string str)))
+    (add-to-list 'orderless-matching-styles 'completion--regex-pinyin)))
 
 ;; modeline
 (setq +modeline-height 24)

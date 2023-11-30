@@ -60,6 +60,8 @@
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
   :pin "fa50ae0c5cf992e95288a3da9c02948a9b42c009")
 
+(package! pinyinlib :pin "1772c79b6f319b26b6a394a8dda065be3ea4498d")
+
 (package! rime :pin "fd434071ce95c41e5d580e303ccf2a65f189e7ec")
 
 (package! go-translate :pin "e5680e294f0e18d945c9f18ff7f4e6610c1ed50b")
