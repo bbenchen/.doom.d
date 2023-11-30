@@ -81,6 +81,10 @@
   (add-hook! 'rainbow-mode-hook
     (hl-line-mode (if rainbow-mode -1 +1))))
 
+;; treemacs
+(after! (:and treemacs ace-window)
+  (delq! 'treemacs-mode aw-ignored-buffers))
+
 ;; lookup
 (when (and IS-MAC (featurep 'xwidget-internal))
   (setq +lookup-open-url-fn #'+lookup-xwidget-webkit-open-url-fn
