@@ -71,7 +71,7 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "b374b4a5da44dde82c06b59dfd99caedc6291824")
+  :pin "ca6262b0f0a44076526457e57056ffb92340e984")
 
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! websocket-bridge
@@ -114,7 +114,7 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "19b344e1dd5b9186e6a98ec3e6cb804d8b0d9967")
+  :pin "f8c7ac58845bf79763538fdccb0d734ce01827da")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
