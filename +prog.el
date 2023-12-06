@@ -316,6 +316,11 @@
                     (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
                       (cl-return "deno")))))))))
 
+  (defadvice! lsp-bridge-not-in-multiple-cursors-a ()
+    :override #'lsp-bridge-not-in-multiple-cursors
+    (not (and (featurep 'multiple-cursors-core)
+              multiple-cursors-mode)))
+
   (map! :leader
         (:prefix-map ("c" . "code")
          :desc "LSP Code actions"            "a"  #'lsp-bridge-code-action
