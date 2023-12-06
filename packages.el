@@ -54,6 +54,10 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
+(if (modulep! :tools tree-sitter)
+    (package! ts-fold :pin "714d645b684028ce850ba305705f5ddfc735970f"
+      :recipe (:host github :repo "emacs-tree-sitter/ts-fold")))
+
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
 (package! cal-china-x
