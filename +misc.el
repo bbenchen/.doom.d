@@ -298,6 +298,7 @@
         eaf-browser-enable-autofill t
         eaf-browser-aria2-proxy-host "127.0.0.1"
         eaf-browser-aria2-proxy-port "7890"
+        eaf-browser-translate-language "zh-CN"
         eaf-browser-auto-import-chrome-cookies nil)
 
   (if-let ((bookmarks (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
