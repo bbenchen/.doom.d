@@ -1,4 +1,4 @@
 #!/bin/bash
 
 exec jenv exec java \
-    -jar "`dirname $0`/../google-java-format.jar" "$@"
+    -jar "$(dirname "$0")/../google-java-format.jar" "$@"

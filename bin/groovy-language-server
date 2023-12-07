@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec jenv exec java \
+    -jar "$(dirname "$0")/../groovy-language-server-all.jar"
