@@ -55,10 +55,15 @@
 (package! tree-sitter-indent :disable t)
 
 (if (modulep! :tools tree-sitter)
-    (package! ts-fold :pin "714d645b684028ce850ba305705f5ddfc735970f"
-      :recipe (:host github :repo "emacs-tree-sitter/ts-fold")))
+    (package! ts-fold
+      :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
+      :pin "714d645b684028ce850ba305705f5ddfc735970f"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
+
+(package! doom-themes
+  :recipe (:host github :repo "bbenchan/doom-themes")
+  :pin "acb5f141dcda14c10dcb2093f318ad9f3eaf4b1a")
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
