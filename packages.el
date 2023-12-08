@@ -92,9 +92,6 @@
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
   :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
-(package! deno-bridge-jieba
-  :recipe (:host github :repo "ginqi7/deno-bridge-jieba" :files ("*.el" "*.ts"))
-  :pin "065dc1933ae0195321bdcdee46e6775dbd77f0e4")
 (package! wraplish
   :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
   :pin "4f62da9631b825ea948406063df4f4407e82c142")

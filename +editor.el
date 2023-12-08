@@ -60,6 +60,7 @@
 
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
+  :load-path (lambda () (list (expand-file-name "site-lisp/deno-bridge-jieba" doom-user-dir)))
   :config
   (define-key!
     [remap forward-word]       #'deno-bridge-jieba-forward-word

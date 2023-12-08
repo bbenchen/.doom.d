@@ -1,3 +1,6 @@
 [submodule "site-lisp/eaf"]
 	path = site-lisp/eaf
 	url = https://github.com/emacs-eaf/emacs-application-framework.git
+[submodule "site-lisp/deno-bridge-jieba"]
+	path = site-lisp/deno-bridge-jieba
+	url = https://github.com/ginqi7/deno-bridge-jieba.git
