@@ -124,7 +124,8 @@
       "/Users/xianbin/.local/jdtls/bundles/jdec.jdt.ls.decompiler.cfr-0.8.0-SNAPSHOT.jar",
       "/Users/xianbin/.local/jdtls/bundles/jdec.jdt.ls.decompiler.common-0.8.0-SNAPSHOT.jar",
       "/Users/xianbin/.local/jdtls/bundles/jdec.jdt.ls.decompiler.fernflower-0.8.0-SNAPSHOT.jar",
-      "/Users/xianbin/.local/jdtls/bundles/jdec.jdt.ls.decompiler.procyon-0.8.0-SNAPSHOT.jar"
+      "/Users/xianbin/.local/jdtls/bundles/jdec.jdt.ls.decompiler.procyon-0.8.0-SNAPSHOT.jar",
+      "/Users/xianbin/.local/jdtls/bundles/com.microsoft.java.debug.plugin-0.50.0.jar"
     ]
   }
 }
