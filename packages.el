@@ -57,7 +57,7 @@
 (if (modulep! :tools tree-sitter)
     (package! ts-fold
       :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-      :pin "714d645b684028ce850ba305705f5ddfc735970f"))
+      :pin "27c0fd0c7ef6435ffb48242810601157cab57d45"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -98,7 +98,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "877d65a60cfa1abab55c95574212bdc9fcd6bebe")
+(package! goto-line-preview :pin "df62161de2223958d44276c4eb5d1dc42b97d985")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
@@ -120,7 +120,7 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "f8c7ac58845bf79763538fdccb0d734ce01827da")
+  :pin "18805287c5e353b193602044dd03d50358613cc7")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
@@ -140,4 +140,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "323ece64acaac7f27b7806db9dba0757d6e57885")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "d31dc3882d0bc2cfc3856fcec1e1e61a5f60659b")
+(package! auto-rename-tag :pin "9c2d1b4a6b752749b19a16a93fd8f2387a278e6f")
