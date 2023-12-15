@@ -54,10 +54,12 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
-(if (modulep! :tools tree-sitter)
-    (package! ts-fold
-      :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-      :pin "27c0fd0c7ef6435ffb48242810601157cab57d45"))
+(when (modulep! :tools tree-sitter)
+  (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
+  (package! tree-sitter-langs :pin "fcc4ebb9636729e6cbd0b3af28afcf12666ff855")
+  (package! ts-fold
+    :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
+    :pin "27c0fd0c7ef6435ffb48242810601157cab57d45"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -114,7 +116,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "4b70b657f83542491b77a4dc512674f3fa5ce01c"))
+  (package! blamer :pin "bb83b0a511de73c8c2fa72126c68883e04058f14"))
 
 (package! lsp-bridge
   :recipe (:host github
