@@ -4,14 +4,14 @@
 
 (setq +mu4e-backend 'mbsync)
 
-(set-email-account! "fa-software.com"
-                    '((mu4e-sent-folder       . "/fa-software.com/Sent")
-                      (mu4e-drafts-folder     . "/fa-software.com/Drafts")
-                      (mu4e-trash-folder      . "/fa-software.com/Trash")
-                      (mu4e-refile-folder     . "/fa-software.com/Archive")
+(set-email-account! "tcl.com"
+                    '((mu4e-sent-folder       . "/tcl.com/Sent")
+                      (mu4e-drafts-folder     . "/tcl.com/Drafts")
+                      (mu4e-trash-folder      . "/tcl.com/Trash")
+                      (mu4e-refile-folder     . "/tcl.com/Archive")
                       (mu4e-update-interval   . 600)
-                      (user-full-name         . "Mike Chen")
-                      (user-mail-address      . "xianbin.chen@fa-software.com"))
+                      (user-full-name         . "Ben Chan")
+                      (user-mail-address      . "ben.chen@tcl.com"))
                     t)
 
 (set-email-account! "qq.com"
@@ -20,7 +20,7 @@
                       (mu4e-trash-folder      . "/qq.com/Trash")
                       (mu4e-refile-folder     . "/qq.com/Archive")
                       (mu4e-update-interval   . 600)
-                      (user-full-name         . "Mike Chen")
+                      (user-full-name         . "Ben Chan")
                       (user-mail-address      . "517926804@qq.com")))
 
 (after! mu4e
@@ -59,7 +59,7 @@
                          (message-fetch-field "from")))
                  (account
                   (cond
-                   ((string-match "xianbin.chen@fa-software.com" from) "fa")
+                   ((string-match "ben.chen@tcl.com" from) "tcl")
                    ((string-match "517926804@qq.com" from) "qq"))))
               (setq message-sendmail-extra-arguments (list '"-a" account '"--read-envelope-from")))))))
 
@@ -145,11 +145,8 @@
 
   (when (modulep! :email mu4e +org)
     (defun +mu4e-set-signature-for-org-msg ()
-      (if (string= (mu4e-context-name (mu4e-context-current)) "fa-software.com")
-          (setq org-msg-greeting-fmt
-                "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n\nFA Software (Chengdu) Co., Ltd\n#+end_signature\n")
-        (setq org-msg-greeting-fmt
-              "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\n陈显彬（Mike Chen）\n#+end_signature\n")))
+      (setq org-msg-greeting-fmt
+            "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\nBC（Ben Chan）\n#+end_signature\n"))
 
     (add-hook! 'mu4e-compose-pre-hook #'+mu4e-set-signature-for-org-msg))
 
