@@ -10,7 +10,7 @@
                       (mu4e-trash-folder      . "/tcl.com/Trash")
                       (mu4e-refile-folder     . "/tcl.com/Archive")
                       (mu4e-update-interval   . 600)
-                      (user-full-name         . "Ben Chan")
+                      (user-full-name         . "Ben Chen")
                       (user-mail-address      . "ben.chen@tcl.com"))
                     t)
 
@@ -20,7 +20,7 @@
                       (mu4e-trash-folder      . "/qq.com/Trash")
                       (mu4e-refile-folder     . "/qq.com/Archive")
                       (mu4e-update-interval   . 600)
-                      (user-full-name         . "Ben Chan")
+                      (user-full-name         . "Ben Chen")
                       (user-mail-address      . "517926804@qq.com")))
 
 (after! mu4e
@@ -146,7 +146,7 @@
   (when (modulep! :email mu4e +org)
     (defun +mu4e-set-signature-for-org-msg ()
       (setq org-msg-greeting-fmt
-            "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\nBC（Ben Chan）\n#+end_signature\n"))
+            "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\nBC（Ben Chen）\n#+end_signature\n"))
 
     (add-hook! 'mu4e-compose-pre-hook #'+mu4e-set-signature-for-org-msg))
 
