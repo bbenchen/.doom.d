@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>${1:com.github.bbenchen}</groupId>
-  <artifactId>$2</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>${1:com.github.bbenchen}</groupId>
+    <artifactId>$2</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-  <name>$\{project.artifactId\}</name>
+    <name>$\{project.artifactId\}</name>
 
-  <properties>
-    <java.version>17</java.version>
-    <maven.compiler.source>$\{java.version\}</maven.compiler.source>
-    <maven.compiler.target>$\{java.version\}</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>$\{java.version\}</maven.compiler.source>
+        <maven.compiler.target>$\{java.version\}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <!-- automatically run annotation processors within the incremental compilation -->
-    <m2e.apt.activation>jdt_apt</m2e.apt.activation>
+        <!-- automatically run annotation processors within the incremental compilation -->
+        <m2e.apt.activation>jdt_apt</m2e.apt.activation>
 
-    <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
 
-    <junit-jupiter.version>5.10.1</junit-jupiter.version>
-  </properties>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
+    </properties>
 
-  <dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>$\{junit-jupiter.version\}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>$\{junit-jupiter.version\}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-  </dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>$\{maven-compiler-plugin.version\}</version>
-        <configuration>
-          <parameters>true</parameters>
-          <compilerArgs>
-            <arg>-Xpkginfo:always</arg>
-          </compilerArgs>
-          <generatedSourcesDirectory>$\{project.build.directory\}/generated-sources</generatedSourcesDirectory>
-          <generatedTestSourcesDirectory>$\{project.build.directory\}/generated-test-sources</generatedTestSourcesDirectory>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>$\{maven-compiler-plugin.version\}</version>
+                <configuration>
+                    <parameters>true</parameters>
+                    <compilerArgs>
+                        <arg>-Xpkginfo:always</arg>
+                    </compilerArgs>
+                    <generatedSourcesDirectory>$\{project.build.directory\}/generated-sources</generatedSourcesDirectory>
+                    <generatedTestSourcesDirectory>$\{project.build.directory\}/generated-test-sources</generatedTestSourcesDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
