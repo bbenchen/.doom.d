@@ -19,7 +19,7 @@
     <!-- automatically run annotation processors within the incremental compilation -->
     <m2e.apt.activation>jdt_apt</m2e.apt.activation>
 
-    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+    <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
 
     <junit-jupiter.version>5.10.1</junit-jupiter.version>
   </properties>
