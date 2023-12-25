@@ -388,3 +388,21 @@
   :after lsp-bridge
   :config
   (add-hook! lsp-bridge-mode #'flymake-bridge-setup))
+
+(use-package! dape
+  :config
+  (setq dape-buffer-window-arrangment 'right
+        dape-adapter-dir (expand-file-name "debug-adapters" doom-etc-dir))
+  (unless (file-exists-p! dape-adapter-dir)
+    (mkdir dape-adapter-dir))
+
+  (setq dape-cwd-fn (lambda (&optional skip-tramp-trim)
+                      (let ((root (doom-project-root)))
+                        (if (and (not skip-tramp-trim) (tramp-tramp-file-p root))
+                            (tramp-file-name-localname (tramp-dissect-file-name root))
+                          root))))
+
+  ;; Save buffers on startup, useful for interpreted languages
+  (add-hook! 'dape-on-start-hooks
+    (defun dape--save-on-start ()
+      (save-some-buffers t t))))
