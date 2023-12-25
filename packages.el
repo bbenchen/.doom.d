@@ -56,10 +56,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "fcc4ebb9636729e6cbd0b3af28afcf12666ff855")
+  (package! tree-sitter-langs :pin "79eabcf0f7018f70928a9d51b6348c787e300088")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "27c0fd0c7ef6435ffb48242810601157cab57d45"))
+    :pin "731adc16078e4d01314fa593a5195058c983bb0a"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -122,7 +122,7 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "18805287c5e353b193602044dd03d50358613cc7")
+  :pin "c479ed203a77781da9d145a92b58317d003cfc3a")
 
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
