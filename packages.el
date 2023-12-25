@@ -51,8 +51,11 @@
 
 (unpin! (:editor snippets))
 
+(package! all-the-icons :disable t)
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
+
+(package! nerd-icons :pin "3af4d38c1119567b20ef9020f70de163d0d58c37")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")

@@ -114,6 +114,13 @@
   ;; Don't complain about this command being disabled when we use it
   (put 'dired-find-alternate-file 'disabled nil))
 
+(after! dirvish
+  (setq dirvish-subtree-state-style 'nerd)
+  (setq dirvish-path-separators (list
+                                 (format "  %s " (nerd-icons-codicon "nf-cod-home"))
+                                 (format "  %s " (nerd-icons-codicon "nf-cod-root_folder"))
+                                 (format " %s " (nerd-icons-faicon "nf-fa-angle_right")))))
+
 ;; flymake
 (after! flymake-popon
   (setq flymake-popon-posframe-border-width 0)
