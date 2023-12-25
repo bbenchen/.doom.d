@@ -115,6 +115,8 @@
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
   :pin "b787803ff745dde28727c10833b397d846fc1f7f")
 
+(package! verb :pin "d211f066b90d714e19783cd2ea20ac96ad25e740")
+
 (when (modulep! :tools magit)
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")

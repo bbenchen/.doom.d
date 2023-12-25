@@ -16,7 +16,10 @@
   (add-to-list 'org-structure-template-alist '("go" . "src go"))
   (add-to-list 'org-structure-template-alist '("yaml" . "src yaml"))
   (add-to-list 'org-structure-template-alist '("json" . "src json"))
-  (add-to-list 'org-structure-template-alist '("sql" . "src sql")))
+  (add-to-list 'org-structure-template-alist '("sql" . "src sql"))
+  (add-to-list 'org-structure-template-alist '("verb" . "src verb"))
+
+  (define-key org-mode-map (kbd "C-c M-r") verb-command-map))
 
 (after! ob-ditaa
   (setq org-ditaa-jar-path (expand-file-name "ditaa.jar" doom-user-dir)
