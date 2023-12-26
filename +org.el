@@ -2,7 +2,8 @@
 
 ;; org-mode
 (after! org
-  (setq org-image-actual-width 600)
+  (setq org-tags-column -80
+        org-image-actual-width 600)
 
   (add-to-list 'org-modules 'org-tempo t)
 
