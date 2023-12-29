@@ -55,14 +55,14 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
-(package! nerd-icons :pin "3af4d38c1119567b20ef9020f70de163d0d58c37")
+(package! nerd-icons :pin "8a39f736e44ec0928803f64fe0c9657ac24e71ca")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "79eabcf0f7018f70928a9d51b6348c787e300088")
+  (package! tree-sitter-langs :pin "f4805b8cac6eb69617ac4787a65d47046426325a")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "731adc16078e4d01314fa593a5195058c983bb0a"))
+    :pin "c6014608c7ea3d3dfb491e16a2ec7508cec239cf"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -132,7 +132,7 @@
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
-(package! dape :pin "fce121e3ba1384febf69b5fe9a2f7d01746e42f0")
+(package! dape :pin "afa65516f948088ea921f35003aa9e8737cd42d1")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
