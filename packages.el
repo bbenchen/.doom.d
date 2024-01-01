@@ -55,14 +55,14 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
-(package! nerd-icons :pin "8a39f736e44ec0928803f64fe0c9657ac24e71ca")
+(package! nerd-icons :pin "007d818f726a8dba75fc520207bb035ad9c46610")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs :pin "f4805b8cac6eb69617ac4787a65d47046426325a")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "c6014608c7ea3d3dfb491e16a2ec7508cec239cf"))
+    :pin "91fdf441bfaec4c0f8fc53f55c9bfcacc4693468"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -103,7 +103,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "df62161de2223958d44276c4eb5d1dc42b97d985")
+(package! goto-line-preview :pin "bbcf14e66abf1c56e8f44d501b971882e881a5f9")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
@@ -127,12 +127,12 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "c479ed203a77781da9d145a92b58317d003cfc3a")
+  :pin "874f3d0d1c7d8006f18860e6d3e0b75e82ab3667")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
-(package! dape :pin "afa65516f948088ea921f35003aa9e8737cd42d1")
+(package! dape :pin "91650d42e3383a0ffd77f967961bc142066fc13b")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -147,4 +147,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "323ece64acaac7f27b7806db9dba0757d6e57885")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "9c2d1b4a6b752749b19a16a93fd8f2387a278e6f")
+(package! auto-rename-tag :pin "9af5f2449bb54d7acbad27feb7c5aab8186b9eeb")
