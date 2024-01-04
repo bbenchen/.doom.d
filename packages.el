@@ -55,7 +55,7 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
-(package! nerd-icons :pin "007d818f726a8dba75fc520207bb035ad9c46610")
+(package! nerd-icons :pin "d53c5a1e0e8837735310d9ebff53d072a947872a")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
@@ -132,7 +132,9 @@
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
-(package! dape :pin "91650d42e3383a0ffd77f967961bc142066fc13b")
+(package! dape
+  :recipe (:host github :repo "svaante/dape")
+  :pin "81b77eb7ab65d1500dd49798e6c05776536be7c5")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
