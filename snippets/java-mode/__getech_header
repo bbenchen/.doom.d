@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: FA File Header
+# name: Getech File Header
 # --
 /**
  * ${1:Description}
@@ -13,7 +13,6 @@
  * </pre>
  *
  * @author `(user-full-name)`
- * @date `(format-time-string "%Y-%m-%d %H:%M:%S")`
- * @copyright 2018, FA Software (Shanghai) Co., Ltd. All Rights Reserved.
+ * @date `(format-time-string "%Y-%m-%d %H:%M")`
  * @since ${0:1.0.0}
  */
