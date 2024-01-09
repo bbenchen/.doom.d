@@ -144,6 +144,8 @@
 (package! protobuf-ts-mode
   :recipe (:host github :repo "emacsmirror/protobuf-ts-mode")
   :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
+(when (modulep! :checkers syntax +flymake)
+  (package! flymake-sqlfluff :pin "598dff268231f74ba902e2c607c85dd014fbee28"))
 (package! sqlup-mode :pin "3f9df9c88d6a7f9b1ae907e401cad8d3d7d63bbf")
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")

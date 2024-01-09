@@ -238,8 +238,92 @@
 (after! sql
   (setq sql-product 'oracle)
 
+  (setq sql-product-alist
+        '((ansi
+           :name "ANSI"
+           :font-lock sql-mode-ansi-font-lock-keywords
+           :statement sql-ansi-statement-starters)
+
+          (mysql
+           :name "MySQL"
+           :free-software t
+           :font-lock sql-mode-mysql-font-lock-keywords
+           :sqli-program sql-mysql-program
+           :sqli-options sql-mysql-options
+           :sqli-login sql-mysql-login-params
+           :sqli-comint-func sql-comint-mysql
+           :list-all "SHOW TABLES;"
+           :list-table "DESCRIBE %s;"
+           :prompt-regexp "^mysql> "
+           :prompt-length 6
+           :prompt-cont-regexp "^    -> "
+           :syntax-alist ((?# . "< b") (?\\ . "\\"))
+           :input-filter sql-remove-tabs-filter)
+
+          (oracle
+           :name "Oracle"
+           :font-lock sql-mode-oracle-font-lock-keywords
+           :sqli-program sql-oracle-program
+           :sqli-options sql-oracle-options
+           :sqli-login sql-oracle-login-params
+           :sqli-comint-func sql-comint-oracle
+           :list-all sql-oracle-list-all
+           :list-table sql-oracle-list-table
+           :completion-object sql-oracle-completion-object
+           :prompt-regexp "^SQL> "
+           :prompt-length 5
+           :prompt-cont-regexp "^\\(?:[ ][ ][1-9]\\|[ ][1-9][0-9]\\|[1-9][0-9]\\{2\\}\\)[ ]\\{2\\}"
+           :statement sql-oracle-statement-starters
+           :syntax-alist ((?$ . "_") (?# . "_"))
+           :terminator ("\\(^/\\|;\\)" . "/")
+           :input-filter sql-placeholders-filter)
+
+          (postgres
+           :name "Postgres"
+           :free-software t
+           :font-lock sql-mode-postgres-font-lock-keywords
+           :sqli-program sql-postgres-program
+           :sqli-options sql-postgres-options
+           :sqli-login sql-postgres-login-params
+           :sqli-comint-func sql-comint-postgres
+           :list-all ("\\d+" . "\\dS+")
+           :list-table ("\\d+ %s" . "\\dS+ %s")
+           :completion-object sql-postgres-completion-object
+           :prompt-regexp "^[-[:alnum:]_]*[-=][#>] "
+           :prompt-length 5
+           :prompt-cont-regexp "^[-[:alnum:]_]*[-'(][#>] "
+           :statement sql-postgres-statement-starters
+           :input-filter sql-remove-tabs-filter
+           :terminator ("\\(^\\s-*\\\\g\\|;\\)" . "\\g"))
+
+          (sqlite
+           :name "SQLite"
+           :free-software t
+           :font-lock sql-mode-sqlite-font-lock-keywords
+           :sqli-program sql-sqlite-program
+           :sqli-options sql-sqlite-options
+           :sqli-login sql-sqlite-login-params
+           :sqli-comint-func sql-comint-sqlite
+           :list-all ".tables"
+           :list-table ".schema %s"
+           :completion-object sql-sqlite-completion-object
+           :prompt-regexp "^sqlite> "
+           :prompt-length 8
+           :prompt-cont-regexp "^   \\.\\.\\.> ")))
+
   (if (modulep! :tools tree-sitter)
       (add-hook! 'sql-mode-local-vars-hook #'tree-sitter! 'append)))
+
+(use-package! flymake-sqlfluff
+  :when (modulep! :checkers syntax +flymake)
+  :config
+  (setq flymake-sqlfluff-dialect "oracle")
+
+  (add-hook! 'sql-mode-hook #'flymake-sqlfluff-load)
+
+  (defadvice! set-flymake-sqlfluff-dialect-after-sql-set-product (&rest _args)
+    :after #'sql-set-product
+    (setq flymake-sqlfluff-dialect (symbol-name sql-product))))
 
 (use-package! sqlup-mode
   :defer t
