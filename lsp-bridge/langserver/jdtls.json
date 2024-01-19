@@ -97,6 +97,13 @@
             "sun.*",
             "jdk.*",
             "io.micrometer.shaded.*"
+          ],
+          "importOrder": [
+            "#",
+            "java",
+            "javax",
+            "com",
+            "org"
           ]
         },
         "signatureHelp": {
