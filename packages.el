@@ -55,20 +55,20 @@
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
-(package! nerd-icons :pin "d53c5a1e0e8837735310d9ebff53d072a947872a")
+(package! nerd-icons :pin "c6a4acf19454b415cba1c43daf4bfca8fccdd9ba")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "f4805b8cac6eb69617ac4787a65d47046426325a")
+  (package! tree-sitter-langs :pin "20fbbb85735a9196ba3e7fb33f99b3a904b363ba")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "91fdf441bfaec4c0f8fc53f55c9bfcacc4693468"))
+    :pin "a549e4050c1025498b1666220842598a8535f826"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "acb5f141dcda14c10dcb2093f318ad9f3eaf4b1a")
+  :pin "db3cf01e6d0687ff1593cebc759e32052ce938c1")
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
@@ -103,13 +103,13 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "bbcf14e66abf1c56e8f44d501b971882e881a5f9")
+(package! goto-line-preview :pin "9492b1d7e451f4a615ad3db04d3840bccb95cc86")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
 
 (if IS-MAC
-    (package! exec-path-from-shell :pin "99b1b731d55614dceb72b6f16602df2b8d030dc9"))
+    (package! exec-path-from-shell :pin "6c10a9d4a38425f2b494013b6bdff91537a6b6da"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
@@ -121,20 +121,20 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "bb83b0a511de73c8c2fa72126c68883e04058f14"))
+  (package! blamer :pin "285e14a566170dfa56235964d6fd82bcc6e86f21"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "f4915fe00e75a98152bf58f1a25315671f1794db")
+  :pin "1627e575051239e212a03c3768ea5495bddac543")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "81b77eb7ab65d1500dd49798e6c05776536be7c5")
+  :pin "68534d691f3fb58dd28483b4b4fd34f4e32ad94f")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -151,4 +151,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "323ece64acaac7f27b7806db9dba0757d6e57885")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "9af5f2449bb54d7acbad27feb7c5aab8186b9eeb")
+(package! auto-rename-tag :pin "288c708e5c88113a5c8c5c44361f1d3c3e334a2e")
