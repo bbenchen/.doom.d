@@ -3,6 +3,10 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
+;; format
+(unless (modulep! :tools lsp)
+    (setq +format-with-lsp nil))
+
 ;; xml
 (after! nxml-mode
   (when (modulep! :tools tree-sitter)
