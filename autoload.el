@@ -78,9 +78,9 @@
   "Toggle between transparent and opaque state for FRAME.
 If FRAME is nil, it defaults to the selected frame."
   (interactive)
-  (pcase (frame-parameter frame 'alpha)
-    (85 (set-frame-parameter frame 'alpha 100))
-    (_ (set-frame-parameter frame 'alpha 85))))
+  (pcase (frame-parameter frame 'alpha-background)
+    (70 (modify-frame-parameters frame '((alpha-background . 100))))
+    (_ (modify-frame-parameters frame '((alpha-background . 70))))))
 
 ;; Network Proxy
 ;;;###autoload
