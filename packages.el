@@ -134,7 +134,7 @@
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "68534d691f3fb58dd28483b4b4fd34f4e32ad94f")
+  :pin "b7fce202149b6cbbab78818d5448d6647a6b7e5e")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
