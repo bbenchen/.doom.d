@@ -39,10 +39,6 @@
               "path": "/Users/xianbin/.jenv/versions/1.8"
             },
             {
-              "name": "JavaSE-11",
-              "path": "/Users/xianbin/.jenv/versions/11"
-            },
-            {
               "name": "JavaSE-17",
               "path": "/Users/xianbin/.jenv/versions/17",
               "default": true
