@@ -53,8 +53,8 @@
          (add-to-list 'default-frame-alist '(undecorated . t)))))
 
 ;; transparency
-(push '(alpha-background . 70) default-frame-alist)
-(modify-frame-parameters nil '((alpha-background . 70)))
+(push '(alpha-background . 50) default-frame-alist)
+(modify-frame-parameters nil '((alpha-background . 50)))
 
 ;; maximize the window
 (when (and (not (> emacs-major-version 28))
