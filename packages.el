@@ -121,7 +121,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "285e14a566170dfa56235964d6fd82bcc6e86f21"))
+  (package! blamer :pin "89b3e1a49cbf1cb0c6ccf614d0b56fb9fad45d50"))
 
 (package! lsp-bridge
   :recipe (:host github
