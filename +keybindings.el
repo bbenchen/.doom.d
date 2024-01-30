@@ -16,6 +16,7 @@
       (:when IS-MAC
         (:when (modulep! :completion vertico)
           "s-F" #'consult-line-multi)
+        "s-k" #'doom/kill-this-buffer-in-all-windows
         "s-x" #'kill-region
         "s-+" #'text-scale-increase
         "s-=" #'text-scale-increase
