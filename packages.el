@@ -62,7 +62,7 @@
   (package! tree-sitter-langs :pin "20fbbb85735a9196ba3e7fb33f99b3a904b363ba")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "a549e4050c1025498b1666220842598a8535f826"))
+    :pin "0627723e5f962fc72b238d4cf99a7f217e72aa3e"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -76,7 +76,7 @@
 
 (package! pinyinlib :pin "1772c79b6f319b26b6a394a8dda065be3ea4498d")
 
-(package! rime :pin "fd434071ce95c41e5d580e303ccf2a65f189e7ec")
+(package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
 (package! go-translate :pin "e5680e294f0e18d945c9f18ff7f4e6610c1ed50b")
 (package! insert-translated-name
@@ -103,7 +103,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "9492b1d7e451f4a615ad3db04d3840bccb95cc86")
+(package! goto-line-preview :pin "cc8d28d8b0a6609a2f4986c374e6ff7a151b632c")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
@@ -121,20 +121,20 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "89b3e1a49cbf1cb0c6ccf614d0b56fb9fad45d50"))
+  (package! blamer :pin "f79a7422e5976eb3bee1c73bfcb33d701cc932a6"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "cc1d0023e35126b2cdec539d34b865b47aac28b4")
+  :pin "02c2adc0ceb3887db0ce4e72cecfd1c98d204468")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "b7fce202149b6cbbab78818d5448d6647a6b7e5e")
+  :pin "1cb2327202badb903b53997f133db4985c2f5214")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
