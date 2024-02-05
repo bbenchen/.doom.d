@@ -13,7 +13,7 @@
       "<M-left>"  #'drag-stuff-left
       "<M-right>" #'drag-stuff-right
 
-      (:when IS-MAC
+      (:when (featurep :system 'macos)
         (:when (modulep! :completion vertico)
           "s-F" #'consult-line-multi)
         "s-k" #'doom/save-and-kill-buffer

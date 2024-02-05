@@ -199,7 +199,7 @@ The directory and file are self-destructed."
       fname)))
 
 (after! mu4e-alert
-  (if IS-MAC
+  (if (featurep :system 'macos)
       (mu4e-alert-set-default-style 'notifier))
 
   ;; Show notifications for mails already notified

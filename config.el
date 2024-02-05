@@ -29,8 +29,8 @@
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (let ((font "Sarasa Fixed SC Nerd Font"))
-  (cond (IS-LINUX (setq doom-font (font-spec :family font :size 11 :weight 'Regular)))
-        (IS-MAC (setq doom-font (font-spec :family font :size 12 :weight 'Regular))))
+  (cond ((featurep :system 'linux) (setq doom-font (font-spec :family font :size 11 :weight 'Regular)))
+        ((featurep :system 'macos) (setq doom-font (font-spec :family font :size 12 :weight 'Regular))))
   (setq doom-variable-pitch-font doom-font
         doom-serif-font doom-font
         ;; doom-unicode-font doom-font
@@ -45,7 +45,7 @@
 
 ;; no broder
 (when (> emacs-major-version 28)
-  (cond (IS-MAC
+  (cond ((featurep :system 'macos)
          (set-frame-parameter nil 'undecorated-round t)
          (add-to-list 'default-frame-alist '(undecorated-round . t)))
         (t
@@ -58,14 +58,14 @@
 
 ;; maximize the window
 (when (and (not (> emacs-major-version 28))
-           (not IS-MAC))
+           (not (featurep :system 'macos)))
   (set-frame-parameter nil 'fullscreen 'maximized)
   (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(cond (IS-MAC (pcase (frame-parameter nil 'ns-appearance)
+(cond ((featurep :system 'macos) (pcase (frame-parameter nil 'ns-appearance)
                 ('light (setq doom-theme 'doom-nord-light))
                 (_ (setq doom-theme 'doom-nord-aurora)))
               (if (boundp 'ns-system-appearance-change-functions)

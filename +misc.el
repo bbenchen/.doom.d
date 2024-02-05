@@ -6,7 +6,7 @@
 (setq confirm-kill-processes nil
       confirm-kill-emacs nil)
 
-(if IS-LINUX
+(if (featurep :system 'linux)
     (setq x-select-enable-clipboard-manager nil))
 
 (if (boundp 'pixel-scroll-precision-mode)
@@ -86,7 +86,7 @@
   (delq! 'treemacs-mode aw-ignored-buffers))
 
 ;; lookup
-(when (and IS-MAC (featurep 'xwidget-internal))
+(when (and (featurep :system 'macos) (featurep 'xwidget-internal))
   (setq +lookup-open-url-fn #'+lookup-xwidget-webkit-open-url-fn
         browse-url-browser-function #'+lookup-xwidget-webkit-open-url-fn)
   (if (boundp 'xwidget-webkit-enable-plugins)
@@ -137,7 +137,7 @@
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
 
 ;; with-editor
-(if IS-MAC
+(if (featurep :system 'macos)
     (if (string-prefix-p "aarch64" system-configuration)
         (setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
       (setq with-editor-emacsclient-executable "/usr/local/bin/emacsclient")))
@@ -186,7 +186,7 @@
 
 ;; exec-path-from-shell
 (use-package! exec-path-from-shell
-  :when IS-MAC
+  :when (featurep :system 'macos)
   :init
   (setq exec-path-from-shell-warn-duration-millis 2000)
   (setq exec-path-from-shell-arguments '("-l"))
@@ -308,15 +308,15 @@
         eaf-browser-translate-language "zh-CN"
         eaf-browser-auto-import-chrome-cookies nil)
 
-  (if-let ((bookmarks (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
-                            (IS-LINUX (file-exists-p! (and (or "chromium/Default/Bookmarks"
+  (if-let ((bookmarks (cond ((featurep :system 'macos) "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
+                            ((featurep :system 'linux) (file-exists-p! (and (or "chromium/Default/Bookmarks"
                                                                "google-chrome/Default/Bookmarks"))
                                                       "~/.config"))
                             (t nil))))
       (setq eaf-chrome-bookmark-file bookmarks))
 
-  (if-let ((history (cond (IS-MAC "~/Library/Application Support/Google/Chrome/Default/History")
-                          (IS-LINUX (file-exists-p! (and (or "chromium/Default/History"
+  (if-let ((history (cond ((featurep :system 'macos) "~/Library/Application Support/Google/Chrome/Default/History")
+                          ((featurep :system 'linux) (file-exists-p! (and (or "chromium/Default/History"
                                                              "google-chrome/Default/History"))
                                                     "~/.config"))
                           (t nil))))

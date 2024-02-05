@@ -108,7 +108,7 @@
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
 
-(if IS-MAC
+(if (featurep :system 'macos)
     (package! exec-path-from-shell :pin "6c10a9d4a38425f2b494013b6bdff91537a6b6da"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave

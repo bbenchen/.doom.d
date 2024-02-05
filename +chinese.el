@@ -61,7 +61,7 @@
   :defer t
   :init
   (setq default-input-method "rime"
-        rime-librime-root (if IS-MAC (expand-file-name "librime/dist/" doom-data-dir))
+        rime-librime-root (if (featurep :system 'macos) (expand-file-name "librime/dist/" doom-data-dir))
         rime-user-data-dir (expand-file-name "rime/" doom-data-dir)
         rime-show-candidate 'posframe
         rime-inline-ascii-trigger 'shift-l
@@ -70,7 +70,7 @@
                                   rime-predicate-ace-window-p
                                   rime-predicate-hydra-p))
 
-  (if (and IS-MAC
+  (if (and (featurep :system 'macos)
            (string-prefix-p "aarch64" system-configuration))
       (if-let* ((emacs-install-dir (file-exists-p! (or (concat "/opt/homebrew/opt/emacs-plus@" (number-to-string emacs-major-version))
                                                        (concat "/opt/homebrew/opt/emacs-head@" (number-to-string emacs-major-version))
@@ -94,7 +94,7 @@
       (if (fboundp 'rime--redisplay)
           (rime--redisplay))))
 
-  (when IS-LINUX
+  (when (featurep :system 'linux)
     (defadvice! +rime--posframe-display-content-filter-a (args)
       "给 `rime--posframe-display-content' 传入的字符串加一个全角空
 格，以解决 `posframe' 偶尔吃字的问题。"
@@ -106,9 +106,9 @@
           (list newresult)))))
 
   (map! (:map rime-mode-map
-         (:when IS-MAC
+         (:when (featurep :system 'macos)
           "s-j" #'rime-force-enable)
-         (:unless IS-MAC
+         (:unless (featurep :system 'macos)
           "C-j" #'rime-force-enable)
          "C-`" #'rime-send-keybinding)))
 
