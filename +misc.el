@@ -42,7 +42,7 @@
 (after! projectile
   (setq projectile-project-search-path
         '(("~/Projects/emacs" . 1)
-          ("~/Projects/fa/sources" . 1)
+          ("~/Projects/getech/sources" . 1)
           ("~/Projects/golang" . 1)
           ("~/Projects/java" . 1)
           ("~/Projects/scala" . 1)))
