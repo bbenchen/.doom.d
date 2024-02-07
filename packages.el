@@ -51,7 +51,6 @@
 
 (unpin! (:editor snippets))
 
-(package! all-the-icons :disable t)
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
@@ -103,7 +102,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "cc8d28d8b0a6609a2f4986c374e6ff7a151b632c")
+(package! goto-line-preview :pin "4e712da4e5e90b02440bd1f435a89ad02ff5a894")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
@@ -132,9 +131,12 @@
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
+(if (<= emacs-major-version 29)
+    (package! jsonrpc :pin "bc7aeb5294d16677ae70b72f8e5e9eea2d756164")
+  (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "1cb2327202badb903b53997f133db4985c2f5214")
+  :pin "3dac6e46e9d085f6e84131212f058ea9eaa8b670")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
