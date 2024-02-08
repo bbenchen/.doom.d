@@ -18,6 +18,7 @@
 ;; recentf
 (after! recentf
   (add-to-list 'recentf-exclude "\\.cache")
+  (add-to-list 'recentf-exclude "\\.local/straight")
   (add-to-list 'recentf-exclude "\\.mail")
   (add-to-list 'recentf-exclude "/var")
   (add-to-list 'recentf-exclude "/autosave"))
