@@ -13,6 +13,12 @@
       "<M-left>"  #'drag-stuff-left
       "<M-right>" #'drag-stuff-right
 
+      "<M-u>"   #'upcase-dwim
+      "C-x C-u" #'upcase-dwim
+      "<M-l>"   #'downcase-dwim
+      "C-x C-l" #'downcase-dwim
+      "<M-c>"   #'capitalize-dwim
+
       (:when (featurep :system 'macos)
         (:when (modulep! :completion vertico)
           "s-F" #'consult-line-multi)
