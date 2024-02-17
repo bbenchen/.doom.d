@@ -58,10 +58,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "20fbbb85735a9196ba3e7fb33f99b3a904b363ba")
+  (package! tree-sitter-langs :pin "734e59339555cae2327c5d41203f90c92f9220e4")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "0627723e5f962fc72b238d4cf99a7f217e72aa3e"))
+    :pin "b19f6f54bf78fa3361132721c74472c942c9baad"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -108,13 +108,13 @@
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
 
 (if (featurep :system 'macos)
-    (package! exec-path-from-shell :pin "6c10a9d4a38425f2b494013b6bdff91537a6b6da"))
+    (package! exec-path-from-shell :pin "d95677ad608c214647b87bc20df1642763e3b400"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
   :pin "b787803ff745dde28727c10833b397d846fc1f7f")
 
-(package! verb :pin "d211f066b90d714e19783cd2ea20ac96ad25e740")
+(package! verb :pin "d30042fad989fe0cb5634322bd86f6b55f89ee4c")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
@@ -126,7 +126,7 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "a6975409322bfafc639d1a14b415a96a9bf701dd")
+  :pin "4035a476b7d6ac96cc7c459cbeb086306b17cb69")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
@@ -135,7 +135,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "3dac6e46e9d085f6e84131212f058ea9eaa8b670")
+  :pin "4694a7323b6bb6747f072c4c1253d18cf07a113f")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
