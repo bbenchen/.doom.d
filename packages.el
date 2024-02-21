@@ -58,7 +58,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "734e59339555cae2327c5d41203f90c92f9220e4")
+  (package! tree-sitter-langs :pin "05e435067abe757616656c3f5fba3662acfd6684")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "b19f6f54bf78fa3361132721c74472c942c9baad"))
@@ -95,7 +95,7 @@
   :pin "40676478e3b2dd5af068b1f7f7024776e7557446")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "a1146e47da22ed43d439bb820527ebf59c1bee4c")
+  :pin "9ef93d1de071de40b71644e3dd7a83342399c24b")
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
   :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
@@ -117,7 +117,7 @@
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
   :pin "b787803ff745dde28727c10833b397d846fc1f7f")
 
-(package! verb :pin "d30042fad989fe0cb5634322bd86f6b55f89ee4c")
+(package! verb :pin "e0dfef281ccea4c9ca44f82546c33c5a2c357aac")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
@@ -129,7 +129,7 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "4035a476b7d6ac96cc7c459cbeb086306b17cb69")
+  :pin "8c5ddc72e46590704e4f6a6a73e2923902c537cb")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
