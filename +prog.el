@@ -391,15 +391,19 @@
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
                                           "-server"
                                           "-Xmx2G"
-                                          "-Xmn768M"
                                           "-Xss512K"
                                           "-XX:MetaspaceSize=256M"
                                           "-XX:MaxMetaspaceSize=256M"
                                           "-XX:InitialCodeCacheSize=128M"
                                           "-XX:ReservedCodeCacheSize=128M"
                                           "-XX:MaxDirectMemorySize=512M"
+                                          "-XX:+UnlockExperimentalVMOptions"
                                           "-XX:+UseNUMA"
                                           "-XX:+UseZGC"
+                                          "-XX:ConcGCThreads=4"
+                                          "-XX:MaxGCPauseMillis=200"
+                                          "-XX:+ZUncommit"
+                                          "-XX:ZUncommitDelay=10"
                                           (concat "-javaagent:" lombok-jar-path))))
   (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
