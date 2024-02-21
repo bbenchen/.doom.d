@@ -8,7 +8,7 @@ import subprocess
 junit_platform_console_file = os.path.expanduser("~/.junit-wrapper/junit-platform-console-standalone.jar")
 
 def download_junit_platform_console():
-    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/1.10.1/junit-platform-console-standalone-1.10.1.jar"
+    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/1.10.2/junit-platform-console-standalone-1.10.2.jar"
     with requests.get(junit_platform_console_download_url, allow_redirects=True) as request:
         open(junit_platform_console_file, 'wb').write(request.content)
 
