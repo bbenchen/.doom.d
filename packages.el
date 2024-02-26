@@ -58,7 +58,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "05e435067abe757616656c3f5fba3662acfd6684")
+  (package! tree-sitter-langs :pin "ef4e9e4ee7d733b8bf2299034e4ed08b9f092997")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "b19f6f54bf78fa3361132721c74472c942c9baad"))
@@ -87,7 +87,7 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "ca6262b0f0a44076526457e57056ffb92340e984")
+  :pin "1777618c3ef68ceb10dacab71a167e4e7743ca37")
 
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! websocket-bridge
@@ -101,7 +101,7 @@
   :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
 (package! wraplish
   :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
-  :pin "4f62da9631b825ea948406063df4f4407e82c142")
+  :pin "873fd3ba2cda8c69093ea946b22f2419493e2262")
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
@@ -129,7 +129,7 @@
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "a5ed21cac3cdace4af4570f994586ff7e1bfd80f")
+  :pin "990a8f862d7881a79af1831137ca3e87c86e024f")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
@@ -138,7 +138,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "4694a7323b6bb6747f072c4c1253d18cf07a113f")
+  :pin "247bcb709ceea07adfcafd86fa7863fa26acc0c2")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
