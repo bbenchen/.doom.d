@@ -22,7 +22,7 @@
       (:when (featurep :system 'macos)
         (:when (modulep! :completion vertico)
           "s-F" #'consult-line-multi)
-        "s-k" #'doom/save-and-kill-buffer
+        "s-k" #'kill-current-buffer
         "s-x" #'kill-region
         "s-+" #'text-scale-increase
         "s-=" #'text-scale-increase
