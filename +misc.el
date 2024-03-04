@@ -35,6 +35,19 @@
 
 ;; workspaces
 (setq +workspaces-on-switch-project-behavior t)
+(after! persp-mode
+  (add-hook! 'persp-filter-save-buffers-functions
+    (defun +workdspace-temporary-buffer-p (buf)
+      ;; "Ignore temporary buffers."
+      (let ((bname (file-name-nondirectory (buffer-name buf))))
+        (or (string-prefix-p ".newsrc" bname)
+            (string-prefix-p "magit" bname)
+            (string-prefix-p "Pfuture-Callback" bname)
+            (and (string-prefix-p "*" bname)
+                 (string-suffix-p "*" bname))
+            (string-match-p "\\.elc\\|\\.tar\\|\\.gz\\|\\.zip\\'" bname)
+            (string-match-p "\\.bin\\|\\.so\\|\\.dll\\|\\.exe\\'" bname)
+            (eq (buffer-local-value 'major-mode buf) 'vterm-mode))))))
 
 ;; lookup
 (appendq! +lookup-provider-url-alist
