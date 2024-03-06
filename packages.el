@@ -69,9 +69,6 @@
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "db3cf01e6d0687ff1593cebc759e32052ce938c1")
 
-(if (>= emacs-major-version 30)
-    (package! transient :built-in t))
-
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
   :pin "fa50ae0c5cf992e95288a3da9c02948a9b42c009")
