@@ -113,6 +113,7 @@
 (package! mind-wave
   :recipe (:host github :repo "manateelazycat/mind-wave" :files ("*.el" "*.py"))
   :pin "b787803ff745dde28727c10833b397d846fc1f7f")
+(package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
 
 (package! verb :pin "e0dfef281ccea4c9ca44f82546c33c5a2c357aac")
 

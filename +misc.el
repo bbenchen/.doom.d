@@ -221,6 +221,12 @@
   ;; (setq exec-path-from-shell-debug t)
   (exec-path-from-shell-initialize))
 
+;; pinentry
+(use-package! pinentry
+  :config
+  (setq epa-pinentry-mode 'loopback)
+  (pinentry-start))
+
 ;; pass
 (after! pass
   (defadvice! pass-view-a ()
