@@ -79,8 +79,8 @@
 If FRAME is nil, it defaults to the selected frame."
   (interactive)
   (pcase (frame-parameter frame 'alpha-background)
-    (60 (modify-frame-parameters frame '((alpha-background . 100))))
-    (_ (modify-frame-parameters frame '((alpha-background . 60))))))
+    (50 (modify-frame-parameters frame '((alpha-background . 100))))
+    (_ (modify-frame-parameters frame '((alpha-background . 50))))))
 
 ;; Network Proxy
 ;;;###autoload
