@@ -96,9 +96,6 @@
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
   :pin "ad0d7a9626f81509b9b3087723010a2a9a0fca37")
-(package! wraplish
-  :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
-  :pin "873fd3ba2cda8c69093ea946b22f2419493e2262")
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
