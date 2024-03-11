@@ -224,7 +224,8 @@
 ;; pinentry
 (use-package! pinentry
   :config
-  (setq epa-pinentry-mode 'loopback)
+  (setq epa-pinentry-mode 'loopback
+        pinentry-prompt-window-height 6)
   (pinentry-start))
 
 ;; pass
