@@ -23,6 +23,14 @@
   (add-to-list 'recentf-exclude "/var")
   (add-to-list 'recentf-exclude "/autosave"))
 
+;; ws-butler
+(after! ws-butler
+  (add-hook! 'minibuffer-setup-hook
+    (defun ws-butler-disable-in-minibuffer ()
+      "Disable `ws-butler' in `minibuffer'"
+      (if (bound-and-true-p ws-butler-mode)
+          (ws-butler-mode -1)))))
+
 ;; winner
 (after! winner
   ;; fix: wrong type argument: frame-live-p, #<dead frame
