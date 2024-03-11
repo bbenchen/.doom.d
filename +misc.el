@@ -174,30 +174,30 @@
 ;;   (if (modulep! :checkers spell +flyspell)
 ;;       (remove-hook! 'git-commit-mode-hook #'flyspell-mode)))
 
-(when (modulep! :tools magit)
-  ;; blamer
-  (use-package! blamer
-    :defer 5
-    :custom
-    (blamer-idle-time 0.5)
-    (blamer-min-offset 70)
-    :init
-    (map! :leader
-          (:prefix-map ("v" . "versioning")
-           :desc "Blamer show commit" "b" #'blamer-show-posframe-commit-info
-           :desc "Blamer" "B" #'blamer-mode))
-    :config
-    (custom-set-faces!
-      `(blamer-face :foreground ,(doom-color 'blue) :background unspecified :italic t))
+;; blamer
+(use-package! blamer
+  :when (modulep! :tools magit)
+  :custom
+  (blamer-idle-time 0.5)
+  (blamer-min-offset 70)
+  :init
+  (map! :leader
+        (:prefix-map ("v" . "versioning")
+         :desc "Blamer show commit" "b" #'blamer-show-posframe-commit-info
+         :desc "Blamer" "B" #'blamer-mode))
+  :config
+  (custom-set-faces!
+    `(blamer-face :foreground ,(doom-color 'blue) :background unspecified :italic t))
 
+  (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
+
+  (add-hook! 'doom-load-theme-hook :append
     (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
+    (set-face-foreground 'blamer-face (doom-color 'blue))))
 
-    (add-hook! 'doom-load-theme-hook :append
-      (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
-      (set-face-foreground 'blamer-face (doom-color 'blue))))
-
-  ;; magit-gerrit
-  (use-package! magit-gerrit))
+;; magit-gerrit
+(use-package! magit-gerrit
+  :when (modulep! :tools magit))
 
 ;; exec-path-from-shell
 (use-package! exec-path-from-shell
