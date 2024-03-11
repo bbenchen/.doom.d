@@ -51,6 +51,7 @@
 
 (unpin! (:editor snippets))
 
+(package! ws-butler :disable t)
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
 
