@@ -59,10 +59,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "f62062fd9d86fc5f1fd9bd1ea2412d5f2e1b1683")
+  (package! tree-sitter-langs :pin "ab76db30ce3952cc5d1d2abc67fde6f62c306aa3")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "b19f6f54bf78fa3361132721c74472c942c9baad"))
+    :pin "aafc4c0a5f614ddd9df743ae138a2157a327aeae"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -113,19 +113,20 @@
   :pin "b787803ff745dde28727c10833b397d846fc1f7f")
 (package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
 
-(package! verb :pin "e0dfef281ccea4c9ca44f82546c33c5a2c357aac")
+(package! verb :pin "468c042cef7c1f97b272117635dd0ab841df3643")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "5c4495283d5c40f6c5997931f01544532ae2d85e"))
+  (package! blamer :pin "39077eb4438a804e413e01fa94a2d1e31e984a75"))
 
 (package! lsp-bridge
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
-           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources"))
-  :pin "2dce86b2ec4f0ca9ba9c19dacfefe09e4c487d7e")
+           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
+           :build (:not compile))
+  :pin "4d13f4e275d4733d681b4040732ea7efb3a4f7bb")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
@@ -134,7 +135,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "0d38f79bc6501febb4c846e8e0bdc4e58b6caf85")
+  :pin "0b6fd667a99cd2cfed105319500c8083b613f562")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
