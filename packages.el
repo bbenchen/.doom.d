@@ -54,6 +54,7 @@
 (package! ws-butler :disable t)
 (package! tide :disable t)
 (package! tree-sitter-indent :disable t)
+(package! mu4e-alert :disable t)
 
 (package! nerd-icons :pin "c6a4acf19454b415cba1c43daf4bfca8fccdd9ba")
 
