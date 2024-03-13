@@ -183,18 +183,18 @@ unwanted space when exporting org-mode to hugo markdown."
   :config
   (setq insert-translated-name-default-style 'origin)
 
-  (defvar insert-translated-name-is-open-ws-butler nil)
-  (defadvice! insert-translated-name-retrieve-translation-a (&rest _)
-    :before #'insert-translated-name-retrieve-translation
-    (setq insert-translated-name-is-open-ws-butler ws-butler-mode)
-    (when insert-translated-name-is-open-ws-butler
-      (ws-butler-mode -1)))
+  ;; (defvar insert-translated-name-is-open-ws-butler nil)
+  ;; (defadvice! insert-translated-name-retrieve-translation-a (&rest _)
+  ;;   :before #'insert-translated-name-retrieve-translation
+  ;;   (setq insert-translated-name-is-open-ws-butler ws-butler-mode)
+  ;;   (when insert-translated-name-is-open-ws-butler
+  ;;     (ws-butler-mode -1)))
 
-  (defadvice! insert-translated-name-update-translation-in-buffer-a (&rest _)
-    :after #'insert-translated-name-update-translation-in-buffer
-    (when insert-translated-name-is-open-ws-butler
-      (ws-butler-mode +1))
-    (setq insert-translated-name-is-open-ws-butler nil))
+  ;; (defadvice! insert-translated-name-update-translation-in-buffer-a (&rest _)
+  ;;   :after #'insert-translated-name-update-translation-in-buffer
+  ;;   (when insert-translated-name-is-open-ws-butler
+  ;;     (ws-butler-mode +1))
+  ;;   (setq insert-translated-name-is-open-ws-butler nil))
 
   (map! :leader
         (:prefix-map ("y" . "translate")
