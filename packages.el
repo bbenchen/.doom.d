@@ -56,11 +56,11 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! nerd-icons :pin "c6a4acf19454b415cba1c43daf4bfca8fccdd9ba")
+(package! nerd-icons :pin "58db45e003e3c6283db54ace23e3594677ffd050")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "ab76db30ce3952cc5d1d2abc67fde6f62c306aa3")
+  (package! tree-sitter-langs :pin "e9577bec612a233c019f0b4278e7273a3a151b41")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "aafc4c0a5f614ddd9df743ae138a2157a327aeae"))
@@ -136,7 +136,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "0b6fd667a99cd2cfed105319500c8083b613f562")
+  :pin "339cdef7d5f76da2cdaa2b679bb07e5ce8830edf")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -144,7 +144,7 @@
   (disable-packages! go-eldoc))
 (package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
 (package! protobuf-ts-mode
-  :recipe (:host github :repo "emacsmirror/protobuf-ts-mode")
+  :recipe (:host github :repo "emacsattic/protobuf-ts-mode")
   :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-sqlfluff :pin "598dff268231f74ba902e2c607c85dd014fbee28"))
