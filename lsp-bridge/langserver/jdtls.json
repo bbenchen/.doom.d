@@ -42,10 +42,6 @@
           "checkProjectSettingsExclusions": true,
           "runtimes": [
             {
-              "name": "JavaSE-1.8",
-              "path": "/Users/xianbin/.jenv/versions/1.8"
-            },
-            {
               "name": "JavaSE-17",
               "path": "/Users/xianbin/.jenv/versions/17",
               "default": true
