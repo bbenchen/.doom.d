@@ -60,7 +60,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "e9577bec612a233c019f0b4278e7273a3a151b41")
+  (package! tree-sitter-langs :pin "8e058964de718d31931e318551cdac06ceb91197")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "aafc4c0a5f614ddd9df743ae138a2157a327aeae"))
@@ -114,7 +114,7 @@
   :pin "b787803ff745dde28727c10833b397d846fc1f7f")
 (package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
 
-(package! verb :pin "468c042cef7c1f97b272117635dd0ab841df3643")
+(package! verb :pin "5ce09750649f6085e8f372fb8a4cb13f7f00fcb4")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
@@ -136,7 +136,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "339cdef7d5f76da2cdaa2b679bb07e5ce8830edf")
+  :pin "d1a96de51cbee7c410d1f2680f860d09048e2fc5")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
