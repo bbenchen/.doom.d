@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! nerd-icons :pin "58db45e003e3c6283db54ace23e3594677ffd050")
+(package! nerd-icons :pin "8095215a503d8048739de8b4ea4066598edb8cbb")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
@@ -120,7 +120,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "39077eb4438a804e413e01fa94a2d1e31e984a75"))
+  (package! blamer :pin "ab7d19c2ee54424d3ffc853982fe875ad47b6e7f"))
 
 (package! lsp-bridge
   :recipe (:host github
