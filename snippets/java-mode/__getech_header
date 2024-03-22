@@ -10,10 +10,10 @@
  * <pre>
  * date             defect#             person             comments
  * --------------------------------------------------------------------------------------------------------------------
- * `(format-time-string "%Y-%m-%d")`       ********            `(user-full-name)`          create file
+ * `(format-time-string "%Y/%m/%d")`       ********            `(user-full-name)`           create file
  * </pre>
  *
  * @author `(user-full-name)`
- * @date `(format-time-string "%Y-%m-%d %H:%M")`
+ * @date `(format-time-string "%Y/%m/%d %H:%M")`
  * @since ${0:1.0.0}
  */
