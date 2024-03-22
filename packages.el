@@ -1,4 +1,4 @@
-;; -*- no-byte-compile: t; -*-
+;; -*- no-byte-compile: t; lexical-binding: t; -*-
 ;;; $DOOMDIR/packages.el
 
 ;; To install a package with Doom you must declare them here and run 'doom sync'
@@ -69,7 +69,7 @@
 
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "db3cf01e6d0687ff1593cebc759e32052ce938c1")
+  :pin "d57e023efd0e7614605b5eaa9d2e01b54fa78808")
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
