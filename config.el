@@ -30,7 +30,7 @@
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (let ((font "Sarasa Fixed SC Nerd Font"))
   (cond ((featurep :system 'linux) (setq doom-font (font-spec :family font :size 11 :weight 'Regular)))
-        ((featurep :system 'macos) (setq doom-font (font-spec :family font :size 12 :weight 'Regular))))
+        ((featurep :system 'macos) (setq doom-font (font-spec :family font :size 10 :weight 'Regular))))
   (setq doom-variable-pitch-font doom-font
         doom-serif-font doom-font
         ;; doom-unicode-font doom-font
