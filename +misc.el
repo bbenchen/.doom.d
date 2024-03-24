@@ -328,7 +328,8 @@
         eaf-browser-aria2-proxy-host "127.0.0.1"
         eaf-browser-aria2-proxy-port "7890"
         eaf-browser-translate-language "zh-CN"
-        eaf-browser-auto-import-chrome-cookies nil)
+        eaf-browser-auto-import-chrome-cookies nil
+        eaf-dired-advisor-enable nil)
 
   (if-let ((bookmarks (cond ((featurep :system 'macos) "~/Library/Application Support/Google/Chrome/Default/Bookmarks")
                             ((featurep :system 'linux) (file-exists-p! (and (or "chromium/Default/Bookmarks"
@@ -349,10 +350,6 @@
   (require 'eaf-markdown-previewer)
   (require 'eaf-org-previewer)
   (require 'eaf-markmap)
-
-  (when (modulep! :emacs dired)
-    (advice-remove #'dired-find-file #'eaf--dired-find-file-advisor)
-    (advice-remove #'dired-find-alternate-file #'eaf--dired-find-file-advisor))
 
   (defun eaf-translate-text (text)
     (cond ((featurep 'popweb-dict) (popweb-dict-bing-input text))
