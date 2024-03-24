@@ -80,6 +80,7 @@
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
 (package! go-translate :pin "377375c87f64e7d069c8fc310ccfefd8771226f3")
+(package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! insert-translated-name
   :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
   :pin "4263968c2bcaf6ecc6c66c9ca43770f39aa09b8b")

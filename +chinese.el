@@ -178,6 +178,24 @@ unwanted space when exporting org-mode to hugo markdown."
                     :render (gts-posframe-pop-render)
                     :splitter (gts-paragraph-splitter)))))
 
+;; immersive-translate
+(use-package! immersive-translate
+  :config
+  (setq immersive-translate-backend 'trans
+        immersive-translate-trans-target-language "zh")
+
+  ;; use google-translate(python) instance of translate-shell
+  (defadvice! immersive-translate-trans-make-command-a (text)
+    :override #'immersive-translate-trans-make-command
+    (list (concat
+           "trans"
+           " -q "
+           immersive-translate-trans-source-language
+           ":"
+           immersive-translate-trans-target-language
+           " "
+           (shell-quote-argument text)))))
+
 ;; insert-translated-name
 (use-package! insert-translated-name
   :config
