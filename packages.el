@@ -151,6 +151,6 @@
 (package! sqlup-mode :pin "3f9df9c88d6a7f9b1ae907e401cad8d3d7d63bbf")
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
-  :pin "323ece64acaac7f27b7806db9dba0757d6e57885")
+  :pin "c3dd49ccd1f0655ed1699058c16a777ac1cb1419")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
 (package! auto-rename-tag :pin "288c708e5c88113a5c8c5c44361f1d3c3e334a2e")
