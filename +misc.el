@@ -375,14 +375,37 @@
       (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer))))
 
 ;; mind-wave
-(use-package! mind-wave
+;; (use-package! mind-wave
+;;   :load-path (lambda () (list (expand-file-name "~/Projects/emacs/carlos-wong-mind-wave")))
+;;   :config
+;;   (setq mind-wave-lang "zh_CN"
+;;         mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
+;;         mind-wave-api-base "https://openkey.cloud/v1"
+;;         mind-wave-chat-model "gpt-3.5-turbo-16k-0613"
+;;         mind-wave-async-text-model "gpt-3.5-turbo-0613"
+;;         mind-wave-action-code-model "gpt-3.5-turbo-0613"
+;;         mind-wave-explain-word-model "gpt-3.5-turbo-0613"
+;;         mind-wave-parse-title-model "gpt-3.5-turbo-0613"
+;;         mind-wave-git-commit-model "gpt-3.5-turbo-0613"))
+
+;; gptel
+(use-package! gptel
   :config
-  (setq mind-wave-lang "zh_CN"
-        mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
-        mind-wave-api-base "https://openkey.cloud/v1"
-        mind-wave-chat-model "gpt-3.5-turbo-16k-0613"
-        mind-wave-async-text-model "gpt-3.5-turbo-0613"
-        mind-wave-action-code-model "gpt-3.5-turbo-0613"
-        mind-wave-explain-word-model "gpt-3.5-turbo-0613"
-        mind-wave-parse-title-model "gpt-3.5-turbo-0613"
-        mind-wave-git-commit-model "gpt-3.5-turbo-0613"))
+  (setq gptel--openai
+        (gptel-make-openai "ChatGPT"
+          :host "openkey.cloud"
+          :key 'gptel-api-key
+          :stream t
+          :models '("gpt-3.5-turbo"
+                    "gpt-3.5-turbo-16k"
+                    "gpt-4"
+                    "gpt-4-turbo-preview"
+                    "gpt-4-32k"
+                    "gpt-4-1106-preview"
+                    "gpt-4-0125-preview"))
+        gptel-backend gptel--openai
+        gptel-model "gpt-3.5-turbo-16k"
+        gptel-default-mode 'org-mode)
+
+  (add-hook! 'gptel-post-stream-hook #'gptel-auto-scroll)
+  (add-hook! 'gptel-post-response-functions #'gptel-end-of-response))
