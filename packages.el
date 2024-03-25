@@ -56,7 +56,8 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :built-in t)
+(if (>= emacs-major-version 30)
+    (package! project :built-in t))
 
 (package! nerd-icons :pin "8095215a503d8048739de8b4ea4066598edb8cbb")
 
