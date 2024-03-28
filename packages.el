@@ -63,10 +63,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "8e058964de718d31931e318551cdac06ceb91197")
+  (package! tree-sitter-langs :pin "c56cb511045d50e30f78508c54494e025d6af2cb")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "aafc4c0a5f614ddd9df743ae138a2157a327aeae"))
+    :pin "0c13c0e4ed548d17ccf830654e8f598652199426"))
 
 (package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
 
@@ -105,7 +105,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "4e712da4e5e90b02440bd1f435a89ad02ff5a894")
+(package! goto-line-preview :pin "056bd88d860ce9309ba3d4934d9ec5801121683b")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
@@ -141,7 +141,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "d1a96de51cbee7c410d1f2680f860d09048e2fc5")
+  :pin "bd62e8fc9d03b3778ffde7d466d06a9ee9206e29")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -158,4 +158,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "c3dd49ccd1f0655ed1699058c16a777ac1cb1419")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "288c708e5c88113a5c8c5c44361f1d3c3e334a2e")
+(package! auto-rename-tag :pin "c6c5bcca6ca1897ecf87c63223f01a45f517a71d")
