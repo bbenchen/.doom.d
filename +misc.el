@@ -197,7 +197,8 @@
 
 ;; magit-gerrit
 (use-package! magit-gerrit
-  :when (modulep! :tools magit))
+  :when (modulep! :tools magit)
+  :after magit)
 
 ;; exec-path-from-shell
 (use-package! exec-path-from-shell
