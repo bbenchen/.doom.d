@@ -63,7 +63,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "c56cb511045d50e30f78508c54494e025d6af2cb")
+  (package! tree-sitter-langs :pin "4b7c1432aef94a7bb61d1f0096e8ef57058dad7b")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "0c13c0e4ed548d17ccf830654e8f598652199426"))
