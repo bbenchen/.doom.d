@@ -34,7 +34,8 @@
           "A" #'+mu4e-view-select-mime-part-action
           "o" #'+mu4e-view-open-attachment))
 
-  (setq mu4e-notification-support t
+  (setq mu4e-modeline-support nil
+        mu4e-notification-support t
         message-dont-reply-to-names t
         mu4e-headers-time-format "%T"
         mu4e-headers-date-format "%D"
