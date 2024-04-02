@@ -63,7 +63,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "4b7c1432aef94a7bb61d1f0096e8ef57058dad7b")
+  (package! tree-sitter-langs :pin "b7895ca759563f3c7c3b928eb4f816bb4099d866")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "0c13c0e4ed548d17ccf830654e8f598652199426"))
@@ -140,7 +140,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "bd62e8fc9d03b3778ffde7d466d06a9ee9206e29")
+  :pin "f673fed6986c5506381477e74a90a07162b03afc")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
