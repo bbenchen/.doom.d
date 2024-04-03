@@ -118,7 +118,7 @@
   :pin "4a4ab1eea0be640afa20d00113dc21617871d637")
 (package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
 
-(package! verb :pin "5ce09750649f6085e8f372fb8a4cb13f7f00fcb4")
+(package! verb :pin "ac6c0ca3777431268e1f5a540c003aa16345381d")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
