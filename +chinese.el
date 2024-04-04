@@ -160,7 +160,7 @@ unwanted space when exporting org-mode to hugo markdown."
         gts-pop-posframe-backcolor (face-background 'mode-line)
         gts-pop-posframe-forecolor (face-foreground 'mode-line))
 
-  (add-hook! 'gts-after-buffer-render-hook (goto-char (point-min)))
+  (add-hook! 'gts-after-buffer-render-hook (goto-line 1))
 
   (setq gts-default-translator
         (gts-translator
