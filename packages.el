@@ -131,7 +131,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "3cf535f2d25cb364efdf8b9c5cd620653ac6dc49")
+  :pin "028d0572b269cda8f421a5122e7dc4d97d99a158")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
@@ -140,7 +140,7 @@
   (package! jsonrpc :built-in t))
 (package! dape
   :recipe (:host github :repo "svaante/dape")
-  :pin "f673fed6986c5506381477e74a90a07162b03afc")
+  :pin "a5c9d468c1e49e533f1146980fa86488bbe3a54e")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
