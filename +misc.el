@@ -211,6 +211,7 @@
                                          "TERM"
                                          "PATH"
                                          "JAVA_HOME"
+                                         "JENV_LOADED"
                                          "SBT_OPTS"
                                          "GOPATH"
                                          "GOBIN"
