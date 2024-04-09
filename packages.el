@@ -113,10 +113,14 @@
 (if (featurep :system 'macos)
     (package! exec-path-from-shell :pin "d95677ad608c214647b87bc20df1642763e3b400"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
+(package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
+
 (package! mind-wave
   :recipe (:host github :repo "bbenchen/mind-wave" :files ("*.el" "*.py"))
   :pin "4a4ab1eea0be640afa20d00113dc21617871d637")
-(package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
+(package! robby
+  :recipe (:host github :repo "stevemolitor/robby")
+  :pin "34cc41331f628685df0bb48983bbfd8531e1127f")
 
 (package! verb :pin "ac6c0ca3777431268e1f5a540c003aa16345381d")
 

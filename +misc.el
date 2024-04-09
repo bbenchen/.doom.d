@@ -393,3 +393,17 @@
       (add-hook! 'mind-wave-chat-mode-hook
         (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
               ((bound-and-true-p flycheck-mode) (flycheck-mode -1))))))
+
+;; robby
+(use-package! robby
+  :defer t
+  :init
+  (setq robby-api-url "https://openkey.cloud/v1/chat/completions"
+        robby-openai-api-key #'+robby--get-api-key-from-auth-source
+        robby-models '("gpt-3.5-turbo" "gpt-3.5-turbo-0301" "gpt-3.5-turbo-0613" "gpt-3.5-turbo-1106" "gpt-3.5-turbo-0125" "gpt-3.5-turbo-16k"
+                       "gpt-3.5-turbo-16k-0613" "gpt-3.5-turbo-instruct" "gpt-4" "gpt-4-0314" "gpt-4-0613" "gpt-4-1106-preview"
+                       "gpt-4-0125-preview" "gpt-4-32k" "gpt-4-32k-0314" "gpt-4-32k-0613" "gpt-4-turbo-preview" "gpt-4-vision-preview"))
+  :config
+  (defun +robby--get-api-key-from-auth-source ()
+    "Get api key from auth source."
+    (+lookup/password :host "openkey.cloud" :user "apikey")))
