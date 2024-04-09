@@ -59,16 +59,16 @@
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
 
-(package! nerd-icons :pin "8095215a503d8048739de8b4ea4066598edb8cbb")
+(package! nerd-icons :pin "2f7b3d492026f4beb1984decfb071dd6a60921bb")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "b7895ca759563f3c7c3b928eb4f816bb4099d866")
+  (package! tree-sitter-langs :pin "bc106a00c5efd957a8d159c0d271e9f3193ed367")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "0c13c0e4ed548d17ccf830654e8f598652199426"))
+    :pin "2d175b74ad701d96d34eed2b4ea743c734ba6e19"))
 
-(package! posframe :pin "017deece88360c7297265680d78a0bb316470716")
+(package! posframe :pin "3298e760b64fbe1449a266c8debe7ed2c2d4b907")
 
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
@@ -131,7 +131,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "028d0572b269cda8f421a5122e7dc4d97d99a158")
+  :pin "121f73a374f6e2b4685f284c8efea1b1a49f613e")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
