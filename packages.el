@@ -73,6 +73,7 @@
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d57e023efd0e7614605b5eaa9d2e01b54fa78808")
+(package! goggles :pin "41d3669d7ae7b73bd39d298e5373ece48b656ce3")
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
