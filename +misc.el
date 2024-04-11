@@ -374,26 +374,6 @@
       (advice-add #'vertico-posframe--show :before-until #'eaf-in-eaf-buffer)
       (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer))))
 
-;; mind-wave
-(use-package! mind-wave
-  :defer 3
-  :config
-  (setq mind-wave-lang "zh_CN"
-        mind-wave-api-key-path (expand-file-name "mind-wave/chatgpt_api_key.txt" doom-data-dir)
-        mind-wave-api-base "https://openkey.cloud/v1/"
-        mind-wave-auto-change-title nil
-        mind-wave-chat-model "gpt-3.5-turbo-16k-0613"
-        mind-wave-async-text-model "gpt-3.5-turbo-0613"
-        mind-wave-action-code-model "gpt-3.5-turbo-0613"
-        mind-wave-explain-word-model "gpt-3.5-turbo-0613"
-        mind-wave-parse-title-model "gpt-3.5-turbo-0613"
-        mind-wave-git-commit-model "gpt-3.5-turbo-0613")
-
-  (if (modulep! :checkers syntax)
-      (add-hook! 'mind-wave-chat-mode-hook
-        (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
-              ((bound-and-true-p flycheck-mode) (flycheck-mode -1))))))
-
 ;; robby
 (use-package! robby
   :defer t
