@@ -96,10 +96,6 @@
   (add-hook! 'rainbow-mode-hook
     (hl-line-mode (if rainbow-mode -1 +1))))
 
-;; goggles
-(use-package! goggles
-  :hook ((prog-mode text-mode) . goggles-mode))
-
 ;; treemacs
 (after! (:and treemacs ace-window)
   (delq! 'treemacs-mode aw-ignored-buffers))
