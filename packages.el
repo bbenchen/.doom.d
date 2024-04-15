@@ -59,11 +59,11 @@
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
 
-(package! nerd-icons :pin "2f7b3d492026f4beb1984decfb071dd6a60921bb")
+(package! nerd-icons :pin "fb395120e9de33b276d16caaccaefd98d4340b92")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "bc106a00c5efd957a8d159c0d271e9f3193ed367")
+  (package! tree-sitter-langs :pin "6351acb48a2111cf711f918e457f253a63e1c528")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "2d175b74ad701d96d34eed2b4ea743c734ba6e19"))
@@ -111,7 +111,7 @@
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
 
 (if (featurep :system 'macos)
-    (package! exec-path-from-shell :pin "d95677ad608c214647b87bc20df1642763e3b400"))
+    (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
 
