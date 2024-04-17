@@ -230,7 +230,10 @@
 
 ;; envrc
 (use-package! envrc
-  :hook (doom-after-init . envrc-global-mode))
+  :config
+  (add-hook! 'doom-after-init-hook :append
+    (when (executable-find "direnv")
+      (envrc-global-mode))))
 
 ;; pass
 (after! pass
