@@ -85,7 +85,7 @@
     (set-face-foreground 'rime-default-face (doom-color 'modeline-fg))
     (set-face-background 'rime-default-face (doom-color 'modeline-bg)))
 
-  (add-hook! '(after-init-hook kill-emacs-hook) :append
+  (add-hook! '(doom-after-init-hook kill-emacs-hook) :append
     (when (fboundp 'rime-lib-sync-user-data)
       (ignore-errors (rime-sync))))
 

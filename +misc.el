@@ -228,6 +228,10 @@
         pinentry-prompt-window-height 8)
   (pinentry-start))
 
+;; envrc
+(use-package! envrc
+  :hook (doom-after-init . envrc-global-mode))
+
 ;; pass
 (after! pass
   (defadvice! pass-view-a ()

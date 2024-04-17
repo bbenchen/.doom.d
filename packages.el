@@ -114,6 +114,7 @@
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
+(package! envrc :pin "8571bf94b6a63ffd9a84100106602f88ba186854")
 
 (package! robby
   :recipe (:host github :repo "stevemolitor/robby")
