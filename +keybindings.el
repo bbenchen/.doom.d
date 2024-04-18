@@ -36,6 +36,12 @@
             "C-\\" #'toggle-input-method))
 
 (map! :leader
+      (:prefix-map ("e" . "envrc")
+                   "a" #'envrc-allow
+                   "d" #'envrc-deny
+                   "r" #'envrc-reload
+                   "l" #'envrc-show-log)
+
       (:prefix-map ("f" . "file")
        :desc "Find file in dotfiles" "t" #'find-in-dotfiles
        :desc "Browse dotfiles" "T" #'browse-dotfiles)

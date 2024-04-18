@@ -231,6 +231,8 @@
 ;; envrc
 (use-package! envrc
   :config
+  (set-popup-rule! "^\\*envrc\\*" :quit t :ttl 0)
+
   (add-hook! 'doom-after-init-hook :append
     (when (executable-find "direnv")
       (envrc-global-mode))))
