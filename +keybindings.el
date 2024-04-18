@@ -36,6 +36,14 @@
             "C-\\" #'toggle-input-method))
 
 (map! :leader
+      (:prefix ("!" . "checkers")
+               (:when (modulep! :checkers syntax +flymake)
+                 :desc "Goto next error"     "n" #'flymake-goto-next-error
+                 :desc "Goto prev error"     "p" #'flymake-goto-prev-error
+                 :desc "Show error at point" "s" #'flymake-show-diagnostic
+                 :desc "Show buffer errors"  "v" #'flymake-show-diagnostic
+                 :desc "Show project errors" "V" #'flymake-show-project-diagnostics))
+
       (:prefix-map ("e" . "envrc")
                    "a" #'envrc-allow
                    "d" #'envrc-deny
