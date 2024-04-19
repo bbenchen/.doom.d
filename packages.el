@@ -138,11 +138,6 @@
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
     :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
-(if (>= emacs-major-version 30)
-  (package! jsonrpc :built-in t))
-(package! dape
-  :recipe (:host github :repo "svaante/dape")
-  :pin "fb6908dbd857628891f6d5296643865e21ca4c01")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
