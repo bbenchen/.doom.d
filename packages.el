@@ -63,7 +63,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "86f50376f8e5452390afeb71f78b17e349603b2a")
+  (package! tree-sitter-langs :pin "a971c34371ecf2e466e898d0e909106ab01ca035")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "2d175b74ad701d96d34eed2b4ea743c734ba6e19"))
@@ -120,7 +120,7 @@
   :recipe (:host github :repo "stevemolitor/robby")
   :pin "34cc41331f628685df0bb48983bbfd8531e1127f")
 
-(package! verb :pin "ac6c0ca3777431268e1f5a540c003aa16345381d")
+(package! verb :pin "efa114468ae3abd1548305bd80941151d8c61a19")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
