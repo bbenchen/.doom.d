@@ -204,6 +204,10 @@
     (setq mode-name "PKGBUILD"
           mode-line-process nil)))
 
+;; nginx-mode
+(use-package! nginx-mode
+  :defer t)
+
 ;; plantuml
 (setq plantuml-jar-path (expand-file-name "plantuml.jar" doom-user-dir)
       plantuml-output-type "png"
