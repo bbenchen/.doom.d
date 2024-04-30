@@ -368,7 +368,8 @@
         acm-backend-search-file-words-enable-fuzzy-match t
         acm-enable-tabnine nil
         acm-enable-copilot nil
-        acm-enable-preview t)
+        acm-enable-preview t
+        acm-backend-lsp-show-progress t)
 
   (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-flex))
