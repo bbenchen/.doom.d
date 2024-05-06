@@ -63,12 +63,12 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "a971c34371ecf2e466e898d0e909106ab01ca035")
+  (package! tree-sitter-langs :pin "ac27f210df341d3ddd8bcbbe38bec09a0a7b2586")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "2d175b74ad701d96d34eed2b4ea743c734ba6e19"))
+    :pin "5a92882bd17bca106b6f8d55ed5401e1de290241"))
 
-(package! posframe :pin "c06b30a0924fbc674f7d088b1ea216a59579fe63")
+(package! posframe :pin "468ac1ab50d7e0feae2c06f12596bbc169f2abe4")
 
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
@@ -113,14 +113,14 @@
 (if (featurep :system 'macos)
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
-(package! pinentry :pin "9230880ebe03da686e9915b200c405ca96fd710d")
+(package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "8571bf94b6a63ffd9a84100106602f88ba186854")
 
 (package! robby
   :recipe (:host github :repo "stevemolitor/robby")
   :pin "34cc41331f628685df0bb48983bbfd8531e1127f")
 
-(package! verb :pin "efa114468ae3abd1548305bd80941151d8c61a19")
+(package! verb :pin "b5de5c18e58c3066d7fdbd033a42fa66d5da73c6")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit
@@ -133,7 +133,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "0ce4de31d4f1ae58bb725dc337db347e85d9086e")
+  :pin "e60b12c21f5f82fa5cf1bcee6ae310f4b50cc371")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
