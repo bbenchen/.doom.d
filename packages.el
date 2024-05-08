@@ -63,12 +63,12 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "ac27f210df341d3ddd8bcbbe38bec09a0a7b2586")
+  (package! tree-sitter-langs :pin "b97e0b9f5f66c614bdaf16ae42e281c1a0d54795")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "5a92882bd17bca106b6f8d55ed5401e1de290241"))
+    :pin "6f62175d8bc42914c00ffdd9bb38677d9fb55a9c"))
 
-(package! posframe :pin "468ac1ab50d7e0feae2c06f12596bbc169f2abe4")
+(package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
@@ -82,7 +82,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "377375c87f64e7d069c8fc310ccfefd8771226f3")
+(package! go-translate :pin "eb10b1ff173c6f39106ca7ea5ce6e741ad2f6324")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! insert-translated-name
   :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
@@ -105,7 +105,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "056bd88d860ce9309ba3d4934d9ec5801121683b")
+(package! goto-line-preview :pin "12bd8de67c33bbeffbe77866b5ea7299786110cb")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
@@ -155,4 +155,4 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "c3dd49ccd1f0655ed1699058c16a777ac1cb1419")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "c6c5bcca6ca1897ecf87c63223f01a45f517a71d")
+(package! auto-rename-tag :pin "71987b2088d2da2d8d03b6902c13fc2df8fe1677")
