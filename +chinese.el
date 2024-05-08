@@ -161,6 +161,7 @@ unwanted space when exporting org-mode to hugo markdown."
 
   (setq gt-default-translator
         (gt-translator
+         :taker (gt-taker :pick 'paragraph)
          :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser)))
          :render (gt-posframe-pop-render)))
 
