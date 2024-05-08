@@ -147,36 +147,30 @@ unwanted space when exporting org-mode to hugo markdown."
   :init
   (map! :leader
         (:prefix-map ("y" . "translate")
-         :desc "Google translate" "g" #'gts-do-translate
-         :desc "Google translate prompt" "G" #'gts-do-translate-prompt))
+         :desc "Google translate" "g" #'gt-do-translate
+         :desc "Google translate prompt" "G" #'gt-do-translate-prompt))
   (add-hook! 'doom-load-theme-hook :append
-    (setq gts-pop-posframe-backcolor (face-background 'mode-line)
-          gts-pop-posframe-forecolor (face-foreground 'mode-line)))
+    (setq gt-pop-posframe-backcolor (face-background 'mode-line)
+          gt-pop-posframe-forecolor (face-foreground 'mode-line)))
   :config
   (set-popup-rule! "^\\*Go-Translate\\*" :side 'right :size 0.4 :select t)
-  (setq gts-translate-list '(("en" "zh"))
-        gts-buffer-follow-p t
-        gts-posframe-pop-render-timeout nil
-        gts-pop-posframe-backcolor (face-background 'mode-line)
-        gts-pop-posframe-forecolor (face-foreground 'mode-line))
+  (setq gt-langs '(en zh)
+        gt-posframe-pop-render-timeout nil
+        gt-pop-posframe-backcolor (face-background 'mode-line)
+        gt-pop-posframe-forecolor (face-foreground 'mode-line))
 
-  (add-hook! 'gts-after-buffer-render-hook (goto-line 1))
+  (setq gt-default-translator
+        (gt-translator
+         :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser)))
+         :render (gt-posframe-pop-render)))
 
-  (setq gts-default-translator
-        (gts-translator
-         :picker (gts-noprompt-picker :texter (gts-current-or-selection-texter))
-         :engines (list (gts-google-rpc-engine :parser (gts-google-rpc-parser)))
-         :render (gts-posframe-pop-render)
-         :splitter (gts-paragraph-splitter)))
-
-  (defun gts-do-translate-prompt ()
+  (defun gt-do-translate-prompt ()
     "Do the translation of this prompt"
     (interactive)
-    (gts-translate (gts-translator
-                    :picker (gts-prompt-picker)
-                    :engines (list (gts-google-rpc-engine :parser (gts-google-rpc-parser)))
-                    :render (gts-posframe-pop-render)
-                    :splitter (gts-paragraph-splitter)))))
+    (gt-start (gt-translator
+                   :taker (gt-taker :prompt t)
+                   :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser)))
+                   :render (gt-posframe-pop-render)))))
 
 ;; immersive-translate
 (use-package! immersive-translate
