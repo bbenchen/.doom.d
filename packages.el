@@ -59,14 +59,14 @@
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
 
-(package! nerd-icons :pin "fb395120e9de33b276d16caaccaefd98d4340b92")
+(package! nerd-icons :pin "66658b89287c3599c7b9b6babea7bcb3dff9a9e4")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "b97e0b9f5f66c614bdaf16ae42e281c1a0d54795")
+  (package! tree-sitter-langs :pin "5c18599c371af14deda2a0ff12706ffbbfe171ca")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "6f62175d8bc42914c00ffdd9bb38677d9fb55a9c"))
+    :pin "b705d300bf402e7c748ec34064deb61c5b0e546e"))
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
@@ -82,7 +82,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "eb10b1ff173c6f39106ca7ea5ce6e741ad2f6324")
+(package! go-translate :pin "7fd7cc27344f89c2edb2bd0ee0bd1e21cd2e279d")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! insert-translated-name
   :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
@@ -90,7 +90,7 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "1777618c3ef68ceb10dacab71a167e4e7743ca37")
+  :pin "ddb3422ba45523c5408bbfc3caf6d5453ef805c1")
 
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! websocket-bridge
@@ -126,7 +126,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "ab7d19c2ee54424d3ffc853982fe875ad47b6e7f"))
+  (package! blamer :pin "4cc2e6daaecf84c8dd00792f86724413423293a6"))
 
 (package! lsp-bridge
   :recipe (:host github
