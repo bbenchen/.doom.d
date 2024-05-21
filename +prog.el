@@ -194,6 +194,10 @@
 (when (treesit-available-p)
   (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
 
+;; cmake
+(use-package! cmake-ts-mode
+  :when (treesit-available-p))
+
 ;; pkgbuild-mode
 (use-package! pkgbuild-mode
   :defer t
