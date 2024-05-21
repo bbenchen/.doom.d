@@ -59,14 +59,14 @@
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
 
-(package! nerd-icons :pin "66658b89287c3599c7b9b6babea7bcb3dff9a9e4")
+(package! nerd-icons :pin "5ed32f43f2e92ac2600d0ff823ec75e4476cc53e")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "5c18599c371af14deda2a0ff12706ffbbfe171ca")
+  (package! tree-sitter-langs :pin "6ce3de71c21a55ffe33ecdead57fff290a5d07df")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "b705d300bf402e7c748ec34064deb61c5b0e546e"))
+    :pin "a66c46d10f3c46c0ba676d448b80219fee2fdd72"))
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
@@ -82,7 +82,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "7fd7cc27344f89c2edb2bd0ee0bd1e21cd2e279d")
+(package! go-translate :pin "5ff3fa939f52a3670b39dfccd9d63a185656238d")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! insert-translated-name
   :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
@@ -114,7 +114,7 @@
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "8571bf94b6a63ffd9a84100106602f88ba186854")
+(package! envrc :pin "4405f6e7b2e300aa91211bd505364d8f01667c97")
 
 (package! robby
   :recipe (:host github :repo "stevemolitor/robby")
