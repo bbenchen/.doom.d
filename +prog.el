@@ -191,8 +191,8 @@
   (set-docsets! 'dockerfile-ts-mode "Docker"))
 
 ;; yaml
-(when (treesit-available-p)
-  (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-ts-mode)))
+(use-package! yaml-ts-mode
+  :when (treesit-available-p))
 
 ;; cmake
 (use-package! cmake-ts-mode
