@@ -102,7 +102,11 @@
           (toml . ("https://github.com/tree-sitter/tree-sitter-toml"))))
 
   (setq major-mode-remap-alist
-        '((conf-toml-mode . toml-ts-mode)
+        '((c-mode . c-ts-mode)
+          (c++-mode . c++-ts-mode)
+          (c-or-c++-mode . c-or-c++-ts-mode)
+          (cmake-mode . cmake-ts-mode)
+          (conf-toml-mode . toml-ts-mode)
           (dockerfile-mode . dockerfile-ts-mode)
           (json-mode . json-ts-mode)
           (js-json-mode . json-ts-mode)
