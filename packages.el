@@ -59,14 +59,14 @@
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
 
-(package! nerd-icons :pin "5ed32f43f2e92ac2600d0ff823ec75e4476cc53e")
+(package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs :pin "6ce3de71c21a55ffe33ecdead57fff290a5d07df")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "a66c46d10f3c46c0ba676d448b80219fee2fdd72"))
+    :pin "6b37ac1864ce98f553da04da354f93e07bfb5405"))
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
@@ -82,7 +82,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "5ff3fa939f52a3670b39dfccd9d63a185656238d")
+(package! go-translate :pin "7c4fa308f21d665f17a7f6c604cfd8a09b984a9e")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! insert-translated-name
   :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
@@ -133,7 +133,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "367205b0570040cb297f52a462cfc96e7d53eb83")
+  :pin "75e9f01196967a888827a52694a5596776a786c6")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
