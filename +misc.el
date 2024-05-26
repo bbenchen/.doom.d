@@ -55,6 +55,8 @@
 
 ;; projectile
 (after! projectile
+  (setq projectile-project-root-files-bottom-up (remove ".project" projectile-project-root-files-bottom-up))
+  (advice-remove 'projectile-dirconfig-file #'doom--projectile-dirconfig-file-a)
   (setq projectile-project-search-path
         '(("~/Projects/emacs" . 1)
           ("~/Projects/getech/sources" . 1)
