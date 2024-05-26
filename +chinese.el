@@ -194,7 +194,22 @@ unwanted space when exporting org-mode to hugo markdown."
 ;; insert-translated-name
 (use-package! insert-translated-name
   :config
-  (setq insert-translated-name-default-style 'origin)
+  (setq insert-translated-name-default-style 'origin
+        insert-translated-name-program "llm")
+
+  (require 'llm-openai)
+  (setq llm-warn-on-nonfree nil)
+  (defadvice! insert-translated-name-retrieve-translation-a (&rest _)
+    :before #'insert-translated-name-retrieve-translation
+    (unless insert-translated-name-llm-provider
+      ;; (setq insert-translated-name-llm-provider (make-llm-openai-compatible
+      ;;                                            :key (insert-translated-name-api-key-from-auth-source "api.deepseek.com")
+      ;;                                            :chat-model "deepseek-chat"
+      ;;                                            :url "https://api.deepseek.com/v1"))
+      (setq insert-translated-name-llm-provider (make-llm-openai-compatible
+                                                 :key (insert-translated-name-api-key-from-auth-source "openkey.cloud")
+                                                 :chat-model "gpt-3.5-turbo"
+                                                 :url "https://openkey.cloud/v1"))))
 
   ;; (defvar insert-translated-name-is-open-ws-butler nil)
   ;; (defadvice! insert-translated-name-retrieve-translation-a (&rest _)

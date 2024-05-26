@@ -84,9 +84,10 @@
 
 (package! go-translate :pin "7c4fa308f21d665f17a7f6c604cfd8a09b984a9e")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
+(package! llm :pin "a391842c6ee419b415381f6dcd9d4b49170a84bb")
 (package! insert-translated-name
-  :recipe (:host github :repo "bbenchan/insert-translated-name" :branch "google")
-  :pin "4263968c2bcaf6ecc6c66c9ca43770f39aa09b8b")
+  :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
+  :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
