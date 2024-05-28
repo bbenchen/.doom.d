@@ -63,7 +63,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "6ce3de71c21a55ffe33ecdead57fff290a5d07df")
+  (package! tree-sitter-langs :pin "acc7a3bdf1cb8762de4002251294aad83d0fef6f")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "6b37ac1864ce98f553da04da354f93e07bfb5405"))
@@ -84,7 +84,7 @@
 
 (package! go-translate :pin "7c4fa308f21d665f17a7f6c604cfd8a09b984a9e")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "a391842c6ee419b415381f6dcd9d4b49170a84bb")
+(package! llm :pin "7a93093a0ad6c63aa347994ab73ff1d25157f56f")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -127,7 +127,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
-  (package! blamer :pin "4cc2e6daaecf84c8dd00792f86724413423293a6"))
+  (package! blamer :pin "281963da789fe9e47ce9efc4f7a9c4d19bf3a405"))
 
 (package! lsp-bridge
   :recipe (:host github
