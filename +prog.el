@@ -384,11 +384,11 @@
   (global-lsp-bridge-mode)
 
   (defadvice! acm-markdown-render-content-a (&rest args)
-      :after #'acm-markdown-render-content
-      (goto-line 1)
-      (when (modulep! :checkers syntax)
-        (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
-              ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))))
+    :after #'acm-markdown-render-content
+    (goto-line 1)
+    (when (modulep! :checkers syntax)
+      (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
+            ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))))
 
   (when (and (modulep! :checkers syntax)
              (not (modulep! :checkers syntax +flymake)))
