@@ -68,7 +68,7 @@
           "launchMode": "Hybrid"
         },
         "format": {
-          "enabled": true
+          "enabled": false
         },
         "contentProvider": {
           "preferred": "cfr"

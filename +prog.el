@@ -3,10 +3,6 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
-;; format
-(unless (modulep! :tools lsp)
-    (setq +format-with-lsp nil))
-
 ;; xml
 (after! nxml-mode
   (when (modulep! :tools tree-sitter)
@@ -72,11 +68,18 @@
         "I" #'go-impl))
 
 ;; java
+(when (modulep! :editor format)
+  (set-formatter! 'spring-java-format '("spring-java-format") :modes '(java-mode java-ts-mode))
+
+  (defadvice! apheleia-format-buffer-a (fn &rest args)
+    :around #'apheleia-format-buffer
+    (let ((default-directory (doom-project-root)))
+      (apply fn args))))
 ;; (when (and (modulep! :lang java)
 ;;            (modulep! :editor format))
 ;;   (set-formatter! 'google-java-format
-;;     '("google-java-format" "-" "-a" "-" "--skip-sorting-imports")
-;;     :modes 'java-mode))
+;;     '("google-java-format" "-" "-a" "--skip-sorting-imports")
+;;     :modes '(java-mode java-ts-mode)))
 
 (map! :map (java-mode-map java-ts-mode-map)
       :localleader
@@ -445,7 +448,8 @@
 
   (defadvice! +format/region-or-buffer-a (fn &rest args)
     :around #'+format/region-or-buffer
-    (if (and lsp-bridge-mode
+    (if (and (not (memq major-mode '(java-mode java-ts-mode)))
+             (bound-and-true-p lsp-bridge-mode)
              (lsp-bridge-has-lsp-server-p))
         (lsp-bridge-code-format)
       (apply fn args)))
