@@ -1,0 +1,12 @@
+#!/bin/bash
+# Choose between pinentry-tty and pinentry-emacs based on whether
+# $PINENTRY_USER_DATA contains USE_TTY
+
+case "${PINENTRY_USER_DATA-}" in
+    *USE_TTY*)
+        exec pinentry-tty "$@"
+        ;;
+    *)
+        exec pinentry-emacs "$@"
+        ;;
+esac
