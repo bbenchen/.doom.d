@@ -217,11 +217,11 @@
   (exec-path-from-shell-initialize))
 
 ;; pinentry
-(use-package! pinentry
-  :config
-  (setq epa-pinentry-mode 'loopback
-        pinentry-prompt-window-height 8)
-  (pinentry-start))
+;; (use-package! pinentry
+;;   :config
+;;   (setq epa-pinentry-mode 'loopback
+;;         pinentry-prompt-window-height 8)
+;;   (pinentry-start))
 
 ;; envrc
 (use-package! envrc
