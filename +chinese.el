@@ -86,12 +86,12 @@
     (set-face-background 'rime-default-face (doom-color 'modeline-bg)))
 
   (add-hook! '(doom-after-init-hook kill-emacs-hook) :append
-    (when (fboundp 'rime-lib-sync-user-data)
+    (when (functionp 'rime-lib-sync-user-data)
       (ignore-errors (rime-sync))))
 
   (add-hook! 'scala-mode-hook :append
     (add-hook! 'post-command-hook :local
-      (if (fboundp 'rime--redisplay)
+      (if (functionp 'rime--redisplay)
           (rime--redisplay))))
 
   (when (featurep :system 'linux)
