@@ -69,6 +69,12 @@
     [remap backward-kill-word] #'deno-bridge-jieba-backward-kill-word
     [remap mark-word]          #'deno-bridge-jieba-mark-word))
 
+;; tree-sitter
+(let ((grammer-dir (expand-file-name "tree-sitter" doom-cache-dir)))
+  (setq tree-sitter-langs-grammar-dir grammer-dir)
+  (if (not (file-exists-p grammer-dir))
+      (make-directory grammer-dir)))
+
 ;; treesit
 (use-package! treesit
   :when (treesit-available-p)
