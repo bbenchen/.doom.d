@@ -114,6 +114,7 @@
           (cmake-mode . cmake-ts-mode)
           (conf-toml-mode . toml-ts-mode)
           (dockerfile-mode . dockerfile-ts-mode)
+          (java-mode . java-ts-mode)
           (json-mode . json-ts-mode)
           (js-json-mode . json-ts-mode)
           (python-mode . python-ts-mode)
