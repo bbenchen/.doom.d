@@ -63,10 +63,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "acc7a3bdf1cb8762de4002251294aad83d0fef6f")
+  (package! tree-sitter-langs :pin "a7b51c99c44194a853be138ffde1a73360966bae")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "6b37ac1864ce98f553da04da354f93e07bfb5405"))
+    :pin "27c6c9d3caa22450ee4fee3fcbf59b7b629f812d"))
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
@@ -82,9 +82,9 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "7c4fa308f21d665f17a7f6c604cfd8a09b984a9e")
+(package! go-translate :pin "a857774be32bf2e7dabb308abbfde759a63a88fc")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "7a93093a0ad6c63aa347994ab73ff1d25157f56f")
+(package! llm :pin "499869789917b18e05e8b644af54b6330f75950d")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -144,7 +144,7 @@
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
-(package! pkgbuild-mode :pin "9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067")
+(package! pkgbuild-mode :pin "8ef396d8fa9187b65c065a6bc2ca15dfaf3255df")
 (package! protobuf-ts-mode
   :recipe (:host github :repo "emacsattic/protobuf-ts-mode")
   :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
