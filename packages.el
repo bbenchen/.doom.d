@@ -117,9 +117,10 @@
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "4405f6e7b2e300aa91211bd505364d8f01667c97")
 
-(package! robby
-  :recipe (:host github :repo "stevemolitor/robby")
-  :pin "34cc41331f628685df0bb48983bbfd8531e1127f")
+(package! aichat
+  :recipe (:host github :repo "xhcoding/emacs-aichat" :files ("aichat-util.el" "aichat-openai.el"))
+  :pin "1b3270c96080a67389f6089d489e883c8367e6f8")
+(package! async-await :pin "e0d15e8057ed7520100bc50c5552278292ebcb07")
 
 (package! verb :pin "b5de5c18e58c3066d7fdbd033a42fa66d5da73c6")
 
