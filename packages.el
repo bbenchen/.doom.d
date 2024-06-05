@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(unpin! (:editor snippets))
+(unpin! (:editor snippets) (:tools editorconfig))
 
 (package! ws-butler :disable t)
 (package! tide :disable t)
