@@ -123,6 +123,7 @@
 (package! async-await :pin "e0d15e8057ed7520100bc50c5552278292ebcb07")
 
 (package! verb :pin "b5de5c18e58c3066d7fdbd033a42fa66d5da73c6")
+(package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
   (package! magit-gerrit

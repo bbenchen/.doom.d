@@ -43,3 +43,6 @@
                  ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   (setq org-latex-src-block-backend 'minted)
   (add-to-list 'org-latex-packages-alist '("" "minted")))
+
+(use-package! ox-gfm
+  :after ox)
