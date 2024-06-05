@@ -64,6 +64,22 @@
                    ((string-match "517926804@qq.com" from) "qq"))))
               (setq message-sendmail-extra-arguments (list '"-a" account '"--read-envelope-from")))))))
 
+  (unless (functionp 'mu4e--view-gather-mime-parts)
+      (defun mu4e--view-gather-mime-parts ()
+        "Gather all MIME parts as an alist.
+The alist uniquely maps the number to the gnus-part."
+        (let ((parts '()))
+          (save-excursion
+            (goto-char (point-min))
+            (while (not (eobp))
+              (let ((part (get-text-property (point) 'gnus-data))
+                    (index (get-text-property (point) 'gnus-part)))
+                (when (and part (numberp index) (not (assoc index parts)))
+                  (push `(,index . ,part) parts))
+                (goto-char (or (next-single-property-change (point) 'gnus-part)
+                               (point-max))))))
+          parts)))
+
   ;;
   ;; Xapian, the search engine of mu has a poor support of CJK characters,
   ;; which causes only query contains no more than 2 CJK characters works.
