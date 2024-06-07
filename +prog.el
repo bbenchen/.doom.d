@@ -99,7 +99,7 @@
              (if is-test-file
                  (lsp-bridge-jdtls-project-get-classpaths
                   #'(lambda (classpaths)
-                      (let ((junit-wrapper "junit-wrapper.py")
+                      (let ((junit-wrapper "junit-wrapper")
                             (classpath-file (expand-file-name "junit-classpaths" temporary-file-directory)))
                         (with-temp-file classpath-file
                           (insert classpaths))
