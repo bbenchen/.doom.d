@@ -32,8 +32,13 @@ def read_junit_opts():
     if os.path.exists(junit_opts_filename) and os.path.isfile(junit_opts_filename):
         with open(junit_opts_filename, mode="r", encoding="utf-8") as f:
             for line in f.readlines():
-                line = line.strip("\n")
-                opts.append(line)
+                line = line.strip()
+                if (line.find(" ") == -1):
+                    opts.append(line)
+                else:
+                    for item in line.split(" "):
+                        if len(item) > 0:
+                            opts.append(item)
     return opts
 
 
@@ -55,7 +60,7 @@ def main():
 
     os.remove(known_args.classpaths_file)
 
-    cmd_args = []
+    cmd_args = ["java"]
 
     junit_opts = read_junit_opts()
     for opt in junit_opts:
@@ -70,7 +75,7 @@ def main():
     cmd_args.append(test_mode)
     cmd_args.append(test_class_or_method)
 
-    subprocess.run(executable="java", encoding="utf-8", args=cmd_args)
+    subprocess.run(cmd_args, encoding="utf-8")
 
 
 if __name__ == "__main__":
