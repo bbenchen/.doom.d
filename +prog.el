@@ -356,6 +356,7 @@
 
 ;; lsp-bridge
 (use-package! lsp-bridge
+  :defer 2
   :init
   (setq lsp-bridge-enable-mode-line nil)
   :config
