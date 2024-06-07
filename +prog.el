@@ -422,17 +422,17 @@
                                           (concat "-javaagent:" lombok-jar-path))))
   (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
-  (setq lsp-bridge-get-multi-lang-server-by-project
-        (lambda (_project-path filepath)
-          ;; If typescript file include deno.land url, then use Deno LSP server.
-          (save-excursion
-            (when (string-equal (file-name-extension filepath) "ts")
-              (cl-dolist (buf (buffer-list))
-                (when (string-equal (buffer-file-name buf) filepath)
-                  (with-current-buffer buf
-                    (goto-char (point-min))
-                    (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
-                      (cl-return "deno")))))))))
+  ;; (setq lsp-bridge-get-multi-lang-server-by-project
+  ;;       (lambda (_project-path filepath)
+  ;;         ;; If typescript file include deno.land url, then use Deno LSP server.
+  ;;         (save-excursion
+  ;;           (when (string-equal (file-name-extension filepath) "ts")
+  ;;             (cl-dolist (buf (buffer-list))
+  ;;               (when (string-equal (buffer-file-name buf) filepath)
+  ;;                 (with-current-buffer buf
+  ;;                   (goto-char (point-min))
+  ;;                   (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
+  ;;                     (cl-return "deno")))))))))
 
   (defadvice! lsp-bridge-not-in-multiple-cursors-a ()
     :override #'lsp-bridge-not-in-multiple-cursors
