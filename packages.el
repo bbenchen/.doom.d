@@ -115,7 +115,7 @@
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "4405f6e7b2e300aa91211bd505364d8f01667c97")
+(package! envrc :pin "2316e004c1574234fe4d991bd75a254cdeaa83ae")
 
 (package! aichat
   :recipe (:host github :repo "xhcoding/emacs-aichat" :files ("aichat-util.el" "aichat-openai.el"))
