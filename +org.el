@@ -1,9 +1,18 @@
 ;;; +org.el -*- lexical-binding: t; -*-
 
+;; ox
+(after! ox
+  (if (require 'edraw-org nil t)
+      (edraw-org-setup-exporter)))
+
 ;; org-mode
 (after! org
   (setq org-tags-column -80
         org-image-actual-width 600)
+
+  ;; edraw
+  (if (require 'edraw-org nil t)
+      (edraw-org-setup-default))
 
   (add-to-list 'org-modules 'org-tempo t)
 

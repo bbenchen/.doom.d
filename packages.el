@@ -122,6 +122,9 @@
   :pin "1b3270c96080a67389f6089d489e883c8367e6f8")
 (package! async-await :pin "e0d15e8057ed7520100bc50c5552278292ebcb07")
 
+(package! easydraw
+  :recipe (:host github :repo "misohena/el-easydraw")
+  :pin "99067dba625db3ac54ca4d3a3c811c41de207309")
 (package! verb :pin "5caa09dd24a3aeefe53ced5250a2ae4e638e576b")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
