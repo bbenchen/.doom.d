@@ -66,7 +66,7 @@
   (package! tree-sitter-langs :pin "a06804e13fc1d24d0099b44ce23d6ac5e6bac5b8")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "f2ab092b8c295dcd6cd35619970dcd36d375e4b5"))
+    :pin "92b2d2ee7befb743568625f8bc7e09c8517741a4"))
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
@@ -125,7 +125,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "99067dba625db3ac54ca4d3a3c811c41de207309")
-(package! verb :pin "5caa09dd24a3aeefe53ced5250a2ae4e638e576b")
+(package! verb :pin "a9c668a1ed39eb2c2666fc3597de9b679c91cd72")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -139,7 +139,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "ca6f84bc0fbd710570f3cf72a96d0a8c5d760b26")
+  :pin "e040c91114cff8ba789b1f9893f2fdb67e49d78b")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
