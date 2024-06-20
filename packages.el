@@ -58,6 +58,7 @@
 
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
+(package! which-key :pin "1e89fa000e9ba9549f15ef57abccd118d5f2fe1a" :built-in 'prefer)
 
 (package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
 
