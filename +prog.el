@@ -68,6 +68,9 @@
         "I" #'go-impl))
 
 ;; java
+(after! projectile
+  (delete "build.gradle" projectile-project-root-files))
+
 (when (modulep! :editor format)
   (set-formatter! 'spring-java-format '("spring-java-format") :modes '(java-mode java-ts-mode))
 
@@ -80,6 +83,8 @@
 ;;   (set-formatter! 'google-java-format
 ;;     '("google-java-format" "-" "-a" "--skip-sorting-imports")
 ;;     :modes '(java-mode java-ts-mode)))
+
+(add-hook! java-ts-mode #'rainbow-delimiters-mode)
 
 (map! :map (java-mode-map java-ts-mode-map)
       :localleader
