@@ -62,6 +62,11 @@
 
 (package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
 
+(if (modulep! :ui vc-gutter +diff-hl)
+    (package! diff-hl :pin "11f3113e790526d5ee00f61f8e7cd0d01e323b2e"))
+
+(package! vterm :pin "df057b1af2bb89a1deb288086f13be296af42090")
+
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs :pin "a06804e13fc1d24d0099b44ce23d6ac5e6bac5b8")
