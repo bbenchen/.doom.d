@@ -56,8 +56,6 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
-
 (package! project :pin "bf4c3cfcfbf3423d79170aa880a1abb332ed942e" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "ed389312170df955aaf10c2e120cc533ed5c509e" :built-in 'prefer)
 
@@ -74,9 +72,13 @@
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
+(package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d57e023efd0e7614605b5eaa9d2e01b54fa78808")
+
+(when (modulep! :email mu4e +org)
+  (package! org-msg :pin "8ce92fecae371b7cfd5ef3c0a3ac280e5664487d"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
