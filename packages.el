@@ -64,7 +64,7 @@
 (package! vterm :pin "df057b1af2bb89a1deb288086f13be296af42090")
 
 (when (modulep! :tools tree-sitter)
-  (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
+  (package! tree-sitter :pin "02fe7b86d92b1aab954045146469b7893f0ab371")
   (package! tree-sitter-langs :pin "b597549d1e3e1fa69e942c4117b63a2089f625c6")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
