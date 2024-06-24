@@ -58,7 +58,7 @@
 
 (if (>= emacs-major-version 30)
     (package! project :built-in t))
-(package! which-key :pin "1e89fa000e9ba9549f15ef57abccd118d5f2fe1a" :built-in 'prefer)
+(package! which-key :pin "ed389312170df955aaf10c2e120cc533ed5c509e" :built-in 'prefer)
 
 (package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
 
@@ -69,10 +69,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "a06804e13fc1d24d0099b44ce23d6ac5e6bac5b8")
+  (package! tree-sitter-langs :pin "b597549d1e3e1fa69e942c4117b63a2089f625c6")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "92b2d2ee7befb743568625f8bc7e09c8517741a4"))
+    :pin "5b8abb69cdef3128f1fdb69176b9963b13ceaf02"))
 
 (package! posframe :pin "f4e9e509ba96ceb3c2b2b054957291607fb52651")
 
@@ -145,7 +145,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "e040c91114cff8ba789b1f9893f2fdb67e49d78b")
+  :pin "595fb14d3f6daf95e20732eea8d3ab303c6c4860")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
