@@ -2,7 +2,8 @@
 
 (setenv "XAPIAN_CJK_NGRAM" "1")
 
-(setq +mu4e-backend 'mbsync)
+(setq +mu4e-compose-org-msg-toggle-next t
+      +mu4e-backend 'mbsync)
 
 (set-email-account! "tcl.com"
                     '((mu4e-sent-folder       . "/tcl.com/Sent")
@@ -159,13 +160,6 @@ The alist uniquely maps the number to the gnus-part."
     (if-let ((msg (mu4e-message-at-point t)))
         (mu4e-action-view-in-browser msg)
       (user-error "No message at point")))
-
-  (when (modulep! :email mu4e +org)
-    (defun +mu4e-set-signature-for-org-msg ()
-      (setq org-msg-greeting-fmt
-            "\n\n#+begin_signature\n--\n\nThanks and Best Regards\n\nBC（Ben Chen）\n#+end_signature\n"))
-
-    (add-hook! 'mu4e-compose-pre-hook #'+mu4e-set-signature-for-org-msg))
 
   (add-hook! 'mu4e-compose-mode-hook
     (defun +mu4e-add-cc--header ()
