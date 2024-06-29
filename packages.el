@@ -57,7 +57,7 @@
 (package! mu4e-alert :disable t)
 
 (package! project :pin "bf4c3cfcfbf3423d79170aa880a1abb332ed942e" :built-in (>= emacs-major-version 30))
-(package! which-key :pin "ed389312170df955aaf10c2e120cc533ed5c509e" :built-in 'prefer)
+(package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "11f3113e790526d5ee00f61f8e7cd0d01e323b2e")
 
@@ -133,7 +133,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "99067dba625db3ac54ca4d3a3c811c41de207309")
-(package! verb :pin "a9c668a1ed39eb2c2666fc3597de9b679c91cd72")
+(package! verb :pin "23628dd831a9f84bc6eb1c5a8f74779dbc7c2a56")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -147,7 +147,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "595fb14d3f6daf95e20732eea8d3ab303c6c4860")
+  :pin "911385dd28cb1a8f80d1976cd3ae836817879d61")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
