@@ -23,6 +23,10 @@
   (add-to-list 'recentf-exclude "/var")
   (add-to-list 'recentf-exclude "/autosave"))
 
+;; epa
+(after! epa
+  (setq epa-file-cache-passphrase-for-symmetric-encryption t))
+
 ;; winner
 (after! winner
   ;; fix: wrong type argument: frame-live-p, #<dead frame
