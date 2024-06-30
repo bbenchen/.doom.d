@@ -133,7 +133,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "99067dba625db3ac54ca4d3a3c811c41de207309")
-(package! verb :pin "23628dd831a9f84bc6eb1c5a8f74779dbc7c2a56")
+(package! verb :pin "574f8c2498f9ada2ce728755fc4ee6456357a942")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -147,7 +147,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "911385dd28cb1a8f80d1976cd3ae836817879d61")
+  :pin "2f25d5e14d9e8062a5052d12dbe28c10e0ecbca3")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
