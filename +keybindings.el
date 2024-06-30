@@ -54,6 +54,9 @@
        :desc "Find file in dotfiles" "t" #'find-in-dotfiles
        :desc "Browse dotfiles" "T" #'browse-dotfiles)
 
+      (:prefix-map ("o" . "open")
+       :desc "View undo" "u" #'vundo)
+
       (:prefix-map ("t" . "toggle")
        :desc "Command window" "C" #'toggle-command-window
        :desc "Frame transparency" "T" #'toggle-frame-transparency
