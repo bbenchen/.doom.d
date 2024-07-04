@@ -75,7 +75,7 @@
 (package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "513ae00ad5fe78e135ac4be97c50f1cf8e428af0")
+  :pin "df6af5c10757e14459d47c3050cd5814e1de5763")
 
 (when (modulep! :email mu4e +org)
   (package! org-msg
