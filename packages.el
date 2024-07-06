@@ -61,14 +61,14 @@
 
 (package! diff-hl :pin "a942b2383db0dc16df389611b84031c29d5c17ed")
 
-(package! vterm :pin "df057b1af2bb89a1deb288086f13be296af42090")
+(package! vterm :pin "d9ea29fb10aed20512bd95dc5b8c1a01684044b1")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "02fe7b86d92b1aab954045146469b7893f0ab371")
   (package! tree-sitter-langs :pin "99dd63d41be0d7d55d98fb7e8a23b569eebadbdc")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "442f6c5e24512816c563c56007a0dc446bb4d456"))
+    :pin "2a0210d0c97d35e5dd1dd508c81a5c10960d0e10"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -133,7 +133,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "a6c849619abcdd80dc82ec5417195414ad438fa3")
-(package! verb :pin "574f8c2498f9ada2ce728755fc4ee6456357a942")
+(package! verb :pin "c1a16c3cb4fe31bcfb002ed84ea2d6abb589a017")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -147,7 +147,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "8e0a14c6a8f522601398ecdcb713dd854e3f46a3")
+  :pin "ddbc098996c783a0752ccb769233576a42c8c123")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
