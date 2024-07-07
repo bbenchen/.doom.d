@@ -377,6 +377,7 @@
         lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
         lsp-bridge-signature-show-with-frame-position "point"
         lsp-bridge-python-lsp-server "ruff"
+        lsp-bridge-python-multi-lsp-server "pyright_ruff"
         acm-backend-yas-match-by-trigger-keyword t
         acm-backend-search-file-words-enable-fuzzy-match t
         acm-enable-capf t
