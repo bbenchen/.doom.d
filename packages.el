@@ -142,16 +142,7 @@
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
   (package! blamer :pin "a6526820ac37a2ab041c4abda57b78f133299bf2"))
 
-(package! lsp-bridge
-  :recipe (:host github
-           :repo "bbenchan/lsp-bridge"
-           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
-           :build (:not compile))
-  :pin "1f214b47e218b22535a720441ffe88f2bd731d3a")
-(when (modulep! :checkers syntax +flymake)
-  (package! flymake-bridge
-    :recipe (:host github :repo "liuyinz/flymake-bridge")
-    :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
+(package! auto-rename-tag :pin "71987b2088d2da2d8d03b6902c13fc2df8fe1677")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -169,4 +160,16 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "c3dd49ccd1f0655ed1699058c16a777ac1cb1419")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
-(package! auto-rename-tag :pin "71987b2088d2da2d8d03b6902c13fc2df8fe1677")
+
+(package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
+
+(package! lsp-bridge
+  :recipe (:host github
+           :repo "bbenchan/lsp-bridge"
+           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
+           :build (:not compile))
+  :pin "1f214b47e218b22535a720441ffe88f2bd731d3a")
+(when (modulep! :checkers syntax +flymake)
+  (package! flymake-bridge
+    :recipe (:host github :repo "liuyinz/flymake-bridge")
+    :pin "30f7ee8c5234b32c6d5acac850bb97c13ee90128"))
