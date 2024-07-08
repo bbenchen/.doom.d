@@ -65,10 +65,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "02fe7b86d92b1aab954045146469b7893f0ab371")
-  (package! tree-sitter-langs :pin "99dd63d41be0d7d55d98fb7e8a23b569eebadbdc")
+  (package! tree-sitter-langs :pin "b2739d07fadf45520a25862342a1790cd905cff9")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "2a0210d0c97d35e5dd1dd508c81a5c10960d0e10"))
+    :pin "7e23a8dcce4b99e4ca928134fb1ef88af7e983d8"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "64a01dc5cc1cbf1b79edbd970a94661f1a4dad90")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "6ecbb763c8ccf24d133dde50abcad8d7fc910c1e")
+(package! llm :pin "7b34f3a1189a77c03f9b2f47b2cc8acfa360fb31")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
