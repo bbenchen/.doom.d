@@ -359,18 +359,18 @@
 
 (use-package! ob-sql-mode)
 
-(use-package! topsy
-  :config
-  (add-hook! 'magit-section-mode-hook #'topsy-mode)
+;; (use-package! topsy
+;;   :config
+;;   (add-hook! 'magit-section-mode-hook #'topsy-mode)
 
-  (after! lsp-bridge
-    (setcdr (assoc nil topsy-mode-functions)
-            (lambda ()
-              (when (lsp-bridge-is-remote-file) "[lsp-bridge] remote file")))
+;;   (after! lsp-bridge
+;;     (setcdr (assoc nil topsy-mode-functions)
+;;             (lambda ()
+;;               (when (lsp-bridge-is-remote-file) "[lsp-bridge] remote file")))
 
-    ;; 当前主要模式为 org-mode 时不激活
-    (add-hook! 'lsp-bridge-mode-hook (unless (derived-mode-p 'org-mode)
-                                       (topsy-mode 1)))))
+;;     ;; 当前主要模式为 org-mode 时不激活
+;;     (add-hook! 'lsp-bridge-mode-hook (unless (derived-mode-p 'org-mode)
+;;                                        (topsy-mode 1)))))
 
 ;; lsp-bridge
 (use-package! lsp-bridge

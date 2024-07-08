@@ -161,7 +161,7 @@
   :pin "c3dd49ccd1f0655ed1699058c16a777ac1cb1419")
 (package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
 
-(package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
+;; (package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
 
 (package! lsp-bridge
   :recipe (:host github
