@@ -90,7 +90,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "64a01dc5cc1cbf1b79edbd970a94661f1a4dad90")
+(package! go-translate :pin "a2fa7d26b92f1abc75487fcaefbbec3cb72f5985")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "7b34f3a1189a77c03f9b2f47b2cc8acfa360fb31")
 (package! insert-translated-name
@@ -133,7 +133,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "a6c849619abcdd80dc82ec5417195414ad438fa3")
-(package! verb :pin "c1a16c3cb4fe31bcfb002ed84ea2d6abb589a017")
+(package! verb :pin "ff9f9b4b441fef596db0a7dbcf761414e2c469bd")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
