@@ -64,7 +64,7 @@
 (package! vterm :pin "d9ea29fb10aed20512bd95dc5b8c1a01684044b1")
 
 (when (modulep! :tools tree-sitter)
-  (package! tree-sitter :pin "02fe7b86d92b1aab954045146469b7893f0ab371")
+  (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs :pin "b2739d07fadf45520a25862342a1790cd905cff9")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
@@ -90,7 +90,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "a2fa7d26b92f1abc75487fcaefbbec3cb72f5985")
+(package! go-translate :pin "13975ae19a55401ee7bcd42d7b71584a554a0a1d")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "7b34f3a1189a77c03f9b2f47b2cc8acfa360fb31")
 (package! insert-translated-name
@@ -168,7 +168,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "1f214b47e218b22535a720441ffe88f2bd731d3a")
+  :pin "dd6b7acd460e35ad9e098b4d434ef597ed1b5854")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
