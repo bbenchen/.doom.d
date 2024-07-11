@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "48085fad79b370ab6f072c8c3fa1320622354f30" :built-in (>= emacs-major-version 30))
+(package! project :pin "093f42a1b612eaae0d2bdd475663c14973fe0325" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "a942b2383db0dc16df389611b84031c29d5c17ed")
@@ -90,9 +90,9 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "13975ae19a55401ee7bcd42d7b71584a554a0a1d")
+(package! go-translate :pin "97468ed8ff5ae93e01e93d4018e7be1b711046a1")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "7b34f3a1189a77c03f9b2f47b2cc8acfa360fb31")
+(package! llm :pin "0be180f3507353c4631a5ed8a5420d352b4a3b95")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -168,7 +168,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "dd6b7acd460e35ad9e098b4d434ef597ed1b5854")
+  :pin "02dd6cf213d8e4ed4216a8e407efb418b9b84fee")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
