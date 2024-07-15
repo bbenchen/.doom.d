@@ -56,16 +56,16 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "093f42a1b612eaae0d2bdd475663c14973fe0325" :built-in (>= emacs-major-version 30))
+(package! project :pin "3a329581ff1803f8ef192b161d63b853d88d6d21" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "a942b2383db0dc16df389611b84031c29d5c17ed")
+(package! diff-hl :pin "f66345ed1f174e844ce43d8225613b7b0fc3e253")
 
 (package! vterm :pin "d9ea29fb10aed20512bd95dc5b8c1a01684044b1")
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "b2739d07fadf45520a25862342a1790cd905cff9")
+  (package! tree-sitter-langs :pin "01d16875317efc7a61c2e19c8f5b94bf4b914bfd")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "7e23a8dcce4b99e4ca928134fb1ef88af7e983d8"))
@@ -90,9 +90,9 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "97468ed8ff5ae93e01e93d4018e7be1b711046a1")
+(package! go-translate :pin "334efbddd3d421ec294002fca166fbd6b0152e2e")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "0be180f3507353c4631a5ed8a5420d352b4a3b95")
+(package! llm :pin "574b84c673816551f9fe20466523603a49f5a13d")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
