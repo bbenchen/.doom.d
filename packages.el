@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "3a329581ff1803f8ef192b161d63b853d88d6d21" :built-in (>= emacs-major-version 30))
+(package! project :pin "b8adaa99fd0094e179c5eb28358c2f98019b064e" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "f66345ed1f174e844ce43d8225613b7b0fc3e253")
@@ -68,7 +68,7 @@
   (package! tree-sitter-langs :pin "01d16875317efc7a61c2e19c8f5b94bf4b914bfd")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "7e23a8dcce4b99e4ca928134fb1ef88af7e983d8"))
+    :pin "9578bdd4966d09b0fa07eea388d32d47ba6afa8f"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -90,9 +90,9 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "334efbddd3d421ec294002fca166fbd6b0152e2e")
+(package! go-translate :pin "74c4e0b0723311f6f592716bccc7328a24828f57")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "574b84c673816551f9fe20466523603a49f5a13d")
+(package! llm :pin "3be592dc8b73723047ad90f9243ef0b0cbb90119")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -123,7 +123,7 @@
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "2316e004c1574234fe4d991bd75a254cdeaa83ae")
+(package! envrc :pin "532ecdab48d073963ba5b581c06f3c0b83db05a6")
 
 (package! aichat
   :recipe (:host github :repo "xhcoding/emacs-aichat" :files ("aichat-util.el" "aichat-openai.el"))
