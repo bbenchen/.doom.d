@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "b8adaa99fd0094e179c5eb28358c2f98019b064e" :built-in (>= emacs-major-version 30))
+(package! project :pin "c0fb3da8b90735fb280ab157f4a8033b42105125" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "f66345ed1f174e844ce43d8225613b7b0fc3e253")
@@ -90,7 +90,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "74c4e0b0723311f6f592716bccc7328a24828f57")
+(package! go-translate :pin "82f5a6ddd94936f74722051dd21402cbfc998e28")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "3be592dc8b73723047ad90f9243ef0b0cbb90119")
 (package! insert-translated-name
