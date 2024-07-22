@@ -59,7 +59,7 @@
 (package! project :pin "c0fb3da8b90735fb280ab157f4a8033b42105125" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "f66345ed1f174e844ce43d8225613b7b0fc3e253")
+(package! diff-hl :pin "57d9d4e3e17397bf178c3aa5c369b5edd24523e0")
 
 (package! vterm :pin "d9ea29fb10aed20512bd95dc5b8c1a01684044b1")
 
@@ -68,7 +68,7 @@
   (package! tree-sitter-langs :pin "01d16875317efc7a61c2e19c8f5b94bf4b914bfd")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "9578bdd4966d09b0fa07eea388d32d47ba6afa8f"))
+    :pin "89b4de0b138d4333e7974df85c680ddf6e7c7298"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -90,7 +90,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "c2974cc3af785ca02951444fc45c77e3f6187195")
+(package! go-translate :pin "c8c45f02e8d3b035da3104e4e248970b123def89")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "3be592dc8b73723047ad90f9243ef0b0cbb90119")
 (package! insert-translated-name
@@ -114,7 +114,7 @@
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
-(package! goto-line-preview :pin "12bd8de67c33bbeffbe77866b5ea7299786110cb")
+(package! goto-line-preview :pin "2d17b10252f3dc8b9737b86e901fc56016ee0f8a")
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
