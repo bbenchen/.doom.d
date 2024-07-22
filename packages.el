@@ -68,7 +68,7 @@
   (package! tree-sitter-langs :pin "01d16875317efc7a61c2e19c8f5b94bf4b914bfd")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "89b4de0b138d4333e7974df85c680ddf6e7c7298"))
+    :pin "7ed0f462e9e226822c3a6ce1211b4ac4792351d7"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -142,7 +142,7 @@
     :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
   (package! blamer :pin "a6526820ac37a2ab041c4abda57b78f133299bf2"))
 
-(package! auto-rename-tag :pin "71987b2088d2da2d8d03b6902c13fc2df8fe1677")
+(package! auto-rename-tag :pin "fb0a38e644354f38578fee8e0bf5fe7f124aa8a7")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
