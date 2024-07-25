@@ -65,10 +65,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "01d16875317efc7a61c2e19c8f5b94bf4b914bfd")
+  (package! tree-sitter-langs :pin "0e603504b8d4f9865d149105dff619072ab0ed40")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "7ed0f462e9e226822c3a6ce1211b4ac4792351d7"))
+    :pin "f6fc276e73ebaf2928450a71f2c4609e372473b6"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "c8c45f02e8d3b035da3104e4e248970b123def89")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "3be592dc8b73723047ad90f9243ef0b0cbb90119")
+(package! llm :pin "32e0a71150062b815213a9bba07666f15580401a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -132,7 +132,7 @@
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "a6c849619abcdd80dc82ec5417195414ad438fa3")
+  :pin "6f93e744d5f62de2176d3d0f0aa1f9e8d84ccefd")
 (package! verb :pin "ff9f9b4b441fef596db0a7dbcf761414e2c469bd")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
