@@ -391,6 +391,7 @@
         lsp-bridge-signature-show-with-frame-position "point"
         lsp-bridge-python-lsp-server "basedpyright"
         lsp-bridge-python-multi-lsp-server "basedpyright_ruff"
+        ;; lsp-bridge-markdown-lsp-server "vale-ls"
         acm-backend-yas-match-by-trigger-keyword t
         acm-backend-search-file-words-enable-fuzzy-match t
         acm-enable-capf t
@@ -402,8 +403,8 @@
   (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-flex))
 
-  (appendq! lsp-bridge-single-lang-server-mode-list
-            '(((json-mode json-ts-mode) . "vscode-json-language-server")))
+  ;; (appendq! lsp-bridge-single-lang-server-mode-list
+  ;;           '((gfm-mode . lsp-bridge-markdown-lsp-server)))
 
   (global-lsp-bridge-mode)
 
