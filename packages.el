@@ -65,10 +65,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "0e603504b8d4f9865d149105dff619072ab0ed40")
+  (package! tree-sitter-langs :pin "8d2707e84fae46a78b3943644fcd734364e05cc4")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "f6fc276e73ebaf2928450a71f2c4609e372473b6"))
+    :pin "55f80a202a8f7582a1c1b0bdccc9963ab2c4c54a"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "c8c45f02e8d3b035da3104e4e248970b123def89")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "32e0a71150062b815213a9bba07666f15580401a")
+(package! llm :pin "7b4888f61058dd36944fa0b463a7e5125e43ab93")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -168,7 +168,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "4a934857454a74fa5c608829b49ac59b9452ba1a")
+  :pin "6f8b5868bc234d55123b8d56dfbb7cc0bd1d0202")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
