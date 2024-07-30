@@ -90,7 +90,7 @@
 
 (package! rime :pin "d8c0a99b0282d3e0aca53146789f6864181228e7")
 
-(package! go-translate :pin "c8c45f02e8d3b035da3104e4e248970b123def89")
+(package! go-translate :pin "daa06b178698cf47f85770292e9f89bcd508459e")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "7b4888f61058dd36944fa0b463a7e5125e43ab93")
 (package! insert-translated-name
