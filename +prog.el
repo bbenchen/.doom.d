@@ -403,8 +403,8 @@
   (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-flex))
 
-  ;; (appendq! lsp-bridge-single-lang-server-mode-list
-  ;;           '((gfm-mode . lsp-bridge-markdown-lsp-server)))
+  (appendq! lsp-bridge-single-lang-server-mode-list
+            '((gfm-mode . lsp-bridge-markdown-lsp-server)))
 
   (global-lsp-bridge-mode)
 
