@@ -72,7 +72,7 @@
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
-(package! nerd-icons :pin "4322290303f2e12efd5685a0d22d76ed76ec7349")
+(package! nerd-icons :pin "dcfc64152ada7514bcdd1c6ce45590c359445ec6")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "df6af5c10757e14459d47c3050cd5814e1de5763")
@@ -133,7 +133,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6f93e744d5f62de2176d3d0f0aa1f9e8d84ccefd")
-(package! verb :pin "ff9f9b4b441fef596db0a7dbcf761414e2c469bd")
+(package! verb :pin "6524018a34f90ee6738fede29e2435f1105da6b2")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
