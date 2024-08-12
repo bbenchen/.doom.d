@@ -54,8 +54,7 @@
             (eq (buffer-local-value 'major-mode buf) 'vterm-mode))))))
 
 ;; lookup
-(appendq! +lookup-provider-url-alist
-          '(("Maven Repository" "http://mvnrepository.com/search?q=%s&ref=opensearch")))
+(add-to-list '+lookup-provider-url-alist '("Maven Repository" "http://mvnrepository.com/search?q=%s&ref=opensearch"))
 
 ;; projectile
 (after! projectile

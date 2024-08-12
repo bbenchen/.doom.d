@@ -379,7 +379,8 @@
   (setq lsp-bridge-enable-mode-line nil)
   :config
   (after! winner
-    (appendq! winner-boring-buffers '("*lsp-bridge-code-action-menu*" "*lsp-bridge-call-hierarchy*")))
+    (dolist (buffer '("*lsp-bridge-code-action-menu*" "*lsp-bridge-call-hierarchy*"))
+      (add-to-list 'winner-boring-buffers buffer t)))
 
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
@@ -403,8 +404,7 @@
   (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-flex))
 
-  (appendq! lsp-bridge-single-lang-server-mode-list
-            '((gfm-mode . lsp-bridge-markdown-lsp-server)))
+  (add-to-list 'lsp-bridge-single-lang-server-mode-list '(gfm-mode . lsp-bridge-markdown-lsp-server) t)
 
   (global-lsp-bridge-mode)
 
