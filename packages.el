@@ -139,7 +139,7 @@
 (when (modulep! :tools magit)
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
-    :pin "9ea3f65918c6cb8ffdb6500b97be15cc1a15a887")
+    :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
   (package! blamer :pin "a6526820ac37a2ab041c4abda57b78f133299bf2"))
 
 (package! auto-rename-tag :pin "fb0a38e644354f38578fee8e0bf5fe7f124aa8a7")
