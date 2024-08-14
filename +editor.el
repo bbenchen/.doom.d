@@ -79,7 +79,8 @@
 (use-package! treesit
   :when (treesit-available-p)
   :config
-  (setq treesit-extra-load-path (list (expand-file-name "tree-sitter" doom-cache-dir)))
+  (setq treesit-extra-load-path (list (expand-file-name "tree-sitter" doom-cache-dir))
+        treesit-font-lock-level 4)
 
   (setq treesit-language-source-alist
         '((bash . ("https://github.com/tree-sitter/tree-sitter-bash"))
