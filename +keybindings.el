@@ -32,6 +32,11 @@
         "<s-left>" #'shrink-window-horizontally
         "<s-right>" #'enlarge-window-horizontally))
 
+(map! (:map dirvish-mode-map
+            "a"   #'dirvish-quick-access
+            "z"   #'dirvish-history-jump
+            "TAB" #'dirvish-subtree-toggle))
+
 (map! (:map vterm-mode-map
             "C-\\" #'toggle-input-method))
 
@@ -55,6 +60,7 @@
        :desc "Browse dotfiles" "T" #'browse-dotfiles)
 
       (:prefix-map ("o" . "open")
+       :desc "Dirvish"   "d" #'dirvish
        :desc "View undo" "u" #'vundo)
 
       (:prefix-map ("t" . "toggle")
