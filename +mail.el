@@ -5,16 +5,6 @@
 (setq +mu4e-compose-org-msg-toggle-next t
       +mu4e-backend 'mbsync)
 
-(set-email-account! "tcl.com"
-                    '((mu4e-sent-folder       . "/tcl.com/Sent")
-                      (mu4e-drafts-folder     . "/tcl.com/Drafts")
-                      (mu4e-trash-folder      . "/tcl.com/Trash")
-                      (mu4e-refile-folder     . "/tcl.com/Archive")
-                      (mu4e-update-interval   . 600)
-                      (user-full-name         . "Ben Chen")
-                      (user-mail-address      . "ben.chen@tcl.com"))
-                    t)
-
 (set-email-account! "qq.com"
                     '((mu4e-sent-folder       . "/qq.com/Sent")
                       (mu4e-drafts-folder     . "/qq.com/Drafts")
@@ -22,7 +12,8 @@
                       (mu4e-refile-folder     . "/qq.com/Archive")
                       (mu4e-update-interval   . 600)
                       (user-full-name         . "Ben Chen")
-                      (user-mail-address      . "517926804@qq.com")))
+                      (user-mail-address      . "517926804@qq.com"))
+                    t)
 
 (after! mu4e
   (define-key! [remap compose-mail] #'+mu4e/compose)
@@ -61,7 +52,6 @@
                          (message-fetch-field "from")))
                  (account
                   (cond
-                   ((string-match "ben.chen@tcl.com" from) "tcl")
                    ((string-match "517926804@qq.com" from) "qq"))))
               (setq message-sendmail-extra-arguments (list '"-a" account '"--read-envelope-from")))))))
 
