@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "c0fb3da8b90735fb280ab157f4a8033b42105125" :built-in (>= emacs-major-version 30))
+(package! project :pin "5c77d78936364e2e6e9641af2091fde0bee729ce" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "b80ff9b4a772f7ea000e86fbf88175104ddf9557")
@@ -65,14 +65,14 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "ac3aa507a8a5664159613834fe6568aa86cc16f1")
+  (package! tree-sitter-langs :pin "1c3d95d018c6ab09dbe0b31530bfb1865fac2e5f")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "55f80a202a8f7582a1c1b0bdccc9963ab2c4c54a"))
 
 (package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
 
-(package! nerd-icons :pin "dcfc64152ada7514bcdd1c6ce45590c359445ec6")
+(package! nerd-icons :pin "c3d641d8e14bd11b5f98372da34ee5313636e363")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "df6af5c10757e14459d47c3050cd5814e1de5763")
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "4fc8659e1e63ade7f89e9411e185db5b245fc2f8")
+(package! llm :pin "3ab6de733d2fbf2c7b58636bb77a8a8e618738d4")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
