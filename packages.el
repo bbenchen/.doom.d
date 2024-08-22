@@ -99,7 +99,7 @@
 
 (package! popweb
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
-  :pin "ddb3422ba45523c5408bbfc3caf6d5453ef805c1")
+  :pin "b1ad611f2ab3b83dc1faf2b4d9872dead89bcb8d")
 
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! websocket-bridge
