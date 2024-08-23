@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "3ab6de733d2fbf2c7b58636bb77a8a8e618738d4")
+(package! llm :pin "779dc12d3118792b613366723c88d7d8ea8935d2")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
