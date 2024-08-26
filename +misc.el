@@ -134,10 +134,6 @@
   ;; Don't complain about this command being disabled when we use it
   (put 'dired-find-alternate-file 'disabled nil))
 
-;; dirvish
-(after! dirvish
-  (setq dirvish-reuse-session t))
-
 ;; flymake
 (after! flymake-popon
   (setq flymake-popon-posframe-border-width 0)
