@@ -15,6 +15,9 @@
 (setq initial-major-mode 'fundamental-mode
       initial-scratch-message nil)
 
+(setq doom-fd-executable "fd"
+      doom-ripgrep-executable "rg")
+
 ;; recentf
 (after! recentf
   (add-to-list 'recentf-exclude "\\.cache")
@@ -112,6 +115,7 @@
   (if (boundp 'xwidget-webkit-enable-plugins)
       (setq xwidget-webkit-enable-plugins t)))
 
+;; xref
 (after! xref
   (cond ((executable-find "ugrep") (setq xref-search-program 'ugrep))
         ((executable-find "rg") (setq xref-search-program 'ripgrep))))
