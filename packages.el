@@ -70,7 +70,7 @@
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "55f80a202a8f7582a1c1b0bdccc9963ab2c4c54a"))
 
-(package! posframe :pin "493b17f74ad41104d0c4d648e8c96dc495279ac8")
+(package! posframe :pin "570273bcf6c21641f02ccfcc9478607728f0a2a2")
 
 (package! nerd-icons :pin "c3d641d8e14bd11b5f98372da34ee5313636e363")
 (package! doom-themes
