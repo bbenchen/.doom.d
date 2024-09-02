@@ -8,11 +8,6 @@
 
       [escape] #'doom/escape
 
-      "<M-up>"    #'drag-stuff-up
-      "<M-down>"  #'drag-stuff-down
-      "<M-left>"  #'drag-stuff-left
-      "<M-right>" #'drag-stuff-right
-
       "M-u"   #'upcase-dwim
       "C-x C-u" #'upcase-dwim
       "M-l"   #'downcase-dwim
