@@ -261,7 +261,7 @@
   :config
   (setq popweb-proxy-type "http"
         popweb-proxy-host "127.0.0.1"
-        popweb-proxy-port "7890")
+        popweb-proxy-port "20122")
 
   (let ((dir (file-name-directory (locate-library "popweb"))))
     (dolist (sub-dir '("extension/dict" "extension/url-preview"))
@@ -328,7 +328,7 @@
         eaf-config-location (expand-file-name "eaf/" doom-cache-dir)
         eaf-proxy-type "http"
         eaf-proxy-host "127.0.0.1"
-        eaf-proxy-port "7890"
+        eaf-proxy-port "20122"
         eaf-webengine-pc-user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
         eaf-webengine-font-family "Times New Roman"
         eaf-webengine-serif-font-family "Times New Roman"
