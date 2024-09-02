@@ -65,7 +65,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "e0c2b6a7639177cdb08051874fa28c0ff8ae2c70")
+  (package! tree-sitter-langs :pin "365a4f7bf5184d04b5cc48175d93d7af7b8bbeb4")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "55f80a202a8f7582a1c1b0bdccc9963ab2c4c54a"))
@@ -80,7 +80,7 @@
 (when (modulep! :email mu4e +org)
   (package! org-msg
     :recipe (:host github :repo "danielfleischer/org-msg" :branch "1.12")
-    :pin "176920550e40f0fa64e154068ff220cfd4bc362f"))
+    :pin "12b725945c7178288b0809fed2bda9a1056ba76f"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "f7fcb1d641698e367beb3b75f533ca64113acdf9")
+(package! llm :pin "7c243a6996e22f30f941961f6797b13219a05a2f")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
