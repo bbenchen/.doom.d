@@ -166,6 +166,13 @@
 ;; ghub
 (after! ghub
   (setq ghub-json-use-jansson t))
+;; code-review
+(after! code-review
+  (add-hook 'code-review-mode-hook
+            (lambda ()
+              ;; include *Code-Review* buffer into current workspace
+              (persp-add-buffer (current-buffer)))))
+
 ;; magit-todos
 (after! magit-todos
   (setq magit-todos-submodule-list t
