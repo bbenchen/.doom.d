@@ -2,9 +2,6 @@
 
 (setenv "XAPIAN_CJK_NGRAM" "1")
 
-(setq +mu4e-compose-org-msg-toggle-next t
-      +mu4e-backend 'mbsync)
-
 (set-email-account! "qq.com"
                     '((mu4e-sent-folder       . "/qq.com/Sent")
                       (mu4e-drafts-folder     . "/qq.com/Drafts")
@@ -36,6 +33,9 @@
         mu4e-search-results-limit 1000
         mu4e-attachment-dir "~/Downloads"
         mm-text-html-renderer 'gnus-w3m)
+
+  (if (modulep! :email mu4e +mbsync)
+      (setq mu4e-get-mail-command "mbsync --all"))
 
   (setq sendmail-program (executable-find "msmtp")
         send-mail-function #'smtpmail-send-it

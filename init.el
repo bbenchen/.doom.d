@@ -197,7 +197,7 @@
        ;;zig               ; C, but simpler
 
        :email
-       (mu4e +org)
+       (mu4e +mbsync +org)
        ;;notmuch
        ;;(wanderlust +gmail)
 
