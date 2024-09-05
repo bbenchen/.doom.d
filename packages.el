@@ -78,9 +78,7 @@
   :pin "df6af5c10757e14459d47c3050cd5814e1de5763")
 
 (when (modulep! :email mu4e +org)
-  (package! org-msg
-    :recipe (:host github :repo "danielfleischer/org-msg" :branch "1.12")
-    :pin "12b725945c7178288b0809fed2bda9a1056ba76f"))
+  (package! org-msg :pin "59e2042e5f23e25f31c6aef0db1e70c6f54f117d"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
