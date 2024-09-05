@@ -163,6 +163,9 @@
 (after! magit
   (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     ")))
 
+;; ghub
+(after! ghub
+  (setq ghub-json-use-jansson t))
 ;; magit-todos
 (after! magit-todos
   (setq magit-todos-submodule-list t
