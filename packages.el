@@ -135,6 +135,9 @@
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
+  ;; Due to the bugs in the latest version of ghub limited to an available version
+  (if (modulep! :tools magit +forge)
+      (package! ghub :pin "9cfd2aab8aeb614ef842a0abc46cd5d1ea8c4414"))
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
