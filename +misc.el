@@ -249,6 +249,14 @@
     (when (executable-find "direnv")
       (envrc-global-mode))))
 
+;; mb-url
+(use-package! mb-url-http
+  :defer t
+  :commands mb-url-http-around-advice
+  :init
+  (setq mb-url-http-backend 'mb-url-http-curl)
+  (advice-add 'url-http :around #'mb-url-http-around-advice))
+
 ;; pass
 (after! pass
   (defadvice! pass-view-a ()
