@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "5c77d78936364e2e6e9641af2091fde0bee729ce" :built-in (>= emacs-major-version 30))
+(package! project :pin "88a1bbacc64fc99f6acf460c75d6f253957ed738" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "b80ff9b4a772f7ea000e86fbf88175104ddf9557")
@@ -65,7 +65,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "365a4f7bf5184d04b5cc48175d93d7af7b8bbeb4")
+  (package! tree-sitter-langs :pin "a08bfbf75787931cf3b2cd6c143651cce3289c64")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "55f80a202a8f7582a1c1b0bdccc9963ab2c4c54a"))
@@ -90,7 +90,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "4c14bdc53d54b147db648de85da3d55b2c262b19")
+(package! llm :pin "f99b837b395adb675cb18bd65bd6c3007443547a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -142,7 +142,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
-  (package! blamer :pin "a6526820ac37a2ab041c4abda57b78f133299bf2"))
+  (package! blamer :pin "4004f8e0c8eb7d441cd501cff29a270b25e1d14a"))
 
 (package! auto-rename-tag :pin "fb0a38e644354f38578fee8e0bf5fe7f124aa8a7")
 
