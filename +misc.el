@@ -407,7 +407,8 @@
 (use-package! aichat-openai
   :config
   (setq aichat-openai-domain "https://openkey.cloud"
-        aichat-openai-api-key #'aichat-openai--get-api-key-from-auth-source)
+        aichat-openai-api-key #'aichat-openai--get-api-key-from-auth-source
+        aichat-openai--chat-completions-model "gpt-4o-mini")
 
   (defun aichat-openai--get-api-key-from-auth-source ()
     "Get openai api key from auth source."

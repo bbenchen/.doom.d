@@ -208,7 +208,7 @@ unwanted space when exporting org-mode to hugo markdown."
       ;;                                            :url "https://api.deepseek.com/v1"))
       (setq insert-translated-name-llm-provider (make-llm-openai-compatible
                                                  :key (insert-translated-name-api-key-from-auth-source "openkey.cloud")
-                                                 :chat-model "gpt-3.5-turbo"
+                                                 :chat-model "gpt-4o-mini"
                                                  :url "https://openkey.cloud/v1"))))
 
   ;; (defvar insert-translated-name-is-open-ws-butler nil)
