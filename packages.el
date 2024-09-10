@@ -139,6 +139,9 @@
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
       (package! ghub :pin "9cfd2aab8aeb614ef842a0abc46cd5d1ea8c4414"))
+  (package! git-commit-ts-mode
+    :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
+    :pin "ba722ba44964e87b2acf48cb7b6154ad4c99bc26")
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")

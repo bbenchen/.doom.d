@@ -88,6 +88,7 @@
           (cmake . ("https://github.com/uyha/tree-sitter-cmake"))
           (dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile"))
           (elisp . ("https://github.com/Wilfred/tree-sitter-elisp"))
+          (gitcommit . ("https://github.com/gbprod/tree-sitter-gitcommit"))
           (go . ("https://github.com/tree-sitter/tree-sitter-go"))
           (gomod . ("https://github.com/camdencheek/tree-sitter-go-mod"))
           (html . ("https://github.com/tree-sitter/tree-sitter-html"))
