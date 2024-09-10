@@ -94,6 +94,11 @@
       (if (functionp 'rime--redisplay)
           (rime--redisplay))))
 
+  (defadvice! rime-predicate-prog-in-code-p-a (result)
+    :filter-return #'rime-predicate-prog-in-code-p
+    (and result
+         (not (derived-mode-p 'git-commit-ts-mode))))
+
   (when (featurep :system 'linux)
     (defadvice! +rime--posframe-display-content-filter-a (args)
       "给 `rime--posframe-display-content' 传入的字符串加一个全角空
