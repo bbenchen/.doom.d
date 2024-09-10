@@ -359,7 +359,7 @@
         eaf-browser-enable-adblocker t
         eaf-browser-enable-autofill t
         eaf-browser-aria2-proxy-host "127.0.0.1"
-        eaf-browser-aria2-proxy-port "7890"
+        eaf-browser-aria2-proxy-port "20122"
         eaf-browser-translate-language "zh-CN"
         eaf-browser-auto-import-chrome-cookies nil
         eaf-dired-advisor-enable nil)
