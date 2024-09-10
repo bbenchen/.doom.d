@@ -188,7 +188,7 @@
 (use-package! git-commit-ts-mode
   :mode "\\COMMIT_EDITMSG\\'"
   :config
-  (setq git-commit-major-mode 'git-commit-ts-mode))
+  (setq git-commit-major-mode #'git-commit-ts-mode))
 
 ;; blamer
 (use-package! blamer
