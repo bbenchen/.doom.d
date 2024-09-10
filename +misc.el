@@ -182,9 +182,8 @@
   (if (executable-find "rg")
       (setq magit-todos-scanner 'magit-todos--scan-with-rg)))
 
-;; (after! git-commit
-;;   (if (modulep! :checkers spell +flyspell)
-;;       (remove-hook! 'git-commit-mode-hook #'flyspell-mode)))
+(after! git-commit
+  (setq git-commit-summary-max-length 60))
 
 ;; blamer
 (use-package! blamer
