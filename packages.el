@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "88a1bbacc64fc99f6acf460c75d6f253957ed738" :built-in (>= emacs-major-version 30))
+(package! project :pin "4831a6c35ddfdc89442fcd1cf9b30ac6078e331d" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "b80ff9b4a772f7ea000e86fbf88175104ddf9557")
@@ -65,10 +65,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "a08bfbf75787931cf3b2cd6c143651cce3289c64")
+  (package! tree-sitter-langs :pin "886d8c899d09bce84a3ca7586467795d7bf37523")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "55f80a202a8f7582a1c1b0bdccc9963ab2c4c54a"))
+    :pin "05f01adfa766e99611eb7719e3475789219d93e2"))
 
 (package! posframe :pin "570273bcf6c21641f02ccfcc9478607728f0a2a2")
 
