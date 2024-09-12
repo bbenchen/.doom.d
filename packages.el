@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "4831a6c35ddfdc89442fcd1cf9b30ac6078e331d" :built-in (>= emacs-major-version 30))
+(package! project :pin "50db3e8e2ebe8976c1c70fc9102f1fd3db15ab40" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "b80ff9b4a772f7ea000e86fbf88175104ddf9557")
@@ -145,7 +145,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
-  (package! blamer :pin "4004f8e0c8eb7d441cd501cff29a270b25e1d14a"))
+  (package! blamer :pin "671d05a7f41ee0ea73b61f8e1f6434a5253b6f3a"))
 
 (package! auto-rename-tag :pin "fb0a38e644354f38578fee8e0bf5fe7f124aa8a7")
 
