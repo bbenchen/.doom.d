@@ -121,7 +121,7 @@
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "532ecdab48d073963ba5b581c06f3c0b83db05a6")
+(package! envrc :pin "7ba710767c14e0d8f3bba2f466a8d1d32d322277")
 (package! mb-url :pin "cf9d94d6a7d00a69c5c0646c05d9f78289f03c99")
 
 (package! aichat
@@ -132,7 +132,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6f93e744d5f62de2176d3d0f0aa1f9e8d84ccefd")
-(package! verb :pin "04fdeadea2172c191f9945185deafa6f01f97578")
+(package! verb :pin "b2e8b81093778e9e2f149237f31accd5f3789c32")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
