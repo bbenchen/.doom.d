@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "50db3e8e2ebe8976c1c70fc9102f1fd3db15ab40" :built-in (>= emacs-major-version 30))
+(package! project :pin "ccbad12da530b4b3968b50fa9399dbc074acb751" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "b80ff9b4a772f7ea000e86fbf88175104ddf9557")
@@ -65,10 +65,10 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "886d8c899d09bce84a3ca7586467795d7bf37523")
+  (package! tree-sitter-langs :pin "89b52e7db8f9ca160a648f1ed1d621c414d8ed68")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "05f01adfa766e99611eb7719e3475789219d93e2"))
+    :pin "e136d4102d6a8cb1d40d561e3a77b976cad14cf2"))
 
 (package! posframe :pin "570273bcf6c21641f02ccfcc9478607728f0a2a2")
 
@@ -90,7 +90,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "f99b837b395adb675cb18bd65bd6c3007443547a")
+(package! llm :pin "175e8ebc2944a9fe5080bc266d5c38ff3c6f361c")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -132,7 +132,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6f93e744d5f62de2176d3d0f0aa1f9e8d84ccefd")
-(package! verb :pin "b2e8b81093778e9e2f149237f31accd5f3789c32")
+(package! verb :pin "c2bab05885d021073872bb11b21487a304829960")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -153,7 +153,7 @@
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
-(package! pkgbuild-mode :pin "8ef396d8fa9187b65c065a6bc2ca15dfaf3255df")
+(package! pkgbuild-mode :pin "8fe743b9a59a9a96fcfd322f1837f7d3d624b7c5")
 (package! protobuf-ts-mode
   :recipe (:host github :repo "emacsattic/protobuf-ts-mode")
   :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
