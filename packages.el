@@ -68,7 +68,7 @@
   (package! tree-sitter-langs :pin "89b52e7db8f9ca160a648f1ed1d621c414d8ed68")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "e136d4102d6a8cb1d40d561e3a77b976cad14cf2"))
+    :pin "01c9ecaaa89966cdcd250ac37c24a9c9f530b725"))
 
 (package! posframe :pin "570273bcf6c21641f02ccfcc9478607728f0a2a2")
 
@@ -145,7 +145,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
-  (package! blamer :pin "671d05a7f41ee0ea73b61f8e1f6434a5253b6f3a"))
+  (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
 (package! auto-rename-tag :pin "fb0a38e644354f38578fee8e0bf5fe7f124aa8a7")
 
