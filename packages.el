@@ -132,7 +132,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6f93e744d5f62de2176d3d0f0aa1f9e8d84ccefd")
-(package! verb :pin "c2bab05885d021073872bb11b21487a304829960")
+(package! verb :pin "7becfb48d9744e8c6333ce186b4acaea2cb5d540")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -153,7 +153,7 @@
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
-(package! pkgbuild-mode :pin "8fe743b9a59a9a96fcfd322f1837f7d3d624b7c5")
+(package! pkgbuild-mode :pin "5325a334a5dde34e38a8dbab81029837ef84391a")
 (package! protobuf-ts-mode
   :recipe (:host github :repo "emacsattic/protobuf-ts-mode")
   :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
