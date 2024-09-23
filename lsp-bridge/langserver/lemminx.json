@@ -1,0 +1,42 @@
+{
+  "name": "lemminx",
+  "languageId": "xml",
+  "command": [
+    "lemminx"
+  ],
+  "settings": {},
+  "initializationOptions": {
+    "settings": {
+      "xml": {
+        "completion": {
+          "autoCloseTags": true
+        },
+        "downloadExternalResources": {
+          "enabled": true
+        },
+        "preferences": {
+          "quoteStyle": "double"
+        },
+        "format": {
+          "enabled": true,
+          "splitAttributes": false,
+          "joinCDATALines": true,
+          "joinCommentLines": false,
+          "formatComments": true,
+          "joinContentLines": false,
+          "spaceBeforeEmptyCloseTag": true
+        },
+        "logs": {
+          "client": true
+        },
+        "useCache": true,
+        "validation": {
+          "enabled": true,
+          "resolveExternalEntities": true,
+          "noGrammar": "hint",
+          "schema": true
+        }
+      }
+    }
+  }
+}
