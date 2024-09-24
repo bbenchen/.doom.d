@@ -6,6 +6,7 @@
 ;; xml
 (after! nxml-mode
   (when (modulep! :tools tree-sitter)
+    (setq +tree-sitter-hl-enabled-modes '(not web-mode typescript-tsx-mode nxml-mode))
     (add-hook! 'nxml-mode-local-vars-hook :append #'tree-sitter!))
 
   (setq nxml-auto-insert-xml-declaration-flag nil
