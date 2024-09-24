@@ -65,7 +65,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "89b52e7db8f9ca160a648f1ed1d621c414d8ed68")
+  (package! tree-sitter-langs :pin "611f4f06d4547e7a63c230666fa59214734bec89")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "01c9ecaaa89966cdcd250ac37c24a9c9f530b725"))
@@ -122,7 +122,7 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "7ba710767c14e0d8f3bba2f466a8d1d32d322277")
-(package! mb-url :pin "cf9d94d6a7d00a69c5c0646c05d9f78289f03c99")
+(package! mb-url :pin "a0ff17901324027774b943d8f58257adb9ae1861")
 
 (package! aichat
   :recipe (:host github :repo "xhcoding/emacs-aichat" :files ("aichat-util.el" "aichat-openai.el"))
@@ -153,7 +153,7 @@
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")
   (disable-packages! go-eldoc))
-(package! pkgbuild-mode :pin "5325a334a5dde34e38a8dbab81029837ef84391a")
+(package! pkgbuild-mode :pin "8c31b24e5979fddf2411456c8957f41f06ae5714")
 (package! protobuf-ts-mode
   :recipe (:host github :repo "emacsattic/protobuf-ts-mode")
   :pin "65152f5341ea4b3417390b3e60b195975161b8bc")
