@@ -373,12 +373,6 @@
 ;;     (add-hook! 'lsp-bridge-mode-hook (unless (derived-mode-p 'org-mode)
 ;;                                        (topsy-mode 1)))))
 
-(after! eglot
-  ;; Remove eglot-maybe-activate-mode from after-change-major-mode-hook,
-  ;; mainly because I don't use eglot and haven't found a reason why eglot would be loaded,
-  ;; so I'm removing it for now.
-  (remove-hook 'after-change-major-mode-hook #'eglot--maybe-activate-editing-mode))
-
 ;; lsp-bridge
 (use-package! lsp-bridge
   :defer 2
