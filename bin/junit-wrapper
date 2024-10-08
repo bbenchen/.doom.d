@@ -11,7 +11,7 @@ junit_platform_console_file = os.path.expanduser(
 
 
 def download_junit_platform_console():
-    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/1.11.1/junit-platform-console-standalone-1.11.1.jar"
+    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/1.11.2/junit-platform-console-standalone-1.11.2.jar"
     request.urlretrieve(
         junit_platform_console_download_url, junit_platform_console_file
     )
