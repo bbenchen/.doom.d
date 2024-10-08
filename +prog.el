@@ -162,8 +162,7 @@
                 (unless break
                   (setq parent (tsc-get-parent parent))))
               (if parent
-                  (setq found-node (tsc-get-child-by-field parent :name)))
-              ))
+                  (setq found-node (tsc-get-child-by-field parent :name)))))
           (if found-node
               (tsc-node-text found-node)))))))
 
