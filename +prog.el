@@ -108,6 +108,7 @@
                       (let ((junit-wrapper "junit-wrapper")
                             (classpath-file (expand-file-name "junit-classpaths" temporary-file-directory)))
                         (with-temp-file classpath-file
+                          (insert "-classpath\n")
                           (insert classpaths))
 
                         (setq-local old-default-directory default-directory

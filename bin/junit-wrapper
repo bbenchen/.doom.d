@@ -52,13 +52,9 @@ def main():
 
     check_junit_platform_console_file()
 
-    classpaths = ""
+    classpaths_file = known_args.classpaths_file
     test_class_or_method = known_args.test_class_or_method
     test_mode = "-m" if test_class_or_method.rfind("#") > 0 else "-c"
-    with open(known_args.classpaths_file) as classpaths_file:
-        classpaths = classpaths_file.readline()
-
-    os.remove(known_args.classpaths_file)
 
     cmd_args = ["java"]
 
@@ -66,16 +62,18 @@ def main():
     for opt in junit_opts:
         cmd_args.append(opt)
 
+    cmd_args.append("-Dfile.encoding=UTF-8")
     cmd_args.append("-jar")
     cmd_args.append(junit_platform_console_file)
     cmd_args.append("execute")
     cmd_args.append("--disable-banner")
-    cmd_args.append("-cp")
-    cmd_args.append(classpaths)
+    cmd_args.append("@" + classpaths_file)
     cmd_args.append(test_mode)
     cmd_args.append(test_class_or_method)
 
     subprocess.run(cmd_args, encoding="utf-8")
+
+    os.remove(known_args.classpaths_file)
 
 
 if __name__ == "__main__":
