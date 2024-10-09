@@ -116,6 +116,9 @@
 (package! auto-save
   :recipe (:host github :repo "manateelazycat/auto-save")
   :pin "0fb3c0f38191c0e74f00bae6adaa342de3750e83")
+(package! thing-edit
+  :recipe (:host github :repo "manateelazycat/thing-edit")
+  :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 
 (if (featurep :system 'macos)
     (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))

@@ -58,6 +58,9 @@
                 (bound-and-true-p org-msg-mode)))))
   (auto-save-enable))
 
+;; thing-edit
+(use-package! thing-edit)
+
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
   :load-path (lambda () (list (expand-file-name "site-lisp/deno-bridge-jieba" doom-user-dir)))
