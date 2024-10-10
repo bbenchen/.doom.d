@@ -407,6 +407,8 @@
 
   (add-to-list 'lsp-bridge-single-lang-server-mode-list '(gfm-mode . lsp-bridge-markdown-lsp-server) t)
 
+  (add-to-list 'lsp-bridge-completion-stop-commands "vundo-backward")
+
   (global-lsp-bridge-mode)
 
   (defadvice! acm-markdown-render-content-a (&rest args)
@@ -456,12 +458,6 @@
   ;;                   (goto-char (point-min))
   ;;                   (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
   ;;                     (cl-return "deno")))))))))
-
-  (defadvice! lsp-bridge--not-follow-complete-a ()
-    :override #'lsp-bridge--not-follow-complete
-    (or
-     (not (member (format "%s" last-command) '("acm-complete" "acm-complete-quick-access" "vundo-backward")))
-     (member (format "%s" this-command) '("self-insert-command" "org-self-insert-command"))))
 
   (defadvice! lsp-bridge-not-in-multiple-cursors-a ()
     :override #'lsp-bridge-not-in-multiple-cursors
