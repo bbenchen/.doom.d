@@ -411,8 +411,13 @@
 (use-package! aider
   :config
   (setenv "OPENAI_API_BASE" "https://openkey.cloud/v1")
-  (setenv "OPENAI_API_KEY" (doom-file-read
-                            (expand-file-name "aider/openai_api_key.txt" doom-data-dir)
-                            :by 'read
-                            :noerror t))
-  (setq aider-args '("--no-auto-commits" "--model" "gpt-4o-mini")))
+
+  (setq aider-args '("--no-auto-commits" "--model" "gpt-4o-mini"))
+
+  (defadvice! aider-run-aider-a ()
+    :before #'aider-run-aider
+    (unless (getenv "OPENAI_API_KEY")
+      (setenv "OPENAI_API_KEY" (prin1-to-string (doom-file-read
+                                                 (expand-file-name "aider/openai_api_key.txt" doom-data-dir)
+                                                 :by 'read
+                                                 :noerror t))))))

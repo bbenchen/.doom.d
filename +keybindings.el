@@ -55,6 +55,7 @@
        :desc "Browse dotfiles" "T" #'browse-dotfiles)
 
       (:prefix-map ("o" . "open")
+       :desc "Aider"     "a" #'aider-run-aider
        :desc "Dirvish"   "d" #'dirvish
        :desc "View undo" "u" #'vundo)
 
