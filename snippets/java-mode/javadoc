@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: javadoc
+# uuid: doc
+# key: doc
+# condition: t
+# --
+/**
+ * $1
+ * @author: `(user-full-name)`
+ * @date: `(format-time-string "%Y/%m/%d %H:%M")`
+ * @since ${0:1.0.0}
+ */
