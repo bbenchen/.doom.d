@@ -127,10 +127,9 @@
 (package! envrc :pin "3c5a60dd917bf9db71d7b8fb822f7d5da7505a39")
 (package! mb-url :pin "a0ff17901324027774b943d8f58257adb9ae1861")
 
-(package! aichat
-  :recipe (:host github :repo "xhcoding/emacs-aichat" :files ("aichat-util.el" "aichat-openai.el"))
-  :pin "1b3270c96080a67389f6089d489e883c8367e6f8")
-(package! async-await :pin "e0d15e8057ed7520100bc50c5552278292ebcb07")
+(package! aider
+  :recipe (:host github :repo "tninja/aider.el" :files ("aider.el"))
+  :pin "9fc3b047754a4ef3fe1d5c664f84170a86a09a4b")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")

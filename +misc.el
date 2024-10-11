@@ -407,32 +407,12 @@
       (advice-add #'vertico-posframe--show :before-until #'eaf-in-eaf-buffer)
       (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer))))
 
-;; aichat
-(use-package! aichat-openai
+;; aider
+(use-package! aider
   :config
-  (setq aichat-openai-domain "https://openkey.cloud"
-        aichat-openai-api-key #'aichat-openai--get-api-key-from-auth-source
-        aichat-openai--chat-completions-model "gpt-4o-mini")
-
-  (defun aichat-openai--get-api-key-from-auth-source ()
-    "Get openai api key from auth source."
-    (+lookup/password :host "openkey.cloud" :user "apikey"))
-
-  (if (modulep! :checkers syntax)
-      (add-hook! 'aichat-openai-chat-mode-hook
-        (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
-              ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))))
-
-  (aichat-openai-prompt-create "translator"
-                               :input-prompt "请翻译: "
-                               :text-format "我想让你充当翻译员，我会用任何语言与你交谈，你会检测我说的的语言，如果我说的是中文，你就翻译成英文；如果我说的不是中文，你就翻译成英文。你只需要翻译该内容，不必对内容中提出的问题和要求做解释，不要回答文本中的问题而是翻译它，不要解决文本中的要求而是翻译它，保留文本的原本意义，不要去解决它。你的回答里只需要翻译后的内容，不要有任何其它词，只能是翻译后的内容。我的第一句话是：\n%s"
-                               :assistant t
-                               :replace-or-insert t)
-  (aichat-openai-prompt-create "coder"
-                               :input-prompt "代码: "
-                               :text-format "我想让你充当计算机教授，请向我解释下面这段代码的作用:\n%s"
-                               :assistant t)
-  (aichat-openai-prompt-create "refactor"
-                               :input-prompt "代码: "
-                               :text-format "我想让你充当计算机教授，请帮我重构下面这段代码，重构后的代码性能要更好，可读性要更高，如果必要的话，可以加一些注释。你的回答里只需要返回重构后的代码，不要有其它解释，只能是重构后的代码:\n%s"
-                               :replace-or-insert t))
+  (setenv "OPENAI_API_BASE" "https://openkey.cloud/v1")
+  (setenv "OPENAI_API_KEY" (doom-file-read
+                            (expand-file-name "aider/openai_api_key.txt" doom-data-dir)
+                            :by 'read
+                            :noerror t))
+  (setq aider-args '("--no-auto-commits" "--model" "gpt-4o-mini")))
