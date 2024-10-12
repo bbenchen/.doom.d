@@ -56,6 +56,7 @@
 
       (:prefix-map ("o" . "open")
        :desc "Aider"     "a" #'aider-run-aider
+       :desc "ChatGPT"   "c" #'gptel
        :desc "Dirvish"   "d" #'dirvish
        :desc "View undo" "u" #'vundo)
 
