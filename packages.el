@@ -56,10 +56,10 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "ba6cb35b423d8388656fd36dda724cd26cef65a9" :built-in (>= emacs-major-version 30))
+(package! project :pin "2c68885f0c7f4e37340592ef74b63fb6562b288b" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "b80ff9b4a772f7ea000e86fbf88175104ddf9557")
+(package! diff-hl :pin "256461d8d4facc58db665c9450919735b38b944a")
 
 (package! vterm :pin "988279316fc89e6d78947b48513f248597ba969a")
 
@@ -90,7 +90,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "89903150048f9976bde86d25006106bc82d9f35d")
+(package! llm :pin "0ad2b7c1aebb204288b290ff24444aa14bb5f567")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
