@@ -417,7 +417,6 @@
   (defadvice! aider-run-aider-a ()
     :before #'aider-run-aider
     (unless (getenv "OPENAI_API_KEY")
-      (setenv "OPENAI_API_KEY" (prin1-to-string (doom-file-read
-                                                 (expand-file-name "aider/openai_api_key.txt" doom-data-dir)
-                                                 :by 'read
-                                                 :noerror t))))))
+      (setenv "OPENAI_API_KEY" (string-trim (doom-file-read
+                                             (expand-file-name "aider/openai_api_key.txt" doom-data-dir)
+                                             :noerror t))))))
