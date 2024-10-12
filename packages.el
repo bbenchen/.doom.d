@@ -130,6 +130,8 @@
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el"))
   :pin "9fc3b047754a4ef3fe1d5c664f84170a86a09a4b")
+(package! gptel :pin "a040fd15bc3a272d2ad1592591b511f0dcc17eeb")
+(package! corsair :pin "828c175d049d31c3dabea46f4df2ef4e8bcf2768")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
