@@ -425,7 +425,7 @@
 (use-package! gptel
   :config
   (setq gptel-default-mode 'org-mode
-        gptel-model "gpt-4o-mini"
+        gptel-model 'gpt-4o-mini
         gptel-backend (gptel-make-openai "ChatGPT"
                         :key 'gptel-api-key
                         :stream t
