@@ -59,7 +59,7 @@
 (package! project :pin "2c68885f0c7f4e37340592ef74b63fb6562b288b" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "256461d8d4facc58db665c9450919735b38b944a")
+(package! diff-hl :pin "9e39dfc666ac03a8474b3a05da17e0c935894414")
 
 (package! vterm :pin "988279316fc89e6d78947b48513f248597ba969a")
 
@@ -130,13 +130,13 @@
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el"))
   :pin "2f96105e419a956d52e977c211a6b04c4722e308")
-(package! gptel :pin "a040fd15bc3a272d2ad1592591b511f0dcc17eeb")
+(package! gptel :pin "25c39a03771a8b2f71d7026fe06f0f5f21e29a9c")
 (package! corsair :pin "828c175d049d31c3dabea46f4df2ef4e8bcf2768")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "ad740d87e768052b0ef5b5e7f0822c7ac1b238fb")
-(package! verb :pin "7becfb48d9744e8c6333ce186b4acaea2cb5d540")
+(package! verb :pin "98934fef8cd2bc339f40abb36ee4a6776e50872d")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
