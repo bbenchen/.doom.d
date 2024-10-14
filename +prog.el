@@ -3,6 +3,10 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
+;; markdown
+(after! markdown-toc
+  (setq markdown-toc-indentation-space 2))
+
 ;; xml
 (after! nxml-mode
   (when (modulep! :tools tree-sitter)
