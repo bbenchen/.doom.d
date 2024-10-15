@@ -93,11 +93,11 @@
 
 (map! :map (java-mode-map java-ts-mode-map)
       :localleader
-      :desc "Run junit test" "t" #'+java/run-junit-test
+      :desc "Run junit test" "t" #'bc/java-run-junit-test
       :desc "Update project config" "u" #'lsp-bridge-jdtls-update-project-configuration)
 
 ;; check junit console launcher options for details
-(defun +java/run-junit-test ()
+(defun bc/java-run-junit-test ()
   "Java run main/test at point."
   (interactive)
   (let* ((pkg (+java/current-package))
@@ -126,17 +126,17 @@
                (message "%s is not a test file" class))))
       (user-error "Can not found package/class"))))
 
-(defun +java/current-package ()
+(defun bc/java--current-package ()
   (if (eq major-mode 'java-mode)
       (+java-current-package)
     (+java/treesit-get-package)))
 
-(defun +java/current-class ()
+(defun bc/java--current-class ()
   (if (eq major-mode 'java-mode)
       (+java-current-class)
     (+java/treesit-get-class)))
 
-(defun +java/current-method ()
+(defun bc/java--current-method ()
   (if (eq major-mode 'java-mode)
       (if (and (modulep! :tools tree-sitter)
                (modulep! :lang java +tree-sitter))
@@ -145,7 +145,7 @@
 
 (when (and (modulep! :tools tree-sitter)
            (modulep! :lang java +tree-sitter))
-  (defun +java/tree-sitter-get-method ()
+  (defun bc/java--tree-sitter-get-method ()
     (let* ((query (tsc-make-query (tree-sitter-require 'java) [(method_declaration name: (identifier) @function.method)]))
            (root-node (tsc-root-node tree-sitter-tree))
            (captures (tsc--without-restriction
@@ -171,7 +171,7 @@
               (tsc-node-text found-node)))))))
 
 (after! java-ts-mode
-  (defun +java/treesit-get-package-node ()
+  (defun bc/java--treesit-get-package-node ()
     (treesit-node-text
      (car (treesit-filter-child
            (treesit-buffer-root-node)
@@ -179,12 +179,12 @@
              (member (treesit-node-type child) '("package_declaration")))))
      t))
 
-  (defun +java/treesit-get-package ()
+  (defun bc/java--treesit-get-package ()
     (let ((p (+java/treesit-get-package-node)))
       (when (string-match "package \\(.+\\);" p)
         (match-string 1 p))))
 
-  (defun +java/treesit-get-class ()
+  (defun bc/java--treesit-get-class ()
     (treesit-defun-name
      (car
       (treesit-filter-child
@@ -192,7 +192,7 @@
        (lambda (child)
          (member (treesit-node-type child) '("class_declaration")))))))
 
-  (defun +java/treesit-get-method ()
+  (defun bc/java--treesit-get-method ()
     (treesit-defun-name
      (treesit-parent-until
       (treesit-node-at (point))
