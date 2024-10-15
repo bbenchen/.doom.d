@@ -102,7 +102,8 @@
   (interactive)
   (let* ((pkg (bc/java--current-package))
          (class (bc/java--current-class))
-         (method (bc/java--current-method)))
+         (method (bc/java--current-method))
+         (parameters (bc/java--current-parameters)))
     (if (and pkg class)
         (lsp-bridge-jdtls-project-is-test-file
          #'(lambda (is-test-file)
@@ -119,7 +120,9 @@
                                     default-directory (doom-project-root))
                         (compilation-start (concat junit-wrapper (format " '%s'" classpath-file)
                                                    (if method
-                                                       (format " '%s.%s#%s'" pkg class method)
+                                                       (if (not (string-empty-p parameters))
+                                                           (format " '%s.%s#%s(%s)'" pkg class method parameters)
+                                                         (format " '%s.%s#%s'" pkg class method))
                                                      (format " '%s.%s'" pkg class))))
                         (setq-local default-directory old-default-directory)))
                   "test")
@@ -142,6 +145,13 @@
                (modulep! :lang java +tree-sitter))
           (bc/java--tree-sitter-get-method))
     (bc/java--treesit-get-method)))
+
+(defun bc/java--current-parameters ()
+  (if (eq major-mode 'java-mode)
+      (if (and (modulep! :tools tree-sitter)
+               (modulep! :lang java +tree-sitter))
+          (bc/java--tree-sitter-get-parameters))
+    (bc/java--treesit-get-parameters)))
 
 (when (and (modulep! :tools tree-sitter)
            (modulep! :lang java +tree-sitter))
@@ -168,20 +178,20 @@
               (if parent
                   (setq found-node (tsc-get-child-by-field parent :name)))))
           (if found-node
-              (tsc-node-text found-node)))))))
+              (tsc-node-text found-node))))))
+
+  (defun bc/java--tree-sitter-get-parameters ()
+    (user-error "unimplemented")))
 
 (after! java-ts-mode
-  (defun bc/java--treesit-get-package-node ()
-    (treesit-node-text
-     (car (treesit-filter-child
-           (treesit-buffer-root-node)
-           (lambda (child)
-             (member (treesit-node-type child) '("package_declaration")))))
-     t))
-
   (defun bc/java--treesit-get-package ()
-    (let ((p (bc/java--treesit-get-package-node)))
-      (when (string-match "package \\(.+\\);" p)
+    (let ((package-node (treesit-node-text
+                         (car (treesit-filter-child
+                               (treesit-buffer-root-node)
+                               (lambda (child)
+                                 (member (treesit-node-type child) '("package_declaration")))))
+                         t)))
+      (when (string-match "package \\(.+\\);" package-node)
         (match-string 1 p))))
 
   (defun bc/java--treesit-get-class ()
@@ -193,11 +203,40 @@
          (member (treesit-node-type child) '("class_declaration")))))))
 
   (defun bc/java--treesit-get-method ()
-    (treesit-defun-name
-     (treesit-parent-until
-      (treesit-node-at (point))
-      (lambda (parent)
-        (member (treesit-node-type parent) '("method_declaration")))))))
+    (treesit-defun-name (bc/java--treesit-get-method-node)))
+
+  (defun bc/java--treesit-get-method-node ()
+    (treesit-parent-until
+     (treesit-node-at (point))
+     (lambda (parent)
+       (member (treesit-node-type parent) '("method_declaration")))))
+
+  (defun bc/java--treesit-get-parameters ()
+    (when-let* ((mnode (bc/java--treesit-get-method-node))
+                (pnode (treesit-node-child-by-field-name mnode "parameters"))
+                (types (cl-map 'vector
+                               #'bc/java--treesit-get-parameter-type
+                               (treesit-node-children pnode t))))
+      (mapconcat 'identity types ",")))
+
+  (defun bc/java--treesit-get-parameter-type (parameter-node)
+    (let ((type-node (treesit-node-child-by-field-name parameter-node "type")))
+      (pcase (if (string= (treesit-node-type type-node) "generic_type")
+                            (treesit-node-text (treesit-node-child type-node 0) t)
+                          (treesit-node-text type-node t))
+        ("String"     "java.lang.String")
+        ("Byte"       "java.lang.Byte")
+        ("Short"      "java.lang.Short")
+        ("Integer"    "java.lang.Integer")
+        ("Long"       "java.lang.Long")
+        ("Float"      "java.lang.Float")
+        ("Double"     "java.lang.Double")
+        ("Class"      "java.lang.Class")
+        ("Collection" "java.util.Collection")
+        ("List"       "java.util.List")
+        ("Map"        "java.util.Map")
+        ("Set"        "java.util.Set")
+        (type-name type-name)))))
 
 ;; dockerfile
 (after! dockerfile-ts-mode
