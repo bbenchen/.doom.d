@@ -33,7 +33,7 @@
 ;; winner
 (after! winner
   ;; fix: wrong type argument: frame-live-p, #<dead frame
-  (defadvice! winner-save-old-configurations-a ()
+  (defadvice! bc/winner-save-old-configurations-before-advice ()
     "Remove dead frames from `winner-modified-list`"
     :before #'winner-save-old-configurations
     (cl-dolist (frame winner-modified-list)
@@ -44,7 +44,7 @@
 (setq +workspaces-on-switch-project-behavior t)
 (after! persp-mode
   (add-hook! 'persp-filter-save-buffers-functions
-    (defun +workdspace-temporary-buffer-p (buf)
+    (defun bc/workdspace--temporary-buffer-p (buf)
       ;; "Ignore temporary buffers."
       (let ((bname (file-name-nondirectory (buffer-name buf))))
         (or (string-prefix-p ".newsrc" bname)
@@ -263,19 +263,19 @@
 
 ;; pass
 (after! pass
-  (defadvice! pass-view-a ()
+  (defadvice! bc/pass-view-override-advice ()
     :override #'pass-view
     (pass--with-closest-entry entry
       (find-file-other-window (concat (f-join (password-store-dir) entry) ".gpg"))))
 
-  (defun pass-view-quit ()
+  (defun bc/pass-view-quit ()
     (interactive)
     (kill-current-buffer)
     (if (modulep! :ui workspaces)
         (+workspace/close-window-or-workspace)
       (quit-window t)))
   (map! :map pass-view-mode-map
-        "C-c C-q" #'pass-view-quit))
+        "C-c C-q" #'bc/pass-view-quit))
 
 ;; popweb
 (use-package! popweb
@@ -303,7 +303,7 @@
 
   (defvar command-window-frame nil)
 
-  (defun toggle-command-window ()
+  (defun bc/command-log-toggle-window ()
     "Show or hide the command window"
     (interactive)
     (if (posframe-workable-p)
@@ -390,22 +390,22 @@
           (t (message "Can't translate text"))))
 
   ;; ensure focus change function has been add
-  (defadvice! eaf-restart-process-a ()
+  (defadvice! bc/eaf-restart-process-after-advice ()
     :after #'eaf-restart-process
     (remove-function after-focus-change-function #'eaf--topmost-focus-change)
     (add-function :after after-focus-change-function #'eaf--topmost-focus-change))
 
   (when (modulep! :completion vertico +childframe)
     (after! vertico-posframe
-      (defun eaf-in-eaf-buffer (&rest _args)
+      (defun bc/eaf-in-eaf-buffer-before-until-advice (&rest _args)
         (let ((has-eaf-buffer nil))
           (dolist (window (window-list))
             (if (eq (with-current-buffer (window-buffer window)
                       major-mode)  'eaf-mode)
                 (setq has-eaf-buffer t)))
           has-eaf-buffer))
-      (advice-add #'vertico-posframe--show :before-until #'eaf-in-eaf-buffer)
-      (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'eaf-in-eaf-buffer))))
+      (advice-add #'vertico-posframe--show :before-until #'bc/eaf-in-eaf-buffer-before-until-advice)
+      (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'bc/eaf-in-eaf-buffer-before-until-advice))))
 
 ;; aider
 (use-package! aider
@@ -414,7 +414,7 @@
 
   (setq aider-args '("--no-auto-commits" "--model" "gpt-4o-mini"))
 
-  (defadvice! aider-run-aider-a ()
+  (defadvice! bc/aider-run-aider-before-advice ()
     :before #'aider-run-aider
     (unless (getenv "OPENAI_API_KEY")
       (setenv "OPENAI_API_KEY" (string-trim (doom-file-read

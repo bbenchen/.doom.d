@@ -18,7 +18,7 @@
 
   (if (modulep! :checkers spell)
       (add-hook! 'nxml-mode-hook
-        (defun disable-spell-for-xml()
+        (defun bc/nxml--disable-spell()
           (if (modulep! :checkers spell +flyspell)
               (flyspell-mode -1)
             (spell-fu-mode -1))))))
@@ -30,12 +30,12 @@
 ;; go
 (after! go-mode
   (when (executable-find "gopkgs")
-    (defun go-packages-gopkgs ()
+    (defun bc/go-packages--gopkgs ()
       "Return a list of all Go packages, using `gopkgs'."
       (if-let (project-dir (doom-project-root))
           (sort (process-lines "gopkgs" "-workDir" project-dir) #'string<)
         (sort (process-lines "gopkgs") #'string<)))
-    (setq go-packages-function 'go-packages-gopkgs))
+    (setq go-packages-function 'bc/go-packages--gopkgs))
 
   (if (executable-find "gogetdoc")
       (setq godoc-at-point-function 'godoc-gogetdoc))
@@ -48,11 +48,11 @@
 
   (remove-hook! go-mode #'go-eldoc-setup)
 
-  (defadvice! godef-jump-a (&rest _args)
+  (defadvice! bc/godef-jump-override-advice (&rest _args)
     :override #'godef-jump
     (+lookup/definition))
 
-  (defadvice! godef-describe-a (&rest _args)
+  (defadvice! bc/godef-describe-override-advice (&rest _args)
     :override #'godef-describe
     (+lookup/documentation)))
 
@@ -79,7 +79,7 @@
 (when (modulep! :editor format)
   (set-formatter! 'spring-java-format '("spring-java-format") :modes '(java-mode java-ts-mode))
 
-  (defadvice! apheleia-format-buffer-a (fn &rest args)
+  (defadvice! bc/apheleia-format-buffer-around-advice (fn &rest args)
     :around #'apheleia-format-buffer
     (let ((default-directory (doom-project-root)))
       (apply fn args))))
@@ -346,7 +346,7 @@
 
   (add-hook! 'sql-mode-hook #'flymake-sqlfluff-load)
 
-  (defadvice! set-flymake-sqlfluff-dialect-after-sql-set-product (&rest _args)
+  (defadvice! bc/set-flymake-sqlfluff-dialect-after-sql-set-product (&rest _args)
     :after #'sql-set-product
     (setq flymake-sqlfluff-dialect (symbol-name sql-product))))
 
@@ -415,7 +415,7 @@
 
   (global-lsp-bridge-mode)
 
-  (defadvice! acm-markdown-render-content-a (&rest args)
+  (defadvice! bc/acm-markdown-render-content-after-advice (&rest args)
     :after #'acm-markdown-render-content
     (goto-line 1)
     (when (modulep! :checkers syntax)
@@ -424,12 +424,12 @@
 
   (when (and (modulep! :checkers syntax)
              (not (modulep! :checkers syntax +flymake)))
-    (defun lsp-bridge-lsp-server-disable-flycheck()
+    (defun bc/lsp-bridge--disable-flycheck()
       (if (bound-and-true-p flycheck-mode)
           (flycheck-mode -1)))
 
     (dolist (hook lsp-bridge-default-mode-hooks)
-      (add-hook hook #'lsp-bridge-lsp-server-disable-flycheck t)))
+      (add-hook hook #'bc/lsp-bridge--disable-flycheck t)))
 
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
@@ -463,8 +463,8 @@
   ;;                   (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
   ;;                     (cl-return "deno")))))))))
 
-  (defadvice! lsp-bridge-not-in-multiple-cursors-a ()
-    :override #'lsp-bridge-not-in-multiple-cursors
+  (defadvice! bc/lsp-bridge--not-in-multiple-cursors-override-advice ()
+    :override #'lsp-bridge--not-in-multiple-cursors
     (not (and (featurep 'multiple-cursors-core)
               multiple-cursors-mode)))
 
@@ -518,7 +518,7 @@
         (lsp-bridge-popup-documentation)
       (apply fn args)))
 
-  (defadvice! better-jumper-jump-backward-a (fn &rest args)
+  (defadvice! bc/lsp-bridge--better-jumper-jump-backward-around-advice (fn &rest args)
     :around #'better-jumper-jump-backward
     (if (and lsp-bridge-mode
              (lsp-bridge-has-lsp-server-p))

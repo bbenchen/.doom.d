@@ -28,7 +28,7 @@ do
         ;;
         GETPIN)
 
-            RES=$(emacsclient -e "(pinentry-emacs \"$DESC\" \"$PROMPT\" \"$OK\" \"$ERROR\")" | sed -e 's/^"//' -e 's/"$//')
+            RES=$(emacsclient -e "(bc/pinentry-emacs \"$DESC\" \"$PROMPT\" \"$OK\" \"$ERROR\")" | sed -e 's/^"//' -e 's/"$//')
             if [ $? -ne 0 ]
             then
                 RES=$(lukspinentry)

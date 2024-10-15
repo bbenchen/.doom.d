@@ -94,13 +94,13 @@
       (if (functionp 'rime--redisplay)
           (rime--redisplay))))
 
-  (defadvice! rime-predicate-prog-in-code-p-a (result)
+  (defadvice! bc/rime-predicate-prog-in-code-p-filter-return-advice (result)
     :filter-return #'rime-predicate-prog-in-code-p
     (and result
          (not (derived-mode-p 'git-commit-ts-mode))))
 
   (when (featurep :system 'linux)
-    (defadvice! +rime--posframe-display-content-filter-a (args)
+    (defadvice! bc/rime--posframe-display-content-filter-args-advice (args)
       "给 `rime--posframe-display-content' 传入的字符串加一个全角空
 格，以解决 `posframe' 偶尔吃字的问题。"
       :filter-args #'rime--posframe-display-content
@@ -118,19 +118,19 @@
          "C-`" #'rime-send-keybinding)))
 
 ;;; Hacks
-(defadvice! +chinese--org-html-paragraph-a (args)
+(defadvice! bc/chinese--org-html-paragraph-filter-args-advice (args)
   "Join consecutive Chinese lines into a single long line without unwanted space
 when exporting org-mode to html."
   :filter-args #'org-html-paragraph
-  (++chinese--org-paragraph args))
+  (bc/chinese--org-paragraph args))
 
-(defadvice! +chinese--org-hugo-paragraph-a (args)
+(defadvice! bc/chinese--org-hugo-paragraph-filter-args-advice (args)
   "Join consecutive Chinese lines into a single long line without
 unwanted space when exporting org-mode to hugo markdown."
   :filter-args #'org-hugo-paragraph
-  (++chinese--org-paragraph args))
+  (bc/chinese--org-paragraph args))
 
-(defun ++chinese--org-paragraph (args)
+(defun bc/chinese--org-paragraph (args)
   (cl-destructuring-bind (paragraph contents info) args
     (let* ((fix-regexp "[[:multibyte:]]")
            (origin-contents
@@ -148,12 +148,11 @@ unwanted space when exporting org-mode to hugo markdown."
 ;; google-translate
 (use-package! go-translate
   :defer t
-  :commands gts-do-translate-prompt
   :init
   (map! :leader
         (:prefix-map ("y" . "translate")
          :desc "Google translate" "g" #'gt-do-translate
-         :desc "Google translate prompt" "G" #'gt-do-translate-prompt))
+         :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt))
   (add-hook! 'doom-load-theme-hook :append
     (setq gt-pop-posframe-backcolor (face-background 'mode-line)
           gt-pop-posframe-forecolor (face-foreground 'mode-line)))
@@ -170,7 +169,7 @@ unwanted space when exporting org-mode to hugo markdown."
          :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser)))
          :render (gt-posframe-pop-render)))
 
-  (defun gt-do-translate-prompt ()
+  (defun bc/gt-do-translate-prompt ()
     "Do the translation of this prompt"
     (interactive)
     (gt-start (gt-translator
@@ -185,7 +184,7 @@ unwanted space when exporting org-mode to hugo markdown."
         immersive-translate-trans-target-language "zh")
 
   ;; use google-translate(python) instance of translate-shell
-  (defadvice! immersive-translate-trans-make-command-a (text)
+  (defadvice! bc/immersive-translate-trans-make-command-override-advice (text)
     :override #'immersive-translate-trans-make-command
     (list (concat
            "trans"
@@ -204,7 +203,7 @@ unwanted space when exporting org-mode to hugo markdown."
 
   (require 'llm-openai)
   (setq llm-warn-on-nonfree nil)
-  (defadvice! insert-translated-name-retrieve-translation-a (&rest _)
+  (defadvice! bc/insert-translated-name-retrieve-translation-before-advice (&rest _)
     :before #'insert-translated-name-retrieve-translation
     (unless insert-translated-name-llm-provider
       ;; (setq insert-translated-name-llm-provider (make-llm-openai-compatible
@@ -257,7 +256,7 @@ unwanted space when exporting org-mode to hugo markdown."
          :desc "Youdao translate input" "Y" #'popweb-dict-youdao-input
          :desc "Play voice"             "p" #'popweb-dict-say-word))
 
-  (defadvice! popweb-dict-region-or-word-a ()
+  (defadvice! bc/popweb-dict-region-or-word-override-advice ()
     :override #'popweb-dict-region-or-word
     (cond ((derived-mode-p 'pdf-view-mode) (car (pdf-view-active-region-text)))
           ((use-region-p) (buffer-substring-no-properties (region-beginning) (region-end)))

@@ -43,7 +43,7 @@
         message-send-mail-function #'message-send-mail-with-sendmail)
 
   (add-hook! 'message-send-mail-hook
-    (defun +mu4e-set-msmtp-account ()
+    (defun bc/mu4e--set-msmtp-account ()
       (if (message-mail-p)
           (save-excursion
             (let*
@@ -80,7 +80,7 @@ The alist uniquely maps the number to the gnus-part."
   ;; This workaroud breaks any CJK words longer than 2 characters into
   ;; combines of bi-grams. Example: 我爱你 -> (我爱 爱你)
   ;;
-  (defun mu4e~break-cjk-word (word)
+  (defun bc/mu4e--break-cjk-word (word)
     "Break CJK word into list of bi-grams like: 我爱你 -> 我爱 爱你"
     (if (or (<= (length word) 2)
             (equal (length word) (string-bytes word))) ; only ascii chars
@@ -90,7 +90,7 @@ The alist uniquely maps the number to the gnus-part."
             (br-word nil))
         (if (setq pos (string-match ":" word))     ; like: "s:abc"
             (concat (substring word 0 (+ 1 pos))
-                    (mu4e~break-cjk-word (substring word (+ 1 pos))))
+                    (bc/mu4e--break-cjk-word (substring word (+ 1 pos))))
           (if (memq 'ascii (find-charset-string word)) ; ascii mixed with others like: abcあいう
               word
             (progn
@@ -100,14 +100,14 @@ The alist uniquely maps the number to the gnus-part."
                 (setq char-list (cdr char-list)))
               br-word))))))
 
-  (defun mu4e~break-cjk-query (expr)
+  (defun bc/mu4e--break-cjk-query (expr)
     "Break CJK strings into bi-grams in query."
     (let ((word-list (split-string expr " " t))
           (new ""))
       (dolist (word word-list new)
-        (setq new (concat new (mu4e~break-cjk-word word) " ")))))
+        (setq new (concat new (bc/mu4e--break-cjk-word word) " ")))))
 
-  (setq mu4e-query-rewrite-function #'mu4e~break-cjk-query)
+  (setq mu4e-query-rewrite-function #'bc/mu4e--break-cjk-query)
 
   (setq mu4e-bookmarks
         `((:name  "Unread messages"
@@ -144,7 +144,7 @@ The alist uniquely maps the number to the gnus-part."
            :query "flag:attach AND maildir:/Inbox/ AND NOT flag:trash"
            :key ?p)))
 
-  (defun +mu4e/open-mail-as-html ()
+  (defun bc/mu4e-open-mail-as-html ()
     "Open the HTML mail in Browser."
     (interactive)
     (if-let ((msg (mu4e-message-at-point t)))
@@ -152,10 +152,10 @@ The alist uniquely maps the number to the gnus-part."
       (user-error "No message at point")))
 
   (add-hook! 'mu4e-compose-mode-hook
-    (defun +mu4e-add-cc--header ()
+    (defun bc/mu4e--add-cc--header ()
       (save-excursion (message-add-header "Cc: \n"))))
 
-  (defun mu4e-headers-mark-all-unread-read ()
+  (defun bc/mu4e-headers-mark-all-unread-read ()
     "Put a ! \(read) mark on all visible unread messages."
     (interactive)
     (mu4e-headers-mark-for-each-if
@@ -163,13 +163,13 @@ The alist uniquely maps the number to the gnus-part."
      (lambda (msg _param)
        (memq 'unread (mu4e-msg-field msg :flags)))))
 
-  (defun mu4e-headers-flag-all-read ()
+  (defun bc/mu4e-headers-flag-all-read ()
     "Flag all visible messages as \"read\"."
     (interactive)
-    (mu4e-headers-mark-all-unread-read)
+    (bc/mu4e-headers-mark-all-unread-read)
     (mu4e-mark-execute-all t))
 
-  (defun mu4e-headers-mark-all ()
+  (defun bc/mu4e-headers-mark-all ()
     "Mark all headers for some action.
 Ask user what action to execute."
     (interactive)
