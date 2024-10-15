@@ -100,9 +100,9 @@
 (defun bc/java-run-junit-test ()
   "Java run main/test at point."
   (interactive)
-  (let* ((pkg (+java/current-package))
-         (class (+java/current-class))
-         (method (+java/current-method)))
+  (let* ((pkg (bc/java--current-package))
+         (class (bc/java--current-class))
+         (method (bc/java--current-method)))
     (if (and pkg class)
         (lsp-bridge-jdtls-project-is-test-file
          #'(lambda (is-test-file)
@@ -128,20 +128,20 @@
 
 (defun bc/java--current-package ()
   (if (eq major-mode 'java-mode)
-      (+java-current-package)
-    (+java/treesit-get-package)))
+      (bc/java--current-package)
+    (bc/java--treesit-get-package)))
 
 (defun bc/java--current-class ()
   (if (eq major-mode 'java-mode)
-      (+java-current-class)
-    (+java/treesit-get-class)))
+      (bc/java--current-class)
+    (bc/java--treesit-get-class)))
 
 (defun bc/java--current-method ()
   (if (eq major-mode 'java-mode)
       (if (and (modulep! :tools tree-sitter)
                (modulep! :lang java +tree-sitter))
-          (+java/tree-sitter-get-method))
-    (+java/treesit-get-method)))
+          (bc/java--tree-sitter-get-method))
+    (bc/java--treesit-get-method)))
 
 (when (and (modulep! :tools tree-sitter)
            (modulep! :lang java +tree-sitter))
@@ -180,7 +180,7 @@
      t))
 
   (defun bc/java--treesit-get-package ()
-    (let ((p (+java/treesit-get-package-node)))
+    (let ((p (bc/java--treesit-get-package-node)))
       (when (string-match "package \\(.+\\);" p)
         (match-string 1 p))))
 
