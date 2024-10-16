@@ -252,7 +252,16 @@
             ((string-prefix-p "URL[" type-name) (concat "java.net." type-name))
             ((string= "List" type-name) "java.util.List")
             ((string= "Map" type-name) "java.util.Map")
+            ((string= "SortedMap" type-name) "java.util.SortedMap")
+            ((string= "NavigableMap" type-name) "java.util.NavigableMap")
             ((string= "Set" type-name) "java.util.Set")
+            ((string= "SortedSet" type-name) "java.util.SortedSet")
+            ((string= "NavigableSet" type-name) "java.util.NavigableSet")
+            ((string= "File" type-name) "java.io.File")
+            ((string= "Path" type-name) "java.nio.file.Path")
+            ((string= "Charset" type-name) "java.nio.charset.Charset")
+            ((string= "Locale" type-name) "java.util.Locale")
+            ((string= "UUID" type-name) "java.util.UUID")
             (t type-name)))))
 
 ;; dockerfile
