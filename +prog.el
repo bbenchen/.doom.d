@@ -262,6 +262,7 @@
             ((string= "Charset" type-name) "java.nio.charset.Charset")
             ((string= "Locale" type-name) "java.util.Locale")
             ((string= "UUID" type-name) "java.util.UUID")
+            ((string= "ArgumentsAccessor" type-name) "org.junit.jupiter.params.aggregator.ArgumentsAccessor")
             (t type-name)))))
 
 ;; dockerfile
