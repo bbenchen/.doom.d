@@ -54,6 +54,9 @@
        :desc "Find file in dotfiles" "t" #'bc/find-in-dotfiles
        :desc "Browse dotfiles"       "T" #'bc/browse-dotfiles)
 
+      (:prefix-map ("i" . "insert")
+       :desc "Duplicate" "d" #'duplicate-dwim)
+
       (:prefix-map ("o" . "open")
        :desc "Aider"     "a" #'aider-run-aider
        :desc "ChatGPT"   "c" #'bc/start-gptel
