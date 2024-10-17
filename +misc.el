@@ -417,9 +417,9 @@
   (defadvice! bc/aider-run-aider-before-advice ()
     :before #'aider-run-aider
     (unless (getenv "OPENAI_API_KEY")
-      (setenv "OPENAI_API_KEY" (string-trim (doom-file-read
-                                             (expand-file-name "aider/openai_api_key.txt" doom-data-dir)
-                                             :noerror t))))))
+      (if-let ((apikey (bc/lookup-password :host "openkey.cloud" :user "apikey")))
+          (setenv "OPENAI_API_KEY" apikey)
+        (user-error "No `api-key' found in the auth source")))))
 
 ;; gptel
 (use-package! gptel
