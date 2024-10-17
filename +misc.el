@@ -430,9 +430,7 @@
                         :key 'gptel-api-key
                         :stream t
                         :host "openkey.cloud"
-                        :models '("gpt-3.5-turbo" "gpt-3.5-turbo-16k" "gpt-4o-mini"
-                                  "gpt-4" "gpt-4o" "gpt-4-turbo" "gpt-4-turbo-preview"
-                                  "gpt-4-32k" "gpt-4-1106-preview" "gpt-4-0125-preview")))
+                        :models gptel--openai-models))
 
   (add-hook! 'gptel-post-stream-hook #'gptel-auto-scroll)
   (add-hook! 'gptel-post-response-hook #'gptel-end-of-response)
