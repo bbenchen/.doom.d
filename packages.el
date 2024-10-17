@@ -90,7 +90,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "0ad2b7c1aebb204288b290ff24444aa14bb5f567")
+(package! llm :pin "d38014f64071513803a036f97ef7e632b2efe980")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -130,7 +130,7 @@
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el"))
   :pin "20a72c239b05a97d9f17e69891dd022481b257e9")
-(package! gptel :pin "403168d218202eb4fe7ee5a0a499be266ebe2431")
+(package! gptel :pin "433763ad194c83d23996c62ac64bb24ad7d9cbe5")
 (package! corsair :pin "828c175d049d31c3dabea46f4df2ef4e8bcf2768")
 
 (package! easydraw
@@ -177,7 +177,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "f892631595041ed75090dab2fee21d04f91cfcc1")
+  :pin "72494c0029795f7d8e888fe432ad6ff94dab5be7")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
