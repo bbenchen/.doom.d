@@ -120,8 +120,6 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 
-(if (featurep :system 'macos)
-    (package! exec-path-from-shell :pin "72ede29a0e0467b3b433e8edbee3c79bab005884"))
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "3c5a60dd917bf9db71d7b8fb822f7d5da7505a39")

@@ -216,27 +216,6 @@
   :when (modulep! :tools magit)
   :after magit)
 
-;; exec-path-from-shell
-(use-package! exec-path-from-shell
-  :when (featurep :system 'macos)
-  :init
-  (setq exec-path-from-shell-warn-duration-millis 2000)
-  (setq exec-path-from-shell-arguments '("-l"))
-  (setq exec-path-from-shell-variables '("LANG"
-                                         "LC_ALL"
-                                         "TERM"
-                                         "PATH"
-                                         "JAVA_HOME"
-                                         "JENV_LOADED"
-                                         "SBT_OPTS"
-                                         "GOPATH"
-                                         "GOBIN"
-                                         "GO111MODULE"
-                                         "GOPROXY"
-                                         "LSP_USE_PLISTS"))
-  ;; (setq exec-path-from-shell-debug t)
-  (exec-path-from-shell-initialize))
-
 ;; pinentry
 ;; (use-package! pinentry
 ;;   :config
