@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "2c68885f0c7f4e37340592ef74b63fb6562b288b" :built-in (>= emacs-major-version 30))
+(package! project :pin "51a5aace11e1d5d95e576ff6a2795adbd18f10e2" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "9e39dfc666ac03a8474b3a05da17e0c935894414")
@@ -65,7 +65,7 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "62e169d3122658761581105c91d8a6aad103fed5")
+  (package! tree-sitter-langs :pin "5e042ec25e5afe468d443b56e0e1a83a58baaa5d")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "01c9ecaaa89966cdcd250ac37c24a9c9f530b725"))
@@ -127,9 +127,9 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el"))
-  :pin "20a72c239b05a97d9f17e69891dd022481b257e9")
-(package! gptel :pin "433763ad194c83d23996c62ac64bb24ad7d9cbe5")
-(package! corsair :pin "828c175d049d31c3dabea46f4df2ef4e8bcf2768")
+  :pin "0742aa2666e0186883a92dd1509b7314b084672b")
+(package! gptel :pin "f91b682d02def1d88999b34c8e7bfd0da175a8d8")
+(package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
