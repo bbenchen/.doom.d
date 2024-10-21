@@ -420,4 +420,5 @@
 
 ;; corsair
 (use-package! corsair
+  :defer t
   :after gptel)
