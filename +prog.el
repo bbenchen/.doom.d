@@ -531,6 +531,15 @@ The shell command used to build the image is:
     (dolist (hook lsp-bridge-default-mode-hooks)
       (add-hook hook #'bc/lsp-bridge--disable-flycheck t)))
 
+  (after! insert-translated-name
+    (defadvice! bc/disable-lsp-bridge-when-active-insert-translated-name (&rest _)
+      :before #'insert-translated-name-active
+      (lsp-bridge-mode -1))
+
+    (defadvice! bc/enable-lsp-bridge-when-inactive-insert-translated-name (&rest _)
+      :after #'insert-translated-name-inactive
+      (lsp-bridge-mode 1)))
+
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
                                           "-server"
