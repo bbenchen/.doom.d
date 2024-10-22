@@ -236,6 +236,8 @@
   (add-hook! 'docker-open-hook #'bc/set-docker-host-from-podman))
 (after! dockerfile-mode
   (add-hook! 'dockerfile-mode-local-vars-hook #'bc/set-docker-host-from-podman))
+(after! dockerfile-ts-mode
+  (add-hook! 'dockerfile-ts-mode-local-vars-hook #'bc/set-docker-host-from-podman))
 
 ;; envrc
 (use-package! envrc
