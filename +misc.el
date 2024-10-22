@@ -223,10 +223,19 @@
 ;;         pinentry-prompt-window-height 8)
 ;;   (pinentry-start))
 
-;; docker
+;; docker and dockerfile-mode
+(defun bc/set-docker-host-from-podman ()
+  (if (and (executable-find "podman")
+           (not (getenv "DOCKER_HOST")))
+      (let* ((res (doom-call-process "podman" "machine" "inspect" "--format" "{{.ConnectionInfo.PodmanSocket.Path}}"))
+             (code (car res)))
+        (if (zerop code)
+            (setenv "DOCKER_HOST" (format "unix://%s" (cdr res)))
+          (user-error "podman not started.")))))
 (after! docker
-  (if (executable-find "podman")
-      (setq docker-command "podman")))
+  (add-hook! 'docker-open-hook #'bc/set-docker-host-from-podman))
+(after! dockerfile-mode
+  (add-hook! 'dockerfile-mode-local-vars-hook #'bc/set-docker-host-from-podman))
 
 ;; envrc
 (use-package! envrc

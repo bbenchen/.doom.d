@@ -3,11 +3,6 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
-;; dockerfile
-(after! dockerfile-mode
-  (if (executable-find "podman")
-      (setq dockerfile-mode-command "podman")))
-
 ;; markdown
 (after! markdown-toc
   (setq markdown-toc-indentation-space 2))
