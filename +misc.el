@@ -232,8 +232,11 @@
         (if (zerop code)
             (setenv "DOCKER_HOST" (format "unix://%s" (cdr res)))
           (user-error "podman not started.")))))
-(after! docker
-  (add-hook! 'docker-open-hook #'bc/set-docker-host-from-podman))
+(after! docker-core
+  (add-hook! 'docker-open-hook #'bc/set-docker-host-from-podman)
+  (defadvice! bc/docker-utils-pop-to-buffer-before-advice (&rest _)
+    :before #'docker-utils-pop-to-buffer
+    (bc/set-docker-host-from-podman)))
 (after! dockerfile-mode
   (add-hook! 'dockerfile-mode-local-vars-hook #'bc/set-docker-host-from-podman))
 (after! dockerfile-ts-mode
