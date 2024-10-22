@@ -3,6 +3,11 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
+;; dockerfile
+(after! dockerfile-mode
+  (if (executable-find "podman")
+      (setq dockerfile-mode-command "podman")))
+
 ;; markdown
 (after! markdown-toc
   (setq markdown-toc-indentation-space 2))
@@ -488,8 +493,7 @@
       (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
             ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))))
 
-  (when (and (modulep! :checkers syntax)
-             (not (modulep! :checkers syntax +flymake)))
+  (when (modulep! :checkers syntax -flymake)
     (defun bc/lsp-bridge--disable-flycheck()
       (if (bound-and-true-p flycheck-mode)
           (flycheck-mode -1)))

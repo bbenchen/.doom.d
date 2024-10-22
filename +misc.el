@@ -223,6 +223,11 @@
 ;;         pinentry-prompt-window-height 8)
 ;;   (pinentry-start))
 
+;; docker
+(after! docker
+  (if (executable-find "podman")
+      (setq docker-command "podman")))
+
 ;; envrc
 (use-package! envrc
   :config
