@@ -516,12 +516,14 @@ The shell command used to build the image is:
 
   (global-lsp-bridge-mode)
 
-  (defadvice! bc/acm-markdown-render-content-after-advice (&rest args)
+  (defadvice! bc/lsp-bridge-disable-syntax-and-spell-in-documentation (&rest _)
     :after #'acm-markdown-render-content
-    (goto-line 1)
     (when (modulep! :checkers syntax)
       (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
-            ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))))
+            ((bound-and-true-p flycheck-mode) (flycheck-mode -1))))
+
+    (when (modulep! :checkers spell -flyspell)
+      (spell-fu-mode -1)))
 
   (when (modulep! :checkers syntax -flymake)
     (defun bc/lsp-bridge--disable-flycheck()
