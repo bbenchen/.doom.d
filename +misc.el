@@ -18,6 +18,17 @@
 (setq doom-fd-executable "fd"
       doom-ripgrep-executable "rg")
 
+;; docker
+(defun bc/set-docker-host-from-podman ()
+  (if (executable-find "podman")
+      (let* ((res (cond
+                   ((featurep :system 'linux) (doom-call-process "podman" "info" "--format" "{{.Host.RemoteSocket.Path"))
+                   (t (doom-call-process "podman" "machine" "inspect" "--format" "{{.ConnectionInfo.PodmanSocket.Path}}"))))
+             (code (car res)))
+        (if (zerop code)
+            (setenv "DOCKER_HOST" (format "unix://%s" (cdr res)))))))
+(add-hook! 'doom-after-init-hook #'bc/set-docker-host-from-podman)
+
 ;; recentf
 (after! recentf
   (add-to-list 'recentf-exclude "\\.cache")
@@ -222,25 +233,6 @@
 ;;   (setq epa-pinentry-mode 'loopback
 ;;         pinentry-prompt-window-height 8)
 ;;   (pinentry-start))
-
-;; docker and dockerfile-mode
-(defun bc/set-docker-host-from-podman ()
-  (if (and (executable-find "podman")
-           (not (getenv "DOCKER_HOST")))
-      (let* ((res (doom-call-process "podman" "machine" "inspect" "--format" "{{.ConnectionInfo.PodmanSocket.Path}}"))
-             (code (car res)))
-        (if (zerop code)
-            (setenv "DOCKER_HOST" (format "unix://%s" (cdr res)))
-          (user-error "podman not started.")))))
-(after! docker-core
-  (add-hook! 'docker-open-hook #'bc/set-docker-host-from-podman)
-  (defadvice! bc/docker-utils-pop-to-buffer-before-advice (&rest _)
-    :before #'docker-utils-pop-to-buffer
-    (bc/set-docker-host-from-podman)))
-(after! dockerfile-mode
-  (add-hook! 'dockerfile-mode-local-vars-hook #'bc/set-docker-host-from-podman))
-(after! dockerfile-ts-mode
-  (add-hook! 'dockerfile-ts-mode-local-vars-hook #'bc/set-docker-host-from-podman))
 
 ;; envrc
 (use-package! envrc

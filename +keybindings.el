@@ -35,6 +35,17 @@
 (map! (:map vterm-mode-map
             "C-\\" #'toggle-input-method))
 
+(map! :map scala-mode-map
+      :localleader
+      (:prefix ("b" . "sbt")
+               "." #'sbt-hydra
+               "b" #'sbt-command))
+
+(map! :map dockerfile-ts-mode-map
+      :localleader
+      :desc "Build"           "b"   #'dockerfile-build-buffer
+      :desc "Build not cache" "M-b" #'dockerfile-build-no-cache-buffer)
+
 (map! :leader
       (:prefix ("!" . "checkers")
                (:when (modulep! :checkers syntax +flymake)

@@ -266,6 +266,49 @@
             (t type-name)))))
 
 ;; dockerfile
+(after! dockerfile-mode
+  (if (executable-find "podman")
+      (setq dockerfile-mode-command "podman")
+    (setq dockerfile-use-buildkit nil
+          dockerfile-mode-command "docker"))
+  (defun dockerfile-build-buffer (image-name &optional no-cache)
+    "Build an image called IMAGE-NAME based upon the buffer.
+
+If the prefix arg NO-CACHE is set, don't cache the image.
+
+The shell command used to build the image is:
+
+    sudo docker build    \\
+      --no-cache         \\
+      --force-rm         \\
+      --pull             \\
+      --tag IMAGE-NAME   \\
+      --build-args args  \\
+      -f filename        \\
+      directory"
+    (interactive (list (dockerfile-read-image-name) prefix-arg))
+    (save-buffer)
+    (compilation-start
+     (format
+      "%s%s%s build %s %s %s %s %s %s -f %s %s"
+      (if dockerfile-use-buildkit "DOCKER_BUILDKIT=1 " "")
+      (if dockerfile-use-sudo "sudo " "")
+      dockerfile-mode-command
+      (if no-cache "--no-cache" "")
+      (if dockerfile-build-force-rm "--force-rm " "")
+      (if dockerfile-build-pull "--pull " "")
+      (dockerfile-tag-string image-name)
+      (dockerfile-build-arg-string)
+      (or dockerfile-build-extra-options "")
+      (shell-quote-argument (dockerfile-standard-filename
+                             (or (file-remote-p (buffer-file-name) 'localname)
+                                 (buffer-file-name))))
+      (shell-quote-argument (dockerfile-standard-filename
+                             (or (file-remote-p default-directory 'localname)
+                                 default-directory))))
+     nil
+     (lambda (_) (format "*docker-build-output: %s *" image-name)))))
+
 (after! dockerfile-ts-mode
   (set-docsets! 'dockerfile-ts-mode "Docker"))
 
@@ -305,14 +348,6 @@
 (after! projectile
   (dolist (dir '(".bloop" ".metals"))
     (add-to-list 'projectile-globally-ignored-directories dir)))
-
-;; scala
-(after! scala-mode
-  (map! :map scala-mode-map
-        :localleader
-        (:prefix ("b" . "sbt")
-                 "." #'sbt-hydra
-                 "b" #'sbt-command)))
 
 ;; sbt
 (after! sbt-mode
