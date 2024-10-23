@@ -65,12 +65,12 @@
 
 (when (modulep! :tools tree-sitter)
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs :pin "5e042ec25e5afe468d443b56e0e1a83a58baaa5d")
+  (package! tree-sitter-langs :pin "465a64032d45f51347a9b68a0e8f33d658039172")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "01c9ecaaa89966cdcd250ac37c24a9c9f530b725"))
 
-(package! posframe :pin "570273bcf6c21641f02ccfcc9478607728f0a2a2")
+(package! posframe :pin "ac9f954ac4c546e68daf403f2ab2b5ad4397f26e")
 
 (package! nerd-icons :pin "cc6c46830305df123de20b18510b15838e1608d6")
 (package! doom-themes
@@ -126,14 +126,14 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el"))
-  :pin "b9c8b7a8279691ec95db6ef8ed066fbb0c2051c0")
-(package! gptel :pin "f91b682d02def1d88999b34c8e7bfd0da175a8d8")
+  :pin "3893b78a169fcfbd81bcff2f4d7eed83b821e770")
+(package! gptel :pin "73bcc682f58cbef28fea27e055cc180b801b6a9d")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "ad740d87e768052b0ef5b5e7f0822c7ac1b238fb")
-(package! verb :pin "98934fef8cd2bc339f40abb36ee4a6776e50872d")
+(package! verb :pin "c05263f8cad09b9bf13b03ad9198c40400f31483")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
