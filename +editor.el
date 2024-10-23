@@ -36,12 +36,6 @@
   :config
   (setq ccm-recenter-at-end-of-file t))
 
-;; goto-line-preview
-(use-package! goto-line-preview
-  :defer t
-  :init
-  (define-key! [remap goto-line] #'goto-line-preview))
-
 ;; auto-save
 (use-package! auto-save
   :config
