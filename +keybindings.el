@@ -14,6 +14,10 @@
       "C-x C-l" #'downcase-dwim
       "M-c"     #'capitalize-dwim
 
+      (:when (modulep! :completion vertico)
+        "M-g m" #'consult-mark
+        "M-g k" #'consult-global-mark)
+
       (:when (featurep :system 'macos)
         (:when (modulep! :completion vertico)
           "s-F" #'consult-line-multi)
