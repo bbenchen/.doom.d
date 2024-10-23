@@ -4,3 +4,4 @@
 *.elc
 tmp/
 .aider*
+.env
