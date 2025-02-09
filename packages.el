@@ -67,7 +67,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "0bbb1b4dcad1dff1dd79868521ad873cc9bf69a2")
+    :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "8ec6de2b374e9bdbcb2cb42e09e6ce6e25efea5c"))
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "fff571a35585710e20ae663c2635260cb1318acb")
+(package! llm :pin "834356273f5ce25944cc9e28d4b24b1d7d92c316")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -133,20 +133,20 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "bc320a10851533f4743905828dc8597201ab1578")
-(package! gptel :pin "c913e2a35a42509a9ea6086ab5abcdcfeb6ac7d5")
+  :pin "f90000ca14f5553d3b7dd0d08db1b66bfa838719")
+(package! gptel :pin "2dd3e317bf4af82cddfa1d1b127c04c17589c878")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "449c1226f7108e1cf8b4b447a65fa053b6bd782f")
-(package! verb :pin "ad225b8699c38ce8d4d35b1e1945f4379daf2e5e")
+  :pin "4615f6de1fe735303759d3b654642326ca0481ec")
+(package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "02a83b5560114a18e7c3f79c7f3b356c11d46ee7"))
+      (package! ghub :pin "077e339bd714a0b8cafcb4ce2b9ec684b0509022"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
