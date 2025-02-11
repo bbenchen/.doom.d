@@ -70,9 +70,9 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "8ec6de2b374e9bdbcb2cb42e09e6ce6e25efea5c"))
+    :pin "8822670c3712b1f1aa11c025c67f918daac141a0"))
 
-(package! posframe :pin "81651536827c96bf5af5265ee7918ab70e1dd5b1")
+(package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
 (package! nerd-icons :pin "546ee20caf825e65da4c5435d31f13d269ed2a81")
 (package! doom-themes
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "834356273f5ce25944cc9e28d4b24b1d7d92c316")
+(package! llm :pin "47b1b86eab38a82ea71ee4fa5574a9f9c4223a39")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -133,8 +133,8 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "f90000ca14f5553d3b7dd0d08db1b66bfa838719")
-(package! gptel :pin "2dd3e317bf4af82cddfa1d1b127c04c17589c878")
+  :pin "2c837d33546a03f197b5d28f5c748fa593b40401")
+(package! gptel :pin "edf834a448f1ee68bbd3117145668a3401817bc3")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -155,7 +155,7 @@
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
-(package! auto-rename-tag :pin "b38895ff4821df3a0461959146e9f912d2acde4e")
+(package! auto-rename-tag :pin "bc3b0ae2e94b7455236205f8fadbeb415898c519")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
@@ -181,7 +181,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "0b9f7952f6df228c036adad50da8e33b2c1b4698")
+  :pin "a1c6d72d6bfa256174cb4021a256df1415ce12c6")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
