@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "1153923187300a8643032e346c5b84af1fe12370" :built-in (>= emacs-major-version 30))
+(package! project :pin "32d88fad00d39ee4ca0fdaad6b316b3d01079295" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "65a5de16e21c87b7c12a78a63fc3b57e07c03c86")
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "47b1b86eab38a82ea71ee4fa5574a9f9c4223a39")
+(package! llm :pin "a9623639b295a00da1826c7baa2ed40f83e60b38")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -129,17 +129,17 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "2b818ca6e4a2f723e7cab70cd0101c2728581c3a")
-(package! mb-url :pin "a0ff17901324027774b943d8f58257adb9ae1861")
+(package! mb-url :pin "b978ccbe0600ee4c114303b5c4b839088d1da13c")
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "2c837d33546a03f197b5d28f5c748fa593b40401")
-(package! gptel :pin "edf834a448f1ee68bbd3117145668a3401817bc3")
+  :pin "96e9a4cab5657b17d5a6deddfc16cf98f94995c1")
+(package! gptel :pin "49c7167646245691e07b283ce8f1f3920acf81bd")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "4615f6de1fe735303759d3b654642326ca0481ec")
+  :pin "04887e56d92944153c7bc970ac91d903a08dab3b")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
