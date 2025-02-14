@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "32d88fad00d39ee4ca0fdaad6b316b3d01079295" :built-in (>= emacs-major-version 30))
+(package! project :pin "c45d9bf11ef7c375902ceeb217d3373deb85e8f3" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "65a5de16e21c87b7c12a78a63fc3b57e07c03c86")
@@ -70,7 +70,7 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "8822670c3712b1f1aa11c025c67f918daac141a0"))
+    :pin "c3b769d577ccad36f872babfde021eee4b1ba2e9"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "a9623639b295a00da1826c7baa2ed40f83e60b38")
+(package! llm :pin "7afcaf0693118a12f1185a7f8aeab177fc30eb23")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -129,12 +129,12 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "2b818ca6e4a2f723e7cab70cd0101c2728581c3a")
-(package! mb-url :pin "b978ccbe0600ee4c114303b5c4b839088d1da13c")
+(package! mb-url :pin "eb04afb7533da178ffe9ea3fc5a49b9f565cb73e")
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "96e9a4cab5657b17d5a6deddfc16cf98f94995c1")
-(package! gptel :pin "49c7167646245691e07b283ce8f1f3920acf81bd")
+  :pin "73c3fd0c55f8a06115d624d0e060cfc33322d7a8")
+(package! gptel :pin "7425ec9f6c3ec5627b15b6c218650f9cccecaa95")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
