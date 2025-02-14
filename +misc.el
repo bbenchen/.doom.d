@@ -181,7 +181,9 @@
 
 ;; magit
 (after! magit
-  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     ")))
+  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     "))
+  (if (featurep 'nerd-icons)
+      (setq magit-format-file-function #'magit-format-file-nerd-icons)))
 
 ;; ghub
 (after! ghub
