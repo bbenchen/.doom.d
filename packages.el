@@ -133,13 +133,13 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "73c3fd0c55f8a06115d624d0e060cfc33322d7a8")
-(package! gptel :pin "7425ec9f6c3ec5627b15b6c218650f9cccecaa95")
+  :pin "f7ae0f4e99ac63b9d4ee3d9f92e221d336d7e2a8")
+(package! gptel :pin "b2e54046fef11566a087587f37d7ea5b194c2074")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "04887e56d92944153c7bc970ac91d903a08dab3b")
+  :pin "fa8007ec1156052f45c6ca9a92fee2ef69bcc8be")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
