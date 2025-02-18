@@ -90,7 +90,7 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "424682b94df9efb3dd59e396677b45e4a67b7723")
+(package! go-translate :pin "01db11bf9a243710c15d4b74ea981ba8a4e0e98a")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "7afcaf0693118a12f1185a7f8aeab177fc30eb23")
 (package! insert-translated-name
@@ -129,17 +129,17 @@
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
 (package! envrc :pin "2b818ca6e4a2f723e7cab70cd0101c2728581c3a")
-(package! mb-url :pin "eb04afb7533da178ffe9ea3fc5a49b9f565cb73e")
+(package! mb-url :pin "0cfc4e1ac6dd2b9e4fa2d7114d2cc5f33657f180")
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "f7ae0f4e99ac63b9d4ee3d9f92e221d336d7e2a8")
+  :pin "3b36c33d192db40ed361604541c140ff357be627")
 (package! gptel :pin "b2e54046fef11566a087587f37d7ea5b194c2074")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "fa8007ec1156052f45c6ca9a92fee2ef69bcc8be")
+  :pin "9cde5ec67145b9b9a8e0533e4f0dff4f62031a80")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
