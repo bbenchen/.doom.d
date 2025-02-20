@@ -59,7 +59,7 @@
 (package! project :pin "c45d9bf11ef7c375902ceeb217d3373deb85e8f3" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "65a5de16e21c87b7c12a78a63fc3b57e07c03c86")
+(package! diff-hl :pin "e1df1e138329e62496592f029b8e1ee23d110701")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -90,9 +90,9 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "01db11bf9a243710c15d4b74ea981ba8a4e0e98a")
+(package! go-translate :pin "1b7ac7f3cc1b6d28416dd981a83ff3c888af374b")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "7afcaf0693118a12f1185a7f8aeab177fc30eb23")
+(package! llm :pin "b170bc663128666e28a728c4b591a0dde6e86c34")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -114,7 +114,7 @@
 
 (package! editorconfig
   :recipe (:nonrecursive t)
-  :pin "24f5b2b1cd4e37adc245fb59f7edeb6872a707a4"
+  :pin "1a9942746cf5b10daae8962f380b5f2a459086f3"
   :built-in (>= emacs-major-version 30))
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
@@ -133,13 +133,13 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "3b36c33d192db40ed361604541c140ff357be627")
+  :pin "35b2d7296d6bd7a37fac6a6397f9c6b0507e2652")
 (package! gptel :pin "b2e54046fef11566a087587f37d7ea5b194c2074")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "9cde5ec67145b9b9a8e0533e4f0dff4f62031a80")
+  :pin "838ecce726cf277729d89c14ef3921a8e3aaf580")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
