@@ -70,11 +70,11 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "c3b769d577ccad36f872babfde021eee4b1ba2e9"))
+    :pin "c9a269d9bd760bc48f2ba7685da569fb4d3693f0"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "546ee20caf825e65da4c5435d31f13d269ed2a81")
+(package! nerd-icons :pin "3a47753ef4f9d7e83474f50c0188a7b39f1ff32d")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "864cf893cee7d08efb48d4aa62409c219c0fb589")
@@ -90,7 +90,7 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "1b7ac7f3cc1b6d28416dd981a83ff3c888af374b")
+(package! go-translate :pin "02a43b48714e2e2d40d1ca2aedde6dde552aa0f4")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "b170bc663128666e28a728c4b591a0dde6e86c34")
 (package! insert-translated-name
@@ -146,7 +146,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "077e339bd714a0b8cafcb4ce2b9ec684b0509022"))
+      (package! ghub :pin "3257231c79ce287108bff738e9c714028466871c"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
