@@ -491,8 +491,8 @@ The shell command used to build the image is:
 
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
+        ;; lsp-bridge-log-level 'debug
         lsp-bridge-enable-completion-in-string t
-        lsp-bridge-enable-log nil
         lsp-bridge-enable-org-babel t
         lsp-bridge-diagnostic-tooltip-border-width 2
         lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
