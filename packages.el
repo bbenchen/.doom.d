@@ -70,7 +70,7 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "c9a269d9bd760bc48f2ba7685da569fb4d3693f0"))
+    :pin "00437be3a9644441af90de3d1f847b40c93ce59f"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -133,13 +133,13 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "35b2d7296d6bd7a37fac6a6397f9c6b0507e2652")
+  :pin "ebc85cc64d759c618ea09d4d1c7852897b2744e7")
 (package! gptel :pin "b2e54046fef11566a087587f37d7ea5b194c2074")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "838ecce726cf277729d89c14ef3921a8e3aaf580")
+  :pin "f6b0f43138693b73cb65327d28bd2a4ee1b6caa7")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
