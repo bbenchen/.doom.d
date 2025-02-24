@@ -59,7 +59,7 @@
 (package! project :pin "c45d9bf11ef7c375902ceeb217d3373deb85e8f3" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "e1df1e138329e62496592f029b8e1ee23d110701")
+(package! diff-hl :pin "685e99135001da13caecdff71acea1ee20bed373")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -74,7 +74,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "3a47753ef4f9d7e83474f50c0188a7b39f1ff32d")
+(package! nerd-icons :pin "a29fcbc24a7827d5e97a05302398f15a155fe18a")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "864cf893cee7d08efb48d4aa62409c219c0fb589")
@@ -90,7 +90,7 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "02a43b48714e2e2d40d1ca2aedde6dde552aa0f4")
+(package! go-translate :pin "f1dce17826d8df02a2c490330ff151bee8ec2875")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "b170bc663128666e28a728c4b591a0dde6e86c34")
 (package! insert-translated-name
@@ -134,7 +134,7 @@
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
   :pin "ebc85cc64d759c618ea09d4d1c7852897b2744e7")
-(package! gptel :pin "b2e54046fef11566a087587f37d7ea5b194c2074")
+(package! gptel :pin "aa62573ee7b14830ffa1cdb3709e588b8fa64f2e")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
