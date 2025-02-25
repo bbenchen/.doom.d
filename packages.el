@@ -70,7 +70,7 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "00437be3a9644441af90de3d1f847b40c93ce59f"))
+    :pin "d79399a025be3531a2f3f42e8778d9b60273c6f2"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "f1dce17826d8df02a2c490330ff151bee8ec2875")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "b170bc663128666e28a728c4b591a0dde6e86c34")
+(package! llm :pin "a1fca956d470fb4863e9b3567ccb8f671e589a24")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -124,7 +124,7 @@
 (package! thing-edit
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
-(package! region-occurrences-highlighter :pin "4c2c7a241fd257dd51f2726715cd1be022b3445a")
+(package! region-occurrences-highlighter :pin "7921b749b641c6682536d58139a48ab25ee2d171")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -133,7 +133,7 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "ebc85cc64d759c618ea09d4d1c7852897b2744e7")
+  :pin "c0bb5d5c8b4f14f6d5b13197ef58e3c13cb3c6dc")
 (package! gptel :pin "aa62573ee7b14830ffa1cdb3709e588b8fa64f2e")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
@@ -155,7 +155,7 @@
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
-(package! auto-rename-tag :pin "bc3b0ae2e94b7455236205f8fadbeb415898c519")
+(package! auto-rename-tag :pin "51d5e093b12568e43b23ca94dc8704041fce9224")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
