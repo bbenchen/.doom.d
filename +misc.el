@@ -240,7 +240,9 @@
 
 ;; diff-hl
 (after! diff-hl
-  (setq diff-hl-disable-on-remote t))
+  (setq diff-hl-disable-on-remote t
+        diff-hl-update-async (not (featurep :system 'macos)))
+  (setq diff-hl-global-modes '(not helpful-mode image-mode pdf-view-mode vterm-mode magit-status-mode)))
 
 ;; pinentry
 ;; (use-package! pinentry
