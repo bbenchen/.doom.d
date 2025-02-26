@@ -417,7 +417,7 @@
   :config
   (setenv "OPENAI_API_BASE" "https://openkey.cloud/v1")
 
-  (setq aider-args '("--no-auto-commits" "--model" "gpt-4o-mini"))
+  (setq aider-args '("--no-auto-commits" "--model" "o3‑mini"))
 
   (defadvice! bc/aider-run-aider-before-advice ()
     :before #'aider-run-aider
