@@ -70,14 +70,14 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "d79399a025be3531a2f3f42e8778d9b60273c6f2"))
+    :pin "2e9f55fa44509669334d5ae8f016393e05081c64"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
 (package! nerd-icons :pin "a29fcbc24a7827d5e97a05302398f15a155fe18a")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "864cf893cee7d08efb48d4aa62409c219c0fb589")
+  :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
 
 (when (modulep! :email mu4e +org)
   (package! org-msg :pin "59e2042e5f23e25f31c6aef0db1e70c6f54f117d"))
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "f1dce17826d8df02a2c490330ff151bee8ec2875")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "a1fca956d470fb4863e9b3567ccb8f671e589a24")
+(package! llm :pin "d0fe19f93bc34f97ab608fad76510eca44aa9ceb")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -134,7 +134,7 @@
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
   :pin "c0bb5d5c8b4f14f6d5b13197ef58e3c13cb3c6dc")
-(package! gptel :pin "aa62573ee7b14830ffa1cdb3709e588b8fa64f2e")
+(package! gptel :pin "6ad2afa7e249de12416b746f1e961c55d2f58722")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
