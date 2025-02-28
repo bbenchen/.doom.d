@@ -70,7 +70,7 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "2e9f55fa44509669334d5ae8f016393e05081c64"))
+    :pin "0b2e87ea5369c96e436d909204624923afab7ab4"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -133,8 +133,8 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "c0bb5d5c8b4f14f6d5b13197ef58e3c13cb3c6dc")
-(package! gptel :pin "6ad2afa7e249de12416b746f1e961c55d2f58722")
+  :pin "88d5e13dac1b53f8772c23c27d3b34b8c9a8e539")
+(package! gptel :pin "ce042d692a5d31bb1aadcf5ad96817547b1b3045")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -155,7 +155,7 @@
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
-(package! auto-rename-tag :pin "51d5e093b12568e43b23ca94dc8704041fce9224")
+(package! auto-rename-tag :pin "ceda8dcb436cc7f2a7b99d33bdeb152a242745a1")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
