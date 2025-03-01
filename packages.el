@@ -133,8 +133,8 @@
 
 (package! aider
   :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "88d5e13dac1b53f8772c23c27d3b34b8c9a8e539")
-(package! gptel :pin "ce042d692a5d31bb1aadcf5ad96817547b1b3045")
+  :pin "bea1f528e2dbc972061f4ce833ccc3943a0d92f4")
+(package! gptel :pin "73133590fa34c51bf2c528862be103a97c6463f0")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
