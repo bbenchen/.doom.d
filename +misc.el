@@ -385,11 +385,12 @@
                            (t nil))))
       (setq eaf-browser-chrome-history-file history))
   :config
-  (require 'eaf-image-viewer)
-  (require 'eaf-browser)
-  (require 'eaf-markdown-previewer)
-  (require 'eaf-org-previewer)
-  (require 'eaf-markmap)
+  (require 'eaf-image-viewer nil t)
+  (require 'eaf-browser nil t)
+  (require 'eaf-markdown-previewer nil t)
+  (require 'eaf-org-previewer nil t)
+  (require 'eaf-markmap nil t)
+  (require 'eaf-mind-elixir nil t)
 
   (defun eaf-translate-text (text)
     (cond ((featurep 'popweb-dict) (popweb-dict-bing-input text))
