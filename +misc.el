@@ -385,11 +385,11 @@
                            (t nil))))
       (setq eaf-browser-chrome-history-file history))
   :config
-  (require 'eaf-image-viewer nil t)
   (require 'eaf-browser nil t)
   (require 'eaf-markdown-previewer nil t)
-  (require 'eaf-org-previewer nil t)
   (require 'eaf-markmap nil t)
+  (require 'eaf-image-viewer nil t)
+  (require 'eaf-org-previewer nil t)
   (require 'eaf-mind-elixir nil t)
 
   (defun eaf-translate-text (text)
