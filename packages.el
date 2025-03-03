@@ -74,7 +74,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "a29fcbc24a7827d5e97a05302398f15a155fe18a")
+(package! nerd-icons :pin "86c5b6ef8613da08bcf131f91220224768d2480b")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -90,9 +90,9 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "f1dce17826d8df02a2c490330ff151bee8ec2875")
+(package! go-translate :pin "c1d8da15db8d44cdcb534ee672f5a39a9fdf9f6c")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "d0fe19f93bc34f97ab608fad76510eca44aa9ceb")
+(package! llm :pin "10e169810f7530a61b048280e8346eaabe5fc13b")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -139,14 +139,14 @@
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "f6b0f43138693b73cb65327d28bd2a4ee1b6caa7")
+  :pin "89001eee083c4c56959c04e1908ec604b5e8845e")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "3257231c79ce287108bff738e9c714028466871c"))
+      (package! ghub :pin "af663777c47a3dce64b2144b4409587b35521e47"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
