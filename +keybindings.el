@@ -5,6 +5,8 @@
 (map! "C-z" nil
       "M-z" nil
       "C-x C-z" nil
+      "C-<left>" nil
+      "C-<right>" nil
 
       [escape] #'doom/escape
 
