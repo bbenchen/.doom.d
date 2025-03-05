@@ -74,7 +74,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "86c5b6ef8613da08bcf131f91220224768d2480b")
+(package! nerd-icons :pin "d0240d36d8f98586687b251acf53e0086798afa8")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -90,9 +90,9 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "c1d8da15db8d44cdcb534ee672f5a39a9fdf9f6c")
+(package! go-translate :pin "55efeac0f99f8eff3f9017e62229212e4876f09b")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "10e169810f7530a61b048280e8346eaabe5fc13b")
+(package! llm :pin "f7c6c1cecc84cbcb7ee2deb980ae2e49c7750890")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -131,15 +131,15 @@
 (package! envrc :pin "2b818ca6e4a2f723e7cab70cd0101c2728581c3a")
 (package! mb-url :pin "0cfc4e1ac6dd2b9e4fa2d7114d2cc5f33657f180")
 
-(package! aider
-  :recipe (:host github :repo "tninja/aider.el" :files ("aider.el" "aider-doom.el"))
-  :pin "bea1f528e2dbc972061f4ce833ccc3943a0d92f4")
+(package! aidermacs
+  :recipe (:host github :repo "MatthewZMD/aidermacs")
+  :pin "ba8508d7d8a7a01f2aa983e72f7fba7e89d628bf")
 (package! gptel :pin "73133590fa34c51bf2c528862be103a97c6463f0")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "89001eee083c4c56959c04e1908ec604b5e8845e")
+  :pin "8ccc58b23754fcf5c3669345c7460e6d5ae32211")
 (package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 

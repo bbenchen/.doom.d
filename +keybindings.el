@@ -75,7 +75,6 @@
        :desc "Duplicate" "d" #'duplicate-dwim)
 
       (:prefix-map ("o" . "open")
-       :desc "Aider"     "a" #'aider-run-aider
        :desc "ChatGPT"   "c" #'bc/start-gptel
        :desc "View undo" "u" #'vundo)
 

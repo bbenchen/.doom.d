@@ -1,5 +1,7 @@
 ;;; +misc.el -*- lexical-binding: t; -*-
 
+(menu-bar-mode -1)
+
 (use-cjk-char-width-table 'zh_CN)
 (setq system-time-locale "C")
 
@@ -415,19 +417,25 @@
       (advice-add #'vertico-posframe--show :before-until #'bc/eaf-in-eaf-buffer-before-until-advice)
       (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'bc/eaf-in-eaf-buffer-before-until-advice))))
 
-;; aider
-(use-package! aider
+;; aidermacs
+(use-package! aidermacs
   :config
-  (setenv "OPENAI_API_BASE" "https://openkey.cloud/v1")
+  (setq aidermacs-auto-commits nil
+        aidermacs-default-model "deepseek/deepseek-chat"
+        aidermacs-use-architect-mode nil
+        aidermacs-architect-model "deepseek/deepseek-chat"
+        aidermacs-editor-model "deepseek/deepseek-chat"
+        aidermacs-extra-args '("--deepseek" "--no-check-update" "--chat-language" "Chinese")
+        aidermacs-backend 'comint)
 
-  (setq aider-args '("--no-auto-commits" "--model" "o3‑mini"))
-
-  (defadvice! bc/aider-run-aider-before-advice ()
-    :before #'aider-run-aider
-    (unless (getenv "OPENAI_API_KEY")
-      (if-let* ((apikey (bc/lookup-password :host "openkey.cloud" :user "apikey")))
-          (setenv "OPENAI_API_KEY" apikey)
-        (user-error "No `api-key' found in the auth source")))))
+  (defadvice! bc/aidermacs-run-before-advice()
+    :before #'aidermacs-run
+    (unless (or (getenv "DEEPSEEK_API_KEY")
+                (getenv "OPENROUTER_API_KEY"))
+      (if-let* ((apikey (bc/lookup-password :host "api.deepseek.com" :user "apikey")))
+          (setenv "DEEPSEEK_API_KEY" apikey))
+      (if-let* ((apikey (bc/lookup-password :host "openrouter.ai" :user "apikey")))
+          (setenv "OPENROUTER_API_KEY" apikey)))))
 
 ;; gptel
 (use-package! gptel
