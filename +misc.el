@@ -430,12 +430,11 @@
 
   (defadvice! bc/aidermacs-run-before-advice()
     :before #'aidermacs-run
-    (unless (or (getenv "DEEPSEEK_API_KEY")
-                (getenv "OPENROUTER_API_KEY"))
-      (if-let* ((apikey (bc/lookup-password :host "api.deepseek.com" :user "apikey")))
-          (setenv "DEEPSEEK_API_KEY" apikey))
-      (if-let* ((apikey (bc/lookup-password :host "openrouter.ai" :user "apikey")))
-          (setenv "OPENROUTER_API_KEY" apikey)))))
+    (cl-dolist (pair '(("deepseek" . "api.deepseek.com")
+                       ("openrouter" . "openrouter.ai")))
+      (let* ((env-name (concat (upcase (car pair)) "_API_KEY")))
+        (if-let* ((apikey (bc/lookup-password :host (cdr pair) :user "apikey")))
+            (setenv env-name apikey))))))
 
 ;; gptel
 (use-package! gptel
