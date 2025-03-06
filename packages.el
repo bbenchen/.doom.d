@@ -74,7 +74,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "d0240d36d8f98586687b251acf53e0086798afa8")
+(package! nerd-icons :pin "d75364b982afda171cccca6d9c6d4c06ec03c91d")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -133,7 +133,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "ba8508d7d8a7a01f2aa983e72f7fba7e89d628bf")
+  :pin "3f84f1666820eaf32789ea44caa541db4f6786db")
 (package! gptel :pin "73133590fa34c51bf2c528862be103a97c6463f0")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 

@@ -426,7 +426,9 @@
         aidermacs-architect-model "deepseek/deepseek-chat"
         aidermacs-editor-model "deepseek/deepseek-chat"
         aidermacs-extra-args '("--deepseek" "--no-check-update" "--chat-language" "Chinese")
-        aidermacs-backend 'comint)
+        aidermacs-backend 'comint
+        aidermacs-comint-multiline-newline-key "S-<return>"
+        aidermacs-vterm-multiline-newline-key "S-<return>")
 
   (defadvice! bc/aidermacs-run-before-advice()
     :before #'aidermacs-run
