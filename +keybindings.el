@@ -85,6 +85,10 @@
        :desc "Proxy"              "p" #'bc/toggle-proxy-http
        :desc "Rainbow mode"       "R" #'rainbow-mode)
 
+      (:prefix-map ("v" . "versioning")
+       :desc "Blamer show commit" "b" #'blamer-show-posframe-commit-info
+       :desc "Blamer" "B" #'blamer-mode)
+
       (:prefix-map ("w" . "workspaces/windows")
                    "<up>"    #'shrink-window
                    "<down>"  #'enlarge-window

@@ -217,15 +217,10 @@
 ;; blamer
 (use-package! blamer
   :when (modulep! :tools magit)
-  :custom
-  (blamer-idle-time 0.5)
-  (blamer-min-offset 70)
-  :init
-  (map! :leader
-        (:prefix-map ("v" . "versioning")
-         :desc "Blamer show commit" "b" #'blamer-show-posframe-commit-info
-         :desc "Blamer" "B" #'blamer-mode))
   :config
+  (setq blamer-idle-time 0.5
+        blamer-min-offset 70)
+
   (custom-set-faces!
     `(blamer-face :foreground ,(doom-color 'blue) :background unspecified :italic t))
 
