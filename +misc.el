@@ -143,6 +143,7 @@
     (defvar editorconfig-exclude-regexps nil)))
 
 ;; vterm
+(setq vterm-always-compile-module nil)
 (after! vterm
   (setq vterm-disable-underline t))
 
@@ -414,6 +415,8 @@
 
 ;; aidermacs
 (use-package! aidermacs
+  :defer t
+  :commands aidermacs-run aidermacs-transient-menu
   :config
   (setq aidermacs-auto-commits nil
         aidermacs-default-model "deepseek/deepseek-chat"
