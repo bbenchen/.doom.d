@@ -438,6 +438,8 @@
 
 ;; gptel
 (use-package! gptel
+  :defer t
+  :commands bc/start-gptel gptel
   :config
   (setq gptel-default-mode 'org-mode
         gptel-model 'gpt-4o-mini
@@ -452,9 +454,7 @@
 
   (defun bc/start-gptel ()
     (interactive)
-    (gptel "ChatGPT" nil nil t)))
+    (gptel "*ChatGPT*" nil nil t))
 
-;; corsair
-(use-package! corsair
-  :defer t
-  :after gptel)
+  (require 'corsair nil t)
+  (setq corsair-chat-buffer-name "*ChatGPT*"))
