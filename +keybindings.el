@@ -33,22 +33,26 @@
         "<s-left>"  #'shrink-window-horizontally
         "<s-right>" #'enlarge-window-horizontally))
 
-(map! (:map dirvish-mode-map
-            "a"   #'dirvish-quick-access
-            "z"   #'dirvish-history-jump
-            "TAB" #'dirvish-subtree-toggle))
+(map! :map dirvish-mode-map
+      "?"   #'dirvish-dispatch
+      "a"   #'dirvish-quick-access
+      "F"   #'dirvish-layout-toggle
+      "h"   #'dired-up-directory
+      "l"   #'dired-find-file
+      "z"   #'dirvish-history-jump
+      "TAB" #'dirvish-subtree-toggle)
 
-(map! (:map vterm-mode-map
-            "C-\\" #'toggle-input-method))
+(map! :map vterm-mode-map
+      "C-\\" #'toggle-input-method)
 
-(map! :map scala-mode-map
-      :localleader
+(map! :localleader
+      :map scala-mode-map
       (:prefix ("b" . "sbt")
                "." #'sbt-hydra
                "b" #'sbt-command))
 
-(map! :map dockerfile-ts-mode-map
-      :localleader
+(map! :localleader
+      :map dockerfile-ts-mode-map
       :desc "Build"           "b"   #'dockerfile-build-buffer
       :desc "Build not cache" "M-b" #'dockerfile-build-no-cache-buffer)
 
