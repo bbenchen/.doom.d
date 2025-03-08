@@ -74,7 +74,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "d75364b982afda171cccca6d9c6d4c06ec03c91d")
+(package! nerd-icons :pin "a9cb361cc8320586adbe83e747164a40bde8c1c1")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -133,8 +133,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "718b5381e06f5073ad7d366df93ede3553d737eb")
-(package! gptel :pin "2bcf06d7d4719598af8a2bbd11fc34cec4b3d7ed")
+  :pin "50e26da76189ca09fa60240c47993c694e1e1ef4")
+(package! gptel :pin "2a6f714d307c403684e81a1c4c0e521d7c4d12d8")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -181,7 +181,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "0c12f0c9ac1f3ba210c8e45a4a90354290dee47e")
+  :pin "1eeba54ed4ee7be2de3afb94b1c02426bed631f0")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
