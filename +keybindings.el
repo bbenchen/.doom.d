@@ -39,6 +39,7 @@
       "F"   #'dirvish-layout-toggle
       "h"   #'dired-up-directory
       "l"   #'dired-find-file
+      "y"   #'dirvish-yank
       "z"   #'dirvish-history-jump
       "TAB" #'dirvish-subtree-toggle)
 
