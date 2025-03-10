@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "66eefd17fe210ca4979c8fa7fd2398b1e6fb99ad" :built-in (>= emacs-major-version 30))
+(package! project :pin "3e5701fecb95d2fa873ef0e1a0debf3d4bc933f5" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "685e99135001da13caecdff71acea1ee20bed373")
@@ -74,7 +74,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "a9cb361cc8320586adbe83e747164a40bde8c1c1")
+(package! nerd-icons :pin "43178575201e3d2ef8c4a507ed4c281b0936f39a")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "55efeac0f99f8eff3f9017e62229212e4876f09b")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "f7c6c1cecc84cbcb7ee2deb980ae2e49c7750890")
+(package! llm :pin "ae1476c476bd2a067bd28ef0984f79b3ff567f55")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -133,14 +133,14 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "50e26da76189ca09fa60240c47993c694e1e1ef4")
-(package! gptel :pin "2a6f714d307c403684e81a1c4c0e521d7c4d12d8")
+  :pin "b4a771c77748f6fb5e22adb1714b7ebc34308d30")
+(package! gptel :pin "95eefe4fa7cb2deda18aa415cd3ed36069d7763e")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8ccc58b23754fcf5c3669345c7460e6d5ae32211")
-(package! verb :pin "3841f1db7c6b7969f349f51dd43eb97477dc3943")
+(package! verb :pin "151ed6bbfff71939a1481b60b9cfd2d720d56785")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
