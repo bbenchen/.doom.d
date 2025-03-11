@@ -107,9 +107,9 @@
   (use-package! pinyinlib
     :after orderless
     :init
-    (defun completion--regex-pinyin (str)
+    (defun orderless-regexp-pinyin (str)
       (orderless-regexp (pinyinlib-build-regexp-string str)))
-    (add-to-list 'orderless-matching-styles 'completion--regex-pinyin)))
+    (add-to-list 'orderless-matching-styles 'orderless-regexp-pinyin)))
 
 ;; modeline
 (setq +modeline-height 24)
