@@ -56,7 +56,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "3e5701fecb95d2fa873ef0e1a0debf3d4bc933f5" :built-in (>= emacs-major-version 30))
+(package! project :pin "f8123159622f09c60c4d0be6c4c773b57c2a010d" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "685e99135001da13caecdff71acea1ee20bed373")
@@ -92,7 +92,7 @@
 
 (package! go-translate :pin "55efeac0f99f8eff3f9017e62229212e4876f09b")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "ae1476c476bd2a067bd28ef0984f79b3ff567f55")
+(package! llm :pin "a97543d0ded21845bf2d3a437854a738b162818a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -133,8 +133,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "b4a771c77748f6fb5e22adb1714b7ebc34308d30")
-(package! gptel :pin "95eefe4fa7cb2deda18aa415cd3ed36069d7763e")
+  :pin "15a01a9b42700f1b1fe4d748ce6e7ce672ecdb25")
+(package! gptel :pin "aef57c2d3f99b894938450ec6a241a9959966973")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
