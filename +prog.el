@@ -499,7 +499,8 @@ The shell command used to build the image is:
         lsp-bridge-signature-show-with-frame-position "point"
         lsp-bridge-python-lsp-server "basedpyright"
         lsp-bridge-python-multi-lsp-server "basedpyright_ruff"
-        ;; lsp-bridge-markdown-lsp-server "vale-ls"
+        lsp-bridge-markdown-lsp-server nil
+        lsp-bridge-imenu-function 'consult-imenu
         acm-backend-yas-match-by-trigger-keyword t
         acm-backend-search-file-words-enable-fuzzy-match t
         acm-enable-capf t
