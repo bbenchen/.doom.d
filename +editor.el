@@ -63,6 +63,14 @@
               "M-p" #'region-occurrences-highlighter-prev))
   (add-hook! (prog-mode org-mode text-mode conf-mode) #'region-occurrences-highlighter-mode))
 
+;; visual-replace
+(use-package! visual-replace
+  :config
+  (setq visual-replace-display-total t)
+
+  (add-hook! 'doom-after-init-hook :append
+    (visual-replace-global-mode 1)))
+
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
   :load-path (lambda () (list (expand-file-name "site-lisp/deno-bridge-jieba" doom-user-dir)))
