@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "f8123159622f09c60c4d0be6c4c773b57c2a010d" :built-in (>= emacs-major-version 30))
+(package! project :pin "d193442fca61b41803baf6446e4052ed034869a6" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "79c46da33b249eb59a2f82fe7ad46fc9621eab0b")
@@ -75,7 +75,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "43178575201e3d2ef8c4a507ed4c281b0936f39a")
+(package! nerd-icons :pin "6612cc65373b63e85362b6a5d0bbd440b05be58b")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -126,7 +126,7 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "7921b749b641c6682536d58139a48ab25ee2d171")
-(package! visual-replace :pin "8c9321fce17e98703ba9ec03c69209defbac2723")
+(package! visual-replace :pin "96f1261c25af8874bddb7eaa2f73de90e3aed051")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -135,20 +135,20 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "96e732d770b9dd5f109aa606a72c1d62ebad6fc5")
-(package! gptel :pin "748fd85493889079f0fe102010c816ee75e802ec")
+  :pin "2a15be0dd350e79c39ee2221ab972f7b10b7c63e")
+(package! gptel :pin "54ce1c3d26715414a014c67e3b9062d9997333ce")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8ccc58b23754fcf5c3669345c7460e6d5ae32211")
-(package! verb :pin "151ed6bbfff71939a1481b60b9cfd2d720d56785")
+(package! verb :pin "0484a7ff8e8f0ed95146e171afa7fb0e64253ca3")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "af663777c47a3dce64b2144b4409587b35521e47"))
+      (package! ghub :pin "75b3ac5491af4cfe5a82c64347426ec36928769f"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
