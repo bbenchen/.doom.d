@@ -44,12 +44,12 @@
           "runtimes": [
             {
               "name": "JavaSE-17",
-              "path": "/Users/xianbin/.jenv/versions/17",
-              "default": true
+              "path": "/Users/xianbin/.jenv/versions/17"
             },
             {
               "name": "JavaSE-21",
-              "path": "/Users/xianbin/.jenv/versions/21"
+              "path": "/Users/xianbin/.jenv/versions/21",
+              "default": true
             }
           ]
         },
