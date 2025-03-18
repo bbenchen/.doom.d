@@ -60,7 +60,7 @@
 (package! project :pin "d193442fca61b41803baf6446e4052ed034869a6" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "79c46da33b249eb59a2f82fe7ad46fc9621eab0b")
+(package! diff-hl :pin "dafd697d2f376275abdf457b0ec7f5bceafd0aab")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "2a15be0dd350e79c39ee2221ab972f7b10b7c63e")
-(package! gptel :pin "54ce1c3d26715414a014c67e3b9062d9997333ce")
+  :pin "03f0fb99bb558c626e3d575311fc25ae59d13f32")
+(package! gptel :pin "4be3d8da7c924daaf34fbde91e0dd77340740f5a")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
