@@ -494,6 +494,7 @@ The shell command used to build the image is:
         ;; lsp-bridge-log-level 'debug
         lsp-bridge-enable-completion-in-string t
         lsp-bridge-enable-org-babel t
+        lsp-bridge-enable-with-tramp nil
         lsp-bridge-diagnostic-tooltip-border-width 2
         lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
         lsp-bridge-signature-show-with-frame-position "point"
