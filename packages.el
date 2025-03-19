@@ -135,7 +135,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "dc3b4452a1e564e13082ece7e57f1ca72763adb6")
+  :pin "e598ae9e9a2f6ee00fe2865f9f9655e9a37a60dd")
 (package! gptel :pin "94b942f46d9795cd3121e4dc7ccb1dc266f0d490")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
