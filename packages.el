@@ -91,7 +91,7 @@
 
 (package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
 
-(package! go-translate :pin "55efeac0f99f8eff3f9017e62229212e4876f09b")
+(package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "a97543d0ded21845bf2d3a437854a738b162818a")
 (package! insert-translated-name
@@ -135,14 +135,14 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "03f0fb99bb558c626e3d575311fc25ae59d13f32")
-(package! gptel :pin "4be3d8da7c924daaf34fbde91e0dd77340740f5a")
+  :pin "dc3b4452a1e564e13082ece7e57f1ca72763adb6")
+(package! gptel :pin "94b942f46d9795cd3121e4dc7ccb1dc266f0d490")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8ccc58b23754fcf5c3669345c7460e6d5ae32211")
-(package! verb :pin "0484a7ff8e8f0ed95146e171afa7fb0e64253ca3")
+(package! verb :pin "332a3ae223515c701d4641905808396a667665de")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
