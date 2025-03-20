@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "a97543d0ded21845bf2d3a437854a738b162818a")
+(package! llm :pin "8383bc74695fa3ff9a54ab4ff9829eba58ade52a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -126,7 +126,7 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "7921b749b641c6682536d58139a48ab25ee2d171")
-(package! visual-replace :pin "96f1261c25af8874bddb7eaa2f73de90e3aed051")
+(package! visual-replace :pin "dfcbcbdf1f5fd2f60ef7a7f52e41c11e35f8a67e")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "e598ae9e9a2f6ee00fe2865f9f9655e9a37a60dd")
-(package! gptel :pin "94b942f46d9795cd3121e4dc7ccb1dc266f0d490")
+  :pin "277a00e323800dc74b373c73ec0e274733a6a818")
+(package! gptel :pin "af4ddb1dffe96461501c08d061d51ac2dbe99c77")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -183,7 +183,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "1eeba54ed4ee7be2de3afb94b1c02426bed631f0")
+  :pin "b513a7359d24943ef879a876abbd4825e69c5e01")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
