@@ -135,7 +135,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "277a00e323800dc74b373c73ec0e274733a6a818")
+  :pin "c1c10518c6bfea832f05823d6d509a90d0606803")
 (package! gptel :pin "af4ddb1dffe96461501c08d061d51ac2dbe99c77")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
@@ -183,7 +183,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "b513a7359d24943ef879a876abbd4825e69c5e01")
+  :pin "63b5933fd7cd58db2853037470848f23e05fbad6")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
