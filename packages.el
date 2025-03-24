@@ -75,7 +75,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "6612cc65373b63e85362b6a5d0bbd440b05be58b")
+(package! nerd-icons :pin "14f7278dd7eb5eca762a6ff32467c72c661c0aae")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "8383bc74695fa3ff9a54ab4ff9829eba58ade52a")
+(package! llm :pin "c0f0e52827ff6d4dbdfe5ae00c40313238d323cd")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -126,7 +126,7 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "7921b749b641c6682536d58139a48ab25ee2d171")
-(package! visual-replace :pin "dfcbcbdf1f5fd2f60ef7a7f52e41c11e35f8a67e")
+(package! visual-replace :pin "0b035a0c33d2e56b9b6bb14e05ba54c9bf6a4f65")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "c1c10518c6bfea832f05823d6d509a90d0606803")
-(package! gptel :pin "af4ddb1dffe96461501c08d061d51ac2dbe99c77")
+  :pin "6cfc8bfa46ad4074213effa45a0fe8e8e12a526e")
+(package! gptel :pin "913e9dba2a977647b1cc2cc8ec368ac896cc47c2")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
