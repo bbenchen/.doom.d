@@ -60,7 +60,7 @@
 (package! project :pin "d193442fca61b41803baf6446e4052ed034869a6" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "dafd697d2f376275abdf457b0ec7f5bceafd0aab")
+(package! diff-hl :pin "5ac6dce3f33b297fe45305605f79114b98b4652c")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "c0f0e52827ff6d4dbdfe5ae00c40313238d323cd")
+(package! llm :pin "f6b06c8a4a0614cc55ddadd1b59faab972e872d2")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -126,16 +126,16 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "7921b749b641c6682536d58139a48ab25ee2d171")
-(package! visual-replace :pin "0b035a0c33d2e56b9b6bb14e05ba54c9bf6a4f65")
+(package! visual-replace :pin "2897c4b323cf38b58a23a78ecb5b081192dea3b7")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "2b818ca6e4a2f723e7cab70cd0101c2728581c3a")
+(package! envrc :pin "116cb75ee1117d72b36e01c1442f76dbfb429259")
 (package! mb-url :pin "0cfc4e1ac6dd2b9e4fa2d7114d2cc5f33657f180")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "6cfc8bfa46ad4074213effa45a0fe8e8e12a526e")
+  :pin "f4fc53e4ceef699ad2404d0970ff70bce4ce56b4")
 (package! gptel :pin "913e9dba2a977647b1cc2cc8ec368ac896cc47c2")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
@@ -183,7 +183,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "63b5933fd7cd58db2853037470848f23e05fbad6")
+  :pin "76cf22bdeb3e4bf0e946baea3349ca01dedd7163")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
