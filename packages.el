@@ -60,7 +60,7 @@
 (package! project :pin "d193442fca61b41803baf6446e4052ed034869a6" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "5ac6dce3f33b297fe45305605f79114b98b4652c")
+(package! diff-hl :pin "7da881a957b8c15ddcc754dd73543c95b128d716")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "f6b06c8a4a0614cc55ddadd1b59faab972e872d2")
+(package! llm :pin "90fd7d267f7e8b80a02726ac89c37da7f36c0c03")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "f4fc53e4ceef699ad2404d0970ff70bce4ce56b4")
-(package! gptel :pin "913e9dba2a977647b1cc2cc8ec368ac896cc47c2")
+  :pin "304543cbd756e0c343b8e096dac14faf0920d9cc")
+(package! gptel :pin "97934261f2418d69996b7cba78a3c63ab301e5a1")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -148,7 +148,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "75b3ac5491af4cfe5a82c64347426ec36928769f"))
+      (package! ghub :pin "97c80a20f1a3fa05384de1fec1b26a99b70c1448"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
