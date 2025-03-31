@@ -125,14 +125,16 @@
               "jakarta.annotation.Nonnull",
               "org.eclipse.jdt.annotation.NonNull",
               "org.springframework.lang.NonNull",
-              "org.jetbrains.annotations.NotNull"
+              "org.jetbrains.annotations.NotNull",
+              "org.jspecify.annotations.NonNull"
             ],
             "nullable": [
               "javax.annotation.Nullable",
               "jakarta.annotation.Nullable",
               "org.eclipse.jdt.annotation.Nullable",
               "org.springframework.lang.Nullable",
-              "org.jetbrains.annotations.Nullable"
+              "org.jetbrains.annotations.Nullable",
+              "org.jspecify.annotations.Nullable"
             ]
           }
         }
