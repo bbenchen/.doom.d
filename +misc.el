@@ -11,9 +11,6 @@
 (if (featurep :system 'linux)
     (setq x-select-enable-clipboard-manager nil))
 
-(if (boundp 'pixel-scroll-precision-mode)
-    (pixel-scroll-precision-mode t))
-
 (setq initial-major-mode 'fundamental-mode
       initial-scratch-message nil)
 
