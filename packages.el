@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "d193442fca61b41803baf6446e4052ed034869a6" :built-in (>= emacs-major-version 30))
+(package! project :pin "5ec4512baaacbfb71d5e83bf556001cc5245d282" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "7da881a957b8c15ddcc754dd73543c95b128d716")
@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "90fd7d267f7e8b80a02726ac89c37da7f36c0c03")
+(package! llm :pin "b90c21d612e3af234a26ba996644809c1eb5f007")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -105,7 +105,7 @@
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! websocket-bridge
   :recipe (:host github :repo "ginqi7/websocket-bridge")
-  :pin "40676478e3b2dd5af068b1f7f7024776e7557446")
+  :pin "535364f8fefd791b22525b7640d291e88c80179d")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
   :pin "a488bb7cf3823bf5a0f04cc896f811a68892a448")
@@ -130,13 +130,13 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "116cb75ee1117d72b36e01c1442f76dbfb429259")
+(package! envrc :pin "4ca2166ac72e756d314fc2348ce1c93d807c1a14")
 (package! mb-url :pin "0cfc4e1ac6dd2b9e4fa2d7114d2cc5f33657f180")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "a252760d74a06c4287244ac9d5f4fb19ef2e33fb")
-(package! gptel :pin "35d53cada3e1fc323b6a18739368e85a82a9e419")
+  :pin "38aa5bfa5c5a66664abb5bb9cd7f191d1ac3d915")
+(package! gptel :pin "4b505e72e9ad0cdbf800457996a4b85c6cb68519")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -148,7 +148,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "97c80a20f1a3fa05384de1fec1b26a99b70c1448"))
+      (package! ghub :pin "1fbce5379e21565f497c0f59bbe5349773c4be62"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
@@ -183,7 +183,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "5e13c14a5b009de1dc266f31448fa0b9c023cba3")
+  :pin "d301ec16b0aaddff91a08571885c73de486fcfea")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
