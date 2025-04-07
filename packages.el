@@ -57,10 +57,10 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "5ec4512baaacbfb71d5e83bf556001cc5245d282" :built-in (>= emacs-major-version 30))
+(package! project :pin "369ac661c8005349da1f79d3ed4fe72e5db7a9e4" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "7da881a957b8c15ddcc754dd73543c95b128d716")
+(package! diff-hl :pin "7440baa9b16b1661e41dac8d7be0ffb426524e21")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -135,7 +135,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "38aa5bfa5c5a66664abb5bb9cd7f191d1ac3d915")
+  :pin "13b5a58b30e45c26a0678a43f55a221df56aad08")
 (package! gptel :pin "4b505e72e9ad0cdbf800457996a4b85c6cb68519")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
