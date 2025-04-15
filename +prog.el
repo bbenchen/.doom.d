@@ -560,8 +560,6 @@ The shell command used to build the image is:
                                           "-XX:+UseZGC"
                                           "-XX:ConcGCThreads=4"
                                           "-XX:MaxGCPauseMillis=200"
-                                          "-XX:+ZUncommit"
-                                          "-XX:ZUncommitDelay=10"
                                           "-XX:ParallelGCThreads=6"
                                           "-XX:ZCollectionInterval=120"
                                           "-XX:ZAllocationSpikeTolerance=4"
