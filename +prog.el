@@ -562,6 +562,10 @@ The shell command used to build the image is:
                                           "-XX:MaxGCPauseMillis=200"
                                           "-XX:+ZUncommit"
                                           "-XX:ZUncommitDelay=10"
+                                          "-XX:ParallelGCThreads=6"
+                                          "-XX:ZCollectionInterval=120"
+                                          "-XX:ZAllocationSpikeTolerance=4"
+                                          "-XX:+ZGenerational"
                                           (concat "-javaagent:" lombok-jar-path))))
   (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
