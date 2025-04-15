@@ -91,10 +91,6 @@
 (when (modulep! :completion vertico)
   (if (modulep! :completion vertico +childframe)
       (after! vertico-posframe
-        (custom-set-faces!
-          `(vertico-posframe :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg))
-          `(vertico-posframe-border :background ,(doom-color 'modeline-bg)))
-
         (add-hook! 'doom-load-theme-hook :append
           (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
           (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
@@ -157,8 +153,6 @@
 ;; flymake
 (after! flymake-popon
   (setq flymake-popon-posframe-border-width 0)
-  (custom-set-faces!
-    `(flymake-popon :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg)))
   (add-hook! 'doom-load-theme-hook :append
     (set-face-foreground 'flymake-popon (doom-color 'modeline-fg))
     (set-face-background 'flymake-popon (doom-color 'modeline-bg))))
@@ -214,11 +208,6 @@
   :config
   (setq blamer-idle-time 0.5
         blamer-min-offset 70)
-
-  (custom-set-faces!
-    `(blamer-face :foreground ,(doom-color 'blue) :background unspecified :italic t))
-
-  (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))
 
   (add-hook! 'doom-load-theme-hook :append
     (plist-put! blamer-posframe-configurations :internal-border-color (doom-color 'modeline-bg))

@@ -78,9 +78,6 @@
                 (emacs-module-header-dir (expand-file-name "include" emacs-install-dir)))
           (setq rime-emacs-module-header-root emacs-module-header-dir)))
   :config
-  (custom-set-faces!
-    `(rime-default-face :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg)))
-
   (add-hook! 'doom-load-theme-hook :append
     (set-face-foreground 'rime-default-face (doom-color 'modeline-fg))
     (set-face-background 'rime-default-face (doom-color 'modeline-bg)))
