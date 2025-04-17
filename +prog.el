@@ -489,8 +489,8 @@ The shell command used to build the image is:
     (dolist (buffer '("*lsp-bridge-code-action-menu*" "*lsp-bridge-call-hierarchy*"))
       (add-to-list 'winner-boring-buffers buffer t)))
 
-  (setq lsp-bridge-user-multiserver-dir (expand-file-name "lsp-bridge/multiserver" doom-user-dir)
-        lsp-bridge-user-langserver-dir (expand-file-name "lsp-bridge/langserver" doom-user-dir)
+  (setq lsp-bridge-user-multiserver-dir (expand-file-name "etc/lsp-bridge/multiserver" doom-user-dir)
+        lsp-bridge-user-langserver-dir (expand-file-name "etc/lsp-bridge/langserver" doom-user-dir)
         ;; lsp-bridge-log-level 'debug
         lsp-bridge-enable-completion-in-string t
         lsp-bridge-enable-org-babel t
