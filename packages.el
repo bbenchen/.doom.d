@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "f7a5210acfe1dfaf9ba941e46363226003e32b53")
+(package! llm :pin "e0f5a76c2979b0eeacb142be759213b79d61efe4")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "bde650d0c3beb1b19cf117df1f4295fca8b6e3da")
-(package! gptel :pin "8e20fae2ce03bc12d9ad2dcf695b16bb2c2cd9e7")
+  :pin "bbf70dbf44e004d58a497d544907bbd05c43af93")
+(package! gptel :pin "d7a170fa9116ad9a4ddd8d246ae8aafaa328853a")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -148,7 +148,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "1fbce5379e21565f497c0f59bbe5349773c4be62"))
+      (package! ghub :pin "7467c905cd11199538e96403d1c58ae3b268d852"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
@@ -183,7 +183,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "357da42bfe8bc126994f3c771dfa7b7c3cdfd93d")
+  :pin "c8eb9efe22970288c6bd30817ddb900f05b37283")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
