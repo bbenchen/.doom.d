@@ -565,7 +565,7 @@ The shell command used to build the image is:
                                           "-XX:ZAllocationSpikeTolerance=4"
                                           "-XX:+ZGenerational"
                                           (concat "-javaagent:" lombok-jar-path))))
-  (setq lsp-bridge-jdtls-default-file (expand-file-name "lsp-bridge/langserver/jdtls.json" doom-user-dir))
+  (setq lsp-bridge-jdtls-default-file (expand-file-name "etc/lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
   ;; (setq lsp-bridge-get-multi-lang-server-by-project
   ;;       (lambda (_project-path filepath)
