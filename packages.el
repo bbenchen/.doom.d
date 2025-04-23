@@ -71,7 +71,7 @@
     :pin "2ff446b4b813543b7a90015808d38f362f039b10")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "0b2e87ea5369c96e436d909204624923afab7ab4"))
+    :pin "6eed69cf2b97dce9c6ad329710ed42f0ad674f76"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -125,7 +125,7 @@
 (package! thing-edit
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
-(package! region-occurrences-highlighter :pin "7921b749b641c6682536d58139a48ab25ee2d171")
+(package! region-occurrences-highlighter :pin "9d2093dab566d8fdaf476829271f265824dcd35c")
 (package! visual-replace :pin "2897c4b323cf38b58a23a78ecb5b081192dea3b7")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
@@ -136,7 +136,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "bbf70dbf44e004d58a497d544907bbd05c43af93")
-(package! gptel :pin "d7a170fa9116ad9a4ddd8d246ae8aafaa328853a")
+(package! gptel :pin "da01adfff462f8302ffb6e5076b84d31d6e0ac83")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -157,7 +157,7 @@
     :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
-(package! auto-rename-tag :pin "ceda8dcb436cc7f2a7b99d33bdeb152a242745a1")
+(package! auto-rename-tag :pin "b58b242918217465b0c59e4b440b7ca808e3946b")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
