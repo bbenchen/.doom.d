@@ -178,6 +178,8 @@
 
 ;; (package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
 
+(package! separedit :pin "0001d2b4fcc6e5f40ebc82dd3c80ac7ce4031234")
+
 (package! lsp-bridge
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"

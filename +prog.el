@@ -3,6 +3,18 @@
 (if (modulep! :editor file-templates)
     (set-file-template! "/pom\\.xml$" :trigger "__pom.xml" :mode 'nxml-mode))
 
+;; separedit
+(use-package! separedit
+  :config
+  (setq separedit-default-mode 'gfm-mode
+        separedit-remove-trailing-spaces-in-comment t
+        separedit-continue-fill-column t
+        separedit-preserve-string-indentation t)
+
+  (map! :leader
+        :map prog-mode-map
+        "'" #'separedit))
+
 ;; markdown
 (after! markdown-toc
   (setq markdown-toc-indentation-space 2))
