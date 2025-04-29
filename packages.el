@@ -60,7 +60,7 @@
 (package! project :pin "369ac661c8005349da1f79d3ed4fe72e5db7a9e4" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "7440baa9b16b1661e41dac8d7be0ffb426524e21")
+(package! diff-hl :pin "ed47dc181224c0c6225886b191cd071dc6d29f73")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "2ff446b4b813543b7a90015808d38f362f039b10")
+    :pin "4eb4989d1a708e81639a7ef7dbff43a34894caee")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "6eed69cf2b97dce9c6ad329710ed42f0ad674f76"))
@@ -115,7 +115,7 @@
 
 (package! editorconfig
   :recipe (:nonrecursive t)
-  :pin "1a9942746cf5b10daae8962f380b5f2a459086f3"
+  :pin "d2beb3ec2e7f84505818594124a7202d5d6d0185"
   :built-in (>= emacs-major-version 30))
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
@@ -135,7 +135,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "afc1937f280246c06537d1fec5d6c6b07abbba57")
+  :pin "9eef7a26e50669b5fea16ede7bbf9a11848dba4d")
 (package! gptel :pin "db4e5c7ea39f7d58d8ca4856c98a6df71b1e18bf")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
@@ -148,7 +148,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "7467c905cd11199538e96403d1c58ae3b268d852"))
+      (package! ghub :pin "214a14627f463449e8ad01d1beb172917120e816"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
@@ -185,7 +185,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "268cd62f2333a85604250a306ed8f761c484f3b2")
+  :pin "b30a4107b336bcef835bc5fea2b55f1635f62c36")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
