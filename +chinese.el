@@ -77,6 +77,9 @@
                                                        (concat "/opt/homebrew/opt/emacs-mac"))))
                 (emacs-module-header-dir (expand-file-name "include" emacs-install-dir)))
           (setq rime-emacs-module-header-root emacs-module-header-dir)))
+
+  (custom-set-faces!
+    `(rime-default-face :foreground ,(doom-color 'modeline-fg) :background ,(doom-color 'modeline-bg)))
   :config
   (add-hook! 'doom-load-theme-hook :append
     (set-face-foreground 'rime-default-face (doom-color 'modeline-fg))
