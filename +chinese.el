@@ -146,10 +146,6 @@ unwanted space when exporting org-mode to hugo markdown."
 (use-package! go-translate
   :defer t
   :init
-  (map! :leader
-        (:prefix-map ("y" . "translate")
-         :desc "Google translate" "g" #'gt-do-translate
-         :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt))
   (add-hook! 'doom-load-theme-hook :append
     (setq gt-pop-posframe-backcolor (face-background 'mode-line)
           gt-pop-posframe-forecolor (face-foreground 'mode-line)))

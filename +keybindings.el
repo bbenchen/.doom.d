@@ -46,14 +46,14 @@
 (map! :map vterm-mode-map
       "C-\\" #'toggle-input-method)
 
-(map! :localleader
-      :map scala-mode-map
+(map! :map scala-mode-map
+      :localleader
       (:prefix ("b" . "sbt")
                "." #'sbt-hydra
                "b" #'sbt-command))
 
-(map! :localleader
-      :map dockerfile-ts-mode-map
+(map! :map dockerfile-ts-mode-map
+      :localleader
       :desc "Build"           "b"   #'dockerfile-build-buffer
       :desc "Build not cache" "M-b" #'dockerfile-build-no-cache-buffer)
 
@@ -98,7 +98,11 @@
                    "<up>"    #'shrink-window
                    "<down>"  #'enlarge-window
                    "<left>"  #'shrink-window-horizontally
-                   "<right>" #'enlarge-window-horizontally))
+                   "<right>" #'enlarge-window-horizontally)
+
+      (:prefix-map ("y" . "translate")
+         :desc "Google translate" "g" #'gt-do-translate
+         :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt))
 
 (map! (:when (modulep! :tools make)
         (:map makefile-mode-map
