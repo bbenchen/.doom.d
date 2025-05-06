@@ -60,7 +60,7 @@
 (package! project :pin "27c6b049145e5d382579bcf1e3e2ea96c6abd3c9" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "ed47dc181224c0c6225886b191cd071dc6d29f73")
+(package! diff-hl :pin "0a378d035726fe66015fc740503be592bca8637c")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "4eb4989d1a708e81639a7ef7dbff43a34894caee")
+    :pin "b39071e6005750f7fcf40fc0d6be16c31fc794dc")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "6eed69cf2b97dce9c6ad329710ed42f0ad674f76"))
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "07a47cfa7860ff39411c9c50919acd79a9b79338")
-(package! gptel :pin "db4e5c7ea39f7d58d8ca4856c98a6df71b1e18bf")
+  :pin "4c514f65a5460425447287dadec56a11a5234fdf")
+(package! gptel :pin "1aa5f1c10df34aeb08f677cd4aa4ef1fc12e87df")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -148,7 +148,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "214a14627f463449e8ad01d1beb172917120e816"))
+      (package! ghub :pin "290482c5d22ce8dcdddd764e7318dd381fe6010e"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
@@ -185,7 +185,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "b30a4107b336bcef835bc5fea2b55f1635f62c36")
+  :pin "ad62de02fcb58b777c76d5dbb48b72226da0d0ae")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
