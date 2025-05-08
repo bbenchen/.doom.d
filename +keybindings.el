@@ -44,7 +44,9 @@
       "TAB" #'dirvish-subtree-toggle)
 
 (map! :map vterm-mode-map
-      "C-\\" #'toggle-input-method)
+      "C-\\"       #'toggle-input-method
+      "M-<return>" #'vterm--self-insert
+      "M-RET"      #'vterm--self-insert)
 
 (map! :map scala-mode-map
       :localleader
