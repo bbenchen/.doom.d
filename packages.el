@@ -60,7 +60,7 @@
 (package! project :pin "27c6b049145e5d382579bcf1e3e2ea96c6abd3c9" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "0a378d035726fe66015fc740503be592bca8637c")
+(package! diff-hl :pin "c2852b0e4b9d8b3b499b5df72d1fc549838a646e")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -75,7 +75,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "14f7278dd7eb5eca762a6ff32467c72c661c0aae")
+(package! nerd-icons :pin "1cb883d928ec046358d2b65db0bb898a1dfffd0a")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
@@ -135,8 +135,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "4c514f65a5460425447287dadec56a11a5234fdf")
-(package! gptel :pin "1aa5f1c10df34aeb08f677cd4aa4ef1fc12e87df")
+  :pin "43780ca542083e43041ba73b9c04a3a7dee9aea2")
+(package! gptel :pin "a7dde728eb6f6046641287d63e17ae8aef153119")
 (package! corsair :pin "f750a435d6be68f0d75dc5a90f8aa3cb58e8c16a")
 
 (package! easydraw
@@ -178,7 +178,7 @@
 
 ;; (package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
 
-(package! separedit :pin "0001d2b4fcc6e5f40ebc82dd3c80ac7ce4031234")
+(package! separedit :pin "5cb46a65fc6e12b753dce8f581fbfa144d011a80")
 
 (package! lsp-bridge
   :recipe (:host github
