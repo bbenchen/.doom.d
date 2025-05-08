@@ -80,8 +80,10 @@
        :desc "Duplicate" "d" #'duplicate-dwim)
 
       (:prefix-map ("o" . "open")
-       :desc "ChatGPT"   "c" #'bc/start-gptel
-       :desc "View undo" "u" #'vundo)
+       :desc "Aidermacs"      "a" #'aidermacs-run
+       :desc "Aidermacs Menu" "A" #'aidermacs-transient-menu
+       :desc "ChatGPT"        "c" #'bc/start-gptel
+       :desc "View undo"      "u" #'vundo)
 
       (:prefix-map ("t" . "toggle")
        :desc "Command window"     "C" #'bc/command-log-toggle-window
