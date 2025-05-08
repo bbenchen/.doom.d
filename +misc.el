@@ -402,16 +402,17 @@
   :config
   (setq aidermacs-auto-commits nil
         aidermacs-default-model "deepseek/deepseek-chat"
-        aidermacs-use-architect-mode nil
+        aidermacs-use-architect-mode t
         aidermacs-architect-model "deepseek/deepseek-chat"
         aidermacs-editor-model "deepseek/deepseek-chat"
-        aidermacs-extra-args '("--model" "deepseek" "--no-check-update" "--chat-language" "Chinese")
-        aidermacs-backend 'comint
+        aidermacs-weak-model "deepseek/deepseek-chat"
+        aidermacs-extra-args '("--no-check-update" "--chat-language" "Chinese")
+        aidermacs-watch-files t
+        aidermacs-backend 'vterm
         aidermacs-comint-multiline-newline-key "S-<return>"
         aidermacs-vterm-multiline-newline-key "S-<return>")
 
-  (defadvice! bc/aidermacs-run-before-advice()
-    :before #'aidermacs-run
+  (add-hook! 'aidermacs-before-run-backend-hook
     (cl-dolist (pair '(("deepseek" . "api.deepseek.com")
                        ("openrouter" . "openrouter.ai")))
       (let* ((env-name (concat (upcase (car pair)) "_API_KEY")))
