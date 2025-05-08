@@ -405,7 +405,7 @@
         aidermacs-use-architect-mode nil
         aidermacs-architect-model "deepseek/deepseek-chat"
         aidermacs-editor-model "deepseek/deepseek-chat"
-        aidermacs-extra-args '("--deepseek" "--no-check-update" "--chat-language" "Chinese")
+        aidermacs-extra-args '("--model" "deepseek" "--no-check-update" "--chat-language" "Chinese")
         aidermacs-backend 'comint
         aidermacs-comint-multiline-newline-key "S-<return>"
         aidermacs-vterm-multiline-newline-key "S-<return>")
