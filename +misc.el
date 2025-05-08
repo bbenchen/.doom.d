@@ -436,7 +436,4 @@
 
   (defun bc/start-gptel ()
     (interactive)
-    (gptel "*ChatGPT*" nil nil t))
-
-  (require 'corsair nil t)
-  (setq corsair-chat-buffer-name "*ChatGPT*"))
+    (gptel "*ChatGPT*" nil nil t)))
