@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "b39071e6005750f7fcf40fc0d6be16c31fc794dc")
+    :pin "becd29c756a3272bc91d09de642df99a0fca6cee")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "6eed69cf2b97dce9c6ad329710ed42f0ad674f76"))
@@ -93,7 +93,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "88e2f56d7ecb2348c40d5ea91d154534defe7b2f")
+(package! llm :pin "f92d6496ce286820cadf1508e84d5accd967c57a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -108,7 +108,7 @@
   :pin "535364f8fefd791b22525b7640d291e88c80179d")
 (package! dictionary-overlay
   :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "a488bb7cf3823bf5a0f04cc896f811a68892a448")
+  :pin "692fdcec3082e58d0ed57b36ad430aebf7352cd0")
 (package! deno-bridge
   :recipe (:host github :repo "bbenchen/deno-bridge")
   :pin "eb36e3da4d784c391a277a0da82d3f8cd3b4a96b")
@@ -136,18 +136,18 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "43780ca542083e43041ba73b9c04a3a7dee9aea2")
-(package! gptel :pin "a7dde728eb6f6046641287d63e17ae8aef153119")
+(package! gptel :pin "3d1856f78d242d84ec61f8a854c968b029fdbe34")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8ccc58b23754fcf5c3669345c7460e6d5ae32211")
-(package! verb :pin "332a3ae223515c701d4641905808396a667665de")
+(package! verb :pin "cc1d05d8890a98f576632632f38da2875c5f8a84")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "290482c5d22ce8dcdddd764e7318dd381fe6010e"))
+      (package! ghub :pin "6bb612e7b7eada22569d84cc529f4ca36e08032d"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
@@ -184,7 +184,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "ad62de02fcb58b777c76d5dbb48b72226da0d0ae")
+  :pin "edb00ab3303656106b5219cedbbb987e854fe8cc")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
