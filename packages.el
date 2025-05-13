@@ -136,11 +136,11 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "43780ca542083e43041ba73b9c04a3a7dee9aea2")
-(package! gptel :pin "3d1856f78d242d84ec61f8a854c968b029fdbe34")
+(package! gptel :pin "7e22a97127c9fa8649c714334f15c6d978fe0616")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "8ccc58b23754fcf5c3669345c7460e6d5ae32211")
+  :pin "bccf0db700cd076f2f7e2786ce922fc9befb5ad2")
 (package! verb :pin "cc1d05d8890a98f576632632f38da2875c5f8a84")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
@@ -153,7 +153,7 @@
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
-    :pin "617d1b239942af62adaedfe4ce248f09a3a67029")
+    :pin "64b3af92166c957bc37a37be5ce18b31f21379f7")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
 (package! auto-rename-tag :pin "b58b242918217465b0c59e4b440b7ca808e3946b")
