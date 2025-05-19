@@ -68,17 +68,18 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "becd29c756a3272bc91d09de642df99a0fca6cee")
+    :pin "3aa35be257d8716d3614166fabdef12ef04e816e")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "6eed69cf2b97dce9c6ad329710ed42f0ad674f76"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "1cb883d928ec046358d2b65db0bb898a1dfffd0a")
+(package! nerd-icons :pin "d972dee349395ffae8fceae790d22fedc8fe08e8")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
+(package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
   (package! org-msg :pin "59e2042e5f23e25f31c6aef0db1e70c6f54f117d"))
@@ -93,7 +94,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "f92d6496ce286820cadf1508e84d5accd967c57a")
+(package! llm :pin "2fee24ffcb58729fd3a5fc23421368b81f10bd95")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -135,8 +136,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "43780ca542083e43041ba73b9c04a3a7dee9aea2")
-(package! gptel :pin "fb1e64dd6a2a06d468c0adedac5025181ac47486")
+  :pin "e3bc846e0f98842bcf96bc591c507da5a1136903")
+(package! gptel :pin "e451038dfb08888628a9e0281e88c677a1eee59f")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
