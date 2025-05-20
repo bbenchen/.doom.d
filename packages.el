@@ -60,7 +60,7 @@
 (package! project :pin "27c6b049145e5d382579bcf1e3e2ea96c6abd3c9" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "c2852b0e4b9d8b3b499b5df72d1fc549838a646e")
+(package! diff-hl :pin "9b032018fda8eb6c241bba1ec0e5c354ad523b2c")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -94,7 +94,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "2fee24ffcb58729fd3a5fc23421368b81f10bd95")
+(package! llm :pin "3bfffd57f43c73b72b420cb61eb15b7409e027db")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -137,7 +137,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "e3bc846e0f98842bcf96bc591c507da5a1136903")
-(package! gptel :pin "e451038dfb08888628a9e0281e88c677a1eee59f")
+(package! gptel :pin "c03e4f3a4768c46cc7c581e52ee130e76a2e0173")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
@@ -185,7 +185,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "edb00ab3303656106b5219cedbbb987e854fe8cc")
+  :pin "c34a8d50014da8dba6b3dc5e9be544f82047d367")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
