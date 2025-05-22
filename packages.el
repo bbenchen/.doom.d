@@ -71,14 +71,14 @@
     :pin "3aa35be257d8716d3614166fabdef12ef04e816e")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "6eed69cf2b97dce9c6ad329710ed42f0ad674f76"))
+    :pin "20b5e723ee1bf676428c56a74c592f0b07d78442"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
 (package! nerd-icons :pin "d972dee349395ffae8fceae790d22fedc8fe08e8")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "187b7e7454e210d08308a42ccffe7f44b8d0ef58")
+  :pin "de83ac514bd597c494a9256cbddf782fa2ebbdb7")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
@@ -136,7 +136,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "e3bc846e0f98842bcf96bc591c507da5a1136903")
+  :pin "b1906a41548153f7808306b86bef1d1e56be84bd")
 (package! gptel :pin "c03e4f3a4768c46cc7c581e52ee130e76a2e0173")
 
 (package! easydraw
@@ -185,7 +185,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "c34a8d50014da8dba6b3dc5e9be544f82047d367")
+  :pin "cddd11986ea8849241caa6d135078e56be649d55")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
