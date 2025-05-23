@@ -136,8 +136,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "b1906a41548153f7808306b86bef1d1e56be84bd")
-(package! gptel :pin "c03e4f3a4768c46cc7c581e52ee130e76a2e0173")
+  :pin "29ba1b8183a1f8e6de0c6601a56358a9d2c3a704")
+(package! gptel :pin "a40e219fad21e4214da840b0852a73b6fc174d93")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
