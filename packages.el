@@ -94,7 +94,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "3bfffd57f43c73b72b420cb61eb15b7409e027db")
+(package! llm :pin "05619e54a1df0597b4e67b960f022d0160bde3bd")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -136,12 +136,12 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "29ba1b8183a1f8e6de0c6601a56358a9d2c3a704")
-(package! gptel :pin "a40e219fad21e4214da840b0852a73b6fc174d93")
+  :pin "9feca8d5e169abdc9a7fafda966ad73da78baf71")
+(package! gptel :pin "7e103f3d03ccd40e7272b842dd462b27cb5a8da5")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "bccf0db700cd076f2f7e2786ce922fc9befb5ad2")
+  :pin "8007f50c1c1734325c47939904f486753c7dd8ee")
 (package! verb :pin "cc1d05d8890a98f576632632f38da2875c5f8a84")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
