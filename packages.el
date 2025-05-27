@@ -137,7 +137,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "9feca8d5e169abdc9a7fafda966ad73da78baf71")
-(package! gptel :pin "7e103f3d03ccd40e7272b842dd462b27cb5a8da5")
+(package! gptel :pin "5fad6f18a608818c70ae7f9332e006c4cfaa1838")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
@@ -185,7 +185,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "cddd11986ea8849241caa6d135078e56be649d55")
+  :pin "942e4fab8d2183e190eeb080b978233ce7a8ce48")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
