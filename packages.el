@@ -94,7 +94,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "05619e54a1df0597b4e67b960f022d0160bde3bd")
+(package! llm :pin "9488a689846d03fdc773bd8d775a995796fc22aa")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -136,7 +136,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "9feca8d5e169abdc9a7fafda966ad73da78baf71")
+  :pin "76cca2c1b547e6855bc9e4fb8781da6b79cc81aa")
 (package! gptel :pin "5fad6f18a608818c70ae7f9332e006c4cfaa1838")
 
 (package! easydraw
