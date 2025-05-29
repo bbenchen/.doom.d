@@ -422,7 +422,7 @@
 ;; gptel
 (use-package! gptel
   :defer t
-  :commands bc/start-gptel gptel
+  :commands bc/start-gptel
   :config
   (setq gptel-default-mode 'markdown-mode
         gptel-model 'gpt-4o-mini
@@ -431,6 +431,16 @@
                         :stream t
                         :host "openkey.cloud"
                         :models gptel--openai-models))
+
+  (setq gptel-display-buffer-action nil)  ; if user changes this, popup manager will bow out
+  (set-popup-rule!
+    (lambda (bname _action)
+      (and (null gptel-display-buffer-action)
+           (buffer-local-value 'gptel-mode (get-buffer bname))))
+    :select t
+    :size 0.3
+    :quit nil
+    :ttl nil)
 
   (add-hook! 'gptel-post-stream-hook #'gptel-auto-scroll)
   (add-hook! 'gptel-post-response-hook #'gptel-end-of-response)
