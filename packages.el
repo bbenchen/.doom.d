@@ -127,7 +127,7 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "9d2093dab566d8fdaf476829271f265824dcd35c")
-(package! visual-replace :pin "2897c4b323cf38b58a23a78ecb5b081192dea3b7")
+(package! visual-replace :pin "687a59a1e3438d20e413f50d5c773c06bf705e1f")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -137,7 +137,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "76cca2c1b547e6855bc9e4fb8781da6b79cc81aa")
-(package! gptel :pin "5fad6f18a608818c70ae7f9332e006c4cfaa1838")
+(package! gptel :pin "7a789df9056dab4eca2eb76a99a1c0bb8ae77c28")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
