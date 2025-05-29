@@ -424,7 +424,7 @@
   :defer t
   :commands bc/start-gptel gptel
   :config
-  (setq gptel-default-mode 'org-mode
+  (setq gptel-default-mode 'markdown-mode
         gptel-model 'gpt-4o-mini
         gptel-backend (gptel-make-openai "ChatGPT"
                         :key 'gptel-api-key
@@ -438,3 +438,7 @@
   (defun bc/start-gptel ()
     (interactive)
     (gptel "*ChatGPT*" nil nil t)))
+
+;; gptel-quick
+(use-package! gptel-quick
+  :defer t)

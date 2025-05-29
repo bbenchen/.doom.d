@@ -82,9 +82,16 @@
        :desc "Duplicate" "d" #'duplicate-dwim)
 
       (:prefix-map ("o" . "open")
-       :desc "Aidermacs"      "a" #'aidermacs-run
-       :desc "Aidermacs Menu" "A" #'aidermacs-transient-menu
-       :desc "ChatGPT"        "c" #'bc/start-gptel
+       (:prefix ("l" . "llm")
+        :desc "Open aidermacs"       "a" #'aidermacs-run
+        :desc "Open aidermacs menu"  "A" #'aidermacs-transient-menu
+        :desc "Add text to gptel"    "c" #'gptel-add
+        :desc "Explain"              "e" #'gptel-quick
+        :desc "Add file to gptel"    "f" #'gptel-add-file
+        :desc "Open gptel"           "l" #'bc/start-gptel
+        :desc "Open gptel menu"      "m" #'gptel-menu
+        :desc "Rewrite"              "r" #'gptel-rewrite
+        :desc "Send to gptel"        "s" #'gptel-send)
        :desc "View undo"      "u" #'vundo)
 
       (:prefix-map ("t" . "toggle")

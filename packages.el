@@ -138,6 +138,9 @@
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "76cca2c1b547e6855bc9e4fb8781da6b79cc81aa")
 (package! gptel :pin "7a789df9056dab4eca2eb76a99a1c0bb8ae77c28")
+(package! gptel-quick
+  :recipe (:host github :repo "karthink/gptel-quick")
+  :pin "34acd437a7af8a387c14428bd1abdb3cd9e95d9d")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
