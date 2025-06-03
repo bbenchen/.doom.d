@@ -104,6 +104,16 @@
       (orderless-regexp (pinyinlib-build-regexp-string str)))
     (add-to-list 'orderless-matching-styles 'orderless-regexp-pinyin)))
 
+;; golden-ratio-scroll-screen
+(use-package! golden-ratio-scroll-screen
+  :config
+  (add-hook! 'doom-load-theme-hook :append
+    (set-face-foreground 'golden-ratio-scroll-highlight-line-face 'unspecified)
+    (set-face-background 'golden-ratio-scroll-highlight-line-face (doom-color 'modeline-bg)))
+
+  (map! [remap scroll-down-command] #'golden-ratio-scroll-screen-down
+        [remap scroll-up-command]   #'golden-ratio-scroll-screen-up))
+
 ;; modeline
 (setq +modeline-height 24)
 ;；set modeline time format
