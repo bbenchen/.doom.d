@@ -68,10 +68,10 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "3aa35be257d8716d3614166fabdef12ef04e816e")
+    :pin "e3f5dc9eda1ba01cab86d424e1723475cf941f1a")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "20b5e723ee1bf676428c56a74c592f0b07d78442"))
+    :pin "327757e4361fdc9a639aad14536b5e5d70cd0502"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -131,16 +131,16 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "4ca2166ac72e756d314fc2348ce1c93d807c1a14")
-(package! mb-url :pin "0cfc4e1ac6dd2b9e4fa2d7114d2cc5f33657f180")
+(package! envrc :pin "cb5f6d2a4217c1e2cc963072aaa5ecfe257ab378")
+(package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "1f4fe4e8ac05c12c310e6c32893b4ab519efbd47")
-(package! gptel :pin "71d1c7ec8f9ac1d991267e4576d89b6adb093584")
+  :pin "8ce3d8cf395ca178c26f0f6eb03e73f2a6f9e4fd")
+(package! gptel :pin "3bfe760d0fadb08cf0ffbdc92e85727864ce179d")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
-  :pin "34acd437a7af8a387c14428bd1abdb3cd9e95d9d")
+  :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
@@ -151,7 +151,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "6bb612e7b7eada22569d84cc529f4ca36e08032d"))
+      (package! ghub :pin "97a07691efad6fc16bc000a35be80d4f8dae251a"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
