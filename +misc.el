@@ -148,7 +148,8 @@
 ;; vterm
 (setq vterm-always-compile-module nil)
 (after! vterm
-  (setq vterm-disable-underline t))
+  (setq vterm-disable-underline t
+        vterm-timer-delay 0.01))
 
 ;; dired
 (after! dired
