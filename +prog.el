@@ -325,6 +325,11 @@ The shell command used to build the image is:
   (set-docsets! 'dockerfile-ts-mode "Docker")
   (set-formatter! 'dockfmt '("dockfmt" "fmt" filepath) :modes '(dockerfile-ts-mode)))
 
+;; dockerignore
+(after! git-modes
+  (add-to-list 'auto-mode-alist
+               (cons "/.dockerignore\\'" 'gitignore-mode)))
+
 ;; yaml
 (use-package! yaml-ts-mode
   :when (treesit-available-p))
