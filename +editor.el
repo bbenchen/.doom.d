@@ -58,9 +58,9 @@
 ;; region-occurrences-highlighter
 (use-package! region-occurrences-highlighter
   :config
-  (map! (:map region-occurrences-highlighter-nav-mode-map
-              "M-n" #'region-occurrences-highlighter-next
-              "M-p" #'region-occurrences-highlighter-prev))
+  (map! :map region-occurrences-highlighter-nav-mode-map
+        "M-n" #'region-occurrences-highlighter-next
+        "M-p" #'region-occurrences-highlighter-prev)
   (add-hook! (prog-mode org-mode text-mode conf-mode) #'region-occurrences-highlighter-mode))
 
 ;; visual-replace
