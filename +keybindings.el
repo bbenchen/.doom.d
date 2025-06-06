@@ -112,8 +112,14 @@
                    "<right>" #'enlarge-window-horizontally)
 
       (:prefix-map ("y" . "translate")
-         :desc "Google translate" "g" #'gt-do-translate
-         :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt))
+         :desc "Google translate"        "g" #'gt-do-translate
+         :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt
+         :desc "Insert translated name"  "i" #'insert-translated-name-insert
+         :desc "Bing translate"          "b" #'popweb-dict-bing-pointer
+         :desc "Bing translate input"    "B" #'popweb-dict-bing-input
+         :desc "Youdao translate"        "y" #'popweb-dict-youdao-pointer
+         :desc "Youdao translate input"  "Y" #'popweb-dict-youdao-input
+         :desc "Play voice"              "p" #'popweb-dict-say-word))
 
 (map! (:when (modulep! :tools make)
         (:map makefile-mode-map

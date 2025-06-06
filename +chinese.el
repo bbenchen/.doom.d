@@ -212,22 +212,19 @@ unwanted space when exporting org-mode to hugo markdown."
       ;;                                            :url "https://openkey.cloud/v1"))
       ))
 
-  ;; (defvar insert-translated-name-is-open-ws-butler nil)
-  ;; (defadvice! insert-translated-name-retrieve-translation-a (&rest _)
-  ;;   :before #'insert-translated-name-retrieve-translation
-  ;;   (setq insert-translated-name-is-open-ws-butler ws-butler-mode)
-  ;;   (when insert-translated-name-is-open-ws-butler
-  ;;     (ws-butler-mode -1)))
+  (when (featurep 'ws-butler)
+    (defvar insert-translated-name-is-open-ws-butler nil)
+    (defadvice! bc/insert-translated-name-retrieve-translation-before-advice (&rest _)
+      :before #'insert-translated-name-retrieve-translation
+      (setq insert-translated-name-is-open-ws-butler (bound-and-true-p ws-butler-mode))
+      (when insert-translated-name-is-open-ws-butler
+        (ws-butler-mode -1)))
 
-  ;; (defadvice! insert-translated-name-update-translation-in-buffer-a (&rest _)
-  ;;   :after #'insert-translated-name-update-translation-in-buffer
-  ;;   (when insert-translated-name-is-open-ws-butler
-  ;;     (ws-butler-mode +1))
-  ;;   (setq insert-translated-name-is-open-ws-butler nil))
-
-  (map! :leader
-        (:prefix-map ("y" . "translate")
-         :desc "Insert translated name" "i" #'insert-translated-name-insert)))
+    (defadvice! bc/insert-translated-name-update-translation-in-buffer-after-advice (&rest _)
+      :after #'insert-translated-name-update-translation-in-buffer
+      (when insert-translated-name-is-open-ws-butler
+        (ws-butler-mode +1))
+      (setq insert-translated-name-is-open-ws-butler nil))))
 
 ;; dictionary-overlay
 (use-package! websocket-bridge)
@@ -244,14 +241,7 @@ unwanted space when exporting org-mode to hugo markdown."
 (use-package! popweb-dict
   :after popweb
   :config
-  (setq popweb-dict-say-word-p nil)
-  (map! :leader
-        (:prefix-map ("y" . "translate")
-         :desc "Bing translate"         "b" #'popweb-dict-bing-pointer
-         :desc "Bing translate input"   "B" #'popweb-dict-bing-input
-         :desc "Youdao translate"       "y" #'popweb-dict-youdao-pointer
-         :desc "Youdao translate input" "Y" #'popweb-dict-youdao-input
-         :desc "Play voice"             "p" #'popweb-dict-say-word))
+  ;; (setq popweb-dict-say-word-p nil)
 
   (defadvice! bc/popweb-dict-region-or-word-override-advice ()
     :override #'popweb-dict-region-or-word
