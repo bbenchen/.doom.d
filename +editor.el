@@ -40,7 +40,8 @@
 (use-package! auto-save
   :config
   (setq auto-save-idle 5
-        auto-save-silent t)   ; quietly save
+        auto-save-silent t ; quietly save
+        auto-save-delete-trailing-whitespace t)
 
   ;; custom predicates if you don't want auto save.
   ;; disable auto save mode when current filetype is an gpg file.
