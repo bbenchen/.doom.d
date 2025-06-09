@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "1539a2f9038f47bc01de987266c1b1c96671e8db" :built-in (>= emacs-major-version 30))
+(package! project :pin "de0deb8dbfb65eae6eaaf45aea77f12aa9a25f89" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "9b032018fda8eb6c241bba1ec0e5c354ad523b2c")
@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "e3f5dc9eda1ba01cab86d424e1723475cf941f1a")
+    :pin "59979a1f5c403d767e59de720387eacee2af72bb")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "327757e4361fdc9a639aad14536b5e5d70cd0502"))
@@ -94,7 +94,7 @@
 
 (package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "e04db690debaec43833fb320f14089b752eda687")
+(package! llm :pin "cbb4fa950cfb6fe076b43cdf55d0086411cad17b")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -137,7 +137,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "8ce3d8cf395ca178c26f0f6eb03e73f2a6f9e4fd")
-(package! gptel :pin "6abda6f465c46216e37ba6aad8daa5fcd5761326")
+(package! gptel :pin "94bf19da93aee9a101429d7ecbfbb9c7c5b67216")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
