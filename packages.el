@@ -60,7 +60,7 @@
 (package! project :pin "de0deb8dbfb65eae6eaaf45aea77f12aa9a25f89" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "9b032018fda8eb6c241bba1ec0e5c354ad523b2c")
+(package! diff-hl :pin "9c4bc17830a7954ef7ab4897730fb56659fbac70")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -78,7 +78,7 @@
 (package! nerd-icons :pin "d972dee349395ffae8fceae790d22fedc8fe08e8")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "de83ac514bd597c494a9256cbddf782fa2ebbdb7")
+  :pin "e8ba57ba27b55460ee556e45becbb90d618b834f")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
@@ -137,7 +137,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "02f8f3ea6ab6c5b7c554c81dd4eb729762ad6910")
-(package! gptel :pin "a5af15c770b66a61d0609a736e1db37495655559")
+(package! gptel :pin "fdd4ede799fdcbdf16f064a5b720ca507bbddca8")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
