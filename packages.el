@@ -128,6 +128,9 @@
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "9d2093dab566d8fdaf476829271f265824dcd35c")
 (package! visual-replace :pin "687a59a1e3438d20e413f50d5c773c06bf705e1f")
+(package! wraplish
+  :recipe (:host github :repo "manateelazycat/wraplish" :files ("*.el" "*.py"))
+  :pin "cb44f60622c2828788d6f8a7d1ee9cbb734061e7")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
