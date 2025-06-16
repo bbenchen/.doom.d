@@ -60,7 +60,7 @@
 (package! project :pin "de0deb8dbfb65eae6eaaf45aea77f12aa9a25f89" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "9c4bc17830a7954ef7ab4897730fb56659fbac70")
+(package! diff-hl :pin "482ca2f78b5dcbb6119769e15bf011663a5cf0a0")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -68,14 +68,14 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "59979a1f5c403d767e59de720387eacee2af72bb")
+    :pin "4c0ee315984323dd8f3d071b973532bbf46671d3")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "327757e4361fdc9a639aad14536b5e5d70cd0502"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "d972dee349395ffae8fceae790d22fedc8fe08e8")
+(package! nerd-icons :pin "71d162a75bf6178ecff1536ac94dfa25e617b6ed")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "e8ba57ba27b55460ee556e45becbb90d618b834f")
@@ -86,13 +86,13 @@
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
-  :pin "fa50ae0c5cf992e95288a3da9c02948a9b42c009")
+  :pin "841e7d80e950865dfffa89bfde969c1d39aebcb1")
 
 (package! pinyinlib :pin "1772c79b6f319b26b6a394a8dda065be3ea4498d")
 
-(package! rime :pin "80f09ed36d9f0ca7ce4e1a3ca1020dc4c80ba335")
+(package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "a924e0bd6b37d424c222377982e6f71a4ddf4452")
+(package! go-translate :pin "61fbcb7a892f00bd564366c4a3fd2ae6436c2526")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "cbb4fa950cfb6fe076b43cdf55d0086411cad17b")
 (package! insert-translated-name
@@ -136,8 +136,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "02f8f3ea6ab6c5b7c554c81dd4eb729762ad6910")
-(package! gptel :pin "fdd4ede799fdcbdf16f064a5b720ca507bbddca8")
+  :pin "25778c6f62db28b2a3c2367c4203306040f2cb95")
+(package! gptel :pin "d91675db959b18cded8afb4902a52b19fd476ac9")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
