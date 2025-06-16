@@ -22,8 +22,9 @@
 ;; hungry-delete
 (use-package! hungry-delete
   :config
-  (add-hook! (prog-mode text-mode conf-mode) #'hungry-delete-mode)
-  (setq-default hungry-delete-chars-to-skip " \t\f\v"))
+  (setq-default hungry-delete-chars-to-skip " \t\f\v")
+
+  (add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook) #'hungry-delete-mode))
 
 ;; centered-cursor
 (use-package! centered-cursor-mode
@@ -62,7 +63,8 @@
   (map! :map region-occurrences-highlighter-nav-mode-map
         "M-n" #'region-occurrences-highlighter-next
         "M-p" #'region-occurrences-highlighter-prev)
-  (add-hook! (prog-mode org-mode text-mode conf-mode) #'region-occurrences-highlighter-mode))
+
+  (add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook) #'region-occurrences-highlighter-mode))
 
 ;; visual-replace
 (use-package! visual-replace
