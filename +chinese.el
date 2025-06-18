@@ -153,7 +153,7 @@ unwanted space when exporting org-mode to hugo markdown."
     (setq gt-pop-posframe-backcolor (face-background 'mode-line)
           gt-pop-posframe-forecolor (face-foreground 'mode-line)))
   :config
-  (set-popup-rule! "^\\*Go-Translate\\*" :side 'right :size 0.4 :select t)
+  (set-popup-rule! "^\\*Go-Translate\\*" :side 'bottom :size 0.3 :select t)
   (setq gt-langs '(en zh)
         gt-posframe-pop-render-timeout nil
         gt-pop-posframe-backcolor (face-background 'mode-line)
@@ -162,8 +162,8 @@ unwanted space when exporting org-mode to hugo markdown."
   (setq gt-default-translator
         (gt-translator
          :taker (gt-taker :pick 'paragraph)
-         :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser)))
-         :render (gt-posframe-pop-render)))
+         :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser) :cache 'word))
+         :render (gt-buffer-render :buffer-name "*Go-Translate*")))
 
   (defun bc/gt-do-translate-prompt ()
     "Do the translation of this prompt"
