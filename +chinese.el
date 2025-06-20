@@ -163,7 +163,7 @@ unwanted space when exporting org-mode to hugo markdown."
         (gt-translator
          :taker (gt-taker :pick 'paragraph)
          :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser) :cache 'word))
-         :render (gt-buffer-render :buffer-name "*Go-Translate*")))
+         :render (gt-buffer-render :name "*Go-Translate*")))
 
   (defun bc/gt-do-translate-prompt ()
     "Do the translation of this prompt"
