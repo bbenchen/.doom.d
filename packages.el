@@ -68,17 +68,17 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "4c0ee315984323dd8f3d071b973532bbf46671d3")
+    :pin "d832d4fffc7908d9e8d691321b22d56b5a5c69f8")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "327757e4361fdc9a639aad14536b5e5d70cd0502"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "71d162a75bf6178ecff1536ac94dfa25e617b6ed")
+(package! nerd-icons :pin "4476b4cabe63f5efafa3c0a8b370db4f6a92e90c")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "e8ba57ba27b55460ee556e45becbb90d618b834f")
+  :pin "ee8a013098f2c2c2dec92ba2c237b25587212169")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
@@ -92,9 +92,9 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "099a469bca192eeee0b3d0c493a62df8bf9a8d46")
+(package! go-translate :pin "1ecaf63fdf25e2b7c0d7c8b6d7eaab921711e0e2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "cbb4fa950cfb6fe076b43cdf55d0086411cad17b")
+(package! llm :pin "8c1b97480d5ca84fba1fdcd64e1625095b4cbd06")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -140,7 +140,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "16c971f288ea18c83a012be385f1f8fb1f5048d0")
-(package! gptel :pin "841dae06defe1b5717f6102cd7dbaf9685a48abc")
+(package! gptel :pin "9d324892d033b7e65f6db6b68dc061dcc921463f")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -154,7 +154,7 @@
 (when (modulep! :tools magit)
   ;; Due to the bugs in the latest version of ghub limited to an available version
   (if (modulep! :tools magit +forge)
-      (package! ghub :pin "97a07691efad6fc16bc000a35be80d4f8dae251a"))
+      (package! ghub :pin "3e7ad9d138c09869df171d945541562448af0174"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
