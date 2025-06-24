@@ -64,9 +64,8 @@
                (:when (modulep! :checkers syntax +flymake)
                  :desc "Goto next error"     "n" #'flymake-goto-next-error
                  :desc "Goto prev error"     "p" #'flymake-goto-prev-error
-                 :desc "Show error at point" "s" #'flymake-show-diagnostic
-                 :desc "Show buffer errors"  "v" #'flymake-show-buffer-diagnostics
-                 :desc "Show project errors" "V" #'flymake-show-project-diagnostics))
+                 :desc "Show buffer errors"  "l" #'flymake-show-buffer-diagnostics
+                 :desc "Show project errors" "L" #'flymake-show-project-diagnostics))
 
       (:prefix-map ("e" . "envrc")
                    "a" #'envrc-allow
