@@ -530,7 +530,8 @@ The shell command used to build the image is:
   (if (modulep! :completion vertico)
       (setq acm-candidate-match-function 'orderless-flex))
 
-  (add-to-list 'lsp-bridge-single-lang-server-mode-list '(gfm-mode . lsp-bridge-markdown-lsp-server) t)
+  (add-to-list 'lsp-bridge-single-lang-server-mode-list '(markdown-ts-mode . lsp-bridge-markdown-lsp-server) t)
+  (add-to-list 'lsp-bridge-default-mode-hooks 'markdown-ts-mode-hook t)
 
   (add-to-list 'lsp-bridge-completion-stop-commands "vundo-backward")
 
