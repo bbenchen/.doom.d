@@ -92,7 +92,7 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "1f817809ccab24bc44f325bb66af73e2b7dae7c7")
+(package! go-translate :pin "a6bd829ee14b8946148e3138d1ed7272fdaa5260")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "8c1b97480d5ca84fba1fdcd64e1625095b4cbd06")
 (package! insert-translated-name
@@ -140,7 +140,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "7719001b57618aa06d0f31b3ff52406f2f7494ef")
-(package! gptel :pin "9caf7684c3a4182e173afe57fa06e53aafc53434")
+(package! gptel :pin "5341ec71b6ffccf1822c7c6e31930f990d5842fd")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
