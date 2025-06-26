@@ -125,7 +125,7 @@
 
 ;; modeline
 (setq +modeline-height 24)
-;；set modeline time format
+;; set modeline time format
 (setq display-time-format "%D %R")
 
 ;; rainbow
