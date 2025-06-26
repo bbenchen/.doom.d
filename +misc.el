@@ -82,9 +82,6 @@
             (string-match-p "\\.bin\\|\\.so\\|\\.dll\\|\\.exe\\'" bname)
             (eq (buffer-local-value 'major-mode buf) 'vterm-mode))))))
 
-;; lookup
-(add-to-list '+lookup-provider-url-alist '("Maven Repository" "http://mvnrepository.com/search?q=%s&ref=opensearch"))
-
 ;; projectile
 (after! projectile
   (setq projectile-project-root-files-bottom-up (delete ".project" projectile-project-root-files-bottom-up))
@@ -146,6 +143,7 @@
         browse-url-browser-function #'+lookup-xwidget-webkit-open-url-fn)
   (if (boundp 'xwidget-webkit-enable-plugins)
       (setq xwidget-webkit-enable-plugins t)))
+(add-to-list '+lookup-provider-url-alist '("Maven Repository" "http://mvnrepository.com/search?q=%s&ref=opensearch"))
 
 ;; xref
 (after! xref
