@@ -40,6 +40,18 @@
   (add-to-list 'recentf-exclude "/var")
   (add-to-list 'recentf-exclude "/autosave"))
 
+;; tramp
+;; https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./
+(after! tramp
+  (setq remote-file-name-inhibit-locks t
+        remote-file-name-inhibit-auto-save-visited t
+        tramp-use-scp-direct-remote-copying t
+        tramp-copy-size-limit (* 1024 1023) ;; 1MB
+        tramp-verbose 2)
+
+  (after! compile
+    (remove-hook! 'compilation-mode-hook #'tramp-compile-disable-ssh-controlmaster-options)))
+
 ;; epa
 (after! epa
   (setq epa-file-cache-passphrase-for-symmetric-encryption t))
