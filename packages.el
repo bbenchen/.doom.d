@@ -152,9 +152,6 @@
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
-  ;; Due to the bugs in the latest version of ghub limited to an available version
-  (if (modulep! :tools magit +forge)
-      (package! ghub :pin "d0576a1375c12f7611131e0187ac7275e2f32907"))
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
