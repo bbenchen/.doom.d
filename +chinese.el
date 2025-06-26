@@ -145,19 +145,12 @@ unwanted space when exporting org-mode to hugo markdown."
              origin-contents)))
       (list paragraph fixed-contents info))))
 
-;; google-translate
+;; go-translate
 (use-package! go-translate
   :defer t
-  :init
-  (add-hook! 'doom-load-theme-hook :append
-    (setq gt-pop-posframe-backcolor (face-background 'mode-line)
-          gt-pop-posframe-forecolor (face-foreground 'mode-line)))
   :config
   (set-popup-rule! "^\\*Go-Translate\\*" :side 'bottom :size 0.3 :select t)
-  (setq gt-langs '(en zh)
-        gt-posframe-pop-render-timeout nil
-        gt-pop-posframe-backcolor (face-background 'mode-line)
-        gt-pop-posframe-forecolor (face-foreground 'mode-line))
+  (setq gt-langs '(en zh))
 
   (setq gt-default-translator
         (gt-translator
@@ -169,9 +162,9 @@ unwanted space when exporting org-mode to hugo markdown."
     "Do the translation of this prompt"
     (interactive)
     (gt-start (gt-translator
-                   :taker (gt-taker :prompt t)
-                   :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser)))
-                   :render (gt-posframe-pop-render)))))
+               :taker (gt-taker :prompt t)
+               :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser) :cache 'word))
+               :render (gt-buffer-render :name "*Go-Translate*")))))
 
 ;; immersive-translate
 (use-package! immersive-translate
