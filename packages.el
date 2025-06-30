@@ -183,8 +183,12 @@
 (package! lsp-bridge
   :recipe (:host github
            :repo "bbenchan/lsp-bridge"
-           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
-           :build (:not compile))
+           :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources" "pyproject.toml" "python-lsp-bridge")
+           :build (:not compile)
+           :post-build
+           (when (executable-find "uv")
+             (delete-file "~/.local/bin/python-lsp-bridge")
+             (make-symbolic-link (concat (straight--build-dir) "lsp-bridge/python-lsp-bridge") "~/.local/bin/python-lsp-bridge")))
   :pin "e4e0abe724741c1674bd49a15ec44b6d8499a7ff")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
