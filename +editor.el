@@ -74,13 +74,6 @@
   (add-hook! 'doom-after-init-hook :append
     (visual-replace-global-mode 1)))
 
-;; wraplish
-(use-package! wraplish
-  :config
-  (setq wraplish-add-space-after-chinese-punctuation t)
-
-  (add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook) #'wraplish-mode))
-
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
   :load-path (lambda () (list (expand-file-name "site-lisp/deno-bridge-jieba" doom-user-dir)))
