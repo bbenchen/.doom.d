@@ -60,7 +60,7 @@
 (package! project :pin "8811a5598acfedd3032531ad2bcf90f4d75fbb8e" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "482ca2f78b5dcbb6119769e15bf011663a5cf0a0")
+(package! diff-hl :pin "f1228602bfaac831e65394967ed70bd3c4264b24")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -92,7 +92,7 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "caa5546c2a98f24ef22d997ed75e24225a04b094")
+(package! go-translate :pin "867faa5f9eadd1ffbd3d1b22a83f54be6ea0acfc")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "8c1b97480d5ca84fba1fdcd64e1625095b4cbd06")
 (package! insert-translated-name
@@ -139,7 +139,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "7719001b57618aa06d0f31b3ff52406f2f7494ef")
+  :pin "fcdbd6c5845c0dfe5a7ddd753598e26e8c508bd3")
 (package! gptel :pin "8f8416b0b69fccfa559be4e05cb3214bd04edd6b")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
@@ -188,7 +188,7 @@
            :repo "bbenchan/lsp-bridge"
            :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
            :build (:not compile))
-  :pin "070d2382062d0f8593825e57f53abded86af6255")
+  :pin "e4e0abe724741c1674bd49a15ec44b6d8499a7ff")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
