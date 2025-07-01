@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "d832d4fffc7908d9e8d691321b22d56b5a5c69f8")
+    :pin "c08226e9875ea2cf26daace9f8de2a90170f6fe1")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "327757e4361fdc9a639aad14536b5e5d70cd0502"))
@@ -92,7 +92,7 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "867faa5f9eadd1ffbd3d1b22a83f54be6ea0acfc")
+(package! go-translate :pin "7c99960aec50719d7f95caa3e8fdd381ca5fd22b")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "8c1b97480d5ca84fba1fdcd64e1625095b4cbd06")
 (package! insert-translated-name
@@ -137,7 +137,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "fcdbd6c5845c0dfe5a7ddd753598e26e8c508bd3")
-(package! gptel :pin "8f8416b0b69fccfa559be4e05cb3214bd04edd6b")
+(package! gptel :pin "3722942363b26befd35e9c259de3f42e9ed704a7")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
