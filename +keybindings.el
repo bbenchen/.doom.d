@@ -60,12 +60,18 @@
       :desc "Build not cache" "M-b" #'dockerfile-build-no-cache-buffer)
 
 (map! :leader
-      (:prefix ("!" . "checkers")
-               (:when (modulep! :checkers syntax +flymake)
-                 :desc "Goto next error"     "n" #'flymake-goto-next-error
-                 :desc "Goto prev error"     "p" #'flymake-goto-prev-error
-                 :desc "Show buffer errors"  "l" #'flymake-show-buffer-diagnostics
-                 :desc "Show project errors" "L" #'flymake-show-project-diagnostics))
+      (:prefix-map ("!" . "checkers")
+                   (:when (modulep! :checkers syntax +flymake)
+                     :desc "Goto next error"     "n" #'flymake-goto-next-error
+                     :desc "Goto prev error"     "p" #'flymake-goto-prev-error
+                     :desc "Show buffer errors"  "l" #'flymake-show-buffer-diagnostics
+                     :desc "Show project errors" "L" #'flymake-show-project-diagnostics))
+
+      (:prefix-map ("c" . "code")
+       :desc "LSP Code actions"            "a"  #'lsp-bridge-code-action
+       :desc "Jump to symbol in workspace" "j"  #'lsp-bridge-workspace-list-symbols
+       :desc "LSP Rename"                  "r"  #'lsp-bridge-rename
+       :desc "LSP Peek"                    "p"  #'lsp-bridge-peek)
 
       (:prefix-map ("e" . "envrc")
                    "a" #'envrc-allow
@@ -81,17 +87,17 @@
        :desc "Duplicate" "d" #'duplicate-dwim)
 
       (:prefix-map ("o" . "open")
-       (:prefix ("l" . "llm")
-        :desc "Open aidermacs"       "a" #'aidermacs-run
-        :desc "Open aidermacs menu"  "A" #'aidermacs-transient-menu
-        :desc "Add text to gptel"    "c" #'gptel-add
-        :desc "Explain"              "e" #'gptel-quick
-        :desc "Add file to gptel"    "f" #'gptel-add-file
-        :desc "Open gptel"           "l" #'bc/start-gptel
-        :desc "Open gptel menu"      "m" #'gptel-menu
-        :desc "Rewrite"              "r" #'gptel-rewrite
-        :desc "Send to gptel"        "s" #'gptel-send)
-       :desc "View undo"      "u" #'vundo)
+                   (:prefix ("l" . "llm")
+                    :desc "Open aidermacs"       "a" #'aidermacs-run
+                    :desc "Open aidermacs menu"  "A" #'aidermacs-transient-menu
+                    :desc "Add text to gptel"    "c" #'gptel-add
+                    :desc "Explain"              "e" #'gptel-quick
+                    :desc "Add file to gptel"    "f" #'gptel-add-file
+                    :desc "Open gptel"           "l" #'bc/start-gptel
+                    :desc "Open gptel menu"      "m" #'gptel-menu
+                    :desc "Rewrite"              "r" #'gptel-rewrite
+                    :desc "Send to gptel"        "s" #'gptel-send)
+                   :desc "View undo"      "u" #'vundo)
 
       (:prefix-map ("t" . "toggle")
        :desc "Command window"     "C" #'bc/command-log-toggle-window
@@ -111,14 +117,14 @@
                    "<right>" #'enlarge-window-horizontally)
 
       (:prefix-map ("y" . "translate")
-         :desc "Google translate"        "g" #'gt-do-translate
-         :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt
-         :desc "Insert translated name"  "i" #'insert-translated-name-insert
-         :desc "Bing translate"          "b" #'popweb-dict-bing-pointer
-         :desc "Bing translate input"    "B" #'popweb-dict-bing-input
-         :desc "Youdao translate"        "y" #'popweb-dict-youdao-pointer
-         :desc "Youdao translate input"  "Y" #'popweb-dict-youdao-input
-         :desc "Play voice"              "p" #'popweb-dict-say-word))
+       :desc "Google translate"        "g" #'gt-do-translate
+       :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt
+       :desc "Insert translated name"  "i" #'insert-translated-name-insert
+       :desc "Bing translate"          "b" #'popweb-dict-bing-pointer
+       :desc "Bing translate input"    "B" #'popweb-dict-bing-input
+       :desc "Youdao translate"        "y" #'popweb-dict-youdao-pointer
+       :desc "Youdao translate input"  "Y" #'popweb-dict-youdao-input
+       :desc "Play voice"              "p" #'popweb-dict-say-word))
 
 (map! (:when (modulep! :tools make)
         (:map makefile-mode-map

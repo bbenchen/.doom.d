@@ -554,15 +554,6 @@ The shell command used to build the image is:
     (dolist (hook lsp-bridge-default-mode-hooks)
       (add-hook hook #'bc/lsp-bridge--disable-flycheck t)))
 
-  (after! insert-translated-name
-    (defadvice! bc/disable-lsp-bridge-when-active-insert-translated-name (&rest _)
-      :before #'insert-translated-name-active
-      (lsp-bridge-mode -1))
-
-    (defadvice! bc/enable-lsp-bridge-when-inactive-insert-translated-name (&rest _)
-      :after #'insert-translated-name-inactive
-      (lsp-bridge-mode 1)))
-
   (let ((lombok-jar-path (expand-file-name "lombok.jar" doom-user-dir)))
     (setq lsp-bridge-jdtls-jvm-args (list "-Dfile.encoding=utf8"
                                           "-server"
@@ -601,13 +592,6 @@ The shell command used to build the image is:
     :override #'lsp-bridge--not-in-multiple-cursors
     (not (and (featurep 'multiple-cursors-core)
               multiple-cursors-mode)))
-
-  (map! :leader
-        (:prefix-map ("c" . "code")
-         :desc "LSP Code actions"            "a"  #'lsp-bridge-code-action
-         :desc "Jump to symbol in workspace" "j"  #'lsp-bridge-workspace-list-symbols
-         :desc "LSP Rename"                  "r"  #'lsp-bridge-rename
-         :desc "LSP Peek"                    "p"  #'lsp-bridge-peek))
 
   (defadvice! +format/region-or-buffer-a (fn &rest args)
     :around #'+format/region-or-buffer

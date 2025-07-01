@@ -205,6 +205,20 @@ unwanted space when exporting org-mode to hugo markdown."
       ;;                                            :url "https://openkey.cloud/v1"))
       ))
 
+  (when (featurep 'lsp-bridge)
+    (defvar insert-translated-name-is-enable-lsp-bridge nil)
+    (defadvice! bc/disable-lsp-bridge-when-active-insert-translated-name (&rest _)
+      :before #'insert-translated-name-active
+      (setq insert-translated-name-is-enable-lsp-bridge (bound-and-true-p lsp-bridge-mode))
+      (if insert-translated-name-is-enable-lsp-bridge
+          (lsp-bridge-mode -1)))
+
+    (defadvice! bc/enable-lsp-bridge-when-inactive-insert-translated-name (&rest _)
+      :after #'insert-translated-name-inactive
+      (if insert-translated-name-is-enable-lsp-bridge
+          (lsp-bridge-mode 1))
+      (setq insert-translated-name-is-enable-lsp-bridge nil)))
+
   (when (featurep 'ws-butler)
     (defvar insert-translated-name-is-open-ws-butler nil)
     (defadvice! bc/insert-translated-name-retrieve-translation-before-advice (&rest _)
