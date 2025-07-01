@@ -101,8 +101,6 @@
 ;;     '("google-java-format" "-" "-a" "--skip-sorting-imports")
 ;;     :modes '(java-mode java-ts-mode)))
 
-(add-hook! java-ts-mode #'rainbow-delimiters-mode)
-
 (map! :map (java-mode-map java-ts-mode-map)
       :localleader
       :desc "Run junit test" "t" #'bc/java-run-junit-test
