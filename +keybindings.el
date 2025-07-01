@@ -60,12 +60,12 @@
       :desc "Build not cache" "M-b" #'dockerfile-build-no-cache-buffer)
 
 (map! :leader
-      (:prefix-map ("!" . "checkers")
-                   (:when (modulep! :checkers syntax +flymake)
-                     :desc "Goto next error"     "n" #'flymake-goto-next-error
-                     :desc "Goto prev error"     "p" #'flymake-goto-prev-error
-                     :desc "Show buffer errors"  "l" #'flymake-show-buffer-diagnostics
-                     :desc "Show project errors" "L" #'flymake-show-project-diagnostics))
+      (:when (modulep! :checkers syntax +flymake)
+        (:prefix-map ("!" . "checkers")
+         :desc "Goto next error"     "n" #'flymake-goto-next-error
+         :desc "Goto prev error"     "p" #'flymake-goto-prev-error
+         :desc "Show buffer errors"  "l" #'flymake-show-buffer-diagnostics
+         :desc "Show project errors" "L" #'flymake-show-project-diagnostics))
 
       (:prefix-map ("c" . "code")
        :desc "LSP Code actions"            "a"  #'lsp-bridge-code-action
