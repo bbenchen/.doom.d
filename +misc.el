@@ -423,7 +423,7 @@
   :config
   (setq aidermacs-auto-commits nil
         aidermacs-default-model "openrouter/deepseek/deepseek-r1-0528:free"
-        aidermacs-use-architect-mode t
+        aidermacs-default-chat-mode 'architect
         aidermacs-architect-model "openrouter/anthropic/claude-sonnet-4"
         aidermacs-editor-model "openrouter/deepseek/deepseek-r1-0528"
         aidermacs-weak-model "openrouter/deepseek/deepseek-chat-v3-0324"
