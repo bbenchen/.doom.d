@@ -473,3 +473,10 @@
 ;; gptel-quick
 (use-package! gptel-quick
   :defer t)
+
+;; gptel-magit
+(use-package! gptel-magit
+  :when (modulep! :tools magit)
+  :after gptel
+  :config
+  (add-hook! 'magit-mode-hook #'gptel-magit-install))
