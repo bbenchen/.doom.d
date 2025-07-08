@@ -179,10 +179,12 @@
     (set-face-background 'flymake-popon (doom-color 'modeline-bg))))
 
 ;; spell
-(setq ispell-dictionary "en_US"
-      ispell-alternate-dictionary (expand-file-name "english-words" doom-user-dir))
+(setq ispell-dictionary "en_US")
+;; (setq ispell-alternate-dictionary (expand-file-name "english-words" doom-user-dir))
 (after! ispell
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
+(after! spell-fu
+  (setq! spell-fu-idle-delay 0.5))
 
 ;; with-editor
 (if (featurep :system 'macos)
