@@ -137,7 +137,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "fcdbd6c5845c0dfe5a7ddd753598e26e8c508bd3")
+  :pin "5084913506b8b243c732a77b6de4768f18edcff3")
 (package! gptel :pin "e9d92423d138e6f217a494ac4b28fe68d349233a")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
