@@ -60,7 +60,7 @@
 (package! project :pin "778c0cdaa1fec7bb89d419004dec6ff81824f043" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "f1228602bfaac831e65394967ed70bd3c4264b24")
+(package! diff-hl :pin "08243a6e0b681c34eb4e4abf1d1c4c1b251ce91e")
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -93,7 +93,7 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "7c99960aec50719d7f95caa3e8fdd381ca5fd22b")
+(package! go-translate :pin "b93c7a0e1c307dda58cda3a1f324af4b10165f7e")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "16f73bbec1bd5e12fa2000c90cb059de82d50390")
 (package! insert-translated-name
@@ -138,7 +138,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "5084913506b8b243c732a77b6de4768f18edcff3")
-(package! gptel :pin "e9d92423d138e6f217a494ac4b28fe68d349233a")
+(package! gptel :recipe (:nonrecursive t) :pin "bed2402c5442fec21cc336a76821a5c89c1b254b")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
