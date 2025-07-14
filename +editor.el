@@ -11,9 +11,12 @@
 ;; multiple-cursors
 (after! multiple-cursors-core
   (if (functionp 'counsel-M-x)
-      (add-to-list 'mc/cmds-to-run-once 'counsel-M-x))
-  (add-to-list 'mc/cmds-to-run-for-all 'hungry-delete-forward)
-  (add-to-list 'mc/cmds-to-run-for-all 'hungry-delete-backward))
+      (add-to-list 'mc--default-cmds-to-run-once 'counsel-M-x))
+  (add-to-list 'mc--default-cmds-to-run-once 'pixel-scroll-precision)
+  (add-to-list 'mc--default-cmds-to-run-once 'beginning-of-buffer)
+  (add-to-list 'mc--default-cmds-to-run-once 'end-of-buffer)
+  (add-to-list 'mc--default-cmds-to-run-for-all 'hungry-delete-forward)
+  (add-to-list 'mc--default-cmds-to-run-for-all 'hungry-delete-backward))
 
 (after! smartparens
   (unbind-key "M-<left>" smartparens-mode-map)
