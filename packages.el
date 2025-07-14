@@ -68,14 +68,14 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "b9339dcce36c58140fda64c71fe36886475d954c")
+    :pin "50cf7af8ffba7c84b74189dc57aeadda0ac4c146")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "327757e4361fdc9a639aad14536b5e5d70cd0502"))
+    :pin "af50e738ea249a36f5aeca123c29dae946944b1e"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "4476b4cabe63f5efafa3c0a8b370db4f6a92e90c")
+(package! nerd-icons :pin "31ca7059761c000bd7ebbcb2625c895ba65284a7")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "ee8a013098f2c2c2dec92ba2c237b25587212169")
@@ -93,9 +93,9 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "b93c7a0e1c307dda58cda3a1f324af4b10165f7e")
+(package! go-translate :pin "736c2d1888644b2cea172a6fc12dbf7840101405")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "16f73bbec1bd5e12fa2000c90cb059de82d50390")
+(package! llm :pin "0fe102cc9f0392961dcd71815fab8de2ca435a6a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -138,7 +138,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "5084913506b8b243c732a77b6de4768f18edcff3")
-(package! gptel :recipe (:nonrecursive t) :pin "bed2402c5442fec21cc336a76821a5c89c1b254b")
+(package! gptel :recipe (:nonrecursive t) :pin "34ecadea17870b07fe7f146376b5a25f45fb27af")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
