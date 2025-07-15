@@ -149,14 +149,14 @@ unwanted space when exporting org-mode to hugo markdown."
 (use-package! gt
   :defer t
   :config
-  (set-popup-rule! "^\\*Go-Translate\\*" :side 'bottom :size 0.3 :select t)
+  (set-popup-rule! "^\\*GT-Translate\\*" :side 'bottom :size 0.3 :select t)
   (setq gt-langs '(en zh))
 
   (setq gt-default-translator
         (gt-translator
          :taker (gt-taker :pick 'paragraph)
          :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser) :cache 'word))
-         :render (gt-buffer-render :name "*Go-Translate*")))
+         :render (gt-buffer-render :name "*GT-Translate*")))
 
   (defun bc/gt-do-translate-prompt ()
     "Do the translation of this prompt"
@@ -164,7 +164,7 @@ unwanted space when exporting org-mode to hugo markdown."
     (gt-start (gt-translator
                :taker (gt-taker :prompt t)
                :engines (list (gt-google-rpc-engine :parse (gt-google-rpc-parser) :cache 'word))
-               :render (gt-buffer-render :name "*Go-Translate*")))))
+               :render (gt-buffer-render :name "*GT-Translate*")))))
 
 ;; immersive-translate
 (use-package! immersive-translate

@@ -117,7 +117,7 @@
                    "<right>" #'enlarge-window-horizontally)
 
       (:prefix-map ("y" . "translate")
-       :desc "Google translate"        "g" #'gt-do-translate
+       :desc "Google translate"        "g" #'gt-translate
        :desc "Google translate prompt" "G" #'bc/gt-do-translate-prompt
        :desc "Insert translated name"  "i" #'insert-translated-name-insert
        :desc "Bing translate"          "b" #'popweb-dict-bing-pointer
