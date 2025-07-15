@@ -189,8 +189,7 @@
            :build (:not compile)
            :post-build
            (progn
-             (if (file-exists-p "~/.local/bin/python-lsp-bridge")
-                 (delete-file "~/.local/bin/python-lsp-bridge"))
+             (ignore-errors (delete-file "~/.local/bin/python-lsp-bridge"))
              (when (executable-find "uv")
                (make-symbolic-link
                 (concat (straight--repos-dir "lsp-bridge") "pyproject.toml")
