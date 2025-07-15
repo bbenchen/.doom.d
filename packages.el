@@ -93,7 +93,9 @@
 
 (package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
 
-(package! go-translate :pin "b54d37eea7d82f28f97d596d6f0af6528b42c4f8")
+(package! gt
+  :recipe (:host github :repo "lorniu/gt.el")
+  :pin "b54d37eea7d82f28f97d596d6f0af6528b42c4f8")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "0fe102cc9f0392961dcd71815fab8de2ca435a6a")
 (package! insert-translated-name

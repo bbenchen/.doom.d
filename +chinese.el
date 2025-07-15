@@ -145,8 +145,8 @@ unwanted space when exporting org-mode to hugo markdown."
              origin-contents)))
       (list paragraph fixed-contents info))))
 
-;; go-translate
-(use-package! go-translate
+;; gt
+(use-package! gt
   :defer t
   :config
   (set-popup-rule! "^\\*Go-Translate\\*" :side 'bottom :size 0.3 :select t)
