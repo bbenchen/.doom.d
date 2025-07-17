@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "50cf7af8ffba7c84b74189dc57aeadda0ac4c146")
+    :pin "627f251aa4bb858fb51048fb0c488d19789cd356")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "af50e738ea249a36f5aeca123c29dae946944b1e"))
@@ -139,7 +139,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "5084913506b8b243c732a77b6de4768f18edcff3")
+  :pin "cfa273dbe8b0f13cd9f750ccf1ddb131fb2bfef5")
 (package! gptel :recipe (:nonrecursive t) :pin "34ecadea17870b07fe7f146376b5a25f45fb27af")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
