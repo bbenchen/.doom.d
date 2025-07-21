@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "627f251aa4bb858fb51048fb0c488d19789cd356")
+    :pin "b23d2983cfb1e8bd730793682c4562bd2e8f751d")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "af50e738ea249a36f5aeca123c29dae946944b1e"))
@@ -130,7 +130,7 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "9d2093dab566d8fdaf476829271f265824dcd35c")
-(package! visual-replace :pin "687a59a1e3438d20e413f50d5c773c06bf705e1f")
+(package! visual-replace :pin "f45bcb7f6663e2390f871c47ddb5ae13d3d8c8ac")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -139,8 +139,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "cfa273dbe8b0f13cd9f750ccf1ddb131fb2bfef5")
-(package! gptel :recipe (:nonrecursive t) :pin "34ecadea17870b07fe7f146376b5a25f45fb27af")
+  :pin "9d819c1041d564d1691d1887f378ffdb24091da0")
+(package! gptel :recipe (:nonrecursive t) :pin "7218aedd6f8294af5be876c0c18a733863156b7b")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
