@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "b23d2983cfb1e8bd730793682c4562bd2e8f751d")
+    :pin "639f392786eb7d7e362e8f9295e9b378c56c1ed1")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "af50e738ea249a36f5aeca123c29dae946944b1e"))
@@ -95,7 +95,7 @@
 
 (package! gt
   :recipe (:host github :repo "lorniu/gt.el")
-  :pin "b54d37eea7d82f28f97d596d6f0af6528b42c4f8")
+  :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
 (package! llm :pin "0fe102cc9f0392961dcd71815fab8de2ca435a6a")
 (package! insert-translated-name
@@ -134,13 +134,13 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "cb5f6d2a4217c1e2cc963072aaa5ecfe257ab378")
+(package! envrc :pin "510807ae96a585ac5eedf8b19fa6c7c9a2ad0338")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "9d819c1041d564d1691d1887f378ffdb24091da0")
-(package! gptel :recipe (:nonrecursive t) :pin "21d2b1bc34306a2f493b1131b10ad0fd8beedca5")
+  :pin "6b33f2ceb49b1832325e2fbfbbcb72e9df5e9128")
+(package! gptel :recipe (:nonrecursive t) :pin "1b8d913dfc51e28edf2c67fab03296ddf94fe8de")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -148,7 +148,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8007f50c1c1734325c47939904f486753c7dd8ee")
-(package! verb :pin "cc1d05d8890a98f576632632f38da2875c5f8a84")
+(package! verb :pin "35a91ac7af9a52d8e7581c6a73ac406fce23eb09")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
