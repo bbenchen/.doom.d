@@ -55,6 +55,9 @@
 ;; transparency
 (push '(alpha-background . 50) default-frame-alist)
 (modify-frame-parameters nil '((alpha-background . 50)))
+(when (> emacs-major-version 30)
+  (push '(borders-respect-alpha-background . 50) default-frame-alist)
+  (modify-frame-parameters nil '((borders-respect-alpha-background . 50))))
 
 ;; maximize the window
 (when (and (not (> emacs-major-version 28))

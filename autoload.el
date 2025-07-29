@@ -78,9 +78,10 @@
   "Toggle between transparent and opaque state for FRAME.
 If FRAME is nil, it defaults to the selected frame."
   (interactive)
-  (pcase (frame-parameter frame 'alpha-background)
-    (50 (modify-frame-parameters frame '((alpha-background . 100))))
-    (_ (modify-frame-parameters frame '((alpha-background . 50))))))
+  (let* ((alpha-background-value (if (< (frame-parameter frame 'alpha-background) 100) 100 50)))
+    (modify-frame-parameters frame (cons (cons 'alpha-background alpha-background-value) nil))
+    (if (> emacs-major-version 30)
+        (modify-frame-parameters frame (cons (cons 'borders-respect-alpha-background alpha-background-value) nil)))))
 
 ;; Network Proxy
 ;;;###autoload
