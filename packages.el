@@ -107,12 +107,6 @@
   :pin "86d72c6281a59248a6bf95fca7a031f4fa8b5b3c")
 
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
-(package! websocket-bridge
-  :recipe (:host github :repo "ginqi7/websocket-bridge")
-  :pin "535364f8fefd791b22525b7640d291e88c80179d")
-(package! dictionary-overlay
-  :recipe (:host github :repo "ginqi7/dictionary-overlay" :files ("*.el" "*.py" "resources"))
-  :pin "692fdcec3082e58d0ed57b36ad430aebf7352cd0")
 (package! deno-bridge
   :recipe (:host github :repo "bbenchen/deno-bridge")
   :pin "eb36e3da4d784c391a277a0da82d3f8cd3b4a96b")

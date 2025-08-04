@@ -233,17 +233,6 @@ unwanted space when exporting org-mode to hugo markdown."
         (ws-butler-mode +1))
       (setq insert-translated-name-is-open-ws-butler nil))))
 
-;; dictionary-overlay
-(use-package! websocket-bridge)
-(use-package! dictionary-overlay
-  :defer 2
-  :after websocket-bridge
-  :init
-  (setq dictionary-overlay-translators '("local" "darwin" "sdcv" "web")
-        dictionary-overlay-user-data-directory (expand-file-name "dictionary-overlay-data" doom-data-dir))
-  :config
-  (dictionary-overlay-start))
-
 ;; popweb-dict
 (use-package! popweb-dict
   :after popweb
