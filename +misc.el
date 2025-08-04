@@ -64,7 +64,7 @@
     :before #'winner-save-old-configurations
     (cl-dolist (frame winner-modified-list)
       (unless (frame-live-p frame)
-        (delq! frame winner-modified-list)))))
+        (cl-callf2 delq frame winner-modified-list)))))
 
 ;; workspaces
 (setq +workspaces-on-switch-project-behavior t)
@@ -135,7 +135,7 @@
 
 ;; treemacs
 (after! (:and treemacs ace-window)
-  (delq! 'treemacs-mode aw-ignored-buffers))
+  (cl-callf2 delq 'treemacs-mode aw-ignored-buffers))
 
 ;; lookup
 (when (and (featurep :system 'macos) (featurep 'xwidget-internal))
