@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "778c0cdaa1fec7bb89d419004dec6ff81824f043" :built-in (>= emacs-major-version 30))
+(package! project :pin "1bc1815467d51f80e9bf24be88e7d211468ea01c" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "08243a6e0b681c34eb4e4abf1d1c4c1b251ce91e")
