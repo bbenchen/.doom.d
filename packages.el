@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "1bc1815467d51f80e9bf24be88e7d211468ea01c" :built-in (>= emacs-major-version 30))
+(package! project :pin "394c79f62ac7e19ad58d3afb2bd0d44956cfc869" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "08243a6e0b681c34eb4e4abf1d1c4c1b251ce91e")
@@ -134,7 +134,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6b33f2ceb49b1832325e2fbfbbcb72e9df5e9128")
-(package! gptel :recipe (:nonrecursive t) :pin "76a0c1686192bc43e56b8f5e4be11736bb9806da")
+(package! gptel :recipe (:nonrecursive t) :pin "0975d9c84aa41eb3096236e92b333a653df49b0d")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
