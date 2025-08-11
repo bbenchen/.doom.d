@@ -60,8 +60,6 @@
 (package! project :pin "30acfc49e54e2bc310be1b1bf99484d75408b6e2" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! diff-hl :pin "08243a6e0b681c34eb4e4abf1d1c4c1b251ce91e")
-
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
 (when (modulep! :tools tree-sitter)
