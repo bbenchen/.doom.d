@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "394c79f62ac7e19ad58d3afb2bd0d44956cfc869" :built-in (>= emacs-major-version 30))
+(package! project :pin "30acfc49e54e2bc310be1b1bf99484d75408b6e2" :built-in (>= emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! diff-hl :pin "08243a6e0b681c34eb4e4abf1d1c4c1b251ce91e")
@@ -68,7 +68,7 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "d9c26fc2b30514015e798cc10c1b41ff32553d27")
+    :pin "f8c4248410e0c1b3288437d63495cf52706158a8")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
     :pin "af50e738ea249a36f5aeca123c29dae946944b1e"))
@@ -97,7 +97,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "0fe102cc9f0392961dcd71815fab8de2ca435a6a")
+(package! llm :pin "5ce1d6bd1359a3204a65e02d5035e05205c6d411")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -113,7 +113,7 @@
 
 (package! editorconfig
   :recipe (:nonrecursive t)
-  :pin "d2beb3ec2e7f84505818594124a7202d5d6d0185"
+  :pin "f85ec9724b01fb144159b472daad136f0941631f"
   :built-in (>= emacs-major-version 30))
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
@@ -134,7 +134,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6b33f2ceb49b1832325e2fbfbbcb72e9df5e9128")
-(package! gptel :recipe (:nonrecursive t) :pin "0975d9c84aa41eb3096236e92b333a653df49b0d")
+(package! gptel :recipe (:nonrecursive t) :pin "3fe5e08ddd8b1bc6f1eee8a9c6548bf7a029f55e")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
