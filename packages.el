@@ -69,7 +69,7 @@
     :pin "f8c4248410e0c1b3288437d63495cf52706158a8")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "af50e738ea249a36f5aeca123c29dae946944b1e"))
+    :pin "3439756b5bbab83f65914d86b093d8c237eb7275"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -121,18 +121,18 @@
 (package! thing-edit
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
-(package! region-occurrences-highlighter :pin "9d2093dab566d8fdaf476829271f265824dcd35c")
+(package! region-occurrences-highlighter :pin "c8c352655a07911a82507be61bb220010a2c262c")
 (package! visual-replace :pin "f45bcb7f6663e2390f871c47ddb5ae13d3d8c8ac")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "510807ae96a585ac5eedf8b19fa6c7c9a2ad0338")
+(package! envrc :pin "107dae065df857271cd3371d9f520ff13df695cf")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6b33f2ceb49b1832325e2fbfbbcb72e9df5e9128")
-(package! gptel :recipe (:nonrecursive t) :pin "3fe5e08ddd8b1bc6f1eee8a9c6548bf7a029f55e")
+(package! gptel :recipe (:nonrecursive t) :pin "55442e230ec1f72c69b9147c8911d58baba766d8")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -153,7 +153,7 @@
     :pin "64b3af92166c957bc37a37be5ce18b31f21379f7")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
-(package! auto-rename-tag :pin "b58b242918217465b0c59e4b440b7ca808e3946b")
+(package! auto-rename-tag :pin "281e87ebd2f738acc5ab5e3f7e37774c1f157a8d")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
