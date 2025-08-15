@@ -69,11 +69,6 @@
 ;; workspaces
 (setq +workspaces-on-switch-project-behavior t)
 (after! persp-mode
-  ;; 由于最新的 persp-mode 存在对 kill-buffer 的增强逻辑，造成 lsp-bridge 无法正常使用，原因暂时不知。
-  ;; 这里禁用相关功能
-  ;; https://github.com/Bad-ptr/persp-mode.el/issues/152
-  ;; https://github.com/Bad-ptr/persp-mode.el/commit/621a2932eedbe443b4e2eaf7fd87df4d61a4e0d7
-  (setq persp-use-kill-buffer-advice nil)
   (add-hook! 'persp-filter-save-buffers-functions
     (defun bc/workdspace--temporary-buffer-p (buf)
       ;; "Ignore temporary buffers."
