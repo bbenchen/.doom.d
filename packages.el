@@ -57,7 +57,7 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "30acfc49e54e2bc310be1b1bf99484d75408b6e2" :built-in (>= emacs-major-version 30))
+(package! project :pin "30acfc49e54e2bc310be1b1bf99484d75408b6e2" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (when (modulep! :ui workspaces)
@@ -69,14 +69,14 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "f8c4248410e0c1b3288437d63495cf52706158a8")
+    :pin "67338ae57f96281e594a32b5346b7047da80682c")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "3439756b5bbab83f65914d86b093d8c237eb7275"))
+    :pin "5585568bf689f19e9e1454b5d78395bb39106855"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "f3e7ba37642455e5627968b1031faeefbcac1245")
+(package! nerd-icons :pin "e98b14248fec120cc23c5f3a5aa1128d98156c2c")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "ee8a013098f2c2c2dec92ba2c237b25587212169")
@@ -134,7 +134,7 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "6b33f2ceb49b1832325e2fbfbbcb72e9df5e9128")
+  :pin "cdee470ee5aa5c81364799fa46f9dbd5ef588663")
 (package! gptel :recipe (:nonrecursive t) :pin "2e3865289aaa7abdc5e4d67798db0d9e1edcb26d")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
