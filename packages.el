@@ -134,8 +134,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "cdee470ee5aa5c81364799fa46f9dbd5ef588663")
-(package! gptel :recipe (:nonrecursive t) :pin "2e3865289aaa7abdc5e4d67798db0d9e1edcb26d")
+  :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
+(package! gptel :recipe (:nonrecursive t) :pin "ca6086888ced9d01aec5ec3d7bbc69d308734b4f")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -153,7 +153,7 @@
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
-    :pin "64b3af92166c957bc37a37be5ce18b31f21379f7")
+    :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
   (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
 
 (package! auto-rename-tag :pin "281e87ebd2f738acc5ab5e3f7e37774c1f157a8d")
