@@ -57,11 +57,11 @@
 (package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "30acfc49e54e2bc310be1b1bf99484d75408b6e2" :built-in (> emacs-major-version 30))
+(package! project :pin "a0ebb2e9cfda339d8ebda77447c9d822fe313c2d" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (when (modulep! :ui workspaces)
-  (package! persp-mode :pin "82680795b3dbb9f9fb023b1754902f38519d9875"))
+  (package! persp-mode :pin "fab4bf76927445d2e431f06e74572acba81f47d5"))
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
@@ -69,14 +69,14 @@
   (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
   (package! tree-sitter-langs
     :recipe (:nonrecursive t)
-    :pin "67338ae57f96281e594a32b5346b7047da80682c")
+    :pin "d28b710e6ce96fa0b6bbe0e3927c8f522ff2d8dd")
   (package! ts-fold
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "5585568bf689f19e9e1454b5d78395bb39106855"))
+    :pin "bd0323aee667296a67e43537ad0c93692c1bced1"))
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "e98b14248fec120cc23c5f3a5aa1128d98156c2c")
+(package! nerd-icons :pin "6868c05c6eb56c6625ee7fa38450b514542ab636")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "ee8a013098f2c2c2dec92ba2c237b25587212169")
@@ -129,13 +129,13 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "107dae065df857271cd3371d9f520ff13df695cf")
+(package! envrc :pin "48a2ee6a4d6a36b1dc76efa321b9b9c8bc11d73b")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "ca6086888ced9d01aec5ec3d7bbc69d308734b4f")
+(package! gptel :recipe (:nonrecursive t) :pin "a2fe4ec752f3859db7d665d03a4c874cfad1e7e2")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -197,7 +197,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "d6d4a031d82a5460c148ce1c1ce7ff2d0e130c40")
+  :pin "822a02c3de59505ca15c9d695873f3a686ceb778")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
