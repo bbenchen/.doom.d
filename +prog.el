@@ -270,14 +270,6 @@ The shell command used to build the image is:
   (add-to-list 'auto-mode-alist
                (cons "/.dockerignore\\'" 'gitignore-mode)))
 
-;; yaml
-(use-package! yaml-ts-mode
-  :when (treesit-available-p))
-
-;; cmake
-(use-package! cmake-ts-mode
-  :when (treesit-available-p))
-
 ;; pkgbuild-mode
 (use-package! pkgbuild-mode
   :defer t

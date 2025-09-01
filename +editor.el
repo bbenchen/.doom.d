@@ -90,4 +90,7 @@
 
 ;; treesit
 (after! treesit
-  (setq treesit-font-lock-level 4))
+  (setq treesit-font-lock-level 4)
+
+  (dolist (map '((gitcommit "https://github.com/gbprod/tree-sitter-gitcommit" nil nil nil nil)))
+    (cl-pushnew map treesit-language-source-alist :test #'eq :key #'car)))
