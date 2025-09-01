@@ -97,100 +97,46 @@
 ;;     '("google-java-format" "-" "-a" "--skip-sorting-imports")
 ;;     :modes '(java-mode java-ts-mode)))
 
-(map! :map (java-mode-map java-ts-mode-map)
-      :localleader
-      :desc "Run junit test" "t" #'bc/java-run-junit-test
-      :desc "Update project config" "u" #'lsp-bridge-jdtls-update-project-configuration)
-
-;; check junit console launcher options for details
-(defun bc/java-run-junit-test ()
-  "Java run main/test at point."
-  (interactive)
-  (let* ((pkg (bc/java--current-package))
-         (class (bc/java--current-class))
-         (method (bc/java--current-method))
-         (parameters (bc/java--current-parameters)))
-    (if (and pkg class)
-        (lsp-bridge-jdtls-project-is-test-file
-         #'(lambda (is-test-file)
-             (if is-test-file
-                 (lsp-bridge-jdtls-project-get-classpaths
-                  #'(lambda (classpaths)
-                      (let ((junit-wrapper "junit-wrapper")
-                            (classpath-file (expand-file-name "junit-classpaths" temporary-file-directory)))
-                        (with-temp-file classpath-file
-                          (insert "-classpath\n")
-                          (insert classpaths))
-
-                        (setq-local old-default-directory default-directory
-                                    default-directory (doom-project-root))
-                        (compilation-start (concat junit-wrapper (format " '%s'" classpath-file)
-                                                   (if method
-                                                       (if (not (string-empty-p parameters))
-                                                           (format " '%s.%s#%s(%s)'" pkg class method parameters)
-                                                         (format " '%s.%s#%s'" pkg class method))
-                                                     (format " '%s.%s'" pkg class))))
-                        (setq-local default-directory old-default-directory)))
-                  "test")
-               (message "%s is not a test file" class))))
-      (user-error "Can not found package/class"))))
-
-(defun bc/java--current-package ()
-  (if (eq major-mode 'java-mode)
-      (bc/java--current-package)
-    (bc/java--treesit-get-package)))
-
-(defun bc/java--current-class ()
-  (if (eq major-mode 'java-mode)
-      (bc/java--current-class)
-    (bc/java--treesit-get-class)))
-
-(defun bc/java--current-method ()
-  (if (eq major-mode 'java-mode)
-      (if (and (modulep! :tools tree-sitter)
-               (modulep! :lang java +tree-sitter))
-          (bc/java--tree-sitter-get-method))
-    (bc/java--treesit-get-method)))
-
-(defun bc/java--current-parameters ()
-  (if (eq major-mode 'java-mode)
-      (if (and (modulep! :tools tree-sitter)
-               (modulep! :lang java +tree-sitter))
-          (bc/java--tree-sitter-get-parameters))
-    (bc/java--treesit-get-parameters)))
-
-(when (and (modulep! :tools tree-sitter)
-           (modulep! :lang java +tree-sitter))
-  (defun bc/java--tree-sitter-get-method ()
-    (let* ((query (tsc-make-query (tree-sitter-require 'java) [(method_declaration name: (identifier) @function.method)]))
-           (root-node (tsc-root-node tree-sitter-tree))
-           (captures (tsc--without-restriction
-                       (tsc-query-captures query root-node #'tsc--buffer-substring-no-properties)))
-           (nodes (mapcar (lambda (capture)
-                            (pcase-let ((`(_ . ,node) capture))
-                              node))
-                          captures)))
-
-      (when (length> nodes 0)
-        (let* ((cur-node (tree-sitter-node-at-pos :named))
-               (found-node (cl-find-if (lambda (node) (tsc-node-eq node cur-node)) nodes)))
-          (unless found-node
-            (let ((parent (tsc-get-parent cur-node))
-                  (break))
-              (while (and parent (not break))
-                (setq break (string= (tsc-node-type parent) "method_declaration"))
-                (unless break
-                  (setq parent (tsc-get-parent parent))))
-              (if parent
-                  (setq found-node (tsc-get-child-by-field parent :name)))))
-          (if found-node
-              (tsc-node-text found-node))))))
-
-  (defun bc/java--tree-sitter-get-parameters ()
-    (user-error "unimplemented")))
-
 (after! java-ts-mode
-  (defun bc/java--treesit-get-package ()
+  (map! :map java-ts-mode-map
+        :localleader
+        :desc "Run junit test" "t" #'bc/java-run-junit-test
+        :desc "Update project config" "u" #'lsp-bridge-jdtls-update-project-configuration)
+
+  ;; check junit console launcher options for details
+  (defun bc/java-run-junit-test ()
+    "Java run main/test at point."
+    (interactive)
+    (let* ((pkg (bc/java--current-package))
+           (class (bc/java--current-class))
+           (method (bc/java--current-method))
+           (parameters (bc/java--current-parameters)))
+      (if (and pkg class)
+          (lsp-bridge-jdtls-project-is-test-file
+           #'(lambda (is-test-file)
+               (if is-test-file
+                   (lsp-bridge-jdtls-project-get-classpaths
+                    #'(lambda (classpaths)
+                        (let ((junit-wrapper "junit-wrapper")
+                              (classpath-file (expand-file-name "junit-classpaths" temporary-file-directory)))
+                          (with-temp-file classpath-file
+                            (insert "-classpath\n")
+                            (insert classpaths))
+
+                          (setq-local old-default-directory default-directory
+                                      default-directory (doom-project-root))
+                          (compilation-start (concat junit-wrapper (format " '%s'" classpath-file)
+                                                     (if method
+                                                         (if (not (string-empty-p parameters))
+                                                             (format " '%s.%s#%s(%s)'" pkg class method parameters)
+                                                           (format " '%s.%s#%s'" pkg class method))
+                                                       (format " '%s.%s'" pkg class))))
+                          (setq-local default-directory old-default-directory)))
+                    "test")
+                 (message "%s is not a test file" class))))
+        (user-error "Can not found package/class"))))
+
+  (defun bc/java--current-package ()
     (let ((package-node (treesit-node-text
                          (car (treesit-filter-child
                                (treesit-buffer-root-node)
@@ -200,7 +146,7 @@
       (when (string-match "package \\(.+\\);" package-node)
         (match-string 1 package-node))))
 
-  (defun bc/java--treesit-get-class ()
+  (defun bc/java--current-class ()
     (treesit-defun-name
      (car
       (treesit-filter-child
@@ -208,24 +154,24 @@
        (lambda (child)
          (member (treesit-node-type child) '("class_declaration")))))))
 
-  (defun bc/java--treesit-get-method ()
-    (treesit-defun-name (bc/java--treesit-get-method-node)))
+  (defun bc/java--current-method ()
+    (treesit-defun-name (bc/java--current-method-node)))
 
-  (defun bc/java--treesit-get-method-node ()
+  (defun bc/java--current-method-node ()
     (treesit-parent-until
      (treesit-node-at (point))
      (lambda (parent)
        (member (treesit-node-type parent) '("method_declaration")))))
 
-  (defun bc/java--treesit-get-parameters ()
-    (when-let* ((mnode (bc/java--treesit-get-method-node))
+  (defun bc/java--current-parameters ()
+    (when-let* ((mnode (bc/java--current-method-node))
                 (pnode (treesit-node-child-by-field-name mnode "parameters"))
                 (types (cl-map 'vector
-                               #'bc/java--treesit-get-parameter-type
+                               #'bc/java--get-parameter-type
                                (treesit-node-children pnode t))))
       (mapconcat 'identity types ",")))
 
-  (defun bc/java--treesit-get-parameter-type (parameter-node)
+  (defun bc/java--get-parameter-type (parameter-node)
     (let* ((type-node (treesit-node-child-by-field-name parameter-node "type"))
            (type-name (if (string= (treesit-node-type type-node) "generic_type")
                           (treesit-node-text (treesit-node-child type-node 0) t)
