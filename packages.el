@@ -54,7 +54,6 @@
 (package! anzu :disable t)
 (package! ws-butler :disable t)
 (package! tide :disable t)
-(package! tree-sitter-indent :disable t)
 (package! mu4e-alert :disable t)
 
 (package! project :pin "a0ebb2e9cfda339d8ebda77447c9d822fe313c2d" :built-in (> emacs-major-version 30))
