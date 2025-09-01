@@ -65,15 +65,6 @@
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
-(when (modulep! :tools tree-sitter)
-  (package! tree-sitter :pin "3cfab8a0e945db9b3df84437f27945746a43cc71")
-  (package! tree-sitter-langs
-    :recipe (:nonrecursive t)
-    :pin "d28b710e6ce96fa0b6bbe0e3927c8f522ff2d8dd")
-  (package! ts-fold
-    :recipe (:host github :repo "emacs-tree-sitter/ts-fold")
-    :pin "bd0323aee667296a67e43537ad0c93692c1bced1"))
-
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
 (package! nerd-icons :pin "6868c05c6eb56c6625ee7fa38450b514542ab636")

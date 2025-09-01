@@ -21,10 +21,6 @@
 
 ;; xml
 (after! nxml-mode
-  (when (modulep! :tools tree-sitter)
-    (setq +tree-sitter-hl-enabled-modes '(not web-mode typescript-tsx-mode nxml-mode))
-    (add-hook! 'nxml-mode-local-vars-hook :append #'tree-sitter!))
-
   (setq nxml-auto-insert-xml-declaration-flag nil
         nxml-slash-auto-complete-flag nil)
 
@@ -451,10 +447,7 @@ The shell command used to build the image is:
            :completion-object sql-sqlite-completion-object
            :prompt-regexp "^sqlite> "
            :prompt-length 8
-           :prompt-cont-regexp "^   \\.\\.\\.> ")))
-
-  (if (modulep! :tools tree-sitter)
-      (add-hook! 'sql-mode-local-vars-hook #'tree-sitter! 'append)))
+           :prompt-cont-regexp "^   \\.\\.\\.> "))))
 
 (use-package! flymake-sqlfluff
   :when (modulep! :checkers syntax +flymake)
