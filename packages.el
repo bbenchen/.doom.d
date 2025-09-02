@@ -134,7 +134,11 @@
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
-  (package! gptel-magit :pin "f27c01821b67ed99ddf705c2b995f78b71394d8b")
+  (package! gptel-magit
+    ;; REVIEW: Revert to upstream if ragnard/gptel-magit#7 is merged.
+    :recipe (:host github
+             :repo "ArthurHeymans/gptel-magit")
+    :pin "4a40c3fc201d60d2f0589c2e1a6693fd94bb4c98")
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
