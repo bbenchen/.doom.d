@@ -59,9 +59,6 @@
 (package! project :pin "a0ebb2e9cfda339d8ebda77447c9d822fe313c2d" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(when (modulep! :ui workspaces)
-  (package! persp-mode :pin "fab4bf76927445d2e431f06e74572acba81f47d5"))
-
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
