@@ -166,7 +166,8 @@
        ;;ledger            ; be audit you can be
        (lua
         +tree-sitter)    ; one-based indices? one-based indices
-       markdown          ; writing docs for people to ignore
+       (markdown
+        +tree-sitter)    ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
