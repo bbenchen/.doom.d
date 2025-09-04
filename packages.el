@@ -56,7 +56,7 @@
 (package! tide :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "a0ebb2e9cfda339d8ebda77447c9d822fe313c2d" :built-in (> emacs-major-version 30))
+(package! project :pin "96d52ff2cb8ad69f0dec3e2b08f0e792bb5b07a1" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
@@ -122,7 +122,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "40f6950e80676bb92a3a7e07656d87578439fbbe")
+(package! gptel :recipe (:nonrecursive t) :pin "81618f24e2190568ea745dca82ba50267eed321a")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -145,7 +145,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
-  (package! blamer :pin "8a79c1f370f7c5f041c980e0b727960462c192ba"))
+  (package! blamer :pin "d06e1b8907f0bb5d603c76323dbcd8b00a014062"))
 
 (package! auto-rename-tag :pin "281e87ebd2f738acc5ab5e3f7e37774c1f157a8d")
 
