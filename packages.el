@@ -63,7 +63,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "6868c05c6eb56c6625ee7fa38450b514542ab636")
+(package! nerd-icons :pin "3774e0578b1023bd2ae10735e28c0cd1ccf46889")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "ee8a013098f2c2c2dec92ba2c237b25587212169")
