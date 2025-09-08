@@ -56,7 +56,7 @@
 (package! tide :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "96d52ff2cb8ad69f0dec3e2b08f0e792bb5b07a1" :built-in (> emacs-major-version 30))
+(package! project :pin "91300714013ba3416c98fe241e12f02991ee6f6f" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
@@ -101,7 +101,7 @@
 
 (package! editorconfig
   :recipe (:nonrecursive t)
-  :pin "f85ec9724b01fb144159b472daad136f0941631f"
+  :pin "4af10445fcdf1c9dfa7af4f9e5bec59e8a759d6f"
   :built-in (>= emacs-major-version 30))
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
