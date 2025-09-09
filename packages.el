@@ -56,7 +56,7 @@
 (package! tide :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "91300714013ba3416c98fe241e12f02991ee6f6f" :built-in (> emacs-major-version 30))
+(package! project :pin "679eb9326ff2835a8917749d83d23ff140fc9f98" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
@@ -85,7 +85,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "5ce1d6bd1359a3204a65e02d5035e05205c6d411")
+(package! llm :pin "c0ce35c35eaa49d713e25ad9db820807fe0dbff7")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -122,7 +122,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "81618f24e2190568ea745dca82ba50267eed321a")
+(package! gptel :recipe (:nonrecursive t) :pin "dd5e71734cd3ec3953cfc3a6b611f066e40ba9a0")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -130,7 +130,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8007f50c1c1734325c47939904f486753c7dd8ee")
-(package! verb :pin "e818377f2ceddf5670dcd9a32d3de0e8bf82a8f1")
+(package! verb :pin "6a441106e6c5c1bae71a5daa5e322d8d333209ef")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -188,7 +188,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "822a02c3de59505ca15c9d695873f3a686ceb778")
+  :pin "6dd9defb2667029bc15d5f37e7254c49e1616a03")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
