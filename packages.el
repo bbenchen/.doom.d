@@ -56,7 +56,7 @@
 (package! tide :disable t)
 (package! mu4e-alert :disable t)
 
-(package! project :pin "679eb9326ff2835a8917749d83d23ff140fc9f98" :built-in (> emacs-major-version 30))
+(package! project :pin "e8615777cb8bd2e26f2b66d18dbe819bef475c57" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
@@ -116,13 +116,13 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "48a2ee6a4d6a36b1dc76efa321b9b9c8bc11d73b")
+(package! envrc :pin "4fc7b657ea62c29eff5b8bf4356427e96cc99c93")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "dd5e71734cd3ec3953cfc3a6b611f066e40ba9a0")
+(package! gptel :recipe (:nonrecursive t) :pin "11a23834cdc7b333a5672e0298a4bae7daac480e")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
