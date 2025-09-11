@@ -291,10 +291,6 @@
 (use-package! popweb
   :defer 1
   :config
-  (setq popweb-proxy-type "http"
-        popweb-proxy-host "127.0.0.1"
-        popweb-proxy-port "20122")
-
   (let ((dir (file-name-directory (locate-library "popweb"))))
     (dolist (sub-dir '("extension/dict" "extension/url-preview"))
       (add-to-list 'load-path (expand-file-name sub-dir dir) t)))
@@ -358,9 +354,6 @@
         browse-url-browser-function #'eaf-open-browser
         eaf-start-python-process-when-require nil
         eaf-config-location (expand-file-name "eaf/" doom-cache-dir)
-        eaf-proxy-type "http"
-        eaf-proxy-host "127.0.0.1"
-        eaf-proxy-port "20122"
         eaf-webengine-pc-user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
         eaf-webengine-font-family "Times New Roman"
         eaf-webengine-serif-font-family "Times New Roman"
@@ -368,8 +361,6 @@
         eaf-browser-dark-mode nil
         eaf-browser-enable-adblocker t
         eaf-browser-enable-autofill t
-        eaf-browser-aria2-proxy-host "127.0.0.1"
-        eaf-browser-aria2-proxy-port "20122"
         eaf-browser-translate-language "zh-CN"
         eaf-browser-auto-import-chrome-cookies nil
         eaf-dired-advisor-enable nil)

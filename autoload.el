@@ -82,37 +82,3 @@ If FRAME is nil, it defaults to the selected frame."
     (modify-frame-parameters frame (cons (cons 'alpha-background alpha-background-value) nil))
     (if (> emacs-major-version 30)
         (modify-frame-parameters frame (cons (cons 'borders-respect-alpha-background alpha-background-value) nil)))))
-
-;; Network Proxy
-;;;###autoload
-(defun bc/show-proxy-http ()
-  "Show HTTP/HTTPS proxy."
-  (interactive)
-  (if (bound-and-true-p url-proxy-services)
-      (message "Current HTTP proxy is `127.0.0.1:20122'")
-    (message "No HTTP proxy")))
-
-;;;###autoload
-(defun bc/enable-proxy-http ()
-  "Enable HTTP/HTTPS proxy."
-  (interactive)
-  (setq url-proxy-services
-        `(("http" . "127.0.0.1:20122")
-          ("https" . "127.0.0.1:20122")
-          ("no_proxy" . "^\\(localhost\\|127.0.0.1\\|192.168.*\\|172.16.*\\|10.0.*\\)")))
-  (bc/show-proxy-http))
-
-;;;###autoload
-(defun bc/disable-proxy-http ()
-  "Disable HTTP/HTTPS proxy."
-  (interactive)
-  (setq url-proxy-services nil)
-  (bc/show-proxy-http))
-
-;;;###autoload
-(defun bc/toggle-proxy-http ()
-  "Toggle HTTP/HTTPS proxy."
-  (interactive)
-  (if (bound-and-true-p url-proxy-services)
-      (bc/disable-proxy-http)
-    (bc/enable-proxy-http)))
