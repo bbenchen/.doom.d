@@ -112,7 +112,7 @@
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! region-occurrences-highlighter :pin "c8c352655a07911a82507be61bb220010a2c262c")
-(package! visual-replace :pin "f45bcb7f6663e2390f871c47ddb5ae13d3d8c8ac")
+(package! visual-replace :pin "cf6a02fae01d9962862920a6cfe2488df2f76684")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -122,7 +122,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "11a23834cdc7b333a5672e0298a4bae7daac480e")
+(package! gptel :recipe (:nonrecursive t) :pin "df7accc3d1c4df88073753c7cb75922dc8672b02")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -188,7 +188,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "6dd9defb2667029bc15d5f37e7254c49e1616a03")
+  :pin "8b36c9c950270f8a71673c20c4a7942189c99e9d")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
