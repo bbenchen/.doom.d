@@ -63,7 +63,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "3774e0578b1023bd2ae10735e28c0cd1ccf46889")
+(package! nerd-icons :pin "4036893c42050426e3a76ec96ef54a661d3cb97f")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "ee8a013098f2c2c2dec92ba2c237b25587212169")
@@ -116,13 +116,13 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "4fc7b657ea62c29eff5b8bf4356427e96cc99c93")
+(package! envrc :pin "de1ae6e538764f74659f358b04af0d84fa0fef42")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "df7accc3d1c4df88073753c7cb75922dc8672b02")
+(package! gptel :recipe (:nonrecursive t) :pin "688fcb088b14aafb08bec57263623390d7dc6728")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -130,7 +130,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8007f50c1c1734325c47939904f486753c7dd8ee")
-(package! verb :pin "6a441106e6c5c1bae71a5daa5e322d8d333209ef")
+(package! verb :pin "3179e53373b9c39845a460474e5483a28c0d22c5")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -188,7 +188,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "8b36c9c950270f8a71673c20c4a7942189c99e9d")
+  :pin "4c21f74dcb1b08d49375123559762dd8002c6cd7")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
