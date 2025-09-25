@@ -8,6 +8,19 @@
 ;; iedit
 (setq iedit-toggle-key-default nil)
 
+;; anzu
+(after! anzu
+  (add-hook! 'doom-after-init-hook :append
+    (global-anzu-mode 1))
+
+  (define-key!
+    [remap query-replace]        #'anzu-query-replace
+    [remap query-replace-regexp] #'anzu-query-replace-regexp)
+
+  (define-key! isearch-mode-map
+    [remap isearch-query-replace]        #'anzu-isearch-query-replace
+    [remap isearch-query-replace-regexp] #'anzu-isearch-query-replace-regexp))
+
 ;; multiple-cursors
 (after! multiple-cursors-core
   (if (functionp 'counsel-M-x)
@@ -68,14 +81,6 @@
         "M-p" #'region-occurrences-highlighter-prev)
 
   (add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook) #'region-occurrences-highlighter-mode))
-
-;; visual-replace
-(use-package! visual-replace
-  :config
-  (setq visual-replace-display-total t)
-
-  (add-hook! 'doom-after-init-hook :append
-    (visual-replace-global-mode 1)))
 
 ;; deno-bridge-jieba
 (use-package! deno-bridge-jieba
