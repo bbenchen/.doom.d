@@ -12,6 +12,15 @@
                       (user-mail-address      . "517926804@qq.com"))
                     t)
 
+(set-email-account! "gmail.com"
+                    '((mu4e-sent-folder       . "/gmail.com/Sent")
+                      (mu4e-drafts-folder     . "/gmail.com/Drafts")
+                      (mu4e-trash-folder      . "/gmail.com/Trash")
+                      (mu4e-refile-folder     . "/gmail.com/Archive")
+                      (mu4e-update-interval   . 600)
+                      (user-full-name         . "Ben Chen")
+                      (user-mail-address      . "chen.jackson@gmail.com")))
+
 (after! mu4e
   (define-key! [remap compose-mail] #'+mu4e/compose)
 
@@ -52,7 +61,8 @@
                          (message-fetch-field "from")))
                  (account
                   (cond
-                   ((string-match "517926804@qq.com" from) "qq"))))
+                   ((string-match "517926804@qq.com" from) "qq")
+                   ((string-match "chen.jackson@gmail.com" from) "gmail"))))
               (setq message-sendmail-extra-arguments (list '"-a" account '"--read-envelope-from")))))))
 
   (unless (functionp 'mu4e--view-gather-mime-parts)
