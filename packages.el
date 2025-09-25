@@ -51,11 +51,6 @@
 
 (unpin! (:editor snippets))
 
-(package! anzu :disable t)
-(package! ws-butler :disable t)
-(package! tide :disable t)
-(package! mu4e-alert :disable t)
-
 (package! project :pin "e8615777cb8bd2e26f2b66d18dbe819bef475c57" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
