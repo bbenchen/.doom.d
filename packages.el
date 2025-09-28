@@ -61,7 +61,7 @@
 (package! nerd-icons :pin "4036893c42050426e3a76ec96ef54a661d3cb97f")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "ae452bc7f045ce86086e9251b25b92a030a32ccf")
+  :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
 (package! rainbow-mode :pin "2e6b18609c2fdd1a2dc513937a64d276fd6cf24c")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "c0ce35c35eaa49d713e25ad9db820807fe0dbff7")
+(package! llm :pin "3ce1e92be8dc70a1f969fd1a6d7eb09c0893b9ca")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -115,8 +115,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "d944f430eae936de2a9aa8121c7eaca2ca7be948")
-(package! gptel :recipe (:nonrecursive t) :pin "688fcb088b14aafb08bec57263623390d7dc6728")
+  :pin "c6cb54d58aa5434ee39db77fde3945e078559f00")
+(package! gptel :recipe (:nonrecursive t) :pin "734541d23de6a2747a24c12e33a3ecfff62f275f")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -182,7 +182,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "4c21f74dcb1b08d49375123559762dd8002c6cd7")
+  :pin "78d26bf36b409606bc053d690f2d3ebdfe8ce7cd")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
