@@ -51,14 +51,14 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "e8615777cb8bd2e26f2b66d18dbe819bef475c57" :built-in (> emacs-major-version 30))
+(package! project :pin "65068c0795747237ac5ecb5e76057c4f42a07bce" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! vterm :pin "056ad74653704bc353d8ec8ab52ac75267b7d373")
+(package! vterm :pin "adf8d10212d15f9bd5ca62b96c7b423be02ce3c4")
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "4036893c42050426e3a76ec96ef54a661d3cb97f")
+(package! nerd-icons :pin "418f137faac926b822582fbce55a74a26e891ec5")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "3ce1e92be8dc70a1f969fd1a6d7eb09c0893b9ca")
+(package! llm :pin "bc2a6ad3a6c84e9d9314c986afed92f665020d50")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -116,7 +116,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "c6cb54d58aa5434ee39db77fde3945e078559f00")
-(package! gptel :recipe (:nonrecursive t) :pin "734541d23de6a2747a24c12e33a3ecfff62f275f")
+(package! gptel :recipe (:nonrecursive t) :pin "4275350d7769fb8fdd09353e3e6d991b05c7a673")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -139,7 +139,7 @@
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
     :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
-  (package! blamer :pin "d06e1b8907f0bb5d603c76323dbcd8b00a014062"))
+  (package! blamer :pin "aa9b22d4e847d15a5c4659c0407aa8bf4242cc94"))
 
 (package! auto-rename-tag :pin "281e87ebd2f738acc5ab5e3f7e37774c1f157a8d")
 
@@ -182,7 +182,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "78d26bf36b409606bc053d690f2d3ebdfe8ce7cd")
+  :pin "97ac3eed8301c8240a5a82365b5d656879d8e816")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
