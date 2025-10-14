@@ -6,7 +6,7 @@
 ;; separedit
 (use-package! separedit
   :config
-  (setq separedit-default-mode 'markdown-mode
+  (setq separedit-default-mode 'markdown-ts-mode
         separedit-remove-trailing-spaces-in-comment t
         separedit-continue-fill-column t
         separedit-preserve-string-indentation t)
