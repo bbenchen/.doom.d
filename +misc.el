@@ -446,18 +446,17 @@
                         :host "openkey.cloud"
                         :models gptel--openai-models))
 
-  (setq gptel-display-buffer-action nil)  ; if user changes this, popup manager will bow out
-  (set-popup-rule!
-    (lambda (bname _action)
-      (and (null gptel-display-buffer-action)
-           (buffer-local-value 'gptel-mode (get-buffer bname))))
-    :select t
-    :size 0.3
-    :quit nil
-    :ttl nil)
+  (add-hook! 'gptel-mode-hook
+    (when (and (modulep! :checkers syntax)
+               (eq gptel-default-mode 'markdown-mode))
+      (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
+            ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))
 
+      (cond ((bound-and-true-p spell-fu-mode) (spell-fu--mode-disable)
+             (bound-and-true-p flyspell-mode) (flyspell-mode -1)))))
+  (add-hook! 'gptel-mode-hook #'gptel-highlight-mode)
   (add-hook! 'gptel-post-stream-hook #'gptel-auto-scroll)
-  (add-hook! 'gptel-post-response-hook #'gptel-end-of-response)
+  (add-hook! 'gptel-post-response-functions #'gptel-end-of-response)
 
   (defun bc/start-gptel ()
     (interactive)
