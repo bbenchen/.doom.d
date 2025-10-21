@@ -58,7 +58,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "418f137faac926b822582fbce55a74a26e891ec5")
+(package! nerd-icons :pin "ad61639aa3ae586b1d94435d55b33e2a166da35e")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
@@ -115,8 +115,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "7fb9f4859c23f9f546490538af41cf544992e86e")
-(package! gptel :recipe (:nonrecursive t) :pin "d085040f180001bccf1ac1a479c7ce7609d95751")
+  :pin "14238322a63636e08a098ee515947dac94d19f0b")
+(package! gptel :recipe (:nonrecursive t) :pin "2911541d00a5049f2efaf360d1f775534ac4189a")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
