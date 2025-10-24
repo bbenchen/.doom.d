@@ -171,6 +171,26 @@
   ;; Don't complain about this command being disabled when we use it
   (put 'dired-find-alternate-file 'disabled nil))
 
+;; dirvish
+(after! dirvish-yank
+  (defun bc/dirvish-yank--get-srcs ()
+    (cl-remove-duplicates
+     (cl-loop
+      with case-fold-search = nil
+      with regexp = (dired-marker-regexp)
+      with buffers = (cl-loop for b in (buffer-list)
+                              when (with-current-buffer b
+                                     (derived-mode-p 'dired-mode))
+                              collect b)
+      for buffer in (seq-filter #'buffer-live-p buffers) append
+      (with-current-buffer buffer
+        (when (save-excursion (goto-char (point-min))
+                              (re-search-forward regexp nil t))
+          (dired-map-over-marks (dired-get-filename) nil))))
+     :test #'equal))
+
+  (setq dirvish-yank-sources #'bc/dirvish-yank--get-srcs))
+
 ;; flymake
 (after! flymake-popon
   (setq flymake-popon-posframe-border-width 0)
