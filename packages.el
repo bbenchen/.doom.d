@@ -58,7 +58,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "4c033505f103c1f302a51fccab0c44fcffce38d6")
+(package! nerd-icons :pin "579f489e75116bb8bb0a507c19f120493a913533")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
@@ -116,7 +116,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "14238322a63636e08a098ee515947dac94d19f0b")
-(package! gptel :recipe (:nonrecursive t) :pin "d14d8c12f33829ea1615ac5316d7534d4175fe23")
+(package! gptel :recipe (:nonrecursive t) :pin "13baa6754e7b12ce9f0a5a87bf11cf01d1b753d8")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
@@ -124,7 +124,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "8007f50c1c1734325c47939904f486753c7dd8ee")
-(package! verb :pin "5f5381333ee5d8ff3df7d1d01b9becc377bb1415")
+(package! verb :pin "9343cc408a6ccf98faf39eff8f1925a86aa4a26b")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
