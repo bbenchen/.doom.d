@@ -458,7 +458,8 @@
   :defer t
   :commands bc/start-gptel
   :config
-  (setq gptel-default-mode 'markdown-mode
+  (setq gptel-highlight-methods '(fringe)
+        gptel-default-mode 'markdown-mode
         gptel-model 'gpt-4o-mini
         gptel-backend (gptel-make-openai "ChatGPT"
                         :key 'gptel-api-key
