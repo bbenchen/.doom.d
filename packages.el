@@ -58,7 +58,7 @@
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "579f489e75116bb8bb0a507c19f120493a913533")
+(package! nerd-icons :pin "f262828f5f0e15d1d0189081bb30a67ddfaaf341")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
@@ -66,7 +66,7 @@
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
-  (package! org-msg :pin "59e2042e5f23e25f31c6aef0db1e70c6f54f117d"))
+  (package! org-msg :pin "327768e2c38020f6ea44730e71f2a62f3f0ce3bd"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
@@ -116,7 +116,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "14238322a63636e08a098ee515947dac94d19f0b")
-(package! gptel :recipe (:nonrecursive t) :pin "13baa6754e7b12ce9f0a5a87bf11cf01d1b753d8")
+(package! gptel :recipe (:nonrecursive t) :pin "81d3d0fc800498430485d4ac84a3e803dcbb5d18")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
