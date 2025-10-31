@@ -505,6 +505,11 @@ The shell command used to build the image is:
                                           (concat "-javaagent:" lombok-jar-path))))
   (setq lsp-bridge-jdtls-default-file (expand-file-name "etc/lsp-bridge/langserver/jdtls.json" doom-user-dir))
 
+  (setq lsp-bridge-get-project-path-by-filepath #'(lambda (filename)
+                                                    (if (and (file-exists-p filename)
+                                                             (not (file-directory-p filename)))
+                                                        (doom-project-root (file-name-directory filename)))))
+
   ;; (setq lsp-bridge-get-multi-lang-server-by-project
   ;;       (lambda (_project-path filepath)
   ;;         ;; If typescript file include deno.land url, then use Deno LSP server.
