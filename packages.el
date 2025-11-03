@@ -116,7 +116,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "14238322a63636e08a098ee515947dac94d19f0b")
-(package! gptel :recipe (:nonrecursive t) :pin "81d3d0fc800498430485d4ac84a3e803dcbb5d18")
+(package! gptel :recipe (:nonrecursive t) :pin "b4bf931e488d18a9502411e40f231df4ad88a1ec")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
