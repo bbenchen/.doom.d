@@ -51,14 +51,14 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "65068c0795747237ac5ecb5e76057c4f42a07bce" :built-in (> emacs-major-version 30))
+(package! project :pin "2b4f40b3ed15c6301ee44e8c89548f5c4c7a26f4" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "adf8d10212d15f9bd5ca62b96c7b423be02ce3c4")
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
-(package! nerd-icons :pin "f262828f5f0e15d1d0189081bb30a67ddfaaf341")
+(package! nerd-icons :pin "940b28d3dbd134696ef448e906e42a87a9d61e20")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
@@ -74,7 +74,7 @@
 
 (package! pinyinlib :pin "1772c79b6f319b26b6a394a8dda065be3ea4498d")
 
-(package! rime :pin "1b70d9cfbac9b11a934007f103b1abc9a034268f")
+(package! rime :pin "f927d26e471e7d63de65ffa92897944242f2fd92")
 
 (package! gt
   :recipe (:host github :repo "lorniu/gt.el")
@@ -106,7 +106,7 @@
 (package! thing-edit
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
-(package! region-occurrences-highlighter :pin "c8c352655a07911a82507be61bb220010a2c262c")
+(package! region-occurrences-highlighter :pin "9db3247c05868b0578c0d740612ade55da6a318d")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
@@ -115,11 +115,11 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "14238322a63636e08a098ee515947dac94d19f0b")
-(package! gptel :recipe (:nonrecursive t) :pin "b4bf931e488d18a9502411e40f231df4ad88a1ec")
+  :pin "9cd6796833b7f830b55d2e3dcc6ef05693bed61b")
+(package! gptel :recipe (:nonrecursive t) :pin "a33e1bb7cbd4a91894f28a66f9e28eb57dd5ea80")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
-  :pin "495b5e0b5348dbced1448bd12cbf8847e30b5175")
+  :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
@@ -141,7 +141,7 @@
     :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
   (package! blamer :pin "aa9b22d4e847d15a5c4659c0407aa8bf4242cc94"))
 
-(package! auto-rename-tag :pin "281e87ebd2f738acc5ab5e3f7e37774c1f157a8d")
+(package! auto-rename-tag :pin "35dd347b9b1f512dd1713c1c2e52766baecb382b")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
