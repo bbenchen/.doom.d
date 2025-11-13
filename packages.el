@@ -54,7 +54,7 @@
 (package! project :pin "2b4f40b3ed15c6301ee44e8c89548f5c4c7a26f4" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! vterm :pin "adf8d10212d15f9bd5ca62b96c7b423be02ce3c4")
+(package! vterm :pin "12bce963fce7a25264cfaf2e29376a6bc2a9bb62")
 
 (package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
 
@@ -115,8 +115,8 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "9cd6796833b7f830b55d2e3dcc6ef05693bed61b")
-(package! gptel :recipe (:nonrecursive t) :pin "a33e1bb7cbd4a91894f28a66f9e28eb57dd5ea80")
+  :pin "fc0f1381bb9398a2d5a76776bad812d7ce3507dc")
+(package! gptel :recipe (:nonrecursive t) :pin "f1cd66a5a9e844058e9f838827524af68cf9dd91")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -182,7 +182,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "e26dfadba4bc3a95184c514f6c4cfa76273b78d8")
+  :pin "4c1b7518d18be7a2c05ce1b7a47fc490bc155f5a")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
