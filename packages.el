@@ -61,7 +61,7 @@
 (package! nerd-icons :pin "940b28d3dbd134696ef448e906e42a87a9d61e20")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "d75f571c46feef64a39d76fbe4292aec47200e5e")
+  :pin "4ec1b48b0532b2cf5f7cbdc6b4f1ba721abf2a60")
 (package! rainbow-mode :pin "2e6b18609c2fdd1a2dc513937a64d276fd6cf24c")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
