@@ -94,10 +94,6 @@
   :recipe (:host github :repo "bbenchen/deno-bridge")
   :pin "eb36e3da4d784c391a277a0da82d3f8cd3b4a96b")
 
-(package! editorconfig
-  :recipe (:nonrecursive t)
-  :pin "4af10445fcdf1c9dfa7af4f9e5bec59e8a759d6f"
-  :built-in (>= emacs-major-version 30))
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
 (package! auto-save

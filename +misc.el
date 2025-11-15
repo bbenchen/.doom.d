@@ -150,11 +150,6 @@
   (cond ((executable-find "ugrep") (setq xref-search-program 'ugrep))
         ((executable-find "rg") (setq xref-search-program 'ripgrep))))
 
-;; editorconfig
-(when (modulep! :tools editorconfig)
-  (unless (boundp 'editorconfig-exclude-regexps)
-    (defvar editorconfig-exclude-regexps nil)))
-
 ;; vterm
 (setq vterm-always-compile-module nil)
 (after! vterm
