@@ -14,6 +14,8 @@
 (setq initial-major-mode 'fundamental-mode
       initial-scratch-message nil)
 
+(setq delete-by-moving-to-trash nil)
+
 (setq mode-line-right-align-edge 'right-margin)
 
 (setq doom-fd-executable "fd"
