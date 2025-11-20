@@ -54,14 +54,14 @@
 (package! project :pin "2b4f40b3ed15c6301ee44e8c89548f5c4c7a26f4" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! vterm :pin "12bce963fce7a25264cfaf2e29376a6bc2a9bb62")
+(package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
-(package! posframe :pin "12f540c9ad5da09673b2bca1132b41f94c134e82")
+(package! posframe :pin "ec5901e75af20bf7ddb383b318b7db4d63dbaa3b")
 
 (package! nerd-icons :pin "940b28d3dbd134696ef448e906e42a87a9d61e20")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "4ec1b48b0532b2cf5f7cbdc6b4f1ba721abf2a60")
+  :pin "c5b52efe05d67db93409fe4dadac53d5c2332446")
 (package! rainbow-mode :pin "2e6b18609c2fdd1a2dc513937a64d276fd6cf24c")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
@@ -112,7 +112,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "fc0f1381bb9398a2d5a76776bad812d7ce3507dc")
-(package! gptel :recipe (:nonrecursive t) :pin "f1cd66a5a9e844058e9f838827524af68cf9dd91")
+(package! gptel :recipe (:nonrecursive t) :pin "9d6313ce7c6eb71bfb24a8d1edcd60fe4534eea3")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
