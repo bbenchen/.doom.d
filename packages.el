@@ -102,17 +102,17 @@
 (package! thing-edit
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
-(package! region-occurrences-highlighter :pin "9db3247c05868b0578c0d740612ade55da6a318d")
+(package! region-occurrences-highlighter :pin "98fc1020c68f339810beb753a29daba93ade57b5")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
-(package! envrc :pin "de1ae6e538764f74659f358b04af0d84fa0fef42")
+(package! envrc :pin "06d72d141ac2e2990d80cdb8bb84f6cb54c628a5")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "fc0f1381bb9398a2d5a76776bad812d7ce3507dc")
-(package! gptel :recipe (:nonrecursive t) :pin "9d6313ce7c6eb71bfb24a8d1edcd60fe4534eea3")
+  :pin "1158314ef4319fd7f0c0eb84a1d17250a6b5648f")
+(package! gptel :recipe (:nonrecursive t) :pin "2270c99a9b361c90c8b2d6a49160aaa228eb2b7e")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -137,7 +137,7 @@
     :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
   (package! blamer :pin "aa9b22d4e847d15a5c4659c0407aa8bf4242cc94"))
 
-(package! auto-rename-tag :pin "35dd347b9b1f512dd1713c1c2e52766baecb382b")
+(package! auto-rename-tag :pin "79000f6253adef4bd59207322fa78d938e3e5cf2")
 
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
