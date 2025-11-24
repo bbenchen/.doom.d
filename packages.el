@@ -91,8 +91,8 @@
 
 (package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
 (package! deno-bridge
-  :recipe (:host github :repo "bbenchen/deno-bridge")
-  :pin "eb36e3da4d784c391a277a0da82d3f8cd3b4a96b")
+  :recipe (:host github :repo "manateelazycat/deno-bridge")
+  :pin "d85e517c025f6ba74f2d19c00a4898bc69c87572")
 
 (package! hungry-delete :pin "d919e555e5c13a2edf4570f3ceec84f0ade71657")
 (package! centered-cursor-mode :pin "67ef719e685407dbc455c7430765e4e685fd95a9")
