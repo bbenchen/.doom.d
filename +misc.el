@@ -458,7 +458,7 @@
   :config
   (setq gptel-highlight-methods '(fringe)
         gptel-default-mode 'markdown-mode
-        gptel-model 'gpt-4o-mini
+        gptel-model 'gpt-5
         gptel-backend (gptel-make-openai "ChatGPT"
                         :key 'gptel-api-key
                         :stream t
