@@ -446,7 +446,8 @@
 
   (add-hook! 'aidermacs-before-run-backend-hook
     (cl-dolist (pair '(("deepseek" . "api.deepseek.com")
-                       ("openrouter" . "openrouter.ai")))
+                       ("openrouter" . "openrouter.ai")
+                       ("gemini" . "generativelanguage.googleapis.com")))
       (let* ((env-name (concat (upcase (car pair)) "_API_KEY")))
         (if-let* ((apikey (bc/lookup-password :host (cdr pair) :user "apikey")))
             (setenv env-name apikey))))))
