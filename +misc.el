@@ -433,10 +433,10 @@
   :commands aidermacs-run aidermacs-transient-menu
   :config
   (setq aidermacs-auto-commits nil
-        aidermacs-default-model "openrouter/deepseek/deepseek-r1-0528:free"
+        aidermacs-default-model "openrouter/deepseek/deepseek-chat-v3.1"
         aidermacs-default-chat-mode 'architect
         aidermacs-architect-model "openrouter/moonshotai/kimi-k2-0905"
-        aidermacs-editor-model "openrouter/deepseek/deepseek-r1-0528"
+        aidermacs-editor-model "openrouter/deepseek/deepseek-chat-v3.1"
         aidermacs-weak-model "openrouter/deepseek/deepseek-chat-v3-0324"
         aidermacs-extra-args '("--no-check-update" "--chat-language" "Chinese")
         aidermacs-watch-files t
