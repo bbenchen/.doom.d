@@ -51,14 +51,14 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "2b4f40b3ed15c6301ee44e8c89548f5c4c7a26f4" :built-in (> emacs-major-version 30))
+(package! project :pin "83c91f5c8407b7ba8376fa966b1e573517a74e9d" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
-(package! posframe :pin "ec5901e75af20bf7ddb383b318b7db4d63dbaa3b")
+(package! posframe :pin "d93828bf6c36383c365bd564ad3bab5a4403804c")
 
-(package! nerd-icons :pin "940b28d3dbd134696ef448e906e42a87a9d61e20")
+(package! nerd-icons :pin "772987a28d6408f840331c52c91d04b623a87048")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "c5b52efe05d67db93409fe4dadac53d5c2332446")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "d053221c85208fda1601202bc5adb1861ffe549d")
+(package! llm :pin "1aced7a2548ecc0350f651157d44c4dac0853987")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -112,7 +112,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "1158314ef4319fd7f0c0eb84a1d17250a6b5648f")
-(package! gptel :recipe (:nonrecursive t) :pin "2270c99a9b361c90c8b2d6a49160aaa228eb2b7e")
+(package! gptel :recipe (:nonrecursive t) :pin "73144b7345693b046174364edb68e1a5f5a3c7ed")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
