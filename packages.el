@@ -119,7 +119,7 @@
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "8007f50c1c1734325c47939904f486753c7dd8ee")
+  :pin "dbf20644f59a968a00780ea57562302183305e2f")
 (package! verb :pin "9343cc408a6ccf98faf39eff8f1925a86aa4a26b")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
