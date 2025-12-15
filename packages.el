@@ -51,14 +51,14 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "83c91f5c8407b7ba8376fa966b1e573517a74e9d" :built-in (> emacs-major-version 30))
+(package! project :pin "d957968f860e5be7c276366c065ecd496366617e" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
 (package! posframe :pin "d93828bf6c36383c365bd564ad3bab5a4403804c")
 
-(package! nerd-icons :pin "772987a28d6408f840331c52c91d04b623a87048")
+(package! nerd-icons :pin "081f6f4f99b9460b63b5a2a6087b62fefd06a5d0")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "c5b52efe05d67db93409fe4dadac53d5c2332446")
@@ -112,7 +112,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! gptel :recipe (:nonrecursive t) :pin "1c7e7d64e00bfabd29ca6c56875ded3e6bc78c5f")
+(package! gptel :recipe (:nonrecursive t) :pin "191e14b5c87b16486065599ef68e13bdd018542e")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
