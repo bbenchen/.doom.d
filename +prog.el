@@ -282,7 +282,9 @@ The shell command used to build the image is:
 
 ;; nginx-mode
 (use-package! nginx-mode
-  :defer t)
+  :defer t
+  :config
+  (setq nginx-indent-level 4))
 
 ;; plantuml
 (setq plantuml-jar-path (expand-file-name "plantuml.jar" doom-user-dir)
