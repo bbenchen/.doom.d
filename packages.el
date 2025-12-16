@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "b47a446694601f9772476160f5ab0878486967f8")
+(package! llm :pin "12967fb6f111605f3d250cff39ebe9a0a3a6c069")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -119,7 +119,7 @@
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "dbf20644f59a968a00780ea57562302183305e2f")
+  :pin "1f39dcb888fd37b8fecfc71032dcbad0652e6864")
 (package! verb :pin "9343cc408a6ccf98faf39eff8f1925a86aa4a26b")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
@@ -178,7 +178,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "4c1b7518d18be7a2c05ce1b7a47fc490bc155f5a")
+  :pin "9d95358557dd0c1d650a1bb83933742e8264f584")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
