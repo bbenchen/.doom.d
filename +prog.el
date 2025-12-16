@@ -452,6 +452,8 @@ The shell command used to build the image is:
         lsp-bridge-imenu-function 'consult-imenu
         acm-backend-yas-match-by-trigger-keyword t
         acm-backend-search-file-words-enable-fuzzy-match t
+        acm-backend-lsp-match-mode "prefix"
+        acm-backend-lsp-case-mode "smart"
         acm-enable-capf t
         acm-enable-tabnine nil
         acm-enable-copilot nil
