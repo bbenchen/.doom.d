@@ -139,6 +139,9 @@
 
 (package! auto-rename-tag :pin "e25eb093881527f297ae8906dbf6e8d25f08303f")
 
+(package! markdown-inline-images
+  :recipe (:host github :repo "domschl/markdown-inline-images.el")
+  :pin "925d58b92d13d18e1569df591d415ec15a7d6a1e")
 (when (modulep! :lang go)
   (package! go-impl :pin "1eebba6ccd02d11a5a82ad4540a8d562797bc3b3")
   (package! go-fill-struct :pin "9e2e4be5af716ecadba809e73ddc95d4c772b2d9")

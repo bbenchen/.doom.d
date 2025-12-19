@@ -35,6 +35,11 @@
   :config
   (add-hook! (nxml-mode xml-mode sgml-mode) #'auto-rename-tag-mode))
 
+;; markdown
+(use-package! markdown-inline-images
+  :config
+  (add-hook! (markdown-mode markdown-ts-mode) #'markdown-inline-images-mode))
+
 ;; go
 (after! go-mode
   (when (executable-find "gopkgs")
