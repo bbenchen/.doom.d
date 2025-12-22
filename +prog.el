@@ -451,8 +451,8 @@ The shell command used to build the image is:
         lsp-bridge-diagnostic-tooltip-border-width 2
         lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
         lsp-bridge-signature-show-with-frame-position "point"
-        lsp-bridge-python-lsp-server "basedpyright"
-        lsp-bridge-python-multi-lsp-server "basedpyright_ruff"
+        lsp-bridge-python-lsp-server "ty"
+        lsp-bridge-python-multi-lsp-server "ty_ruff"
         lsp-bridge-markdown-lsp-server nil
         lsp-bridge-imenu-function 'consult-imenu
         acm-backend-yas-match-by-trigger-keyword t
