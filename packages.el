@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "29a3a94525e45ebffd330758f45ef95f240d070f")
+(package! llm :pin "41c1c5771a606e413f207880ba64d95a30c89be4")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -112,7 +112,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! gptel :recipe (:nonrecursive t) :pin "0f65be08ead0c9bc882fad5a4dcb604448e366a6")
+(package! gptel :recipe (:nonrecursive t) :pin "b6726490e7de00e4a54b17490c6e09b39adbfab4")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -120,7 +120,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "1caace5c9b25b659d64f96c0c44015a9514e960f")
-(package! verb :pin "ec93e0b18f3b65f6f9517e4001ff1c0c643b32cd")
+(package! verb :pin "f45e31b2bcdea2a859bb28cbb1819469978457c9")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
