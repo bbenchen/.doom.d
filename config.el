@@ -53,11 +53,16 @@
          (add-to-list 'default-frame-alist '(undecorated . t)))))
 
 ;; transparency
-(push '(alpha-background . 50) default-frame-alist)
-(modify-frame-parameters nil '((alpha-background . 50)))
-(when (> emacs-major-version 30)
-  (push '(borders-respect-alpha-background . 50) default-frame-alist)
-  (modify-frame-parameters nil '((borders-respect-alpha-background . 50))))
+(when (featurep :system 'macos)
+  (set-frame-parameter nil 'ns-alpha-elements '(ns-alpha-all))
+  (add-to-list 'default-frame-alist '(ns-alpha-elements . (ns-alpha-all))))
+(set-frame-parameter nil 'alpha-background 50)
+(add-to-list 'default-frame-alist '(alpha-background . 50))
+(set-frame-parameter nil 'borders-respect-alpha-background t)
+(add-to-list 'default-frame-alist '(borders-respect-alpha-background . t))
+(when (featurep :system 'macos)
+  (set-frame-parameter nil 'ns-background-blur 20)
+  (add-to-list 'default-frame-alist '(ns-background-blur . 20)))
 
 ;; maximize the window
 (when (and (not (> emacs-major-version 28))
