@@ -51,7 +51,7 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "fda7258c4802833828d2f456c2064d9bd6190aaa" :built-in (> emacs-major-version 30))
+(package! project :pin "eeb6aa1b5b51df497f1ef7d21f9e18f5ec10607c" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "00f120f129d1e95faec6683bed062cb5118d6420")
+(package! llm :pin "f41864e396511b05565f9180852b44ac4876e15a")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -112,7 +112,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! gptel :recipe (:nonrecursive t) :pin "850c20689fe00e18b13047c784c77f0df8ab6ca9")
+(package! gptel :recipe (:nonrecursive t) :pin "93d58e4cce68c8f603562904f77a3e329eaf5a24")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -137,7 +137,7 @@
     :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
   (package! blamer :pin "aa9b22d4e847d15a5c4659c0407aa8bf4242cc94"))
 
-(package! auto-rename-tag :pin "e25eb093881527f297ae8906dbf6e8d25f08303f")
+(package! auto-rename-tag :pin "ace6de8bc8200aa9c9f37c8266d0e1b51627b559")
 
 (package! markdown-inline-images
   :recipe (:host github :repo "domschl/markdown-inline-images.el")
@@ -181,7 +181,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "e800abc4c8fa73cd1944c825a9168b3638ba8784")
+  :pin "144ebce793c96d7bc86bad5feb143c8678bc3c8f")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
