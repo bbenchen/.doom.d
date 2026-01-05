@@ -263,7 +263,9 @@
 (after! diff-hl
   (setq diff-hl-disable-on-remote t
         diff-hl-update-async (not (featurep :system 'macos)))
-  (setq diff-hl-global-modes '(not helpful-mode image-mode pdf-view-mode vterm-mode magit-status-mode)))
+  (setq diff-hl-global-modes '(not helpful-mode image-mode pdf-view-mode vterm-mode magit-status-mode))
+
+  (remove-hook! 'dired-mode-hook #'+vc-gutter-enable-maybe-h))
 
 ;; pinentry
 ;; (use-package! pinentry
