@@ -25,9 +25,10 @@
           "s-F" #'consult-line-multi)
         "s-k" #'kill-current-buffer
         "s-x" #'kill-region
-        "s-+" #'text-scale-increase
         "s-=" #'text-scale-increase
         "s--" #'text-scale-decrease
+        "s-+" #'shift-number-up
+        "s-_" #'shift-number-down
         "<s-up>"    #'shrink-window
         "<s-down>"  #'enlarge-window
         "<s-left>"  #'shrink-window-horizontally

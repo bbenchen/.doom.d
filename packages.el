@@ -102,6 +102,9 @@
 (package! thing-edit
   :recipe (:host github :repo "manateelazycat/thing-edit")
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
+(package! shift-number
+  :recipe (:host codeberg :repo "ideasman42/emacs-shift-number")
+  :pin "b60fce74b97ea3598b569354dd9de448af6384d7")
 (package! region-occurrences-highlighter :pin "98fc1020c68f339810beb753a29daba93ade57b5")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
