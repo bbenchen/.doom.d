@@ -105,7 +105,7 @@
 (package! region-occurrences-highlighter :pin "98fc1020c68f339810beb753a29daba93ade57b5")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
-;; (package! pinentry :pin "91d51af8a1cb970743fb4841d7876c10ceb487e8")
+;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
 (package! envrc :pin "06d72d141ac2e2990d80cdb8bb84f6cb54c628a5")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
