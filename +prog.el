@@ -445,14 +445,15 @@ The shell command used to build the image is:
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "etc/lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "etc/lsp-bridge/langserver" doom-user-dir)
         ;; lsp-bridge-log-level 'debug
+        lsp-bridge-enable-document-highlight t
         lsp-bridge-enable-completion-in-string t
         lsp-bridge-enable-org-babel t
         lsp-bridge-enable-with-tramp nil
         lsp-bridge-diagnostic-tooltip-border-width 2
         lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
         lsp-bridge-signature-show-with-frame-position "point"
-        lsp-bridge-python-lsp-server "ty"
-        lsp-bridge-python-multi-lsp-server "ty_ruff"
+        lsp-bridge-python-lsp-server "basedpyright"
+        lsp-bridge-python-multi-lsp-server "basedpyright_ruff"
         lsp-bridge-markdown-lsp-server nil
         lsp-bridge-imenu-function 'consult-imenu
         acm-backend-yas-match-by-trigger-keyword t

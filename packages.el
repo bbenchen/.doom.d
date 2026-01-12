@@ -187,7 +187,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "144ebce793c96d7bc86bad5feb143c8678bc3c8f")
+  :pin "b0dd95408c650be1183977a3b07eec080096b8fe")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
