@@ -51,7 +51,7 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "a66b0e0987ce5b81a36d81cc43eed2c9dc0bdeeb" :built-in (> emacs-major-version 30))
+(package! project :pin "be0c22791e8e93db405a91468049b74f06458818" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
