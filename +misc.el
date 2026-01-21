@@ -488,10 +488,6 @@
 (use-package! gptel-quick
   :defer t)
 
-;; magit-pre-commit
-(use-package! magit-pre-commit
-  :after magit)
-
 ;; gptel-magit
 (use-package! gptel-magit
   :when (modulep! :tools magit)

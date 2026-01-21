@@ -127,9 +127,6 @@
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
-  (package! magit-pre-commit
-  :recipe (:host github :repo "DamianB-BitFlipper/magit-pre-commit.el")
-  :pin "2f517ad5694c52bd13ffb88ea2f46954343ace3d")
   (package! gptel-magit
     ;; REVIEW: Revert to upstream if ragnard/gptel-magit#7 is merged.
     :recipe (:host github
