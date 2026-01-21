@@ -10,7 +10,7 @@ junit_platform_console_file = os.path.expanduser(
 )
 
 
-def download_junit_platform_console():
+def download_junit_platform_console() -> None:
     junit_platform_console_version = "6.0.2"
     junit_platform_console_download_url = f"https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/{junit_platform_console_version}/junit-platform-console-standalone-{junit_platform_console_version}.jar"
     _ = request.urlretrieve(
@@ -18,7 +18,7 @@ def download_junit_platform_console():
     )
 
 
-def check_junit_platform_console_file():
+def check_junit_platform_console_file() -> None:
     if not os.path.exists(junit_platform_console_file):
         junit_platform_console_dir = os.path.dirname(junit_platform_console_file)
         if not os.path.exists(junit_platform_console_dir):
