@@ -11,7 +11,8 @@ junit_platform_console_file = os.path.expanduser(
 
 
 def download_junit_platform_console():
-    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/6.0.2/junit-platform-console-standalone-6.0.2.jar"
+    junit_platform_console_version = "6.0.2"
+    junit_platform_console_download_url = f"https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/{junit_platform_console_version}/junit-platform-console-standalone-{junit_platform_console_version}.jar"
     _ = request.urlretrieve(
         junit_platform_console_download_url, junit_platform_console_file
     )
@@ -26,8 +27,8 @@ def check_junit_platform_console_file():
         download_junit_platform_console()
 
 
-def read_junit_opts():
-    opts = []
+def read_junit_opts() -> list[str]:
+    opts: list[str] = []
     junit_opts_filename = ".junit-opts"
     if os.path.exists(junit_opts_filename) and os.path.isfile(junit_opts_filename):
         with open(junit_opts_filename, mode="r", encoding="utf-8") as f:
@@ -45,15 +46,15 @@ def read_junit_opts():
 def main():
     parser = argparse.ArgumentParser()
 
-    _ = parser.add_argument("classpaths_file", help="类路径信息")
-    _ = parser.add_argument("test_class_or_method", help="要测试的类或方法")
+    _ = parser.add_argument("classpaths_file", type=str, help="类路径信息")
+    _ = parser.add_argument("test_class_or_method", type=str, help="要测试的类或方法")
 
-    known_args = parser.parse_args()
+    known_args  = vars(parser.parse_args())
 
     check_junit_platform_console_file()
 
-    classpaths_file = known_args.classpaths_file
-    test_class_or_method = known_args.test_class_or_method
+    classpaths_file = f"{known_args["classpaths_file"]}"
+    test_class_or_method = f"{known_args["test_class_or_method"]}"
     test_mode = "-m" if test_class_or_method.rfind("#") > 0 else "-c"
 
     cmd_args = ["java"]
@@ -67,13 +68,13 @@ def main():
     cmd_args.append(junit_platform_console_file)
     cmd_args.append("execute")
     cmd_args.append("--disable-banner")
-    cmd_args.append("@" + classpaths_file)
+    cmd_args.append(f"@{classpaths_file}")
     cmd_args.append(test_mode)
     cmd_args.append(test_class_or_method)
 
     _ = subprocess.run(cmd_args, encoding="utf-8")
 
-    os.remove(known_args.classpaths_file)
+    os.remove(classpaths_file)
 
 
 if __name__ == "__main__":
