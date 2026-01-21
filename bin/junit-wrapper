@@ -11,8 +11,8 @@ junit_platform_console_file = os.path.expanduser(
 
 
 def download_junit_platform_console():
-    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/6.0.1/junit-platform-console-standalone-6.0.1.jar"
-    request.urlretrieve(
+    junit_platform_console_download_url = "https://mirrors.huaweicloud.com/repository/maven/org/junit/platform/junit-platform-console-standalone/6.0.2/junit-platform-console-standalone-6.0.2.jar"
+    _ = request.urlretrieve(
         junit_platform_console_download_url, junit_platform_console_file
     )
 
@@ -45,8 +45,8 @@ def read_junit_opts():
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("classpaths_file", help="类路径信息")
-    parser.add_argument("test_class_or_method", help="要测试的类或方法")
+    _ = parser.add_argument("classpaths_file", help="类路径信息")
+    _ = parser.add_argument("test_class_or_method", help="要测试的类或方法")
 
     known_args = parser.parse_args()
 
@@ -71,7 +71,7 @@ def main():
     cmd_args.append(test_mode)
     cmd_args.append(test_class_or_method)
 
-    subprocess.run(cmd_args, encoding="utf-8")
+    _ = subprocess.run(cmd_args, encoding="utf-8")
 
     os.remove(known_args.classpaths_file)
 
