@@ -56,7 +56,7 @@
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
-(package! posframe :pin "d93828bf6c36383c365bd564ad3bab5a4403804c")
+(package! posframe :pin "2160846ed3be154c31b712e4f1d3fd4cffc5e1fc")
 
 (package! nerd-icons :pin "14b9fb4b48a08806836bc93f09cf44565aa9f152")
 (package! doom-themes
@@ -66,7 +66,7 @@
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
-  (package! org-msg :pin "327768e2c38020f6ea44730e71f2a62f3f0ce3bd"))
+  (package! org-msg :pin "b7f17693739ce9c9a1b4356a1443a4b1db85b386"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
