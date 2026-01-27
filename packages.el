@@ -56,7 +56,7 @@
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
-(package! posframe :pin "2160846ed3be154c31b712e4f1d3fd4cffc5e1fc")
+(package! posframe :pin "4fc893c3c9ea3f6b5099ac1b369abb3c6da40b1e")
 
 (package! nerd-icons :pin "14b9fb4b48a08806836bc93f09cf44565aa9f152")
 (package! doom-themes
