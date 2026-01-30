@@ -51,22 +51,22 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "d1bf92c7a7d7fc97ee1169f6a02db32c98e5fba2" :built-in (> emacs-major-version 30))
+(package! project :pin "5607b0df59356672b796fa828479ef8e6d480a5a" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
 (package! posframe :pin "4fc893c3c9ea3f6b5099ac1b369abb3c6da40b1e")
 
-(package! nerd-icons :pin "14b9fb4b48a08806836bc93f09cf44565aa9f152")
+(package! nerd-icons :pin "9a7f44db9a53567f04603bc88d05402cad49c64c")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "c5b52efe05d67db93409fe4dadac53d5c2332446")
+  :pin "8445771f84f498de9e7989bd02b7c9eeb2798c63")
 (package! rainbow-mode :pin "2e6b18609c2fdd1a2dc513937a64d276fd6cf24c")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
-  (package! org-msg :pin "b7f17693739ce9c9a1b4356a1443a4b1db85b386"))
+  (package! org-msg :pin "0c93f4d6250c207099a3bcbd15dfd3fc91135515"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
