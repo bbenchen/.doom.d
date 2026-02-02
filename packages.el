@@ -89,7 +89,7 @@
   :recipe (:host github :repo "manateelazycat/popweb" :files ("*.el" "*.py" "*.js" "extension"))
   :pin "86d72c6281a59248a6bf95fca7a031f4fa8b5b3c")
 
-(package! websocket :pin "40c208eaab99999d7c1e4bea883648da24c03be3")
+(package! websocket :pin "03d1cca4bd910a8df73e4ec637836c6ac25213a2")
 (package! deno-bridge
   :recipe (:host github :repo "manateelazycat/deno-bridge")
   :pin "d85e517c025f6ba74f2d19c00a4898bc69c87572")
