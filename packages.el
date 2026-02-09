@@ -51,7 +51,7 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "5607b0df59356672b796fa828479ef8e6d480a5a" :built-in (> emacs-major-version 30))
+(package! project :pin "ff700457fee13ae82f00b7522e4fe5fa333e3533" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "70d4bf5192b1770821fd18fc7e9d1d74283355d2")
+(package! llm :pin "d36832e95da6467774a768459e11205a08d7edd6")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -109,13 +109,13 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
-(package! envrc :pin "06d72d141ac2e2990d80cdb8bb84f6cb54c628a5")
+(package! envrc :pin "d3289e92e0e2fc39a2be3f3bb382f99a9c5dc8e3")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! gptel :recipe (:nonrecursive t) :pin "96199593c107767ffe0b59ab2a1f996c112e4fdf")
+(package! gptel :recipe (:nonrecursive t) :pin "11ddace991f63e98212be400570d85d716d2db83")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
