@@ -35,7 +35,7 @@
 (add-hook! 'doom-after-init-hook #'bc/set-docker-host-from-podman)
 
 ;; recentf
-(after! recentf
+(with-eval-after-load 'recentf
   (add-to-list 'recentf-exclude "\\.cache")
   (add-to-list 'recentf-exclude "\\.local/straight")
   (add-to-list 'recentf-exclude "\\.mail")
@@ -44,22 +44,22 @@
 
 ;; tramp
 ;; https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./
-(after! tramp
+(with-eval-after-load 'tramp
   (setq remote-file-name-inhibit-locks t
         remote-file-name-inhibit-auto-save-visited t
         tramp-use-scp-direct-remote-copying t
         tramp-copy-size-limit (* 1024 1023) ;; 1MB
         tramp-verbose 2)
 
-  (after! compile
+  (with-eval-after-load 'compile
     (remove-hook! 'compilation-mode-hook #'tramp-compile-disable-ssh-controlmaster-options)))
 
 ;; epa
-(after! epa
+(with-eval-after-load 'epa
   (setq epa-file-cache-passphrase-for-symmetric-encryption t))
 
 ;; winner
-(after! winner
+(with-eval-after-load 'winner
   ;; fix: wrong type argument: frame-live-p, #<dead frame
   (defadvice! bc/winner-save-old-configurations-before-advice ()
     "Remove dead frames from `winner-modified-list`"
@@ -70,7 +70,7 @@
 
 ;; workspaces
 (setq +workspaces-on-switch-project-behavior t)
-(after! persp-mode
+(with-eval-after-load 'persp-mode
   (add-hook! 'persp-filter-save-buffers-functions
     (defun bc/workdspace--temporary-buffer-p (buf)
       ;; "Ignore temporary buffers."
@@ -85,7 +85,7 @@
             (eq (buffer-local-value 'major-mode buf) 'vterm-mode))))))
 
 ;; projectile
-(after! projectile
+(with-eval-after-load 'projectile
   (setq projectile-project-root-files-bottom-up (delete ".project" projectile-project-root-files-bottom-up))
   (advice-remove 'projectile-dirconfig-file #'doom--projectile-dirconfig-file-a)
   (setq projectile-project-search-path
@@ -101,7 +101,7 @@
 ;; vertico
 (when (modulep! :completion vertico)
   (if (modulep! :completion vertico +childframe)
-      (after! vertico-posframe
+      (with-eval-after-load 'vertico-posframe
         (add-hook! 'doom-load-theme-hook :append
           (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
           (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
@@ -131,13 +131,15 @@
 (setq display-time-format "%D %R")
 
 ;; rainbow
-(after! rainbow-mode
+(with-eval-after-load 'rainbow-mode
   (add-hook! 'rainbow-mode-hook
     (hl-line-mode (if rainbow-mode -1 +1))))
 
 ;; treemacs
-(after! (:and treemacs ace-window)
-  (cl-callf2 delq 'treemacs-mode aw-ignored-buffers))
+(when (modulep! :ui treemacs)
+  (with-eval-after-load 'treemacs
+    (with-eval-after-load 'ace-window
+      (cl-callf2 delq 'treemacs-mode aw-ignored-buffers))))
 
 ;; lookup
 (when (and (featurep :system 'macos) (featurep 'xwidget-internal))
@@ -148,19 +150,19 @@
 (add-to-list '+lookup-provider-url-alist '("Maven Repository" "http://mvnrepository.com/search?q=%s&ref=opensearch"))
 
 ;; xref
-(after! xref
+(with-eval-after-load 'xref
   (cond ((executable-find "ugrep") (setq xref-search-program 'ugrep))
         ((executable-find "rg") (setq xref-search-program 'ripgrep))))
 
 ;; vterm
 (setq vterm-always-compile-module nil)
-(after! vterm
+(with-eval-after-load 'vterm
   (setq vterm-disable-underline t
         vterm-timer-delay 0.01
         vterm-clear-scrollback-when-clearing t))
 
 ;; dired
-(after! dired
+(with-eval-after-load 'dired
   (setq dired-recursive-copies 'always
         dired-recursive-deletes 'always)
   (if (boundp 'dired-kill-when-opening-new-dired-buffer)
@@ -170,7 +172,7 @@
   (put 'dired-find-alternate-file 'disabled nil))
 
 ;; dirvish
-(after! dirvish-yank
+(with-eval-after-load 'dirvish-yank
   (defun bc/dirvish-yank--get-srcs ()
     (cl-remove-duplicates
      (cl-loop
@@ -190,7 +192,7 @@
   (setq dirvish-yank-sources #'bc/dirvish-yank--get-srcs))
 
 ;; flymake
-(after! flymake-popon
+(with-eval-after-load 'flymake-popon
   (setq flymake-popon-posframe-border-width 0)
   (add-hook! 'doom-load-theme-hook :append
     (set-face-foreground 'flymake-popon (doom-color 'modeline-fg))
@@ -199,9 +201,9 @@
 ;; spell
 (setq ispell-dictionary "en_US")
 ;; (setq ispell-alternate-dictionary (expand-file-name "english-words" doom-user-dir))
-(after! ispell
+(with-eval-after-load 'ispell
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
-(after! spell-fu
+(with-eval-after-load 'spell-fu
   (setq! spell-fu-idle-delay 0.5))
 
 ;; with-editor
@@ -211,23 +213,23 @@
       (setq with-editor-emacsclient-executable "/usr/local/bin/emacsclient")))
 
 ;; magit
-(after! magit
+(with-eval-after-load 'magit
   (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     "))
   (if (featurep 'nerd-icons)
       (setq magit-format-file-function #'magit-format-file-nerd-icons)))
 
 ;; ghub
-(after! ghub
+(with-eval-after-load 'ghub
   (setq ghub-json-use-jansson t))
 ;; code-review
-(after! code-review
+(with-eval-after-load 'code-review
   (add-hook 'code-review-mode-hook
             (lambda ()
               ;; include *Code-Review* buffer into current workspace
               (persp-add-buffer (current-buffer)))))
 
 ;; magit-todos
-(after! magit-todos
+(with-eval-after-load 'magit-todos
   (setq magit-todos-submodule-list t
         magit-todos-exclude-globs (append magit-todos-exclude-globs '(".svn/" "node_modules/*")))
   (if (executable-find "nice")
@@ -235,7 +237,7 @@
   (if (executable-find "rg")
       (setq magit-todos-scanner 'magit-todos--scan-with-rg)))
 
-(after! git-commit
+(with-eval-after-load 'git-commit
   (setq git-commit-summary-max-length 60))
 
 (use-package! git-commit-ts-mode
@@ -260,7 +262,7 @@
   :after magit)
 
 ;; diff-hl
-(after! diff-hl
+(with-eval-after-load 'diff-hl
   (setq diff-hl-disable-on-remote t
         diff-hl-update-async (not (featurep :system 'macos)))
   (setq diff-hl-global-modes '(not helpful-mode image-mode pdf-view-mode vterm-mode magit-status-mode))
@@ -292,7 +294,7 @@
   (advice-add 'url-http :around #'mb-url-http-around-advice))
 
 ;; pass
-(after! pass
+(with-eval-after-load 'pass
   (defadvice! bc/pass-view-override-advice ()
     :override #'pass-view
     (pass--with-closest-entry entry
@@ -418,7 +420,7 @@
     (add-function :after after-focus-change-function #'eaf--topmost-focus-change))
 
   (when (modulep! :completion vertico +childframe)
-    (after! vertico-posframe
+    (with-eval-after-load 'vertico-posframe
       (defun bc/eaf-in-eaf-buffer-before-until-advice (&rest _args)
         (let ((has-eaf-buffer nil))
           (dolist (window (window-list))

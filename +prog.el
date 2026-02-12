@@ -16,11 +16,11 @@
         "'" #'separedit))
 
 ;; markdown
-(after! markdown-toc
+(with-eval-after-load 'markdown-toc
   (setq markdown-toc-indentation-space 2))
 
 ;; xml
-(after! nxml-mode
+(with-eval-after-load 'nxml-mode
   (setq nxml-auto-insert-xml-declaration-flag nil
         nxml-slash-auto-complete-flag nil)
 
@@ -41,7 +41,7 @@
   (add-hook! (markdown-mode markdown-ts-mode) #'markdown-inline-images-mode))
 
 ;; go
-(after! go-mode
+(with-eval-after-load 'go-mode
   (when (executable-find "gopkgs")
     (defun bc/go-packages--gopkgs ()
       "Return a list of all Go packages, using `gopkgs'."
@@ -86,7 +86,7 @@
         "I" #'go-impl))
 
 ;; java
-(after! projectile
+(with-eval-after-load 'projectile
   (delete "build.gradle" projectile-project-root-files))
 
 (when (modulep! :editor format)
@@ -102,7 +102,7 @@
 ;;     '("google-java-format" "-" "-a" "--skip-sorting-imports")
 ;;     :modes '(java-mode java-ts-mode)))
 
-(after! java-ts-mode
+(with-eval-after-load 'java-ts-mode
   (map! :map java-ts-mode-map
         :localleader
         :desc "Run junit test" "t" #'bc/java-run-junit-test
@@ -223,7 +223,7 @@
             (t type-name)))))
 
 ;; dockerfile
-(after! dockerfile-mode
+(with-eval-after-load 'dockerfile-mode
   (if (executable-find "podman")
       (setq dockerfile-mode-command "podman")
     (setq dockerfile-use-buildkit nil
@@ -266,12 +266,12 @@ The shell command used to build the image is:
      nil
      (lambda (_) (format "*docker-build-output: %s *" image-name)))))
 
-(after! dockerfile-ts-mode
+(with-eval-after-load 'dockerfile-ts-mode
   (set-docsets! 'dockerfile-ts-mode "Docker")
   (set-formatter! 'dockfmt '("dockfmt" "fmt" filepath) :modes '(dockerfile-ts-mode)))
 
 ;; dockerignore
-(after! git-modes
+(with-eval-after-load 'git-modes
   (add-to-list 'auto-mode-alist
                (cons "/.dockerignore\\'" 'gitignore-mode)))
 
@@ -302,12 +302,12 @@ The shell command used to build the image is:
   :defer t)
 
 ;; projectile
-(after! projectile
+(with-eval-after-load 'projectile
   (dolist (dir '(".bloop" ".metals"))
     (add-to-list 'projectile-globally-ignored-directories dir)))
 
 ;; sbt
-(after! sbt-mode
+(with-eval-after-load 'sbt-mode
   ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
   ;; allows using SPACE when in the minibuffer
   (substitute-key-definition
@@ -318,7 +318,7 @@ The shell command used to build the image is:
   (setq sbt:program-options '("-Dsbt.supershell=false")))
 
 ;; sql
-(after! sql
+(with-eval-after-load 'sql
   (setq sql-product 'oracle)
 
   (setq sql-product-alist
@@ -423,7 +423,7 @@ The shell command used to build the image is:
 ;;   :config
 ;;   (add-hook! 'magit-section-mode-hook #'topsy-mode)
 
-;;   (after! lsp-bridge
+;;   (with-eval-after-load 'lsp-bridge
 ;;     (setcdr (assoc nil topsy-mode-functions)
 ;;             (lambda ()
 ;;               (when (lsp-bridge-is-remote-file) "[lsp-bridge] remote file")))
@@ -438,7 +438,7 @@ The shell command used to build the image is:
   :init
   (setq lsp-bridge-enable-mode-line nil)
   :config
-  (after! winner
+  (with-eval-after-load 'winner
     (dolist (buffer '("*lsp-bridge-code-action-menu*" "*lsp-bridge-call-hierarchy*"))
       (add-to-list 'winner-boring-buffers buffer t)))
 

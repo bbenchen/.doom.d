@@ -1,12 +1,12 @@
 ;;; +org.el -*- lexical-binding: t; -*-
 
 ;; ox
-(after! ox
+(with-eval-after-load 'ox
   (if (require 'edraw-org nil t)
       (edraw-org-setup-exporter)))
 
 ;; org-mode
-(after! org
+(with-eval-after-load 'org
   (setq org-tags-column -80
         org-image-actual-width 600)
 
@@ -31,11 +31,11 @@
 
   (define-key org-mode-map (kbd "C-c M-r") verb-command-map))
 
-(after! ob-ditaa
+(with-eval-after-load 'ob-ditaa
   (setq org-ditaa-jar-path (expand-file-name "ditaa.jar" doom-user-dir)
         org-ditaa-eps-jar-path (expand-file-name "DitaaEps.jar" doom-user-dir)))
 
-(after! ox-latex
+(with-eval-after-load 'ox-latex
   ;; @see https://yuchi.me/post/export-org-mode-in-chinese-to-pdf-with-custom-latex-class
   ;; download elegantpaper.cls and place it in the same level as the org document
   (setq org-latex-pdf-process '("latexmk -xelatex -quiet -shell-escape -f %f"))

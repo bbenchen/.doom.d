@@ -9,7 +9,7 @@
 (setq iedit-toggle-key-default nil)
 
 ;; anzu
-(after! anzu
+(with-eval-after-load 'anzu
   (add-hook! 'doom-after-init-hook :append
     (global-anzu-mode 1))
 
@@ -22,7 +22,7 @@
     [remap isearch-query-replace-regexp] #'anzu-isearch-query-replace-regexp))
 
 ;; multiple-cursors
-(after! multiple-cursors-core
+(with-eval-after-load 'multiple-cursors-core
   (if (functionp 'counsel-M-x)
       (add-to-list 'mc--default-cmds-to-run-once 'counsel-M-x))
   (add-to-list 'mc--default-cmds-to-run-once 'pixel-scroll-precision)
@@ -31,7 +31,7 @@
   (add-to-list 'mc--default-cmds-to-run-for-all 'hungry-delete-forward)
   (add-to-list 'mc--default-cmds-to-run-for-all 'hungry-delete-backward))
 
-(after! smartparens
+(with-eval-after-load 'smartparens
   (unbind-key "M-<left>" smartparens-mode-map)
   (unbind-key "M-<right>" smartparens-mode-map))
 
@@ -94,7 +94,7 @@
     [remap mark-word]          #'deno-bridge-jieba-mark-word))
 
 ;; treesit
-(after! treesit
+(with-eval-after-load 'treesit
   (setq treesit-font-lock-level 4)
 
   (dolist (map '((gitcommit "https://github.com/gbprod/tree-sitter-gitcommit" nil nil nil nil)))

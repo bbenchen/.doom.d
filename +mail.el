@@ -21,7 +21,7 @@
                       (user-full-name         . "Ben Chen")
                       (user-mail-address      . "chen.jackson@gmail.com")))
 
-(after! mu4e
+(with-eval-after-load 'mu4e
   (define-key! [remap compose-mail] #'+mu4e/compose)
 
   (map! :map mu4e-headers-mode-map
@@ -189,6 +189,6 @@ Ask user what action to execute."
     (mu4e-mark-execute-all)))
 
 (when (modulep! :email mu4e +org)
-  (after! org-msg
+  (with-eval-after-load 'org-msg
     (add-hook! 'org-msg-edit-mode-local-vars-hook (when (bound-and-true-p lsp-bridge-mode)
                                                     (lsp-bridge-mode -1)))))
