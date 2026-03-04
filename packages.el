@@ -56,7 +56,7 @@
 
 (package! vterm :pin "a01a2894a1c1e81a39527835a9169e35b7ec5dec")
 
-(package! posframe :pin "41cc4def6190f100ba50dca51457c38f4f90dfb1")
+(package! posframe :pin "3a80911b2f45ce6926196930bb7d5cc662c7b3c8")
 
 (package! nerd-icons :pin "9a7f44db9a53567f04603bc88d05402cad49c64c")
 (package! doom-themes
@@ -123,7 +123,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6a68a77b5d837e83280c927ecda9844190eeb3e6")
-(package! verb :pin "0625fb314341a479dd472ae5e7f10375c1988131")
+(package! verb :pin "40ad1f06aac3373db788aedffd0eba113b80972f")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -137,7 +137,7 @@
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
   (package! magit-gerrit
     :recipe (:host github :repo "darcylee/magit-gerrit")
-    :pin "8f1082d55f3b71589463adaeab3413924383a9c9")
+    :pin "e3eeb34fea782c2a88fe280fa633aea3376190de")
   (package! blamer :pin "aa9b22d4e847d15a5c4659c0407aa8bf4242cc94"))
 
 (package! auto-rename-tag :pin "ace6de8bc8200aa9c9f37c8266d0e1b51627b559")
