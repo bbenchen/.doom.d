@@ -115,7 +115,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! gptel :recipe (:nonrecursive t) :pin "29401924c23e536da33e22c461961ab567f65cc1")
+(package! gptel :recipe (:nonrecursive t) :pin "6df3413964e6a127a404292929795dca0d0819ef")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -184,7 +184,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "40e116b4eecf0b925d1aa90f223eebbb54ca4ba7")
+  :pin "2c35f14fbdfd5cce0b5b21ebe1738e04575e5723")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
