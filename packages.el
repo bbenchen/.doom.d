@@ -57,8 +57,7 @@
 (package! vterm :pin "54c29d14bca05bdd8ae60cda01715d727831e3f9")
 
 (package! posframe :pin "02592d165b4ce5552fae6cd8004325f97431f01a")
-(package! which-key-posframe :pin "e4a9ce9a1b20de550fca51f14d055821980d534a")
-(package! transient-posframe :pin "06e6a4dea56c6333b7be17e16e6e94b1cdd1d2e1")
+
 (package! nerd-icons :pin "1db0b0b9203cf293b38ac278273efcfc3581a05f")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
