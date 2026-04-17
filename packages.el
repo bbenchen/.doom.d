@@ -51,12 +51,12 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "041a69d062a5442e2b0fee125c3228225f894ce1" :built-in (> emacs-major-version 30))
+(package! project :pin "bb2158dd7469a570f591531e8b954a5ce22eeb40" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "54c29d14bca05bdd8ae60cda01715d727831e3f9")
 
-(package! posframe :pin "3a80911b2f45ce6926196930bb7d5cc662c7b3c8")
+(package! posframe :pin "02592d165b4ce5552fae6cd8004325f97431f01a")
 
 (package! nerd-icons :pin "1db0b0b9203cf293b38ac278273efcfc3581a05f")
 (package! doom-themes
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "7ac8aab062e1ddd7f99a6ef6b0ee417f0ef0a7a8")
+(package! llm :pin "55f77875e7da6a4b21fca9ea1139032a0c0382d6")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -115,7 +115,7 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! gptel :recipe (:nonrecursive t) :pin "cd4375a53525a399f64adfc99c791b35c890d152")
+(package! gptel :recipe (:nonrecursive t) :pin "4747ffa251af84dbb6fe181f5d2b484ec2e442a7")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -123,7 +123,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6a68a77b5d837e83280c927ecda9844190eeb3e6")
-(package! verb :pin "40ad1f06aac3373db788aedffd0eba113b80972f")
+(package! verb :pin "9bc8960c0dcd2331566d876fd98fbc4522171b1e")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
