@@ -89,12 +89,12 @@
 
       (:prefix-map ("o" . "open")
                    (:prefix ("l" . "llm")
-                    :desc "Open aidermacs"       "a" #'aidermacs-run
-                    :desc "Open aidermacs menu"  "A" #'aidermacs-transient-menu
+                    :desc "Start ai-code"        "a" #'ai-code-cli-start
+                    :desc "Open ai-code menu"    "A" #'ai-code-menu
                     :desc "Add text to gptel"    "c" #'gptel-add
                     :desc "Explain"              "e" #'gptel-quick
                     :desc "Add file to gptel"    "f" #'gptel-add-file
-                    :desc "Open gptel"           "l" #'bc/start-gptel
+                    :desc "Open gptel"           "g" #'bc/start-gptel
                     :desc "Open gptel menu"      "m" #'gptel-menu
                     :desc "Rewrite"              "r" #'gptel-rewrite
                     :desc "Send to gptel"        "s" #'gptel-send)

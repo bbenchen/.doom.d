@@ -495,6 +495,16 @@
         (if-let* ((apikey (bc/lookup-password :host (cdr pair) :user "apikey")))
             (setenv env-name apikey))))))
 
+;; ai-code
+(use-package! ai-code
+  :config
+  (ai-code-set-backend 'opencode)
+
+  (setq ai-code-auto-test-type 'ask-me)
+
+  (with-eval-after-load 'magit
+    (ai-code-magit-setup-transients)))
+
 ;; gptel
 (use-package! gptel
   :defer t
