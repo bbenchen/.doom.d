@@ -98,14 +98,49 @@
   (dolist (suffix '(".bak" ".exe"))
     (add-to-list 'projectile-globally-ignored-file-suffixes suffix)))
 
+;; which-key-posframe
+(use-package! which-key-posframe
+  :config
+  (setq which-key-posframe-poshandler 'posframe-poshandler-frame-center
+        which-key-posframe-parameters '((left-fringe . 4)
+                                        (right-fringe . 4)
+                                        (min-width . 100)))
+
+  (defun bc/update-which-key-posframe-face ()
+    (set-face-foreground 'which-key-posframe (doom-color 'modeline-fg))
+    (set-face-background 'which-key-posframe (doom-color 'modeline-bg))
+    (set-face-background 'which-key-posframe-border (doom-color 'modeline-bg)))
+  (add-hook! 'doom-load-theme-hook :append #'bc/update-which-key-posframe-face)
+
+  (which-key-posframe-mode 1))
+
+;; transient-posframe
+(use-package! transient-posframe
+  :hook ((after-init server-after-make-frame) . transient-posframe-mode)
+  :config
+  (setq transient-posframe-poshandler 'posframe-poshandler-frame-center
+        transient-mode-line-format nil
+        transient-posframe-parameters '((left-fringe . 4)
+                                        (right-fringe . 4)))
+
+  (defun bc/update-transient-posframe-face ()
+    (set-face-foreground 'transient-posframe (doom-color 'modeline-fg))
+    (set-face-background 'transient-posframe (doom-color 'modeline-bg))
+    (set-face-background 'transient-posframe-border (doom-color 'modeline-bg)))
+  (add-hook! 'doom-load-theme-hook :append #'bc/update-transient-posframe-face))
+
 ;; vertico
 (when (modulep! :completion vertico)
-  (if (modulep! :completion vertico +childframe)
-      (with-eval-after-load 'vertico-posframe
-        (add-hook! 'doom-load-theme-hook :append
-          (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
-          (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
-          (set-face-background 'vertico-posframe-border (doom-color 'modeline-bg)))))
+  (with-eval-after-load 'vertico-posframe
+    (setq vertico-posframe-parameters '((left-fringe . 4)
+                                        (right-fringe . 4)))
+
+    (defun bc/update-vertico-posframe-face ()
+      (set-face-foreground 'vertico-posframe (doom-color 'modeline-fg))
+      (set-face-background 'vertico-posframe (doom-color 'modeline-bg))
+      (set-face-background 'vertico-posframe-border (doom-color 'modeline-bg)))
+    (bc/update-vertico-posframe-face)
+    (add-hook! 'doom-load-theme-hook :append #'bc/update-vertico-posframe-face))
 
   ;; Support Pinyin
   (use-package! pinyinlib
