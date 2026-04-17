@@ -21,6 +21,10 @@
 (setq doom-fd-executable "fd"
       doom-ripgrep-executable "rg")
 
+;; mule
+(with-eval-after-load 'mule
+  (setq auto-coding-alist (rassq-delete-all 'utf-8-undecided auto-coding-alist)))
+
 ;; docker
 (defun bc/set-docker-host-from-podman ()
   (unless (file-exists-p "/var/run/docker.sock")
