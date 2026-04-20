@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "55f77875e7da6a4b21fca9ea1139032a0c0382d6")
+(package! llm :pin "68570165cf44a6ff926668f4888afb6b5c978cd7")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -115,8 +115,8 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! ai-code :pin "5f57be8bfc419ffad80993c464d3abe496731c02")
-(package! gptel :recipe (:nonrecursive t) :pin "4747ffa251af84dbb6fe181f5d2b484ec2e442a7")
+(package! ai-code :pin "2cc91da1a476e15624fb6c5ff11314ca2ece69d2")
+(package! gptel :recipe (:nonrecursive t) :pin "3ad7a36250eaed8b68bb7fbd264877ef62bdf2b5")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
