@@ -520,6 +520,11 @@ The shell command used to build the image is:
                                                              (not (file-directory-p filename)))
                                                         (doom-project-root (file-name-directory filename)))))
 
+  (unless (boundp 'js-indent-level)
+    (setq js-indent-level 2))
+  (unless (boundp 'js2-basic-offset)
+    (setq js2-basic-offset 2))
+
   ;; (setq lsp-bridge-get-multi-lang-server-by-project
   ;;       (lambda (_project-path filepath)
   ;;         ;; If typescript file include deno.land url, then use Deno LSP server.
@@ -531,6 +536,13 @@ The shell command used to build the image is:
   ;;                   (goto-char (point-min))
   ;;                   (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
   ;;                     (cl-return "deno")))))))))
+
+  (setq lsp-bridge-get-single-lang-server-by-project
+        (lambda (project-path file-path)
+          (when (and (or (string-equal (file-name-extension file-path) "yml")
+                         (string-equal (file-name-extension file-path) "yaml"))
+                     (string-match-p "ansible" project-path))
+            "ansible-language-server")))
 
   (defadvice! bc/lsp-bridge--not-in-multiple-cursors-override-advice ()
     :override #'lsp-bridge--not-in-multiple-cursors
