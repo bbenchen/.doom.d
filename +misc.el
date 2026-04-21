@@ -462,6 +462,7 @@
 
 ;; ai-code
 (use-package! ai-code
+  :defer 3
   :config
   (ai-code-set-backend 'opencode)
 
