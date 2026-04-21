@@ -506,13 +506,15 @@
   :after gptel
   :config
   (setq gptel-quick-use-context 'system
-        gptel-quick-model 'o4-mini
+        gptel-quick-model 'gpt-4.1-mini
         gptel-quick-backend (gptel-make-openai "OpenAI"
                               :key 'gptel-api-key
                               :stream t
                               :host "openkey.cloud")
         gptel-quick-word-count 24
-        gptel-quick-timeout nil))
+        gptel-quick-timeout nil
+        gptel-quick-system-message (lambda (count)
+                                     (format "Please explain in Chinese and keep the reply within %d words" count))))
 
 ;; gptel-magit
 (use-package! gptel-magit
