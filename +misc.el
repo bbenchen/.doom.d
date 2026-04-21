@@ -503,7 +503,16 @@
 
 ;; gptel-quick
 (use-package! gptel-quick
-  :after gptel)
+  :after gptel
+  :config
+  (setq gptel-quick-use-context 'system
+        gptel-quick-model 'o4-mini
+        gptel-quick-backend (gptel-make-openai "OpenAI"
+                              :key 'gptel-api-key
+                              :stream t
+                              :host "openkey.cloud")
+        gptel-quick-word-count 24
+        gptel-quick-timeout nil))
 
 ;; gptel-magit
 (use-package! gptel-magit
