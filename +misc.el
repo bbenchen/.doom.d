@@ -514,7 +514,7 @@
         gptel-quick-word-count 24
         gptel-quick-timeout nil
         gptel-quick-system-message (lambda (count)
-                                     (format "Please explain in Chinese and keep the reply within %d words" count))))
+                                     (format "You are a concise and professional assistant.\nRespond in Chinese only.\nExplain the topic clearly and accurately, using at most %d words.\nAvoid small talk, filler text, and unnecessary introductions." count))))
 
 ;; gptel-magit
 (use-package! gptel-magit
