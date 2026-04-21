@@ -473,7 +473,7 @@
 
 ;; gptel
 (use-package! gptel
-  :defer t
+  :defer 5
   :commands bc/start-gptel
   :config
   (setq gptel-highlight-methods '(fringe)
@@ -503,7 +503,7 @@
 
 ;; gptel-quick
 (use-package! gptel-quick
-  :defer t)
+  :after gptel)
 
 ;; gptel-magit
 (use-package! gptel-magit
