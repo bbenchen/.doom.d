@@ -474,7 +474,9 @@
 ;; agent-shell
 (use-package! agent-shell
   :config
-  (setq agent-shell-preferred-agent-config (agent-shell-opencode-make-agent-config)
+  (setq agent-shell-prefer-session-resume t
+        agent-shell-prefer-viewport-interaction t
+        agent-shell-preferred-agent-config (agent-shell-opencode-make-agent-config)
         agent-shell-opencode-authentication (agent-shell-opencode-make-authentication :none t)
         agent-shell-opencode-default-model-id "deepseek/deepseek-chat")
 
