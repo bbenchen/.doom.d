@@ -116,6 +116,11 @@
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
 (package! ai-code :pin "2e20ca594626384605e58b9d3ad2f5ad86cfcbe9")
+(package! agent-shell :pin "023ad9caaf9b66162d58c6189e61622ee95d13c8")
+(if (featurep :system 'macos)
+    (package! agent-shell-macext
+      :recipe (:host github :repo "cxa/agent-shell-macext")
+      :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
 (package! gptel :recipe (:nonrecursive t) :pin "593786fce27b54248d4c0ae19b120cbbcf51aea9")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")

@@ -471,6 +471,24 @@
   (with-eval-after-load 'magit
     (ai-code-magit-setup-transients)))
 
+;; agent-shell
+(use-package! agent-shell
+  :config
+  (setq agent-shell-preferred-agent-config (agent-shell-opencode-make-agent-config)
+        agent-shell-opencode-authentication (agent-shell-opencode-make-authentication :none t)
+        agent-shell-opencode-default-model-id "deepseek/deepseek-chat")
+
+  (map! :map agent-shell-mode-map
+        "RET" #'agent-shell-newline
+        "M-RET" #'agent-shell-submit))
+
+(use-package! agent-shell-macext
+  :when (featurep :system 'macos)
+  :hook (agent-shell-mode . agent-shell-macext-setup)
+  :config
+  (setq agent-shell-macext-file-copy-policy 'auto
+        agent-shell-macext-notifications nil))
+
 ;; gptel
 (use-package! gptel
   :defer 5
