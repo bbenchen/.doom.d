@@ -125,6 +125,7 @@
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
+(package! mcp :pin "5c105a8db470eb9777fdbd26251548dec42c03f0")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")

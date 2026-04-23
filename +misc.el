@@ -515,6 +515,10 @@
   (add-hook! 'gptel-post-stream-hook #'gptel-auto-scroll)
   (add-hook! 'gptel-post-response-functions #'gptel-end-of-response)
 
+  (require 'gptel-integrations)
+  (setq mcp-hub-servers `(("fetch" . (:command "uvx" :args ("mcp-server-fetch")))
+                          ("memory" . (:command "npx" :args ("-y" "@modelcontextprotocol/server-memory")))))
+
   (defun bc/start-gptel ()
     (interactive)
     (gptel "*ChatGPT*" nil nil t)))
