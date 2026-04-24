@@ -197,13 +197,8 @@ unwanted space when exporting org-mode to hugo markdown."
     (unless insert-translated-name-llm-provider
       (setq insert-translated-name-llm-provider (make-llm-openai-compatible
                                                  :key (insert-translated-name-api-key-from-auth-source "api.deepseek.com")
-                                                 :chat-model "deepseek-chat"
-                                                 :url "https://api.deepseek.com/v1"))
-      ;; (setq insert-translated-name-llm-provider (make-llm-openai-compatible
-      ;;                                            :key (insert-translated-name-api-key-from-auth-source "openkey.cloud")
-      ;;                                            :chat-model "gpt-4o-mini"
-      ;;                                            :url "https://openkey.cloud/v1"))
-      ))
+                                                 :chat-model "deepseek-v4-flash"
+                                                 :url "https://api.deepseek.com"))))
 
   (when (featurep 'lsp-bridge)
     (defvar insert-translated-name-is-enable-lsp-bridge nil)

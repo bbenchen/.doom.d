@@ -441,11 +441,11 @@
   :commands aidermacs-run aidermacs-transient-menu
   :config
   (setq aidermacs-auto-commits nil
-        aidermacs-default-model "openrouter/deepseek/deepseek-v3.2"
+        aidermacs-default-model "deepseek/deepseek-v4-flash"
         aidermacs-default-chat-mode 'architect
-        aidermacs-architect-model "openrouter/google/gemini-3-flash-preview"
-        aidermacs-editor-model "openrouter/deepseek/deepseek-v3.2"
-        aidermacs-weak-model "openrouter/deepseek/deepseek-v3.2"
+        aidermacs-architect-model "deepseek/deepseek-v4-pro"
+        aidermacs-editor-model "deepseek/deepseek-v4-flash"
+        aidermacs-weak-model "deepseek/deepseek-v4-flash"
         aidermacs-extra-args '("--no-check-update" "--chat-language" "Chinese")
         aidermacs-watch-files t
         aidermacs-backend 'vterm
