@@ -478,7 +478,7 @@
         agent-shell-prefer-viewport-interaction nil
         agent-shell-preferred-agent-config (agent-shell-opencode-make-agent-config)
         agent-shell-opencode-authentication (agent-shell-opencode-make-authentication :none t)
-        agent-shell-opencode-default-model-id "deepseek/deepseek-chat")
+        agent-shell-opencode-default-model-id "deepseek/deepseek-v4-flash")
 
   (map! :map agent-shell-mode-map
         "RET" #'+default/newline-below
