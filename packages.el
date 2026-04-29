@@ -58,7 +58,7 @@
 
 (package! posframe :pin "fcf1757baee481f617fbf2dc39f8c561207df263")
 
-(package! nerd-icons :pin "3f6e8b36436d99659234d5bbbd84ba5c09282692")
+(package! nerd-icons :pin "ae1b85c487c2b0bb1efb8bc0edc23af74282eec2")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "fbea17a80645fd4f36df829d8753b220ba693318")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "c1a87f3370998ef76fef9087b80f4b05dfc39c3d")
+(package! llm :pin "285cb799c846d893ae84d451f2f99e5fc89bbc89")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -114,14 +114,14 @@
 
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "6d0c41d1cfd24821fb32933edf8c0c2a9bb8c847")
-(package! ai-code :pin "c660173c73f6658086f89346d6988a533ffd473f")
-(package! agent-shell :pin "0882a02a56f1051f198ba24e014fecc79b7c6fbb")
+  :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
+(package! ai-code :pin "7a23d39d9fcb66da4a7192b0c1a00727586a473f")
+(package! agent-shell :pin "9368925f40f92c6de79cf8c1f3d95265e56da213")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
-(package! gptel :recipe (:nonrecursive t) :pin "302a1d895e0f92f665a2886eadf2eb4548a080cb")
+(package! gptel :recipe (:nonrecursive t) :pin "71b9f9414536c4cd35d8c02d3c8ad4fc4aea8718")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -130,7 +130,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6a68a77b5d837e83280c927ecda9844190eeb3e6")
-(package! verb :pin "9bc8960c0dcd2331566d876fd98fbc4522171b1e")
+(package! verb :pin "e2cf58fdc86510c025d4a8dbbacacbf7998beb26")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
