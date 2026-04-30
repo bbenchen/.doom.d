@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "285cb799c846d893ae84d451f2f99e5fc89bbc89")
+(package! llm :pin "ba1ced43c4012ebe2215b9b4ef4e015a9e7b1cbd")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -104,7 +104,7 @@
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! shift-number
   :recipe (:host codeberg :repo "ideasman42/emacs-shift-number")
-  :pin "b60fce74b97ea3598b569354dd9de448af6384d7")
+  :pin "ab412a7af647c230fa1d316dc0e6a0c289986e16")
 (package! region-occurrences-highlighter :pin "98fc1020c68f339810beb753a29daba93ade57b5")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
@@ -115,8 +115,8 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
-(package! ai-code :pin "7a23d39d9fcb66da4a7192b0c1a00727586a473f")
-(package! agent-shell :pin "9368925f40f92c6de79cf8c1f3d95265e56da213")
+(package! ai-code :pin "51b2d6512267ab14590261792bdfbf8d582c91f0")
+(package! agent-shell :pin "85bd9c41d43a92b0961960864830dc893120c86d")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
