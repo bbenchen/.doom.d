@@ -208,7 +208,7 @@
 (with-eval-after-load 'ispell
   (advice-add #'ispell-lookup-words :around #'doom-shut-up-a))
 (with-eval-after-load 'spell-fu
-  (setq! spell-fu-idle-delay 0.5))
+  (setopt spell-fu-idle-delay 0.5))
 
 ;; with-editor
 (if (featurep :system 'macos)
