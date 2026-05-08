@@ -51,7 +51,7 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "bb2158dd7469a570f591531e8b954a5ce22eeb40" :built-in (> emacs-major-version 30))
+(package! project :pin "f4ec26c30a08663e93449317a5f765032ab84f28" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! vterm :pin "54c29d14bca05bdd8ae60cda01715d727831e3f9")
@@ -66,7 +66,7 @@
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
 (when (modulep! :email mu4e +org)
-  (package! org-msg :pin "aa608b399586fb771ad37045a837f8286a0b6124"))
+  (package! org-msg :pin "7b45df759340f3e388e84f497052b7cf3a41698c"))
 
 (package! cal-china-x
   :recipe (:host github :repo "cnsunyour/cal-china-x" :files ("*.el"))
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "ba1ced43c4012ebe2215b9b4ef4e015a9e7b1cbd")
+(package! llm :pin "d3db1611607a02c189618de87cf8649fa18b1517")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -104,7 +104,7 @@
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! shift-number
   :recipe (:host codeberg :repo "ideasman42/emacs-shift-number")
-  :pin "ab412a7af647c230fa1d316dc0e6a0c289986e16")
+  :pin "4dfa414a498fa279a17595fb83b3d6aba4f3e1d0")
 (package! region-occurrences-highlighter :pin "98fc1020c68f339810beb753a29daba93ade57b5")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
@@ -115,13 +115,13 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
-(package! ai-code :pin "51b2d6512267ab14590261792bdfbf8d582c91f0")
-(package! agent-shell :pin "85bd9c41d43a92b0961960864830dc893120c86d")
+(package! ai-code :pin "6291f3661d1acf41237be20641bded536a42bf3f")
+(package! agent-shell :pin "30fe4bd8fd67d9b6e26daa573246cf2cae286bba")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
-(package! gptel :recipe (:nonrecursive t) :pin "71b9f9414536c4cd35d8c02d3c8ad4fc4aea8718")
+(package! gptel :recipe (:nonrecursive t) :pin "df08c1a4d4c6e253870b8aa1634922b8f56224e7")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
