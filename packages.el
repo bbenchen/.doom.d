@@ -54,7 +54,7 @@
 (package! project :pin "f4ec26c30a08663e93449317a5f765032ab84f28" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! vterm :pin "54c29d14bca05bdd8ae60cda01715d727831e3f9")
+(package! vterm :pin "92add72b728e47852ea1e95dc9f08d01b33d4bf0")
 
 (package! posframe :pin "fcf1757baee481f617fbf2dc39f8c561207df263")
 
@@ -115,8 +115,8 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
-(package! ai-code :pin "6291f3661d1acf41237be20641bded536a42bf3f")
-(package! agent-shell :pin "30fe4bd8fd67d9b6e26daa573246cf2cae286bba")
+(package! ai-code :pin "9d14668e3f545be8583f843c9b3b3cb859f1572b")
+(package! agent-shell :pin "7e74d620dd5d43f99fe9080c815770e9afe7e28d")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
@@ -125,7 +125,7 @@
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
-(package! mcp :pin "5c105a8db470eb9777fdbd26251548dec42c03f0")
+(package! mcp :pin "f10768e16f94f65527a0ea657ec91ab2eeaf244d")
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
