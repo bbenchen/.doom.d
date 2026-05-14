@@ -58,7 +58,7 @@
 
 (package! posframe :pin "fcf1757baee481f617fbf2dc39f8c561207df263")
 
-(package! nerd-icons :pin "ae1b85c487c2b0bb1efb8bc0edc23af74282eec2")
+(package! nerd-icons :pin "a5b6899dd529cac195179feb6b32b32379fda22a")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "fbea17a80645fd4f36df829d8753b220ba693318")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "d3db1611607a02c189618de87cf8649fa18b1517")
+(package! llm :pin "e09851b06342a52d37c5a6e43ca3527dbde148d4")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -115,8 +115,8 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
-(package! ai-code :pin "9d14668e3f545be8583f843c9b3b3cb859f1572b")
-(package! agent-shell :pin "7e74d620dd5d43f99fe9080c815770e9afe7e28d")
+(package! ai-code :pin "9f4be9f785a5fb02a5543c43878c4ed06be70ebf")
+(package! agent-shell :pin "91e7b00742ce4c2325595218c20e13e1e0cfbc3e")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
@@ -138,7 +138,7 @@
     ;; REVIEW: Revert to upstream if ragnard/gptel-magit#7 is merged.
     :recipe (:host github
              :repo "ArthurHeymans/gptel-magit")
-    :pin "4a40c3fc201d60d2f0589c2e1a6693fd94bb4c98")
+    :pin "93d05dabbc88a8be899015a9cc2ddf33135c1834")
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
