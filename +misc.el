@@ -435,31 +435,6 @@
       (advice-add #'vertico-posframe--show :before-until #'bc/eaf-in-eaf-buffer-before-until-advice)
       (advice-add #'vertico-posframe--handle-minibuffer-window :before-until #'bc/eaf-in-eaf-buffer-before-until-advice))))
 
-;; aidermacs
-(use-package! aidermacs
-  :defer t
-  :commands aidermacs-run aidermacs-transient-menu
-  :config
-  (setq aidermacs-auto-commits nil
-        aidermacs-default-model "deepseek/deepseek-v4-flash"
-        aidermacs-default-chat-mode 'architect
-        aidermacs-architect-model "deepseek/deepseek-v4-pro"
-        aidermacs-editor-model "deepseek/deepseek-v4-flash"
-        aidermacs-weak-model "deepseek/deepseek-v4-flash"
-        aidermacs-extra-args '("--no-check-update" "--chat-language" "Chinese")
-        aidermacs-watch-files t
-        aidermacs-backend 'vterm
-        aidermacs-comint-multiline-newline-key "S-<return>"
-        aidermacs-vterm-multiline-newline-key "S-<return>")
-
-  (add-hook! 'aidermacs-before-run-backend-hook
-    (cl-dolist (pair '(("deepseek" . "api.deepseek.com")
-                       ("openrouter" . "openrouter.ai")
-                       ("gemini" . "generativelanguage.googleapis.com")))
-      (let* ((env-name (concat (upcase (car pair)) "_API_KEY")))
-        (if-let* ((apikey (bc/lookup-password :host (cdr pair) :user "apikey")))
-            (setenv env-name apikey))))))
-
 ;; ai-code
 (use-package! ai-code
   :defer 3

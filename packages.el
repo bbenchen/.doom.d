@@ -112,9 +112,6 @@
 (package! envrc :pin "60820285aeed4f87969d663a1c14a905c7bb763a")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! aidermacs
-  :recipe (:host github :repo "MatthewZMD/aidermacs")
-  :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
 (package! ai-code :pin "3f1b1becde52f3508b9ab45fae72c9efb5dd2b3a")
 (package! agent-shell :pin "67babec2278f8ee1cf1c4dc605e976247388df51")
 (if (featurep :system 'macos)
