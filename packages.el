@@ -58,7 +58,7 @@
 
 (package! posframe :pin "fcf1757baee481f617fbf2dc39f8c561207df263")
 
-(package! nerd-icons :pin "a5b6899dd529cac195179feb6b32b32379fda22a")
+(package! nerd-icons :pin "d33d12f5dcb6bf2fb23c3f75df5de85beb4afd95")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "fbea17a80645fd4f36df829d8753b220ba693318")
@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "e09851b06342a52d37c5a6e43ca3527dbde148d4")
+(package! llm :pin "95372e6d0675b55444d49ad9b91efe87e782dc4e")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -115,13 +115,13 @@
 (package! aidermacs
   :recipe (:host github :repo "MatthewZMD/aidermacs")
   :pin "6bc95319a979a5e2c349c2eeb01388f53e8c6f9d")
-(package! ai-code :pin "9f4be9f785a5fb02a5543c43878c4ed06be70ebf")
-(package! agent-shell :pin "91e7b00742ce4c2325595218c20e13e1e0cfbc3e")
+(package! ai-code :pin "3f1b1becde52f3508b9ab45fae72c9efb5dd2b3a")
+(package! agent-shell :pin "67babec2278f8ee1cf1c4dc605e976247388df51")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
-(package! gptel :recipe (:nonrecursive t) :pin "df08c1a4d4c6e253870b8aa1634922b8f56224e7")
+(package! gptel :recipe (:nonrecursive t) :pin "14c92e270c850afb14dc1b03c0127cd7d95e0acf")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
