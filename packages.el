@@ -132,10 +132,9 @@
 
 (when (modulep! :tools magit)
   (package! gptel-magit
-    ;; REVIEW: Revert to upstream if ragnard/gptel-magit#7 is merged.
     :recipe (:host github
-             :repo "ArthurHeymans/gptel-magit")
-    :pin "93d05dabbc88a8be899015a9cc2ddf33135c1834")
+             :repo "roife/gptel-magit")
+    :pin "89e1c044e6454913d0086b48f9d1d4931d585179")
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")

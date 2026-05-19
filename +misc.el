@@ -520,4 +520,7 @@
   :when (modulep! :tools magit)
   :after gptel
   :config
+  (setq gptel-magit-body-length 72
+        gptel-magit-commit-prompt (cdr (assoc "Conventional Commits" gptel-magit-commit-styles-alist)))
+
   (add-hook! 'magit-mode-hook #'gptel-magit-install))
