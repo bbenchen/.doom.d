@@ -109,11 +109,11 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
-(package! envrc :pin "60820285aeed4f87969d663a1c14a905c7bb763a")
+(package! envrc :pin "1e63a3db367254897a39251944ba68938ec41020")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "3f1b1becde52f3508b9ab45fae72c9efb5dd2b3a")
-(package! agent-shell :pin "67babec2278f8ee1cf1c4dc605e976247388df51")
+(package! ai-code :pin "1f5548acfd33fef35cb7e4409080f6bed95f1cd7")
+(package! agent-shell :pin "33cfb8e9827e571806e8b2284c8af96ffa395173")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
