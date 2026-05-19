@@ -440,7 +440,11 @@ The shell command used to build the image is:
       result)))
 
 (use-package! ob-clutch
-  :after org)
+  :after org
+  :config
+  (add-to-list 'org-structure-template-alist '("clutch" . "src clutch"))
+  (add-to-list 'org-structure-template-alist '("mysql" . "src mysql"))
+  (add-to-list 'org-structure-template-alist '("pg" . "src postgresql")))
 
 ;; (use-package! topsy
 ;;   :config
