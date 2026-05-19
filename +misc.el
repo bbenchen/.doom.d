@@ -493,8 +493,11 @@
   (add-hook! 'gptel-post-response-functions #'gptel-end-of-response)
 
   (require 'gptel-integrations)
+  (require 'mcp-hub)
   (setq mcp-hub-servers `(("fetch" . (:command "uvx" :args ("mcp-server-fetch")))
                           ("memory" . (:command "npx" :args ("-y" "@modelcontextprotocol/server-memory")))))
+  (mcp-hub-start-all-server (lambda ()
+                              (gptel-mcp-connect)))
 
   (defun bc/start-gptel ()
     (interactive)
