@@ -496,12 +496,13 @@
   (require 'mcp-hub)
   (setq mcp-hub-servers `(("fetch" . (:command "uvx" :args ("mcp-server-fetch")))
                           ("memory" . (:command "npx" :args ("-y" "@modelcontextprotocol/server-memory")))))
-  (mcp-hub-start-all-server (lambda ()
-                              (gptel-mcp-connect)))
 
   (defun bc/start-gptel ()
     (interactive)
-    (gptel "*ChatGPT*" nil nil t)))
+    (gptel "*ChatGPT*" nil nil t)
+    (when (= (hash-table-size mcp-server-connections) 0)
+      (mcp-hub-start-all-server (lambda ()
+                                  (gptel-mcp-connect))))))
 
 ;; gptel-quick
 (use-package! gptel-quick
