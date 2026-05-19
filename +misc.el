@@ -521,6 +521,23 @@
   :after gptel
   :config
   (setq gptel-magit-body-length 72
-        gptel-magit-commit-prompt (cdr (assoc "Conventional Commits" gptel-magit-commit-styles-alist)))
+        gptel-magit-commit-prompt "You are an expert at writing Git commits. Write a short clear commit message that summarizes the changes.
+
+Format:
+
+    <type>(<optional scope>): <description>
+
+    [optional body]
+
+Rules:
+- MUST be prefixed with a type: build, chore, ci, docs, feat, fix, perf, refactor, style, test
+- MUST use `feat` for new features
+- MUST use `fix` for bug fixes
+- Scope is optional and goes in parentheses, describing modified section of the codebase, e.g. `fix(parser):`
+- A short description of changes MUST immediately follow the type/scope prefix, e.g., `fix: array parsing issue with multiple spaces`
+- Keep the subject imperative, lowercase, and under 60 characters
+- Do not end the subject line with punctuation
+- MAY add a body separated by one blank line after the short description, providing additional contextual infomation about changes.
+- Keep the body short and concise (omit it entirely if not useful)")
 
   (add-hook! 'magit-mode-hook #'gptel-magit-install))
