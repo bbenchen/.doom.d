@@ -461,10 +461,10 @@
 
 (use-package! agent-shell-macext
   :when (featurep :system 'macos)
-  :hook (agent-shell-mode . agent-shell-macext-setup)
   :config
   (setq agent-shell-macext-file-copy-policy 'auto
-        agent-shell-macext-notifications nil))
+        agent-shell-macext-notifications nil)
+  (add-hook! 'agent-shell-mode-hook #'agent-shell-macext-setup))
 
 ;; gptel
 (use-package! gptel
