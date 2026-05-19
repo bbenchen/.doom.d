@@ -539,7 +539,7 @@ Rules:
 - MUST use `fix` for bug fixes
 - Scope is optional and goes in parentheses, describing modified section of the codebase, e.g. `fix(parser):`
 - A short description of changes MUST immediately follow the type/scope prefix, e.g., `fix: array parsing issue with multiple spaces`
-- Keep the subject imperative, lowercase, and under 60 characters
+- Keep the subject imperative, starts with a lowercase letter, and under 60 characters
 - Do not end the subject line with punctuation
 - MAY add a body separated by one blank line after the short description, providing additional contextual infomation about changes.
 - Keep the body short and concise (omit it entirely if not useful)")
