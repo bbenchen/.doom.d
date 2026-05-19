@@ -163,7 +163,12 @@
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
-(package! ob-sql-mode :pin "2eaf436a6ac2178b94442d80f84fc6c02aa644d8")
+(package! clutch
+  :recipe (:host github :repo "LuciusChen/clutch")
+  :pin "30cd728b951ceecf8f19a22e35ba376739805d0d")
+(package! ob-clutch
+  :recipe (:host github :repo "LuciusChen/ob-clutch")
+  :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
 
 ;; (package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
 

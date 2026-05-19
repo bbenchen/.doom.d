@@ -417,7 +417,30 @@ The shell command used to build the image is:
   :init
   (add-hook! 'sql-mode-hook :append #'sqlind-minor-mode))
 
-(use-package! ob-sql-mode)
+(use-package! clutch
+  :config
+  (require 'clutch-db-jdbc)
+  (require 'clutch-db-mysql)
+  (require 'clutch-db-pg)
+
+  (setq clutch-csv-export-default-coding-system 'utf-8
+        clutch-jdbc-agent-dir (expand-file-name "clutch-jdbc" doom-data-dir)
+        clutch-sql-product 'postgres
+        clutch-connection-alist
+        '(("local-pg" . (:backend pg :sql-product postgres
+                         :host "127.0.0.1" :port 5432
+                         :user "postgres" :database "postgres"))))
+
+  (defadvice! bc/clutch--effective-sql-product (fn &rest args)
+    :around #'clutch--effective-sql-product
+    (let* ((result (apply fn args))
+           (product (or result clutch-sql-product)))
+      (unless (equal sql-product product)
+        (sql-set-product product))
+      result)))
+
+(use-package! ob-clutch
+  :after org)
 
 ;; (use-package! topsy
 ;;   :config
