@@ -69,6 +69,7 @@
          :desc "Show project errors" "L" #'flymake-show-project-diagnostics))
 
       (:prefix-map ("c" . "code")
+       :desc "Separedit"                   "'"  #'separedit
        :desc "LSP Code actions"            "a"  #'lsp-bridge-code-action
        :desc "Jump to symbol in workspace" "j"  #'lsp-bridge-workspace-list-symbols
        :desc "LSP Rename"                  "r"  #'lsp-bridge-rename
