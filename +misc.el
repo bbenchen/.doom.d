@@ -472,7 +472,7 @@
   :commands bc/start-gptel
   :config
   (setq gptel-highlight-methods '(fringe)
-        gptel-default-mode 'markdown-mode
+        gptel-default-mode 'org-mode
         gptel-model 'gpt-5.2
         gptel-backend (gptel-make-openai "ChatGPT"
                         :key 'gptel-api-key
@@ -482,7 +482,7 @@
 
   (add-hook! 'gptel-mode-hook
     (when (and (modulep! :checkers syntax)
-               (eq gptel-default-mode 'markdown-mode))
+               (eq gptel-default-mode 'org-mode))
       (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
             ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))
 
