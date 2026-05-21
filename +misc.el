@@ -477,7 +477,7 @@
         gptel-backend (gptel-make-openai "ChatGPT"
                         :key 'gptel-api-key
                         :stream t
-                        :host "openkey.cloud"
+                        :host "api.poixe.com"
                         :models gptel--openai-models))
 
   (add-hook! 'gptel-mode-hook
@@ -513,7 +513,7 @@
         gptel-quick-backend (gptel-make-openai "OpenAI"
                               :key 'gptel-api-key
                               :stream t
-                              :host "openkey.cloud")
+                              :host "api.poixe.com")
         gptel-quick-word-count 24
         gptel-quick-timeout nil
         gptel-quick-system-message (lambda (count)
