@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "5fb014d9320dc8c93d8b2fcb11fb8e02b29fcfd5")
+(package! llm :pin "335ef6087de51e27072ceecc63001439043394e9")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -112,7 +112,7 @@
 (package! envrc :pin "1e63a3db367254897a39251944ba68938ec41020")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "0c6b9723d36d024a4daaecb5450bf215423acb5f")
+(package! ai-code :pin "5bd2d976aaf29206854715512a9de50f4a9cafc3")
 (package! agent-shell :pin "530620eab82a7c71e379bb44a75561e6532ca1bb")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
@@ -165,7 +165,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "64ecb29207acc0a66d0df087bc46837dbd5afc89")
+  :pin "cc2102cc6ff264b6a5cb9d4e44563814641bea47")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
