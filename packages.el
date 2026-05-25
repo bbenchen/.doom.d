@@ -80,7 +80,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "335ef6087de51e27072ceecc63001439043394e9")
+(package! llm :pin "b29c521c8ee8afa9ac629a71b45e934cb2877503")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -104,7 +104,7 @@
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! shift-number
   :recipe (:host codeberg :repo "ideasman42/emacs-shift-number")
-  :pin "4dfa414a498fa279a17595fb83b3d6aba4f3e1d0")
+  :pin "e7ec4402962471baa8d9a3b445bbbb06c71af139")
 (package! region-occurrences-highlighter :pin "98fc1020c68f339810beb753a29daba93ade57b5")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
@@ -112,13 +112,13 @@
 (package! envrc :pin "1e63a3db367254897a39251944ba68938ec41020")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "5bd2d976aaf29206854715512a9de50f4a9cafc3")
-(package! agent-shell :pin "530620eab82a7c71e379bb44a75561e6532ca1bb")
+(package! ai-code :pin "d90004ef45539507fbff4f4513a01f9443716fc7")
+(package! agent-shell :pin "b9a1d653974b0111f177e240fcb21eb7e8ec51d1")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
-(package! gptel :recipe (:nonrecursive t) :pin "677eb955918ad5290432040bfa44d0ac4e05036d")
+(package! gptel :recipe (:nonrecursive t) :pin "88e4999fcc352b1d72bc07e230dda86d1bc9f37b")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -127,7 +127,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6a68a77b5d837e83280c927ecda9844190eeb3e6")
-(package! verb :pin "e2cf58fdc86510c025d4a8dbbacacbf7998beb26")
+(package! verb :pin "81aa67dffb17b3d88b35f16787aa3292d5761abb")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -165,7 +165,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "cc2102cc6ff264b6a5cb9d4e44563814641bea47")
+  :pin "b2cece0da5866f0d839501b09ec08be58d2de69b")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
