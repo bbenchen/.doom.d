@@ -165,7 +165,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "b2cece0da5866f0d839501b09ec08be58d2de69b")
+  :pin "3b8fb5b274236b144341a019fb19a380b650e675")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
