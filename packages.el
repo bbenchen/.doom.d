@@ -113,12 +113,12 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "d90004ef45539507fbff4f4513a01f9443716fc7")
-(package! agent-shell :pin "b9a1d653974b0111f177e240fcb21eb7e8ec51d1")
+(package! agent-shell :pin "89bd6e136a08e1527dd630e4573639c838fd7e22")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
-(package! gptel :recipe (:nonrecursive t) :pin "88e4999fcc352b1d72bc07e230dda86d1bc9f37b")
+(package! gptel :recipe (:nonrecursive t) :pin "5c82ff85be0beed57a923935e18b9c4d1a8d0858")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
