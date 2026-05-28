@@ -56,7 +56,7 @@
 
 (package! vterm :pin "92add72b728e47852ea1e95dc9f08d01b33d4bf0")
 
-(package! posframe :pin "fcf1757baee481f617fbf2dc39f8c561207df263")
+(package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
 (package! nerd-icons :pin "d33d12f5dcb6bf2fb23c3f75df5de85beb4afd95")
 (package! doom-themes
@@ -113,7 +113,7 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "d90004ef45539507fbff4f4513a01f9443716fc7")
-(package! agent-shell :pin "89bd6e136a08e1527dd630e4573639c838fd7e22")
+(package! agent-shell :pin "2e288326f43397008b04d3da0724acf5afab9283")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
@@ -165,7 +165,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "3b8fb5b274236b144341a019fb19a380b650e675")
+  :pin "b00d323588b0d70456e497d86b4e4b657ca1022e")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
