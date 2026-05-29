@@ -99,7 +99,9 @@
                     :desc "Open gptel menu"      "m" #'gptel-menu
                     :desc "Rewrite"              "r" #'gptel-rewrite
                     :desc "Send to gptel"        "s" #'gptel-send)
-                   :desc "View undo"      "u" #'vundo)
+                   :desc "Open ghostel"            "t" #'ghostel
+                   :desc "Open ghostel in project" "T" #'ghostel-project
+                   :desc "View undo"               "u" #'vundo)
 
       (:prefix-map ("t" . "toggle")
        :desc "Command window"     "C" #'bc/command-log-toggle-window

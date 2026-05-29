@@ -54,7 +54,9 @@
 (package! project :pin "f4ec26c30a08663e93449317a5f765032ab84f28" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! vterm :pin "d8157e74339e02b70fa5dcd9d572960dd5c8214a")
+(package! ghostel
+  :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
+  :pin "d3e30721741248b24341914e1e7dad6b71d3805f")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 

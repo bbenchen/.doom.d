@@ -165,6 +165,21 @@
         vterm-timer-delay 0.01
         vterm-clear-scrollback-when-clearing t))
 
+;; ghostel
+(use-package! ghostel
+  :defer t
+  :when (bound-and-true-p module-file-suffix)
+  :init
+  (setq ghostel-module-directory (expand-file-name "ghostel" doom-data-dir))
+  :config
+  ;; (set-popup-rule! "ghostel\\*?$" :size 0.25 :vslot -4 :select t :quit nil :ttl 0 :modeline nil)
+
+  (setq ghostel-shell '("/bin/zsh" "--login")
+        ghostel-tramp-shell-integration t
+        ghostel-kill-buffer-on-exit t)
+
+  (add-hook! 'ghostel-mode-hook :append #'doom-mark-buffer-as-real-h))
+
 ;; dired
 (with-eval-after-load 'dired
   (setq dired-recursive-copies 'always
@@ -441,7 +456,8 @@
   :config
   (ai-code-set-backend 'opencode)
 
-  (setq ai-code-auto-test-type 'ask-me)
+  (setq ai-code-backends-infra-terminal-backend 'ghostel
+        ai-code-auto-test-type 'ask-me)
 
   (with-eval-after-load 'magit
     (ai-code-magit-setup-transients)))
