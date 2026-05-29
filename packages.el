@@ -54,7 +54,7 @@
 (package! project :pin "f4ec26c30a08663e93449317a5f765032ab84f28" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
-(package! vterm :pin "92add72b728e47852ea1e95dc9f08d01b33d4bf0")
+(package! vterm :pin "d8157e74339e02b70fa5dcd9d572960dd5c8214a")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -112,7 +112,7 @@
 (package! envrc :pin "1e63a3db367254897a39251944ba68938ec41020")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "d90004ef45539507fbff4f4513a01f9443716fc7")
+(package! ai-code :pin "336b4c42537ceabdc4585fae0fd6091b1a054f6c")
 (package! agent-shell :pin "2e288326f43397008b04d3da0724acf5afab9283")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
@@ -165,7 +165,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "b00d323588b0d70456e497d86b4e4b657ca1022e")
+  :pin "4056374e4c02f7f0a9bffa6b82d361d3b5953f34")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
