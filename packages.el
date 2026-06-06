@@ -56,7 +56,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "d3e30721741248b24341914e1e7dad6b71d3805f")
+  :pin "a614f0f30d8a65da928a840e62cc9b2c6a1381af")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -82,7 +82,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "b29c521c8ee8afa9ac629a71b45e934cb2877503")
+(package! llm :pin "ad3ca69156f9fd50826e413b8ecd312cb1458b5b")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -114,13 +114,13 @@
 (package! envrc :pin "1e63a3db367254897a39251944ba68938ec41020")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "336b4c42537ceabdc4585fae0fd6091b1a054f6c")
-(package! agent-shell :pin "2e288326f43397008b04d3da0724acf5afab9283")
+(package! ai-code :pin "c8838a691160987744493db80aff07df3436c10e")
+(package! agent-shell :pin "bfc3e727ec0eb20a0a9467b835ad0e6134e65c25")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "dd3c2035829bd4cd24114a009960d10a1c7ac3ba"))
-(package! gptel :recipe (:nonrecursive t) :pin "5c82ff85be0beed57a923935e18b9c4d1a8d0858")
+(package! gptel :recipe (:nonrecursive t) :pin "a22585bc0768bdd060ae13a36337cedee5979fd7")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "018ff2be8f860a1e8fe3966eec418ad635620c38")
@@ -167,7 +167,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "4056374e4c02f7f0a9bffa6b82d361d3b5953f34")
+  :pin "59796c0cb42a2d73d3b8619679f96bc867334043")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "7c75a939f3a58cb67a0572cb12266638936b7074")
