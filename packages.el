@@ -56,11 +56,11 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "adb010b7fec943405006fcd1fac280e74ffa9e30")
+  :pin "d8fde4241e15c094ee3c6453a76d4dbbc87abd1a")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
-(package! nerd-icons :pin "a9a9177e135dd407d508609ac4d9915eb8608b4f")
+(package! nerd-icons :pin "2247dfb513a80aa5b1047f04fd9f2e9b41f336fd")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "fbea17a80645fd4f36df829d8753b220ba693318")
@@ -106,7 +106,7 @@
   :pin "49b6a7cbc6a45d1aa9977a3f8f0e5d06b343f100")
 (package! shift-number
   :recipe (:host codeberg :repo "ideasman42/emacs-shift-number")
-  :pin "fed971a983fce0f60a2e9795df3eca7712152a29")
+  :pin "52f4d32080cca50da0f88b2141d597827c7341cf")
 (package! region-occurrences-highlighter :pin "444789ea3567fc85ba32c7349050024ba8e5b9f8")
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
@@ -115,7 +115,7 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "453281bd230d7004a517e3b288eff530c3b9d4de")
-(package! agent-shell :pin "bb1bcfa97231d35f498197ac647debcc128ee3c4")
+(package! agent-shell :pin "131b9bec01588488c353de1f2510dc1bd68fa850")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
