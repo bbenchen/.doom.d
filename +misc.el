@@ -86,7 +86,8 @@
                  (string-suffix-p "*" bname))
             (string-match-p "\\.elc\\|\\.tar\\|\\.gz\\|\\.zip\\'" bname)
             (string-match-p "\\.bin\\|\\.so\\|\\.dll\\|\\.exe\\'" bname)
-            (eq (buffer-local-value 'major-mode buf) 'vterm-mode))))))
+            (eq (buffer-local-value 'major-mode buf) 'vterm-mode)
+            (eq (buffer-local-value 'major-mode buf) 'ghostel-mode))))))
 
 ;; projectile
 (with-eval-after-load 'projectile
@@ -178,6 +179,7 @@
         ghostel-tramp-shell-integration t
         ghostel-kill-buffer-on-exit t)
 
+  (add-hook! 'ghostel-mode-hook :append #'ghostel-ime-mode)
   (add-hook! 'ghostel-mode-hook :append #'doom-mark-buffer-as-real-h))
 
 ;; dired
@@ -449,7 +451,7 @@
         agent-shell-prefer-viewport-interaction nil
         agent-shell-preferred-agent-config (agent-shell-opencode-make-agent-config)
         agent-shell-opencode-authentication (agent-shell-opencode-make-authentication :none t)
-        agent-shell-opencode-default-model-id "deepseek/deepseek-v4-flash")
+        agent-shell-opencode-default-model-id "zai/glm-5.2")
 
   (map! :map agent-shell-mode-map
         "RET" #'+default/newline-below
