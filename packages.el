@@ -56,7 +56,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "9034334fc2cb09f48ef342c86f339c4b0de0d10a")
+  :pin "92bfcc57dc85f254ce95dcb51dbdd2411fea5f02")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -82,7 +82,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "be2ad1a280ac3e935a948b29573e17ee712813b4")
+(package! llm :pin "0c506e24e81865a8091a27a8c81fc3d9691986d1")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -114,8 +114,8 @@
 (package! envrc :pin "77e9dec1563bc204cc9e086cd8a7d3622196224c")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "d966e427bf5b8f98c439a00e63278ca3c032d6bb")
-(package! agent-shell :pin "131b9bec01588488c353de1f2510dc1bd68fa850")
+(package! ai-code :pin "3f3c3f25d288cdb817fb29c83ca8728a46c24a37")
+(package! agent-shell :pin "c59a0a9e94e964ebb15dbdf94838b58ccb03cb20")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
