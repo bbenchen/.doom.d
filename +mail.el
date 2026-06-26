@@ -21,6 +21,8 @@
                       (user-full-name         . "Ben Chen")
                       (user-mail-address      . "chen.jackson@gmail.com")))
 
+(setq +mu4e-gmail-accounts '(("chen.jackson@gmail.com" . "/gmail.com")))
+
 (with-eval-after-load 'mu4e
   (define-key! [remap compose-mail] #'+mu4e/compose)
 
