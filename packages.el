@@ -114,8 +114,8 @@
 (package! envrc :pin "77e9dec1563bc204cc9e086cd8a7d3622196224c")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "3f3c3f25d288cdb817fb29c83ca8728a46c24a37")
-(package! agent-shell :pin "c59a0a9e94e964ebb15dbdf94838b58ccb03cb20")
+(package! ai-code :pin "934c5b67cd602eff926d21fd243bc0e7326a3c9f")
+(package! agent-shell :pin "df1b2ea244d9f10339ec4cd63f4fe26e340a2800")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
