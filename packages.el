@@ -51,7 +51,7 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "6be4c7c464110d26094c452aab5069094b8d5009" :built-in (> emacs-major-version 30))
+(package! project :pin "321deb4ca5709965e6802bdf571086bb31ce69b9" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! ghostel
@@ -115,7 +115,7 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "934c5b67cd602eff926d21fd243bc0e7326a3c9f")
-(package! agent-shell :pin "df1b2ea244d9f10339ec4cd63f4fe26e340a2800")
+(package! agent-shell :pin "96343cf9a321f707e3007fb9a1543871d07f9937")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
@@ -194,7 +194,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "a23698fb53f7209597ebbf48f18e431c7f6f2753")
+  :pin "38fab7bd891f7bde36264c3b90825adbf82d61fe")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
