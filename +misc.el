@@ -172,15 +172,23 @@
   :when (bound-and-true-p module-file-suffix)
   :init
   (setq ghostel-module-directory (expand-file-name "ghostel" doom-data-dir))
+
+  (add-hook! 'solaire-global-mode-hook :append
+    (defun +ghostel-init-solaire-h ()
+      (with-eval-after-load 'ghostel-faces
+        (let ((fc (if solaire-global-mode 'solaire-default-face 'default)))
+          (dolist (fr (cons t (frame-list)))
+            (set-face-attribute 'ghostel-default fr :inherit fc))))))
   :config
   ;; (set-popup-rule! "ghostel\\*?$" :size 0.25 :vslot -4 :select t :quit nil :ttl 0 :modeline nil)
+  (add-to-list 'doom-real-buffer-modes 'ghostel-mode)
 
   (setq ghostel-shell '("/bin/zsh" "--login")
         ghostel-tramp-shell-integration t
         ghostel-kill-buffer-on-exit t)
 
   (add-hook! 'ghostel-mode-hook :append #'ghostel-ime-mode)
-  (add-hook! 'ghostel-mode-hook :append #'doom-mark-buffer-as-real-h))
+  (add-hook! 'ghostel-mode-hook :append #'doom-disable-line-numbers-h))
 
 ;; dired
 (with-eval-after-load 'dired
