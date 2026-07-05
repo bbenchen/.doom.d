@@ -51,12 +51,12 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "883c035af5b66550a1692b89bb11a9daead62d61" :built-in (> emacs-major-version 30))
+(package! project :pin "3d71e2caace5891cba08ae38bb60432f8efa8267" :built-in (> emacs-major-version 30))
 (package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "109ed0d1c88d36dcd415381148164bafd70ee97b")
+  :pin "f77efee9172854abc08652637d23adc26faa25a2")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -115,12 +115,12 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "848140a8f36034d3c0cefafa0e9cea7c957229a6")
-(package! agent-shell :pin "b835a03a517da5c1e3c689e88f51718c2b1ed441")
+(package! agent-shell :pin "8e85d5f59220400e7633495fef21a19fe130e2cc")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "ae3a1603e1d7a138f7eddfcd967e097dcca8b612"))
-(package! gptel :recipe (:nonrecursive t) :pin "9ff70ce03589862bb7d6e67d224f3230526a9311")
+(package! gptel :recipe (:nonrecursive t) :pin "3bc90bdfb97a7d8051b4aada66bd0609d1e26faa")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -167,7 +167,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "8bb537e4599a33ff448370589a3d7f8727156761")
+  :pin "ba2253bb90384b49489d4bcca6ad740bc3d322eb")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "1e12b09f44d0ad9092ae33dc4deebb4436adf340")
