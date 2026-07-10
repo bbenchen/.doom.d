@@ -56,7 +56,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "bc0de0b14cf54898ebceecaf36fc81692526d9d0")
+  :pin "766a2d440ea785818d1792def48d397e01b84846")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -115,12 +115,12 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 ;; (package! ai-code :pin "848140a8f36034d3c0cefafa0e9cea7c957229a6")
-(package! agent-shell :pin "ee4f259b8918c799c6c18c8caa78cf4519706ddb")
+(package! agent-shell :pin "3c8bd0b995c398625b8088a37f46939c0976e3d7")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "ae3a1603e1d7a138f7eddfcd967e097dcca8b612"))
-(package! gptel :recipe (:nonrecursive t) :pin "ebf0f3d8e9932e0ac6de82542220864cc17f6784")
+(package! gptel :recipe (:nonrecursive t) :pin "74cd61c58b0922c020683677085e3b0deb0c044d")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -129,7 +129,7 @@
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
   :pin "6a68a77b5d837e83280c927ecda9844190eeb3e6")
-(package! verb :pin "25a25456bb9ef5090d80105aaa8ad931f336a06e")
+(package! verb :pin "ef09a5804cac4816ca9a0d1fb9c71c8ed3d3df8f")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
 (when (modulep! :tools magit)
@@ -167,7 +167,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "a51255212cf422947aa9e5339d523dc28c2b7e88")
+  :pin "5233aca8494a545597901cc34b7e395536faedd1")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "c0b67548b5a6ad2e228f6b0c3dc684b9fb7b85bc")
