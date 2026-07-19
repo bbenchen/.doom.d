@@ -51,16 +51,15 @@
 
 (unpin! (:editor snippets))
 
-(package! project :pin "3d71e2caace5891cba08ae38bb60432f8efa8267" :built-in (> emacs-major-version 30))
-(package! which-key :pin "38d4308d1143b61e4004b6e7a940686784e51500" :built-in 'prefer)
+(package! project :pin "ffb38d7798d86c7fa6623db0f64b461abb6572c2" :built-in (> emacs-major-version 30))
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "766a2d440ea785818d1792def48d397e01b84846")
+  :pin "7aa53db6ce82612b868c70e44087ac55f4354d56")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
-(package! nerd-icons :pin "d7742c5e8fba5d601633dd46f4cd7b34928f1185")
+(package! nerd-icons :pin "674909974637ff0ec2b5ebf43f9a8aefa35d93e9")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "fbea17a80645fd4f36df829d8753b220ba693318")
@@ -82,7 +81,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "be56ed97afe3e0b1634fedd46cb51538da9294f6")
+(package! llm :pin "d261e039fe8159351402faa7ab18cd1e473e647d")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -114,13 +113,13 @@
 (package! envrc :pin "77e9dec1563bc204cc9e086cd8a7d3622196224c")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-;; (package! ai-code :pin "848140a8f36034d3c0cefafa0e9cea7c957229a6")
-(package! agent-shell :pin "3c8bd0b995c398625b8088a37f46939c0976e3d7")
+(package! ai-code :pin "a27cf8894f5284c330fc32a0528d964030052cb1")
+(package! agent-shell :pin "7e5162d610a4e951aeedbac356f8ae6aa26d0133")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
-      :pin "ae3a1603e1d7a138f7eddfcd967e097dcca8b612"))
-(package! gptel :recipe (:nonrecursive t) :pin "74cd61c58b0922c020683677085e3b0deb0c044d")
+      :pin "1f9b4e0cb1fb180f6246ed0c99a72f55187066dd"))
+(package! gptel :recipe (:nonrecursive t) :pin "8701e2bd80c5d2091ce2decef5d34d6fce4a3ada")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -167,7 +166,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "5233aca8494a545597901cc34b7e395536faedd1")
+  :pin "f64414e20c58a6b92255fd3f634785b0855ea8f5")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "c0b67548b5a6ad2e228f6b0c3dc684b9fb7b85bc")
