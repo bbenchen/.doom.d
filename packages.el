@@ -55,7 +55,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "73123c8ae88695c93ea6e3421cffdc874cf01998")
+  :pin "f3da49c5a10479bb490c0ddb320a1f87680c765d")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -81,7 +81,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "7de8fdd0e0c3faac6d8e033974edf9b7960eced1")
+(package! llm :pin "6377d1a90b38d6ace0d4ac028be676eb969bfb58")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -113,13 +113,13 @@
 (package! envrc :pin "77e9dec1563bc204cc9e086cd8a7d3622196224c")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "d41a2182ca86b12afe3dd9ed41dde98fd0aa13a0")
-(package! agent-shell :pin "8a6ea7a22afb6e7aef198a41bba2cc554e96981c")
+(package! ai-code :pin "948693eb48046120e539ee38a32ebf822aba2fff")
+(package! agent-shell :pin "58d410e84de70a91d13fcd7c9389833c9206e8b0")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
-      :pin "1f9b4e0cb1fb180f6246ed0c99a72f55187066dd"))
-(package! gptel :recipe (:nonrecursive t) :pin "8701e2bd80c5d2091ce2decef5d34d6fce4a3ada")
+      :pin "41e0a7d31434a0f3fe08c83d9acc45b5402bd3b7"))
+(package! gptel :recipe (:nonrecursive t) :pin "9cafa41e7172a995e4eeadb5049a8c05bf7c30ba")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -135,7 +135,7 @@
   (package! gptel-magit
     :recipe (:host github
              :repo "roife/gptel-magit")
-    :pin "7a1567e730382c05536e996a6bf1eee3a2e97947")
+    :pin "a0958609526ace45b8195422c42e467d5f6b65b9")
   (package! git-commit-ts-mode
     :recipe (:host github :repo "danilshvalov/git-commit-ts-mode")
     :pin "6eb42a3c08c5c6a1a610d433b93590b88a71f63e")
@@ -166,7 +166,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "98aef2f0d116c73062f588b3c4490510780b1ced")
+  :pin "07d0d86bd75c10956b12040407aef738570b930d")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "c0b67548b5a6ad2e228f6b0c3dc684b9fb7b85bc")
