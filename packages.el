@@ -55,11 +55,11 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "f3da49c5a10479bb490c0ddb320a1f87680c765d")
+  :pin "037378b44ceedf1c8bf15e365fc62c7f5c92363d")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
-(package! nerd-icons :pin "674909974637ff0ec2b5ebf43f9a8aefa35d93e9")
+(package! nerd-icons :pin "1e75075e323dedaf9f2fd5837082c60a2d0dfae3")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "fbea17a80645fd4f36df829d8753b220ba693318")
@@ -113,13 +113,13 @@
 (package! envrc :pin "77e9dec1563bc204cc9e086cd8a7d3622196224c")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "948693eb48046120e539ee38a32ebf822aba2fff")
-(package! agent-shell :pin "58d410e84de70a91d13fcd7c9389833c9206e8b0")
+(package! ai-code :pin "bba26b245839b663ae047e0f54e489b1d417bd68")
+(package! agent-shell :pin "8cb20f20265f40e5ec1891d032ecca626c05a2e1")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "41e0a7d31434a0f3fe08c83d9acc45b5402bd3b7"))
-(package! gptel :recipe (:nonrecursive t) :pin "9cafa41e7172a995e4eeadb5049a8c05bf7c30ba")
+(package! gptel :recipe (:nonrecursive t) :pin "fc6963634af2f76a9909ad674e2c0b3f005e60b5")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -166,7 +166,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "07d0d86bd75c10956b12040407aef738570b930d")
+  :pin "9c622e9eef271d8a0ad37ce69c189eda6c770722")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "c0b67548b5a6ad2e228f6b0c3dc684b9fb7b85bc")
