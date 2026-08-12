@@ -62,7 +62,7 @@
 (package! nerd-icons :pin "1e75075e323dedaf9f2fd5837082c60a2d0dfae3")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
-  :pin "fbea17a80645fd4f36df829d8753b220ba693318")
+  :pin "6250823caf7268585be4c0526371a77a1a7cb284")
 (package! rainbow-mode :pin "2e6b18609c2fdd1a2dc513937a64d276fd6cf24c")
 (package! golden-ratio-scroll-screen :pin "60eb00ed7e51c0875a38cff25c9a87fe79296484")
 
@@ -193,7 +193,7 @@
                (make-symbolic-link
                 (concat (straight--build-dir "lsp-bridge") "python-lsp-bridge")
                 "~/.local/bin/python-lsp-bridge"))))
-  :pin "38fab7bd891f7bde36264c3b90825adbf82d61fe")
+  :pin "581ab3b510c2f3d5f59036d5e1bd33d641a6ebb1")
 (when (modulep! :checkers syntax +flymake)
   (package! flymake-bridge
     :recipe (:host github :repo "liuyinz/flymake-bridge")
