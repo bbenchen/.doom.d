@@ -55,7 +55,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "037378b44ceedf1c8bf15e365fc62c7f5c92363d")
+  :pin "1104eae607c44698c9c1cccf5ed868ee89a2ea3d")
 
 (package! posframe :pin "74c8c56131ed866db47ae4191364b72dd4852456")
 
@@ -110,11 +110,11 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
-(package! envrc :pin "77e9dec1563bc204cc9e086cd8a7d3622196224c")
+(package! envrc :pin "e4f9fd79a612c8f81b4ba5b12ee7261fc33568f0")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "bba26b245839b663ae047e0f54e489b1d417bd68")
-(package! agent-shell :pin "8cb20f20265f40e5ec1891d032ecca626c05a2e1")
+(package! ai-code :pin "6e9da1ad6126614867e4efde4af8327dca347382")
+(package! agent-shell :pin "ab620f37dd88089afa559de2b0f189dc8c9566e5")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
@@ -166,7 +166,7 @@
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "9c622e9eef271d8a0ad37ce69c189eda6c770722")
+  :pin "3887c8c1a98128af619ef2e64952dfbf148a8508")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "c0b67548b5a6ad2e228f6b0c3dc684b9fb7b85bc")
