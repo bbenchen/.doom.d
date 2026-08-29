@@ -55,9 +55,9 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "ccd9d27408752172c4abdb5a6fc7f94b50666752")
+  :pin "7c4cbd9f487b545c3d0452ab749f65eaa3c18b7e")
 
-(package! posframe :pin "ec0ec37c0d6397422a07def499e87591ca037af7")
+(package! posframe :pin "6f89c0acd29306cb2cd023418d18134cfc507800")
 
 (package! nerd-icons :pin "17faac7977242b470732efd417d3bcc8eb5a830e")
 (package! doom-themes
@@ -110,11 +110,11 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
-(package! envrc :pin "e4f9fd79a612c8f81b4ba5b12ee7261fc33568f0")
+(package! envrc :pin "ed33d42a6315bbf7f51cc6a7dd03d1e3a3c6f22b")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "3b1474f0c50cf276df1c8e4bca7cb9c00b484fd3")
-(package! agent-shell :pin "833b2a8031a22068c0528a1f7600926b7359154a")
+(package! ai-code :pin "5d63bef0700e29e8c85d0bad73ca2da8233dd47a")
+(package! agent-shell :pin "f28ca5f5e7eb718de0884412f672e4db5e01234a")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
