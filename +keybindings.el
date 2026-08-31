@@ -90,15 +90,15 @@
 
       (:prefix-map ("o" . "open")
                    (:prefix ("l" . "llm")
-                    :desc "Start ai-code"        "a" #'ai-code-cli-start
-                    :desc "Open ai-code menu"    "A" #'ai-code-menu
-                    :desc "Add text to gptel"    "c" #'gptel-add
-                    :desc "Explain"              "e" #'gptel-quick
-                    :desc "Add file to gptel"    "f" #'gptel-add-file
-                    :desc "Open gptel"           "g" #'bc/start-gptel
-                    :desc "Open gptel menu"      "m" #'gptel-menu
-                    :desc "Rewrite"              "r" #'gptel-rewrite
-                    :desc "Send to gptel"        "s" #'gptel-send)
+                    :desc "Start agent shell"      "a" #'agent-shell
+                    :desc "Open agent shell menu"  "A" #'agent-shell-help-menu
+                    :desc "Add text to gptel"      "c" #'gptel-add
+                    :desc "Explain"                "e" #'gptel-quick
+                    :desc "Add file to gptel"      "f" #'gptel-add-file
+                    :desc "Open gptel"             "g" #'bc/start-gptel
+                    :desc "Open gptel menu"        "m" #'gptel-menu
+                    :desc "Rewrite"                "r" #'gptel-rewrite
+                    :desc "Send to gptel"          "s" #'gptel-send)
                    :desc "Open ghostel"            "t" #'ghostel
                    :desc "Open ghostel in project" "T" #'ghostel-project
                    :desc "View undo"               "u" #'vundo)
