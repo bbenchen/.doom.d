@@ -468,8 +468,9 @@ The shell command used to build the image is:
   (setq lsp-bridge-user-multiserver-dir (expand-file-name "etc/lsp-bridge/multiserver" doom-user-dir)
         lsp-bridge-user-langserver-dir (expand-file-name "etc/lsp-bridge/langserver" doom-user-dir)
         ;; lsp-bridge-log-level 'debug
-        lsp-bridge-enable-document-highlight t
         lsp-bridge-enable-completion-in-string t
+        lsp-bridge-enable-document-highlight t
+        lsp-bridge-enable-mode-line t
         lsp-bridge-enable-org-babel t
         lsp-bridge-enable-with-tramp nil
         lsp-bridge-diagnostic-tooltip-border-width 2
@@ -561,11 +562,12 @@ The shell command used to build the image is:
   ;;                     (cl-return "deno")))))))))
 
   (setq lsp-bridge-get-single-lang-server-by-project
-        (lambda (project-path file-path)
-          (when (and (or (string-equal (file-name-extension file-path) "yml")
-                         (string-equal (file-name-extension file-path) "yaml"))
-                     (string-match-p "ansible" project-path))
-            "ansible-language-server")))
+        (lambda (projectpath filepath)
+          (when (or (string-equal (file-name-extension filepath) "yml")
+                    (string-equal (file-name-extension filepath) "yaml"))
+            (cond
+             ((string-match-p "docker-compose" (file-name-base filepath)) "yaml-language-server")
+             ((string-match-p "ansible" projectpath) "ansible-language-server")))))
 
   (defadvice! bc/lsp-bridge--not-in-multiple-cursors-override-advice ()
     :override #'lsp-bridge--not-in-multiple-cursors
