@@ -188,7 +188,8 @@
         ghostel-kill-buffer-on-exit t)
 
   (add-hook! 'ghostel-mode-hook :append #'ghostel-ime-mode)
-  (add-hook! 'ghostel-mode-hook :append #'doom-disable-line-numbers-h))
+  (add-hook! 'ghostel-mode-hook :append #'doom-disable-line-numbers-h)
+  (add-hook! 'comint-mode-hook #'ghostel-comint-mode))
 
 ;; dired
 (with-eval-after-load 'dired
