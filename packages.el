@@ -55,7 +55,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "7c4cbd9f487b545c3d0452ab749f65eaa3c18b7e")
+  :pin "20cf11e7b6f44342b20c3f0b7838f7c9f357ee62")
 
 (package! posframe :pin "6f89c0acd29306cb2cd023418d18134cfc507800")
 
@@ -110,7 +110,7 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
-(package! envrc :pin "ed33d42a6315bbf7f51cc6a7dd03d1e3a3c6f22b")
+(package! envrc :pin "c127d8fb1cfab37582eddb47ea28c8533de06f5b")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "5d63bef0700e29e8c85d0bad73ca2da8233dd47a")
@@ -168,7 +168,7 @@
 (package! pgsql :pin "8a282e565f139f3794ff219237b0f962f2a0a9b5")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "833fcb0709959281a713da0d262a2e7d70640cff")
+  :pin "89d1d3442c8670dc7aa938b05bab907137f10615")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "c0b67548b5a6ad2e228f6b0c3dc684b9fb7b85bc")
