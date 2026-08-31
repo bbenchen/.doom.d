@@ -459,7 +459,16 @@
   (setq agent-shell-prefer-viewport-interaction t
         agent-shell-preferred-agent-config (agent-shell-opencode-make-agent-config)
         agent-shell-opencode-authentication (agent-shell-opencode-make-authentication :none t)
-        agent-shell-opencode-default-model-id "zai/glm-5.2")
+        agent-shell-opencode-default-model-id "zai/glm-4.7")
+
+  (add-hook! '(agent-shell-mode-hook agent-shell-viewport-edit-mode-hook agent-shell-viewport-view-mode-hook)
+    (when (and (modulep! :checkers syntax)
+               (eq gptel-default-mode 'org-mode))
+      (cond ((bound-and-true-p flymake-mode) (flymake-mode-off))
+            ((bound-and-true-p flycheck-mode) (flycheck-mode -1)))
+
+      (cond ((bound-and-true-p spell-fu-mode) (spell-fu--mode-disable)
+             (bound-and-true-p flyspell-mode) (flyspell-mode -1)))))
 
   (map! :map agent-shell-mode-map
         "RET" #'+default/newline-below
