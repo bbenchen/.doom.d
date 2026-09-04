@@ -55,7 +55,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "20cf11e7b6f44342b20c3f0b7838f7c9f357ee62")
+  :pin "2bea18f3b52bf97d8222fea706da6fabdfc2cbb8")
 
 (package! posframe :pin "6f89c0acd29306cb2cd023418d18134cfc507800")
 
@@ -110,16 +110,16 @@
 
 (package! command-log-mode :pin "af600e6b4129c8115f464af576505ea8e789db27")
 ;; (package! pinentry :pin "99480adc192f657d7d9f2eb3ed4e568df3de8613")
-(package! envrc :pin "c127d8fb1cfab37582eddb47ea28c8533de06f5b")
+(package! envrc :pin "d8988cfdf85dfc5759be043567822ab40f84f316")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "5d63bef0700e29e8c85d0bad73ca2da8233dd47a")
-(package! agent-shell :pin "f28ca5f5e7eb718de0884412f672e4db5e01234a")
+(package! ai-code :pin "f743c958dc062943e8ca77392d81c158ff7ca538")
+(package! agent-shell :pin "d027d8de2b74019ae83e36b1edcd0b968295ac31")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "41e0a7d31434a0f3fe08c83d9acc45b5402bd3b7"))
-(package! gptel :recipe (:nonrecursive t) :pin "1f6556d9266c756a142337ccc82acfa5bba713ec")
+(package! gptel :recipe (:nonrecursive t) :pin "cf0eb7d2289581e7d1f0eed52b29870d8739d4f2")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
