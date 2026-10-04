@@ -55,9 +55,9 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "c2c411f2b0051465a5f5e7826ebab4ed216d4c0e")
+  :pin "8cc917321a8ba5d704c72e3dd6d9d186ece7a692")
 
-(package! posframe :pin "bdabcec96f127b2daa2f8bf988a71ec146e301d5")
+(package! posframe :pin "4b69cc261f5a1675b8f0f54e2634b1451cbc8c32")
 
 (package! nerd-icons :pin "17faac7977242b470732efd417d3bcc8eb5a830e")
 (package! doom-themes
@@ -81,7 +81,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "5d71e95a2c7ceca8ee5e613dcda73e8589c23315")
+(package! llm :pin "4331bcbbc38099bf03fd3ce0979d3668bd9d97dc")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -113,13 +113,13 @@
 (package! envrc :pin "1ecb82e01745d700578754eb35d6c1758290b869")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "024722baaf7249b666cf255ed11b2cf4f4235a04")
-(package! agent-shell :pin "d551202139dc0ad5f671fd19ca237515eb4ae762")
+(package! ai-code :pin "2402d4cb00448fee11674aa8c9ac81312a6a09ec")
+(package! agent-shell :pin "1cd4f20e0ebbebe72829f163b1447cf432587c17")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "41e0a7d31434a0f3fe08c83d9acc45b5402bd3b7"))
-(package! gptel :recipe (:nonrecursive t) :pin "ec25a41fb8bebf5ea08341a9d8c70c0ee907ee23")
+(package! gptel :recipe (:nonrecursive t) :pin "edb3fee3b5266e9060f6d121e9b3914eb7c3409d")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -127,7 +127,7 @@
 
 (package! easydraw
   :recipe (:host github :repo "misohena/el-easydraw")
-  :pin "2f05683f1636040387470f8fa051f22b22106267")
+  :pin "28029b991a90932a014e920838e641985975d4bd")
 (package! verb :pin "8eca8cdb9eaebc49a7da068c74cfe52f2d37d76e")
 (package! ox-gfm :pin "4f774f13d34b3db9ea4ddb0b1edc070b1526ccbb")
 
@@ -164,14 +164,14 @@
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
-(package! mysql :pin "0f8f3c0fff6d9016c9c04ab6094d9354cca82c2c")
-(package! pgsql :pin "9dbf135d16393c9d849ebd85543a6143fc42a8f9")
+(package! mysql :pin "bf4a57aa88eeca9c4f08aa392bf1d10a9fd04dd5")
+(package! pgsql :pin "86fa3054061e4b17eb2faa98bdf4d602d209d912")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "84420697005c0e0b2545b9940b612a331682a48d")
+  :pin "3b256b80dd06dcde25d78f601368a32dbf39c236")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
-  :pin "3767a3ce7981883f73d82a15d82daadbb5aedcf1")
+  :pin "a989fbbd417f48b613bc26e30324870b6f7bc09e")
 
 ;; (package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
 
