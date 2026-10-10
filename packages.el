@@ -55,11 +55,11 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "8cc917321a8ba5d704c72e3dd6d9d186ece7a692")
+  :pin "a269cce7d1f583a64712a7d7ee2218e728b3e505")
 
-(package! posframe :pin "4b69cc261f5a1675b8f0f54e2634b1451cbc8c32")
+(package! posframe :pin "1d833af5c43313e401be2e5c456bf03d4ce9519c")
 
-(package! nerd-icons :pin "17faac7977242b470732efd417d3bcc8eb5a830e")
+(package! nerd-icons :pin "63e76023274e9d4806f3d84f8f3b69b7b63bbfb9")
 (package! doom-themes
   :recipe (:host github :repo "bbenchan/doom-themes")
   :pin "2fba9bf42340d35cdb5a2df4828cfc2e219a684e")
@@ -81,7 +81,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "ffc09771df99a204f7716de12b7fae249db77298")
+(package! llm :pin "d6d101ef3d562865088449e02e9b37210378e67f")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -114,7 +114,7 @@
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
 (package! ai-code :pin "c06ddf9b39b42d8d514103191dc075571d6fb2fb")
-(package! agent-shell :pin "9a52907d7c6c00e06e570d2d37a50c1a0174fa47")
+(package! agent-shell :pin "cba82e8a8af1aafb07cc3ff6e511f5e8d9acc7c9")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
@@ -164,11 +164,11 @@
 (package! sql-indent
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
-(package! mysql :pin "be8d9c9598dcd03906858d64ea4d3aebee252058")
-(package! pgsql :pin "86fa3054061e4b17eb2faa98bdf4d602d209d912")
+(package! mysql :pin "ede699b3143c7a49e3ee0703598f06655c3b8e7c")
+(package! pgsql :pin "aabac885a0d848c9819b2ebe24096bff3be3415d")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "c2bc7e16f33e396845ebe0f0c0cb3962c3696c7c")
+  :pin "5285554ae3e39cdd6ed8a81973d0af0a872c9d06")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
   :pin "a989fbbd417f48b613bc26e30324870b6f7bc09e")
