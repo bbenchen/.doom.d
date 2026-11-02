@@ -55,7 +55,7 @@
 
 (package! ghostel
   :recipe (:host github :repo "dakra/ghostel" :files ("lisp/*.el" "etc"))
-  :pin "7c55ea50103c0fdd5c406000712d0a3f246e54f1")
+  :pin "a63db707e0d71e49eb4de95b198e288788eb92f8")
 
 (package! posframe :pin "1a6a25c58559ef43821a071c43b23de5cbc3cc3a")
 
@@ -81,7 +81,7 @@
   :recipe (:host github :repo "lorniu/gt.el")
   :pin "f9febd8583ea482f72139e02f440f3972502f5a2")
 (package! immersive-translate :pin "1d00d558363985fa988fc40cd5093bfc6926d83e")
-(package! llm :pin "38cfcf96b55e5a042862a099661ad706b60755d0")
+(package! llm :pin "f9f0d8a948bd8cacf280f078a5501c8484aa8339")
 (package! insert-translated-name
   :recipe (:host github :repo "manateelazycat/insert-translated-name" :files ("*.el" "*.py"))
   :pin "a2bc301f6e99a6f965f7612c5666546e3d1a8fe3")
@@ -113,13 +113,13 @@
 (package! envrc :pin "af7e0a699060c8128fdd8318d28a7401b82bb3fd")
 (package! mb-url :pin "873ba6cbb1cf1a82d6328f5cb9718fccdeb98027")
 
-(package! ai-code :pin "90030b5dfd7e556b0a12e4399b09498265685115")
-(package! agent-shell :pin "aeadc345254a1c5277095227d23631ca0a6da61a")
+(package! ai-code :pin "7f23e7790bc30b5f50d38efe474a26dea668c584")
+(package! agent-shell :pin "c788df02f071cc808c837435b65c8e72668b8e22")
 (if (featurep :system 'macos)
     (package! agent-shell-macext
       :recipe (:host github :repo "cxa/agent-shell-macext")
       :pin "41e0a7d31434a0f3fe08c83d9acc45b5402bd3b7"))
-(package! gptel :recipe (:nonrecursive t) :pin "e7cebe4621533a036840d47c9741682bb687d808")
+(package! gptel :recipe (:nonrecursive t) :pin "65280701b87dc32cbe6cf9c07f1b88fdf035085c")
 (package! gptel-quick
   :recipe (:host github :repo "karthink/gptel-quick")
   :pin "36fe296e016449433fa1213f4b89cb8dc7d4db5e")
@@ -165,13 +165,13 @@
   :recipe (:host github :repo "alex-hhh/emacs-sql-indent")
   :pin "2ed4c6a26b8f3d651ac6231eaafb2565d77c918b")
 (package! mysql :pin "ede699b3143c7a49e3ee0703598f06655c3b8e7c")
-(package! pgsql :pin "61eb714f85f3142a8be998e5311f6cab62b9f29f")
+(package! pgsql :pin "adf4ca1d5997e492bb30f133f12b8960df73c73f")
 (package! clutch
   :recipe (:host github :repo "LuciusChen/clutch")
-  :pin "4ece93a1e7450ca45ff5f2e48b88a0447f71a2c8")
+  :pin "c17bbbcc890561a0b7a5bfb761642343f515cdb2")
 (package! ob-clutch
   :recipe (:host github :repo "LuciusChen/ob-clutch")
-  :pin "db01a26d39a955d63391dfa6b971f9a0e810d4f9")
+  :pin "7215e324db2798e06f3ae47e96f2c0c5d9b87818")
 
 ;; (package! topsy :pin "8b6c6d5026ac72b4c3704ed7bb8fafe1ea343699")
 
